@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Create Water",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Drop of water / Pinch of dust",
+"range":"30 yds.",
+"aoe":"Up to 27 cu. ft.",
+"castingTime":"1 rd.",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"When the priest casts a create water spell, up to four gallons of water are generated for every experience level of the caster (for example, a 2nd-level priest creates up to 8 gallons of water, a 3rd-level priest up to 12 gallons, etc.). The water is clean and drinkable (it is just like rain water). The created water can be dispelled within a round of its creation; otherwise, its magic fades, leaving normal water that can be used, spilled, evaporated, etc. The reverse of the spell, destroy water, obliterates without trace (no vapor, mist, fog, or steam) a like quantity of water. Water can be created or destroyed in an area as small as will actually contain the liquid, or in an area as large as 27 cubic feet (1 cubic yard).
+Note that water can neither be created nor destroyed within a creature. For reference purposes, water weighs about 8 _ pounds per gallon, and a cubic foot of water weighs approximately 64 pounds.
+The create water spell requires at least a drop of water; the destroy water spell, at least a pinch of dust."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Create Water</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Up to 27 cu. ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Drop of water / Pinch of dust&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the priest casts a create water spell, up to four gallons of water are generated for every experience level of the caster (for example, a 2nd-level priest creates up to 8 gallons of water, a 3rd-level priest up to 12 gallons, etc.). The water is clean and drinkable (it is just like rain water). The created water can be dispelled within a round of its creation; otherwise, its magic fades, leaving normal water that can be used, spilled, evaporated, etc. The reverse of the spell, destroy water, obliterates without trace (no vapor, mist, fog, or steam) a like quantity of water. Water can be created or destroyed in an area as small as will actually contain the liquid, or in an area as large as 27 cubic feet (1 cubic yard).<br />Note that water can neither be created nor destroyed within a creature. For reference purposes, water weighs about 8 _ pounds per gallon, and a cubic foot of water weighs approximately 64 pounds.<br />The create water spell requires at least a drop of water; the destroy water spell, at least a pinch of dust.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 253</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="883" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Water to Wine",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy Symbol",
+"range":"Touch",
+"aoe":"1 wineskin / Level",
+"castingTime":"10",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.
+
+At level 7, the caster may pair the wines specifically with foods."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Water to Wine</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">10&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 wineskin / Level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Holy Symbol&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.<br /><br />At level 7, the caster may pair the wines specifically with foods.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="848" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Watery Fist",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"60 yds.",
+"aoe":"Special",
+"castingTime":"5",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell conjures a coherent pseudopod of water from any suitable body of water at least 5 feet across and 2 feet deep (for streams) or 10 feet in diameter and 2 feet deep (for ponds or pools). The pseudopod can stretch up to 10 feet plus 1 foot per caster level from its source, so a 3rd-level priest could command watery fist to strike at a creature hovering thirteen feet above a lake or standing on the shore 13 feet from the water. The pseudopod obeys the priest's mental commands, although the priest must concentrate each round in order to maintain control of the watery member.
+The pseudopod is incapable of fine manipulation, but it can be used to make bludgeoning or constricting attacks. When used to strike at opponents, it attacks with the caster's THAC0 and inflicts damage as shown below. The priest may add his magical attack adjustment (from his Wisdom score) to his THAC0, but Strength-based adjustments or special weapon skills don't help the priest to control watery fist. The pseudopod may be able to make rear or flank attacks if the priest can direct it into the proper position.
+If used to encircle and constrict, the pseudopod must first make an attack roll as described above, inflicting damage based on the priest's level. However, in following rounds, the pseudopod automatically strikes its grappled target for constricting damage, +1 point per round of constricting. In other words, in the first round the victim sustains listed damage, in the second round he sustains listed damage +1, in the third he sustains listed damage +2, and so on. The pseudopod holds its target with an effective Strength equal to the priest's Wisdom score.
+Watery fist can be released by the priest any time he cares to stop concentrating on maintaining it. The pseudopod immediately resumes its normal state, possibly drenching a grappled creature or extinguishing a small fire if the caster wishes. The pseudopod is AC 6 and has 15 hp plus 1 hp per caster level, but it can only be damaged by magical weapons, fire, or cold; all other attacks simply pass through the water.
+Transmute water to dust, part water, lower water, and Otiluke's freezing sphere all destroy watery fist on contact.
+The material component is a vial full of blessed water or a sprig of mistletoe that is thrown onto the body of water from which the fist will be summoned."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Watery Fist</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell conjures a coherent pseudopod of water from any suitable body of water at least 5 feet across and 2 feet deep (for streams) or 10 feet in diameter and 2 feet deep (for ponds or pools). The pseudopod can stretch up to 10 feet plus 1 foot per caster level from its source, so a 3rd-level priest could command watery fist to strike at a creature hovering thirteen feet above a lake or standing on the shore 13 feet from the water. The pseudopod obeys the priest&#039;s mental commands, although the priest must concentrate each round in order to maintain control of the watery member.<br />The pseudopod is incapable of fine manipulation, but it can be used to make bludgeoning or constricting attacks. When used to strike at opponents, it attacks with the caster&#039;s THAC0 and inflicts damage as shown below. The priest may add his magical attack adjustment (from his Wisdom score) to his THAC0, but Strength-based adjustments or special weapon skills don&#039;t help the priest to control watery fist. The pseudopod may be able to make rear or flank attacks if the priest can direct it into the proper position.<br />If used to encircle and constrict, the pseudopod must first make an attack roll as described above, inflicting damage based on the priest&#039;s level. However, in following rounds, the pseudopod automatically strikes its grappled target for constricting damage, +1 point per round of constricting. In other words, in the first round the victim sustains listed damage, in the second round he sustains listed damage +1, in the third he sustains listed damage +2, and so on. The pseudopod holds its target with an effective Strength equal to the priest&#039;s Wisdom score.<br />Watery fist can be released by the priest any time he cares to stop concentrating on maintaining it. The pseudopod immediately resumes its normal state, possibly drenching a grappled creature or extinguishing a small fire if the caster wishes. The pseudopod is AC 6 and has 15 hp plus 1 hp per caster level, but it can only be damaged by magical weapons, fire, or cold; all other attacks simply pass through the water.<br />Transmute water to dust, part water, lower water, and Otiluke&#039;s freezing sphere all destroy watery fist on contact.<br />The material component is a vial full of blessed water or a sprig of mistletoe that is thrown onto the body of water from which the fist will be summoned.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 166</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="559" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Water Breathing",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"6",
+"duration":"1 hr./level",
+"save":"None",
+"damage":"",
+"description":"The recipient of a water breathing spell is able to breathe under water freely for the duration of the spell--i.e., one hour for each experience level of the caster. The priest can divide the base duration between multiple characters. Thus, an 8th-level priest can confer this ability to two characters for four hours, four for two hours, eight for one hour, etc., to a minimum of one half-hour per character.
+The reverse, air breathing, enables water-breathing creatures to survive comfortably in the atmosphere for an equal duration. Note that neither version prevents the recipient creature from breathing in its natural element."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Water Breathing</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The recipient of a water breathing spell is able to breathe under water freely for the duration of the spell--i.e., one hour for each experience level of the caster. The priest can divide the base duration between multiple characters. Thus, an 8th-level priest can confer this ability to two characters for four hours, four for two hours, eight for one hour, etc., to a minimum of one half-hour per character.<br />The reverse, air breathing, enables water-breathing creatures to survive comfortably in the atmosphere for an equal duration. Note that neither version prevents the recipient creature from breathing in its natural element.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 273</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="560" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Water Walk",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"6",
+"duration":"1 turn + 1 turn/level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster is able to empower one or more creatures to tread upon any liquid as if it were firm ground; this includes mud, quicksand, oil, running water, and snow. The recipient's feet do not touch the surface of the liquid, but oval depressions of his appropriate foot size and 2 inches deep are left in the mud or snow.
+The recipient's rate of movement remains normal. If cast under water, the recipient is borne toward the surface.
+For every level of the caster above the minimum required to cast the spell (5th level), he can affect another creature.
+The material components for this spell are a piece of cork and the priest's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Water Walk</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster is able to empower one or more creatures to tread upon any liquid as if it were firm ground; this includes mud, quicksand, oil, running water, and snow. The recipient&#039;s feet do not touch the surface of the liquid, but oval depressions of his appropriate foot size and 2 inches deep are left in the mud or snow.<br />The recipient&#039;s rate of movement remains normal. If cast under water, the recipient is borne toward the surface.<br />For every level of the caster above the minimum required to cast the spell (5th level), he can affect another creature.<br />The material components for this spell are a piece of cork and the priest&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 273</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="574" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Lower Water",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds.",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The lower water spell causes water or similar fluid in the area of effect to sink away to a minimum depth of 1 inch. The depth can be lowered by up to 2 feet for every experience level of the priest. The water is lowered within a square area whose sides are 10 feet long per caster level. Thus, an 8th-level priest affects a volume up to 16 feet x 80 feet x 80 feet, a 9th-level caster affects a volume up to 18 feet x 90 feet x 90 feet, and so on. In extremely large and deep bodies of water, such as deep ocean, the spell creates a whirlpool that sweeps ships and similar craft downward, putting them at risk and rendering them unable to leave by normal movement for the duration of the spell. When cast on water elementals and other water-based creatures, this spell acts as a slow spell: The creature moves at half speed and makes half its usual number of attacks each round.
+The spell has no effect on other creatures.
+Its reverse, raise water, causes water or similar fluids to return to their highest natural level: spring flood, high tide, etc. This can make fords impassable, float grounded ships, and may even sweep away bridges at the DM's option. It negates lower water and vice versa.
+The material components of this spell are the priest's holy (or unholy) symbol and a pinch of dust."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Lower Water</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The lower water spell causes water or similar fluid in the area of effect to sink away to a minimum depth of 1 inch. The depth can be lowered by up to 2 feet for every experience level of the priest. The water is lowered within a square area whose sides are 10 feet long per caster level. Thus, an 8th-level priest affects a volume up to 16 feet x 80 feet x 80 feet, a 9th-level caster affects a volume up to 18 feet x 90 feet x 90 feet, and so on. In extremely large and deep bodies of water, such as deep ocean, the spell creates a whirlpool that sweeps ships and similar craft downward, putting them at risk and rendering them unable to leave by normal movement for the duration of the spell. When cast on water elementals and other water-based creatures, this spell acts as a slow spell: The creature moves at half speed and makes half its usual number of attacks each round.<br />The spell has no effect on other creatures.<br />Its reverse, raise water, causes water or similar fluids to return to their highest natural level: spring flood, high tide, etc. This can make fords impassable, float grounded ships, and may even sweep away bridges at the DM&#039;s option. It negates lower water and vice versa.<br />The material components of this spell are the priest&#039;s holy (or unholy) symbol and a pinch of dust.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 277</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="580" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Reflecting Pool",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yds.",
+"aoe":"Special",
+"castingTime":"2 hrs.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to cause a pool of normal water found in a natural setting to act as a scrying device. The pool can be of no greater diameter than 2 feet per level of the caster. The effect is to create a scrying device similar to a crystal ball. The scrying can extend only to the Ethereal Plane and the Inner Planes (which includes the paraelemental planes, the Demiplane of Shadow, etc.). General notes on scrying, detection by the subject, and penalties for attempting to scry beyond the caster's own plane are given in the DMG, as well as a description of the crystal ball item.
+The following spells can be cast through a reflecting pool, with a 5% per level chance for operating correctly: detect magic, detect snares and pits, and detect poison. Each additional detection attempt requires a round of concentration, regardless of success.
+Infravision, if available, operates normally through the reflecting pool.
+The image is nearly always hazy enough to prevent the reading of script of any type.
+The material component is the oil extracted from such nuts as the hickory and the walnut, refined, and dropped in three measures upon the surface of the pool. (A measure need be no more than a single ounce of oil.) At the DM's option, the casting of this spell may be limited to once per day."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Reflecting Pool</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 hrs.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to cause a pool of normal water found in a natural setting to act as a scrying device. The pool can be of no greater diameter than 2 feet per level of the caster. The effect is to create a scrying device similar to a crystal ball. The scrying can extend only to the Ethereal Plane and the Inner Planes (which includes the paraelemental planes, the Demiplane of Shadow, etc.). General notes on scrying, detection by the subject, and penalties for attempting to scry beyond the caster&#039;s own plane are given in the DMG, as well as a description of the crystal ball item.<br />The following spells can be cast through a reflecting pool, with a 5% per level chance for operating correctly: detect magic, detect snares and pits, and detect poison. Each additional detection attempt requires a round of concentration, regardless of success.<br />Infravision, if available, operates normally through the reflecting pool.<br />The image is nearly always hazy enough to prevent the reading of script of any type.<br />The material component is the oil extracted from such nuts as the hickory and the walnut, refined, and dropped in three measures upon the surface of the pool. (A measure need be no more than a single ounce of oil.) At the DM&#039;s option, the casting of this spell may be limited to once per day.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 278</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="874" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Produce Ice",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"60 yds.",
+"aoe":"Cube 1 ft./level",
+"castingTime":"8",
+"duration":"2 rds./level",
+"save":"Special",
+"damage":"",
+"description":"This spell creates supernatural cold in the area of effect, condensing all atmospheric and standing water into a thick rime of ice. If there is no source of water or even enough humidity to support this spell, then the DM can rule that the spell has no effect. The caster affects a cubic area of 1 foot per level to a side, so a 12th-level caster affects a 12-foot by 12-foot by 12-foot cube (up to a maximum of 25 feet to a side). This can have several effects; first of all, any creature caught in the area of effect when the temperature is lowered suffers 2d4 damage plus 1 point per level of the caster (or 2d4+12, for the 12th-level caster described above), or half that damage with a successful saving throw vs. spell. Any fires in the area are suppressed and may (50% chance) be extinguished.
+Creatures entering the area of effect after the initial creation of ice suffer no additional damage, although the air will be noticeably dry and cold. However, the ice formed by the spell coats all surfaces and may cause creatures to slip and fall. Any creature moving into or out of the affected area must make a saving throw vs. spell or fall, losing their action for the round. The ice lasts at least 2 rounds per caster level, and then begins to melt at whatever rate nature decrees.
+If cast on a body of water, this spell creates an iceberg of the stated dimensions. A swimmer or aquatic creature could be caught in the ice and trapped until the ice melts; most air-breathers will suffocate from this treatment, but a few aquatic creatures (fish, amphibians, etc.) may survive being frozen, at the DM's discretion.
+The material component is a scale from a white dragon."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Produce Ice</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Cube 1 ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates supernatural cold in the area of effect, condensing all atmospheric and standing water into a thick rime of ice. If there is no source of water or even enough humidity to support this spell, then the DM can rule that the spell has no effect. The caster affects a cubic area of 1 foot per level to a side, so a 12th-level caster affects a 12-foot by 12-foot by 12-foot cube (up to a maximum of 25 feet to a side). This can have several effects; first of all, any creature caught in the area of effect when the temperature is lowered suffers 2d4 damage plus 1 point per level of the caster (or 2d4+12, for the 12th-level caster described above), or half that damage with a successful saving throw vs. spell. Any fires in the area are suppressed and may (50% chance) be extinguished.<br />Creatures entering the area of effect after the initial creation of ice suffer no additional damage, although the air will be noticeably dry and cold. However, the ice formed by the spell coats all surfaces and may cause creatures to slip and fall. Any creature moving into or out of the affected area must make a saving throw vs. spell or fall, losing their action for the round. The ice lasts at least 2 rounds per caster level, and then begins to melt at whatever rate nature decrees.<br />If cast on a body of water, this spell creates an iceberg of the stated dimensions. A swimmer or aquatic creature could be caught in the ice and trapped until the ice melts; most air-breathers will suffocate from this treatment, but a few aquatic creatures (fish, amphibians, etc.) may survive being frozen, at the DM&#039;s discretion.<br />The material component is a scale from a white dragon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 175</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="624" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Part Water",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"20 yds./level",
+"aoe":"3 ft./level x 20 yds./level x 30 yds.",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"By employing a part water spell, the priest is able to cause water or similar liquid to move apart, thus forming a trough. The depth and length of the trough created by the spell depends on the level of the priest. A trough 3 feet deep per caster level, by 30 yards wide, by 20 yards long per level is created. Thus at 12th level, the priest would part water 36 feet deep by 30 yards wide by 240 yards long. The trough remains as long as the spell lasts or until the priest who cast it opts to end its effects. Existing currents appear to flow through the parted water, although swimming creatures and physical objects such as boats do not enter the rift without strenuous and deliberate effort. If cast underwater, this spell creates an air cylinder of appropriate length and diameter. If cast directly on a water elemental or other water-based creature, the creature suffers 48 points of damage and must roll a successful saving throw vs. spell or flee in panic for 3d4 rounds.
+The material component of this spell is the priest's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Part Water</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">20 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">3 ft./level x 20 yds./level x 30 yds.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By employing a part water spell, the priest is able to cause water or similar liquid to move apart, thus forming a trough. The depth and length of the trough created by the spell depends on the level of the priest. A trough 3 feet deep per caster level, by 30 yards wide, by 20 yards long per level is created. Thus at 12th level, the priest would part water 36 feet deep by 30 yards wide by 240 yards long. The trough remains as long as the spell lasts or until the priest who cast it opts to end its effects. Existing currents appear to flow through the parted water, although swimming creatures and physical objects such as boats do not enter the rift without strenuous and deliberate effort. If cast underwater, this spell creates an air cylinder of appropriate length and diameter. If cast directly on a water elemental or other water-based creature, the creature suffers 48 points of damage and must roll a successful saving throw vs. spell or flee in panic for 3d4 rounds.<br />The material component of this spell is the priest&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 290</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="627" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Transmute Water to Dust",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"60 yds.",
+"aoe":"1 cu. yd./level",
+"castingTime":"8",
+"duration":"Permanent",
+"save":"Special",
+"damage":"",
+"description":"When this spell is cast, the subject area instantly undergoes a change from liquid to powdery dust. Note that if the water is already muddy, the area of effect is doubled, while if wet mud is present, the area of effect is quadrupled. If water remains in contact with the transmuted dust, the former quickly permeates the latter, turning the dust into silty mud. If there is not a sufficient quantity of water to cause that effect, it simply soaks or dampens the dust accordingly.
+Only the liquid actually in the area of effect at the moment of spellcasting is affected.
+Potions that contain water as a component part are rendered useless. Living creatures are unaffected, except for those native to the elemental plane of Water. Such creatures must roll a successful saving throws vs. death or be slain. However, only one such creature can be affected by any single casting of this spell, regardless of the creature's size or the size of the spell's area of effect.
+The reverse of this spell is simply a very high-powered create water spell that requires a pinch of normal dust as an additional material component.
+For either usage of the spell, other components required are diamond dust of at least 500 gp value, a bit of sea shell, and the caster's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Transmute Water to Dust</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 cu. yd./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the subject area instantly undergoes a change from liquid to powdery dust. Note that if the water is already muddy, the area of effect is doubled, while if wet mud is present, the area of effect is quadrupled. If water remains in contact with the transmuted dust, the former quickly permeates the latter, turning the dust into silty mud. If there is not a sufficient quantity of water to cause that effect, it simply soaks or dampens the dust accordingly.<br />Only the liquid actually in the area of effect at the moment of spellcasting is affected.<br />Potions that contain water as a component part are rendered useless. Living creatures are unaffected, except for those native to the elemental plane of Water. Such creatures must roll a successful saving throws vs. death or be slain. However, only one such creature can be affected by any single casting of this spell, regardless of the creature&#039;s size or the size of the spell&#039;s area of effect.<br />The reverse of this spell is simply a very high-powered create water spell that requires a pinch of normal dust as an additional material component.<br />For either usage of the spell, other components required are diamond dust of at least 500 gp value, a bit of sea shell, and the caster&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 291</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="880" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Conjure Air or Water Elemental",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"80 yds.",
+"aoe":"Special",
+"castingTime":"6 rds.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"Priests of elemental air or elemental water can summon elementals from their respective spheres, just as druids can conjure fire or earth elementals. The summoned elemental is 60% likely to have 12 Hit Dice, 35% likely to have 16 Hit Dice, and 5% likely to have 21 to 24 Hit Dice (20+1d4). Unlike the wizard version of this spell, the caster does not need to concentrate to maintain control of the elemental since the creature regards the caster as a friend and obeys him implicitly. The elemental remains until destroyed, dispelled, sent away by a dismissal or a holy word spell, or the spell duration expires."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Conjure Air or Water Elemental</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Priests of elemental air or elemental water can summon elementals from their respective spheres, just as druids can conjure fire or earth elementals. The summoned elemental is 60% likely to have 12 Hit Dice, 35% likely to have 16 Hit Dice, and 5% likely to have 21 to 24 Hit Dice (20+1d4). Unlike the wizard version of this spell, the caster does not need to concentrate to maintain control of the elemental since the creature regards the caster as a friend and obeys him implicitly. The elemental remains until destroyed, dispelled, sent away by a dismissal or a holy word spell, or the spell duration expires.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 178</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="882" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Tsunami",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"200 yds. + 50 yds./level",
+"aoe":"Wave 2 ft. high and 10 ft. long per level",
+"castingTime":"3 rds.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This mighty spell summons a tsunami, or gigantic wave, from any major body of water. The body of water must be at least 1 mile in width, so in most circumstances the tsunami can only be summoned from the sea, large lakes, or extremely big rivers. The wave is 2 feet high and 10 feet long for each level of experience of the caster, so a 15th-level priest would summon a tsunami 30 feet high and 150 feet wide. The wave can appear anywhere within the spell's range and immediately sweeps forward in the direction specified by the caster. This may take it out of the allowed range or even back at the casting priest. The tsunami moves at a rate of 24 (240 yards per round) and lasts one round at 14th level, two rounds at 18th level, or three rounds at 22nd or higher level.
+Ships caught by the tsunami must make a seaworthiness check (see Table 77: Tsunami Ship Types in the DMG) with a penalty equal to the wave's height in feet. For example, a tsunami created by a 15th-level caster would inflict a -30% penalty to a vessel's seaworthiness check. If the check is failed, the vessel capsizes and sinks in 1d10 rounds, with the possible loss of those aboard. Human or humanoid swimmers caught in the wave must make a saving throw vs. death magic or be drowned in the wave; any creature in the water in the wave's path will be carried along as long as it lasts.
+If the priest sent the wave towards the shore, the tsunami loses 5 feet of height for every 20 yards it travels; a 30-foot wave could wash 120 yards inland before there was nothing left of it. Creatures caught in the area sustain 1d4 points of damage for every 5 feet of height the tsunami currently possesses and are carried along until it ends.
+Air-breathing creatures must make saving throws vs. death magic or be drowned outright by this treatment. Wooden buildings have a chance equal to three times the wave's current height of being destroyed by the tsunami (90% for a 30-foot wave, for example) while stone buildings have a chance equal to the wave's height (or 30% for a 30-foot wave). Topography may influence or channel the wave's advance, so a good-sized hill could stop a tsunami cold, although its seaward face may be denuded of creatures and vegetation by the wave.
+Note that this spell in the hands of a high-level character can blanket an awesome amount of territory and literally destroy or drown anything in its path. The tsunami is so strenuous a spell that the priest is exhausted and helpless for 1d6 hours after summoning it."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Tsunami</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">200 yds. + 50 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Wave 2 ft. high and 10 ft. long per level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This mighty spell summons a tsunami, or gigantic wave, from any major body of water. The body of water must be at least 1 mile in width, so in most circumstances the tsunami can only be summoned from the sea, large lakes, or extremely big rivers. The wave is 2 feet high and 10 feet long for each level of experience of the caster, so a 15th-level priest would summon a tsunami 30 feet high and 150 feet wide. The wave can appear anywhere within the spell&#039;s range and immediately sweeps forward in the direction specified by the caster. This may take it out of the allowed range or even back at the casting priest. The tsunami moves at a rate of 24 (240 yards per round) and lasts one round at 14th level, two rounds at 18th level, or three rounds at 22nd or higher level.<br />Ships caught by the tsunami must make a seaworthiness check (see Table 77: Tsunami Ship Types in the DMG) with a penalty equal to the wave&#039;s height in feet. For example, a tsunami created by a 15th-level caster would inflict a -30% penalty to a vessel&#039;s seaworthiness check. If the check is failed, the vessel capsizes and sinks in 1d10 rounds, with the possible loss of those aboard. Human or humanoid swimmers caught in the wave must make a saving throw vs. death magic or be drowned in the wave; any creature in the water in the wave&#039;s path will be carried along as long as it lasts.<br />If the priest sent the wave towards the shore, the tsunami loses 5 feet of height for every 20 yards it travels; a 30-foot wave could wash 120 yards inland before there was nothing left of it. Creatures caught in the area sustain 1d4 points of damage for every 5 feet of height the tsunami currently possesses and are carried along until it ends.<br />Air-breathing creatures must make saving throws vs. death magic or be drowned outright by this treatment. Wooden buildings have a chance equal to three times the wave&#039;s current height of being destroyed by the tsunami (90% for a 30-foot wave, for example) while stone buildings have a chance equal to the wave&#039;s height (or 30% for a 30-foot wave). Topography may influence or channel the wave&#039;s advance, so a good-sized hill could stop a tsunami cold, although its seaward face may be denuded of creatures and vegetation by the wave.<br />Note that this spell in the hands of a high-level character can blanket an awesome amount of territory and literally destroy or drown anything in its path. The tsunami is so strenuous a spell that the priest is exhausted and helpless for 1d6 hours after summoning it.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 179</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="803" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Elemental Swarm",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"240 yards",
+"aoe":"Special",
+"castingTime":"3 turns",
+"duration":"6 turns",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.
+After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.
+These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.
+They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Elemental Swarm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">240 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.<br />After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.<br />These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.<br />They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="822" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Storm of Vengeance",
+"school":"Invocation/Evocation",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"400 yards",
+"aoe":"120-yard radius circle",
+"castingTime":"1 turn",
+"duration":"1 turn",
+"save":"Special",
+"damage":"",
+"description":"This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.
+In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.
+On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.
+No saving throw is allowed.
+On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).
+On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).
+On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.
+The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Storm of Vengeance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">400 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">120-yard radius circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.<br />In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.<br />On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.<br />No saving throw is allowed.<br />On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).<br />On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).<br />On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.<br />The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 121</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

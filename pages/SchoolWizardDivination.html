@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Comprehend Languages",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Self",
+"aoe":"1 creature / level",
+"castingTime":"5",
+"duration":"5 minutes / level",
+"save":"1/2",
+"damage":"",
+"description":"The caster makes wide gesticulations and forcefully speaks the words to this spell, allowing them to understand any language they are in contact with. To understand spoken words, the caster must touch the creature who is speaking. To understand written words, the caster must touch the writings. This spell does not let the caster speak/read the language, only to understand the language. Translation does not necessarily impart understanding (A cryptically worded letter translated is still cryptic.), nor does it permit another creature to understand the caster. 
+
+Example: A caster could touch a goblin to understand it, but should another nearby goblin also be speaking, the caster could not understand the other goblin. Neither goblin could understand the caster.
+
+A caster may affect themselves and one other creature per level of experience."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Comprehend Languages</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Self&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature / level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 minutes / level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The caster makes wide gesticulations and forcefully speaks the words to this spell, allowing them to understand any language they are in contact with. To understand spoken words, the caster must touch the creature who is speaking. To understand written words, the caster must touch the writings. This spell does not let the caster speak/read the language, only to understand the language. Translation does not necessarily impart understanding (A cryptically worded letter translated is still cryptic.), nor does it permit another creature to understand the caster. <br /><br />Example: A caster could touch a goblin to understand it, but should another nearby goblin also be speaking, the caster could not understand the other goblin. Neither goblin could understand the caster.<br /><br />A caster may affect themselves and one other creature per level of experience.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="34" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Magic",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10 ft. path, x 60 ft. long",
+"castingTime":"1",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"When the detect magic spell is cast, the wizard detects magical radiations in a path 10 feet wide and up to 60 feet long, in the direction he is facing. The intensity of the magic can be determined (dim, faint, moderate, strong, overwhelming), and the wizard has a 10% chance per level to recognize if a certain type of magic (alteration, conjuration, etc.) is present. The caster can turn, scanning a 60-degree arc per round. 
+A stone wall of one foot or more thickness, solid metal of one inch thickness, or a yard or more of solid wood blocks the spell. Magical areas, multiple types of magic, or strong local magical emanations may confuse or conceal weaker radiations. 
+Note that this spell does not reveal the presence of good or evil, or reveal alignment. Other-planar creatures are not necessarily magical."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Magic</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. path, x 60 ft. long&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the detect magic spell is cast, the wizard detects magical radiations in a path 10 feet wide and up to 60 feet long, in the direction he is facing. The intensity of the magic can be determined (dim, faint, moderate, strong, overwhelming), and the wizard has a 10% chance per level to recognize if a certain type of magic (alteration, conjuration, etc.) is present. The caster can turn, scanning a 60-degree arc per round. <br />A stone wall of one foot or more thickness, solid metal of one inch thickness, or a yard or more of solid wood blocks the spell. Magical areas, multiple types of magic, or strong local magical emanations may confuse or conceal weaker radiations. <br />Note that this spell does not reveal the presence of good or evil, or reveal alignment. Other-planar creatures are not necessarily magical.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 172</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="337" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Phase",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10 x 60 ft.",
+"castingTime":"1",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"Creatures or objects that are phased - that is, in the Ethereal plane - can be detected by using this spell. The spell affects a path 60 feet long and 10 feet wide; any phased creatures or objects in this area are revealed as soft, blue-glowing outlines visible to anyone in the vicinity. Creatures or effects detected by this spell include: phase spiders, ghost in their ethereal state, characters or creatures employing oil of etherealness, psionic etherealness or phasing, and all other similar effects. Doorways or portals to extradimensional spaces are also detected, although anything hidden within remains unseen.
+
+Detect phase does not reveal the location of creatures or objects concealed by magical invisibility or illusion. Note that detecting a phased monster doesn't necessarily give the caster the ability to attack it, but creatures such as phase spiders lose any special surprise bonuses they may receive if they are detected by using this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Phase</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 x 60 ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Creatures or objects that are phased - that is, in the Ethereal plane - can be detected by using this spell. The spell affects a path 60 feet long and 10 feet wide; any phased creatures or objects in this area are revealed as soft, blue-glowing outlines visible to anyone in the vicinity. Creatures or effects detected by this spell include: phase spiders, ghost in their ethereal state, characters or creatures employing oil of etherealness, psionic etherealness or phasing, and all other similar effects. Doorways or portals to extradimensional spaces are also detected, although anything hidden within remains unseen.<br /><br />Detect phase does not reveal the location of creatures or objects concealed by magical invisibility or illusion. Note that detecting a phased monster doesn&#039;t necessarily give the caster the ability to attack it, but creatures such as phase spiders lose any special surprise bonuses they may receive if they are detected by using this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 140</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="338" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Secret Passages and Portals",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10 x 10 ft. area/level",
+"castingTime":"1",
+"duration":"1 turn",
+"save":"None",
+"damage":"",
+"description":"This spell enables a wizard to detect secret doors, compartments, caches, and similar devices. Only passages, doors, or openings that have been deliberately constructed so as to escape detection are detected by this spell- a trap door buried beneath crates in a cellar, an illusionary wall, or an amulet left in a cluttered room would not be detected. The wizard affects an area of 10 feet square per level, so a 4th-level wizard could search four sections of wall, floor, or ceiling. Any doorways or openings detected by this spell glow softly for one full turn. It's possible that a wizard might not find a secret compartment in the area of effect if the compartment is behind or under another object that covers it completely. This spell only detects the doorway or opening; the wizard may have to search for a mechanism or catch that opens the door."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Secret Passages and Portals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 x 10 ft. area/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables a wizard to detect secret doors, compartments, caches, and similar devices. Only passages, doors, or openings that have been deliberately constructed so as to escape detection are detected by this spell- a trap door buried beneath crates in a cellar, an illusionary wall, or an amulet left in a cluttered room would not be detected. The wizard affects an area of 10 feet square per level, so a 4th-level wizard could search four sections of wall, floor, or ceiling. Any doorways or openings detected by this spell glow softly for one full turn. It&#039;s possible that a wizard might not find a secret compartment in the area of effect if the compartment is behind or under another object that covers it completely. This spell only detects the doorway or opening; the wizard may have to search for a mechanism or catch that opens the door.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 140</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="35" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Undead",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a bit of earth from a grave",
+"range":"0",
+"aoe":"60 ft.+ 10 ft./level",
+"castingTime":"1 rd.",
+"duration":"3 turns",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to detect all undead creatures out to the limit of the spell. The area of effect extends in a path 10 feet wide and 60 feet long (plus 10 feet longer per level of the wizard), in the direction the caster is facing. Scanning a direction requires one round, and the caster must be motionless.
+
+While the spell indicates direction, it does not give specific location or distance. It detects undead through walls and obstacles but is blocked by 1 foot of solid stone, 1 yard of wood or loose earth, or a thin coating of metal. The spell does not indicate the type of undead detected, only that undead are present.
+
+The material component for this spell is a bit of earth from a grave.
+"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Undead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">60 ft.+ 10 ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >a bit of earth from a grave&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to detect all undead creatures out to the limit of the spell. The area of effect extends in a path 10 feet wide and 60 feet long (plus 10 feet longer per level of the wizard), in the direction the caster is facing. Scanning a direction requires one round, and the caster must be motionless.<br /><br />While the spell indicates direction, it does not give specific location or distance. It detects undead through walls and obstacles but is blocked by 1 foot of solid stone, 1 yard of wood or loose earth, or a thin coating of metal. The spell does not indicate the type of undead detected, only that undead are present.<br /><br />The material component for this spell is a bit of earth from a grave.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 173</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="966" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Georg's Handy Metric",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"A well crafted ruler (1sp)",
+"range":"1000 feet",
+"aoe":"Special",
+"castingTime":"2",
+"duration":"Instantaneous",
+"save":"1/2",
+"damage":"",
+"description":"By holding a ruler at arms length and observing at least one of two points within range, the caster can know, to 1 sig. fig., the distance between the two objects or points. One of the points must be within range and sight, the other must be known, either through visual observation or logical deduction.
+
+Example: A caster stands on the bank of a river on a moonless, foggy night. The other bank of the river is unseen and an unknown distance away. The caster could use this spell to determine the width of the river. The caster could not, however, measure the distance between this bank and \"the closest tree\". The caster could determine the distance from where they're standing to their house though, since the house is a known and fixed point in space. "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Georg's Handy Metric</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1000 feet&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >A well crafted ruler (1sp)&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By holding a ruler at arms length and observing at least one of two points within range, the caster can know, to 1 sig. fig., the distance between the two objects or points. One of the points must be within range and sight, the other must be known, either through visual observation or logical deduction.<br /><br />Example: A caster stands on the bank of a river on a moonless, foggy night. The other bank of the river is unseen and an unknown distance away. The caster could use this spell to determine the width of the river. The caster could not, however, measure the distance between this bank and &quot;the closest tree&quot;. The caster could determine the distance from where they&#039;re standing to their house though, since the house is a known and fixed point in space. </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Hobgoblin</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="386" class="card wild divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hornung's Guess",
+"school":"Divination",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"300 yards",
+"aoe":"Special",
+"castingTime":"2",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"Hornung, one of the leading wizards in the field of wild magic (before his untimely disappearance while experimenting with wildwind),developed this spell to improve the accuracy of his estimates. The spell provides a wizard with an instant and highly accurate-estimate of the number of persons or objects in a group.
+
+The spell's area effect is one group of a general class of objects. All objects of the group must be within spell range and the group as a whole must be visible to the caster. The wizard need not see every individual in the group, merely the general limits of the group's size and area. For example, a wizard on a hill could look down on a forest and estimate the number of trees in all or part of it. He could not get an estimate of the number of goblins within the forest, however, since the group as a whole is concealed from sight.
+
+The estimate generated is accurate to the largest factor of ten .For example, if Hornung's guess were cast on a group of 439 horsemen, the estimate would be 400. If there were 2,670 horsemen, the spell would estimate 3,000. If there were 37 horsemen, the answer would be 40. Clearly, using the spell on small groups(especially those with fewer than 10 members) is pointless.
+
+Hornung's guess can be used to quickly estimate the size of treasure hoards and army units. It is particularly popular with moneylenders and generals."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hornung's Guess</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">300 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Hornung, one of the leading wizards in the field of wild magic (before his untimely disappearance while experimenting with wildwind),developed this spell to improve the accuracy of his estimates. The spell provides a wizard with an instant and highly accurate-estimate of the number of persons or objects in a group.<br /><br />The spell&#039;s area effect is one group of a general class of objects. All objects of the group must be within spell range and the group as a whole must be visible to the caster. The wizard need not see every individual in the group, merely the general limits of the group&#039;s size and area. For example, a wizard on a hill could look down on a forest and estimate the number of trees in all or part of it. He could not get an estimate of the number of goblins within the forest, however, since the group as a whole is concealed from sight.<br /><br />The estimate generated is accurate to the largest factor of ten .For example, if Hornung&#039;s guess were cast on a group of 439 horsemen, the estimate would be 400. If there were 2,670 horsemen, the spell would estimate 3,000. If there were 37 horsemen, the answer would be 40. Clearly, using the spell on small groups(especially those with fewer than 10 members) is pointless.<br /><br />Hornung&#039;s guess can be used to quickly estimate the size of treasure hoards and army units. It is particularly popular with moneylenders and generals.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 17</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="45" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Identify",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pearl (of at least 100gp value) and an owl feather steeped in wine",
+"range":"0",
+"aoe":"1 item/level",
+"castingTime":"Special",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When an identify spell is cast, magical items subsequently touched by the wizard can be identified. The eight hours immediately preceeding the casting of the spell must be spent purifying the items and removing influences that would corrupt and blur their magical auras. If this period is interrupted, it must be begun again. When the spell is cast, each item must be handled in turn by the wizard. Any consequences of this handling fall fully upon the wizard and may end the spell, although the wizard is allowed any applicable saving throw.
+
+The chance of learning a piece of information about an item is equal to 10% per level of the caster, to a maximum of 90%, rolled by the DM. Any roll of 96-00 indicates a false reading (91-95 reveal nothing). Only one function of a multi-function item is discovered per handling (i.e., a 5-th level wizard could attempt to determine the nature of five different items, five different functions of a single item, or any combination of the two). If any attempt at reading fails, the caster cannot learn any more about that item until he advances a level. Note that some items, such as special magical tomes, cannot be identified with this spell.
+
+The item never reveals its exact attack or damage bonuses, although the fact that it has few or many bonuses can be determined. If it has charges, only a general indication of the number of charges remaining is learned: powerful (81% - 100% of the total possible charges), strong (61% - 80%), moderate (41% - 60%), weak (6% - 40%), or faint (five charges or less). The faint result takes precedence, so a fully charges ring of three wishes always appears to be only faintly charged.
+
+After casting the spell and determining what can be learned from it, the wizard loses 8 points of Constitution. He must rest for one hour to recover each point of Constitution. If the 8-point loss drops the spellcaster below a Constitution of 1, he falls unconscious. Consciousness is not regained until full Constitution is restored, which takes 24 hours (one point per three hours for an unconscious character).
+
+The material components of this spell are a pearl (of at least 100gp value) and an owl feather steeped in wine, with the infusion drunk prior to spellcasting. If a luckstone is powdered and added to the infusion, the divination becomes much more potent: exact bonuses or charges can be determined, and the functions of a multi-functional item can be learned from a single reading.
+
+At the DM's option, certain properties of an artifact or relic might also be learned."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Identify</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Special&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 item/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >a pearl (of at least 100gp value) and an owl feather steeped in wine&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When an identify spell is cast, magical items subsequently touched by the wizard can be identified. The eight hours immediately preceeding the casting of the spell must be spent purifying the items and removing influences that would corrupt and blur their magical auras. If this period is interrupted, it must be begun again. When the spell is cast, each item must be handled in turn by the wizard. Any consequences of this handling fall fully upon the wizard and may end the spell, although the wizard is allowed any applicable saving throw.<br /><br />The chance of learning a piece of information about an item is equal to 10% per level of the caster, to a maximum of 90%, rolled by the DM. Any roll of 96-00 indicates a false reading (91-95 reveal nothing). Only one function of a multi-function item is discovered per handling (i.e., a 5-th level wizard could attempt to determine the nature of five different items, five different functions of a single item, or any combination of the two). If any attempt at reading fails, the caster cannot learn any more about that item until he advances a level. Note that some items, such as special magical tomes, cannot be identified with this spell.<br /><br />The item never reveals its exact attack or damage bonuses, although the fact that it has few or many bonuses can be determined. If it has charges, only a general indication of the number of charges remaining is learned: powerful (81% - 100% of the total possible charges), strong (61% - 80%), moderate (41% - 60%), weak (6% - 40%), or faint (five charges or less). The faint result takes precedence, so a fully charges ring of three wishes always appears to be only faintly charged.<br /><br />After casting the spell and determining what can be learned from it, the wizard loses 8 points of Constitution. He must rest for one hour to recover each point of Constitution. If the 8-point loss drops the spellcaster below a Constitution of 1, he falls unconscious. Consciousness is not regained until full Constitution is restored, which takes 24 hours (one point per three hours for an unconscious character).<br /><br />The material components of this spell are a pearl (of at least 100gp value) and an owl feather steeped in wine, with the infusion drunk prior to spellcasting. If a luckstone is powdered and added to the infusion, the divination becomes much more potent: exact bonuses or charges can be determined, and the functions of a multi-functional item can be learned from a single reading.<br /><br />At the DM&#039;s option, certain properties of an artifact or relic might also be learned.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 175</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="964" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Identify Potion",
+"school":"Divination",
+"verbal":"0",
+"somatic":"1",
+"material":"1",
+"materials":"1 powdered pearl with 10gp, 1 owl feather",
+"range":"5'",
+"aoe":"1 potion",
+"castingTime":"10 minutes",
+"duration":"Instantaneous",
+"save":"1/2",
+"damage":"",
+"description":"For this spell to work, the potion to be identified must be in a transparent glass container. The caster must create a clean environment in which to cast the spell. No potions or magic items may be within 30 feet of the caster during the preparation or casting.  Once the area is clear, the powdered pearl is used to create a small circle on a table or other flat and clean surface. Within this circle the potion is placed. The caster uses the owl feather to make circles around the potion, which stir the fluids within. During this time, the feather begins to disintegrate and, if all is done right, falls onto the powdered pearl. When no more feather is left, the pearl/owl powder takes on a colored glow to which the potion reacts. Depending on the reaction of potion and powder, the caster can determine the type of the potion.
+
+The caster learns the type of the potion through this spell, but only for potions they know. Part of learning this spell is also learning different common types of potions. It is possible to learn the type of a potion without knowing what that type of potion does. This mostly comes into play with rare, obscure, or unique potions."}</textarea>
+ -->
+			<div class="components  somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Identify Potion</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5'&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">10 minutes&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 potion&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >1 powdered pearl with 10gp, 1 owl feather&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">For this spell to work, the potion to be identified must be in a transparent glass container. The caster must create a clean environment in which to cast the spell. No potions or magic items may be within 30 feet of the caster during the preparation or casting.  Once the area is clear, the powdered pearl is used to create a small circle on a table or other flat and clean surface. Within this circle the potion is placed. The caster uses the owl feather to make circles around the potion, which stir the fluids within. During this time, the feather begins to disintegrate and, if all is done right, falls onto the powdered pearl. When no more feather is left, the pearl/owl powder takes on a colored glow to which the potion reacts. Depending on the reaction of potion and powder, the caster can determine the type of the potion.<br /><br />The caster learns the type of the potion through this spell, but only for potions they know. Part of learning this spell is also learning different common types of potions. It is possible to learn the type of a potion without knowing what that type of potion does. This mostly comes into play with rare, obscure, or unique potions.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">The powder burns and scars the surface on which it is placed. This radiates moderate magic for 1 month.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="391" class="card wild divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Patternweave",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a small hand lens",
+"range":"10 yards",
+"aoe":"10-foot square",
+"castingTime":"3",
+"duration":"1 round",
+"save":"Special",
+"damage":"",
+"description":"Patternweave allows the caster to make sense of apparent chaos. The caster can see such things as pottery shards reformed into a whole pot, shreds of paper formed into a page, scattered parts as a working machine, or specific trails appearing out of overlapping footprints.
+
+After casting the spell, the mage studies seemingly random elements-broken bits of glass, shreds of paper, intermingled trails, etc. The items to be studied must be tangible-coded flashing lights, garbled speech, or thoughts of any kind cannot be studied.
+The wizard must study the random elements for one round, after which the DM secretly makes a saving throw vs. spell for the wizard. If the saving throw is failed, the spell fails. However, if the saving throw is successful, the caster sees in his mind the pattern these objects form. If the items studied are truly random, no information is gained.
+
+After the caster has visualized the pattern, he can attempt to reassemble the parts into their original form. This requires another saving throw vs. spell to determine whether the mage remembers sufficient details to accomplish the task. The amount of time required and the quality of restoration vary according to the complexity of the pattern. Reassembling a shredded map may be easy; reassembling a broken clock is significantly more difficult; rebuilding a shattered mosaic is extremely difficult. In any case, the wizard can make only a reasonable copy of the item. He can use this spell to restore works of art, but they will be worth only a small percentage of their original value.
+
+The material component is a small hand lens through which the caster studies the objects. The lens is not consumed in the casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Patternweave</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot square&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small hand lens&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Patternweave allows the caster to make sense of apparent chaos. The caster can see such things as pottery shards reformed into a whole pot, shreds of paper formed into a page, scattered parts as a working machine, or specific trails appearing out of overlapping footprints.<br /><br />After casting the spell, the mage studies seemingly random elements-broken bits of glass, shreds of paper, intermingled trails, etc. The items to be studied must be tangible-coded flashing lights, garbled speech, or thoughts of any kind cannot be studied.<br />The wizard must study the random elements for one round, after which the DM secretly makes a saving throw vs. spell for the wizard. If the saving throw is failed, the spell fails. However, if the saving throw is successful, the caster sees in his mind the pattern these objects form. If the items studied are truly random, no information is gained.<br /><br />After the caster has visualized the pattern, he can attempt to reassemble the parts into their original form. This requires another saving throw vs. spell to determine whether the mage remembers sufficient details to accomplish the task. The amount of time required and the quality of restoration vary according to the complexity of the pattern. Reassembling a shredded map may be easy; reassembling a broken clock is significantly more difficult; rebuilding a shattered mosaic is extremely difficult. In any case, the wizard can make only a reasonable copy of the item. He can use this spell to restore works of art, but they will be worth only a small percentage of their original value.<br /><br />The material component is a small hand lens through which the caster studies the objects. The lens is not consumed in the casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 20</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="55" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Read Magic",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a clear crystal or mineral prism",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"By means of a read magic spell, the wizard is able to read magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be totally unintelligible. (The personal books of the wizard, and works already magically read, are intelligible.) This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed scroll. Furthermore, once the spell is cast and the wizard has read the magical inscription, he is thereafter able to read that particular writing without recourse to the use of the read magic spell. The duration of the spell is two rounds per level of experience of the spellcaster; the wizard can read one page or its equivalent per round.
+
+The wizard must have a clear crystal or mineral prism, which is not expended, to cast the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Read Magic</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a clear crystal or mineral prism&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of a read magic spell, the wizard is able to read magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be totally unintelligible. (The personal books of the wizard, and works already magically read, are intelligible.) This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed scroll. Furthermore, once the spell is cast and the wizard has read the magical inscription, he is thereafter able to read that particular writing without recourse to the use of the read magic spell. The duration of the spell is two rounds per level of experience of the spellcaster; the wizard can read one page or its equivalent per round.<br /><br />The wizard must have a clear crystal or mineral prism, which is not expended, to cast the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 178</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="965" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Reveal Doors",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Sand",
+"range":"Self",
+"aoe":"30' radius",
+"castingTime":"2",
+"duration":"1 minute",
+"save":"None",
+"damage":"",
+"description":"When the caster sprinkles sand from their hand and speaks the words, all doors in the area of effect are outlined with a dim light whose color matches that of the sprinkled sand. The light is too dim to be noticed in bright light, and even in dim light can be difficult to distinguish. Furthermore, this light can be blocked by other objects. A trap door underneath some a carpet may be affected by the spell but remain unnoticed because the carpet blocks the light. "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Reveal Doors</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Self&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30' radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 minute&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Sand&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the caster sprinkles sand from their hand and speaks the words, all doors in the area of effect are outlined with a dim light whose color matches that of the sprinkled sand. The light is too dim to be noticed in bright light, and even in dim light can be difficult to distinguish. Furthermore, this light can be blocked by other objects. A trap door underneath some a carpet may be affected by the spell but remain unnoticed because the carpet blocks the light. </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="76" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Evil",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds.",
+"aoe":"10-ft. path",
+"castingTime":"2",
+"duration":"5 rds./level",
+"save":"None",
+"damage":"",
+"description":"This spell discovers emanations of evil (or of good in the case of the reverse spell) from any creature, object, or area. Character alignment is not revealed under most circumstances: characters who are strongly aligned, do not stray from their faith, and who are at least 9th level might radiate good or evil if they are intent upon appropriate actions. Powerful monsters, such as ki-rin, send forth emanations of evil or good, even if polymorphed. Aligned undead radiate evil, for it is this power and negative force that enable them to continue existing. An evilly cursed object or unholy water radiates evil, but a hidden trap or an unintelligent viper does not.
+ 
+The degree of evil (faint, moderate, strong, overwhelming) can be noted. 
+
+Note that priests have a more powerful version of this spell.
+
+The spell has a path of detection ten feet wide in the direction in which the mage is facing. The wizard must concentrate - stop, have quiet, and intently seek to detect the aura - for at least one round to receive a reading."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Evil</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. path&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell discovers emanations of evil (or of good in the case of the reverse spell) from any creature, object, or area. Character alignment is not revealed under most circumstances: characters who are strongly aligned, do not stray from their faith, and who are at least 9th level might radiate good or evil if they are intent upon appropriate actions. Powerful monsters, such as ki-rin, send forth emanations of evil or good, even if polymorphed. Aligned undead radiate evil, for it is this power and negative force that enable them to continue existing. An evilly cursed object or unholy water radiates evil, but a hidden trap or an unintelligent viper does not.<br /> <br />The degree of evil (faint, moderate, strong, overwhelming) can be noted. <br /><br />Note that priests have a more powerful version of this spell.<br /><br />The spell has a path of detection ten feet wide in the direction in which the mage is facing. The wizard must concentrate - stop, have quiet, and intently seek to detect the aura - for at least one round to receive a reading.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 182</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="77" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Invisibility",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of talc and a small sprinkling of powdered silver",
+"range":"10 yds./level",
+"aoe":"10-foot path",
+"castingTime":"2",
+"duration":"5 rds./level",
+"save":"None",
+"damage":"",
+"description":"When the wizard casts a detect invisibility spell, he is able to see clearly any objects or beings that are invisible, as well as any that are astral, ethereal, or out of phase. In addition, it enables the wizard to detect hidden or concealed creatures (e.g., thieves in shadows, halflings in underbrush, and so on). 
+
+It does not reveal the method of concealment or invisibility, except in the case of astral travelers (where the silver cord can be seen). It does not reveal illusions or enable the caster to see through physical objects. Detection is in the wizards line of sight along a ten-foot-wide path to the range limit.
+
+The material components of this spell are a pinch of talc and a small sprinkling of powdered silver."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Invisibility</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot path&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of talc and a small sprinkling of powdered silver&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the wizard casts a detect invisibility spell, he is able to see clearly any objects or beings that are invisible, as well as any that are astral, ethereal, or out of phase. In addition, it enables the wizard to detect hidden or concealed creatures (e.g., thieves in shadows, halflings in underbrush, and so on). <br /><br />It does not reveal the method of concealment or invisibility, except in the case of astral travelers (where the silver cord can be seen). It does not reveal illusions or enable the caster to see through physical objects. Detection is in the wizards line of sight along a ten-foot-wide path to the range limit.<br /><br />The material components of this spell are a pinch of talc and a small sprinkling of powdered silver.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 182</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="78" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"ESP",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a copper piece",
+"range":"5 yds./level, 90 yds. max",
+"aoe":"1 creature per probe",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When an ESP spell is used, the caster is able to detect the surface thoughts of any creatures in range - except for those of undead and creatures without minds (as we know them). 
+
+The ESP is stopped by two or more feet of rock, two or more inches of any metal other than lead, or a thin sheet of lead foil. 
+The wizard employing the spell is able to probe the surface thoughts of one creature per round, getting simple instinctual thoughts from lower order creatures. Probes can continue on the same creature from round to round or can move on to other creatures. 
+The caster can use the spell to help determine if a creature lurks behind a door, for example, but the ESP does not always reveal what sort of creature it is. 
+
+If used as part of a program of interrogation, an intelligent and wary subject receives an initial saving throw. If successful, the creature successfully resists and the spell reveals no additional information. If the saving throw is failed, the caster may learn additional information, according to the DMs ruling. 
+
+The creature's Wisdom adjustment applies, as may additional bonuses up to +4, based on the sensitivity of the information sought.
+The material component of this spell is a copper piece."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">ESP</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yds./level, 90 yds. max&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature per probe&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a copper piece&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When an ESP spell is used, the caster is able to detect the surface thoughts of any creatures in range - except for those of undead and creatures without minds (as we know them). <br /><br />The ESP is stopped by two or more feet of rock, two or more inches of any metal other than lead, or a thin sheet of lead foil. <br />The wizard employing the spell is able to probe the surface thoughts of one creature per round, getting simple instinctual thoughts from lower order creatures. Probes can continue on the same creature from round to round or can move on to other creatures. <br />The caster can use the spell to help determine if a creature lurks behind a door, for example, but the ESP does not always reveal what sort of creature it is. <br /><br />If used as part of a program of interrogation, an intelligent and wary subject receives an initial saving throw. If successful, the creature successfully resists and the spell reveals no additional information. If the saving throw is failed, the caster may learn additional information, according to the DMs ruling. <br /><br />The creature&#039;s Wisdom adjustment applies, as may additional bonuses up to +4, based on the sensitivity of the information sought.<br />The material component of this spell is a copper piece.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 182</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="89" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Know Alignment",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yds.",
+"aoe":"1 creature or object per 2 rds.",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"A know alignment spell enables the wizard to read the aura of a creature or an aligned object (unaligned objects reveal nothing). 
+
+The caster must remain stationary and concentrate on the subject for two full rounds. A creature is allowed a saving throw vs. spell and, if successful, the caster learns nothing about that particular creature from the casting. If the caster concentrates on a creature or object for only one round, he can learn only its alignment with respect to law and chaos. 
+
+Certain magical devices negate the know alignment spell.
+
+The reverse, undetectable alignment, conceals the alignment of an object or creature for 24 hours - even from a know alignment spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Know Alignment</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature or object per 2 rds.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A know alignment spell enables the wizard to read the aura of a creature or an aligned object (unaligned objects reveal nothing). <br /><br />The caster must remain stationary and concentrate on the subject for two full rounds. A creature is allowed a saving throw vs. spell and, if successful, the caster learns nothing about that particular creature from the casting. If the caster concentrates on a creature or object for only one round, he can learn only its alignment with respect to law and chaos. <br /><br />Certain magical devices negate the know alignment spell.<br /><br />The reverse, undetectable alignment, conceals the alignment of an object or creature for 24 hours - even from a know alignment spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 185</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="939" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Landmark",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"A compass",
+"range":"1 mile",
+"aoe":"Current plane",
+"castingTime":"1 minute",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"Casting this spell draws on the knowledge of all creatures within the range, and poses a subconscious question to these creatures: Where is the landmark in question. The answer is then returned to the caster as long as the location is on the current plane of existence, and there is a general consensus from the creatures in the area. Landmarks must be stationary and singular. Should a stationary landmark be moved, perhaps the \"Great Tree of Vitality\" has been cut down and moved, the original location of the landmark as it is known to people in the range of the spell is used. Mobile landmarks, like a King's Crown, automatically fail.
+
+Example: Bobo the diviner casts Locate Landmark, with the landmark in question being the secret burial ground of elves. Bobo is in a human dominated region, where nobody knows the answer to this question, so it returns no answer. Bobo then decides to head to a major port where there are many elves, and casts the spell again. The compass in his hand turns to point North West. Bobo doesn't know how far North West it is, so he travels North West for six days before casting the spell again. This time he is in a small elvan port town that allows human visitors. He casts the spell again, and gets a direction of south west. Bobo knows he's overshot the distance, and can change directions, heading south this time.
+
+A very careful wizard with a compass and map might be able to triangulate the location of a landmark, although this can be tricky since the further the target is from the landmark, the more the compass needle wobbles. "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Landmark</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1 mile&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 minute&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Current plane&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >A compass&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Casting this spell draws on the knowledge of all creatures within the range, and poses a subconscious question to these creatures: Where is the landmark in question. The answer is then returned to the caster as long as the location is on the current plane of existence, and there is a general consensus from the creatures in the area. Landmarks must be stationary and singular. Should a stationary landmark be moved, perhaps the &quot;Great Tree of Vitality&quot; has been cut down and moved, the original location of the landmark as it is known to people in the range of the spell is used. Mobile landmarks, like a King&#039;s Crown, automatically fail.<br /><br />Example: Bobo the diviner casts Locate Landmark, with the landmark in question being the secret burial ground of elves. Bobo is in a human dominated region, where nobody knows the answer to this question, so it returns no answer. Bobo then decides to head to a major port where there are many elves, and casts the spell again. The compass in his hand turns to point North West. Bobo doesn&#039;t know how far North West it is, so he travels North West for six days before casting the spell again. This time he is in a small elvan port town that allows human visitors. He casts the spell again, and gets a direction of south west. Bobo knows he&#039;s overshot the distance, and can change directions, heading south this time.<br /><br />A very careful wizard with a compass and map might be able to triangulate the location of a landmark, although this can be tricky since the further the target is from the landmark, the more the compass needle wobbles. </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="92" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Object",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a forked twig",
+"range":"0",
+"aoe":"20 yards/level",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell aids in locating a known or familiar object. The wizard casts the spell, slowly turns, and senses when he is facing in the direction of the object to be located, provided the object is within range, i.e., 60 yards for 3rd-level wizards, 80 yards for 4th, 100 yards for 5th, etc. 
+
+The spell can locate such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Note that attempting to find a specific item, such as jewelry or a crown, requires an accurate mental image; if the image is not close enough to the actual, the spell does not work. Desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.
+
+Creatures cannot be found by this spell.
+
+The material component is a forked twig.
+
+The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. Creatures cannot be affected by this spell. The material component is a chameleon skin."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Object</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20 yards/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a forked twig&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell aids in locating a known or familiar object. The wizard casts the spell, slowly turns, and senses when he is facing in the direction of the object to be located, provided the object is within range, i.e., 60 yards for 3rd-level wizards, 80 yards for 4th, 100 yards for 5th, etc. <br /><br />The spell can locate such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Note that attempting to find a specific item, such as jewelry or a crown, requires an accurate mental image; if the image is not close enough to the actual, the spell does not work. Desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.<br /><br />Creatures cannot be found by this spell.<br /><br />The material component is a forked twig.<br /><br />The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. Creatures cannot be affected by this spell. The material component is a chameleon skin.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 185</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="397" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Past Life",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"One creature",
+"castingTime":"1 round",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By touching the remains of a dead creature, this spell allows a caster to gain a mental image of the deceased's former appearance. The remains can be of any age and only a tiny fragment is required, such as a bone splinter or a strand of hair.
+
+When cast by a wizard of at least 7th level, he is able to view the final minute of the subject's life from the subject's point of view.
+
+When cast by a wizard of at least 9th level, a personal possession(a ring, favorite walking stick, etc.)may be substituted for bodily remains."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Past Life</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By touching the remains of a dead creature, this spell allows a caster to gain a mental image of the deceased&#039;s former appearance. The remains can be of any age and only a tiny fragment is required, such as a bone splinter or a strand of hair.<br /><br />When cast by a wizard of at least 7th level, he is able to view the final minute of the subject&#039;s life from the subject&#039;s point of view.<br /><br />When cast by a wizard of at least 9th level, a personal possession(a ring, favorite walking stick, etc.)may be substituted for bodily remains.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 22</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="982" class="card divination" data-school="Divination" data-caster="Wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Watchful Ward",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"4 100gp gems, 2 carved faces each worth 100gp",
+"range":"Touch",
+"aoe":"2 Objects",
+"castingTime":"1 hour or 1",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"This spell creates two magically linked wards that allows a wizard on one end to observe what is happening on the other end. The first version of this spell enchants the wards permanently, while the second version permits their use.
+
+Two masks must be created, one that looks outward, and one that looks inward. The outward facing mask has the shape of a person, animal, or monster as seen by another person - a typical face. The masks that look in are shaped as if to be donned, but must also match the outward mask. When the wizard \"wears\" the inward mask and casts the spell they see as if their face was the outward mask. They cannot move the outward mask, but may move the eyes, which might be noticed by someone observing the outward mask.
+
+The second version of the spell has a duration of 1 round / level, during which time the wizard may switch between various masks if they have more than one.
+
+Should a mask be damaged, it may cease to function. This is checked the first time the mask is used after being damaged. A mask 10% damaged has a 10% chance of failing. If this check is passed, it will continue to function until further damaged. Damage to the gems that function as eyes destroyed the magic."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Watchful Ward</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 hour or 1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">2 Objects&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >4 100gp gems, 2 carved faces each worth 100gp&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates two magically linked wards that allows a wizard on one end to observe what is happening on the other end. The first version of this spell enchants the wards permanently, while the second version permits their use.<br /><br />Two masks must be created, one that looks outward, and one that looks inward. The outward facing mask has the shape of a person, animal, or monster as seen by another person - a typical face. The masks that look in are shaped as if to be donned, but must also match the outward mask. When the wizard &quot;wears&quot; the inward mask and casts the spell they see as if their face was the outward mask. They cannot move the outward mask, but may move the eyes, which might be noticed by someone observing the outward mask.<br /><br />The second version of the spell has a duration of 1 round / level, during which time the wizard may switch between various masks if they have more than one.<br /><br />Should a mask be damaged, it may cease to function. This is checked the first time the mask is used after being damaged. A mask 10% damaged has a 10% chance of failing. If this check is passed, it will continue to function until further damaged. Damage to the gems that function as eyes destroyed the magic.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Moderate divination magic around the eyes, minor divination magic around the mask.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="402" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Alamir's Fundamental Breakdown",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a wand cut",
+"range":"Touch",
+"aoe":"One item",
+"castingTime":"1 round",
+"duration":"Special",
+"save":"Special",
+"damage":"4d8/level",
+"description":"By casting this spell, the wizard learns what ingredients and formulas were used to create a chemical mixture or magical item.
+
+The information instantly appears in the caster's mind but may be lost if the wizard cannot comprehend it. The caster must roll an Intelligence check; if successful, the wizard understands the formula and retains it in his memory. If the roll is missed, the caster cannot comprehend what he has learned and the information is immediately forgotten. If the spell is cast a second time on the same substance, the spell automatically fails unless the wizard has advanced to the next experience level.
+
+The caster's level determines the type of information gleaned:
+
+5th Level: The type and quantity of ingredients and the preparation process required to produce a non-magical mixture are learned. For example, the wizard could learn how to produce Greek fire or gunpowder, or could learn the recipe for something simple, like chocolate cake.
+
+9th Level: The wizard may learn the proper ingredients and formula for making a magical liquid (potion, scroll ink, etc.).
+
+14th Level: The caster may learn the formula for creating any type of magical object, excluding unique items and objects of extreme power (artifacts and relics).
+
+In all cases, simply knowing the proper formula does not mean the wizard can successfully create the item or material. The construction of alchemical mixtures and magical items is a time consuming and expensive undertaking.
+
+This spell has detrimental effects on the magical item analyzed. Single-use items (potions, oils, etc.) are automatically destroyed; the spell consumes the item in the process of analyzing it. Reusable magical items must make a saving throw vs. disintegration. If the saving throw is failed, Alamir's fundamental breakdown releases the magic of the item in an explosive blast, rendering it permanently nonmagical. The caster suffers 4d8 points of damage from the explosion.
+
+The material component is a wand cut from a 100-year-old oak tree. The wand is used to touch the item in question, and vanishes in a puff of smoke when the spell is complete."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Alamir's Fundamental Breakdown</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One item&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">4d8/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a wand cut&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, the wizard learns what ingredients and formulas were used to create a chemical mixture or magical item.<br /><br />The information instantly appears in the caster&#039;s mind but may be lost if the wizard cannot comprehend it. The caster must roll an Intelligence check; if successful, the wizard understands the formula and retains it in his memory. If the roll is missed, the caster cannot comprehend what he has learned and the information is immediately forgotten. If the spell is cast a second time on the same substance, the spell automatically fails unless the wizard has advanced to the next experience level.<br /><br />The caster&#039;s level determines the type of information gleaned:<br /><br />5th Level: The type and quantity of ingredients and the preparation process required to produce a non-magical mixture are learned. For example, the wizard could learn how to produce Greek fire or gunpowder, or could learn the recipe for something simple, like chocolate cake.<br /><br />9th Level: The wizard may learn the proper ingredients and formula for making a magical liquid (potion, scroll ink, etc.).<br /><br />14th Level: The caster may learn the formula for creating any type of magical object, excluding unique items and objects of extreme power (artifacts and relics).<br /><br />In all cases, simply knowing the proper formula does not mean the wizard can successfully create the item or material. The construction of alchemical mixtures and magical items is a time consuming and expensive undertaking.<br /><br />This spell has detrimental effects on the magical item analyzed. Single-use items (potions, oils, etc.) are automatically destroyed; the spell consumes the item in the process of analyzing it. Reusable magical items must make a saving throw vs. disintegration. If the saving throw is failed, Alamir&#039;s fundamental breakdown releases the magic of the item in an explosive blast, rendering it permanently nonmagical. The caster suffers 4d8 points of damage from the explosion.<br /><br />The material component is a wand cut from a 100-year-old oak tree. The wand is used to touch the item in question, and vanishes in a puff of smoke when the spell is complete.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 24</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="112" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clairaudience",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a small horn of at least 100gp value",
+"range":"Unlimited",
+"aoe":"",
+"castingTime":"3",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"The clairaudience spell enables the wizard to concentrate upon some locale and hear in his mind any noise within a 60-foot radius of the spell's casting point. Distance is not a factor, but the locale must be known - a place familiar to the spellcaster or an obvious one (such as behind a door, around a corner, in a copse of trees, etc.). 
+
+Only sounds that are normally detectable by the wizard can be heard by use of this spell. Lead sheeting or magical protections prevent the operation of the spell, and the wizard has some indication that the spell is so blocked. 
+Note that it functions only on the wizard's current plane of existence. The spell creates an invisible sensor that can be magically dispelled.
+
+The material component of the spell is a small horn of at least 100gp value."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clairaudience</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Unlimited&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small horn of at least 100gp value&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The clairaudience spell enables the wizard to concentrate upon some locale and hear in his mind any noise within a 60-foot radius of the spell&#039;s casting point. Distance is not a factor, but the locale must be known - a place familiar to the spellcaster or an obvious one (such as behind a door, around a corner, in a copse of trees, etc.). <br /><br />Only sounds that are normally detectable by the wizard can be heard by use of this spell. Lead sheeting or magical protections prevent the operation of the spell, and the wizard has some indication that the spell is so blocked. <br />Note that it functions only on the wizard&#039;s current plane of existence. The spell creates an invisible sensor that can be magically dispelled.<br /><br />The material component of the spell is a small horn of at least 100gp value.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 190</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="113" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clairvoyance",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of powdered pineal gland",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"3",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"Similar to the clairaudience spell, the clairvoyance spell empowers the wizard to see in his mind whatever is within sight range from the spell locale chosen. 
+
+Distance from the wizard is not a factor, but the locale must be known - familiar or obvious. Furthermore, light is a factor, as the spell does not enable the use of infravision or magical enhancements. 
+
+If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell's area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.
+
+Lead sheeting or magical protection foils a clairvoyance spell, and the wizard has some indication that it is so blocked. The spell creates an invisible sensor, similar to that created by a crystal ball spell, that can be dispelled. 
+
+The spell functions only on the wizards current plane of existence.
+
+The material component is a pinch of powdered pineal gland."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clairvoyance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of powdered pineal gland&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Similar to the clairaudience spell, the clairvoyance spell empowers the wizard to see in his mind whatever is within sight range from the spell locale chosen. <br /><br />Distance from the wizard is not a factor, but the locale must be known - familiar or obvious. Furthermore, light is a factor, as the spell does not enable the use of infravision or magical enhancements. <br /><br />If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell&#039;s area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.<br /><br />Lead sheeting or magical protection foils a clairvoyance spell, and the wizard has some indication that it is so blocked. The spell creates an invisible sensor, similar to that created by a crystal ball spell, that can be dispelled. <br /><br />The spell functions only on the wizards current plane of existence.<br /><br />The material component is a pinch of powdered pineal gland.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 190</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="971" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clairvoyance",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Crystal Ball and a cloth mat",
+"range":"Same plane of Existance",
+"aoe":"~300 radius",
+"castingTime":"1 minute",
+"duration":"1 round / level",
+"save":"None",
+"damage":"",
+"description":"A space needs to be cleared, a clean mat put down, and the crystal ball placed on top of it, and a previously seen and well known location held in the mind while the spell is cast. As long as the caster closes their eyes, keeps their hands on the ball, and maintains concentration on the spell, their spirit is projected through the ball to the location in mind. The character sees as if they were standing on the ground in the place. They can look in any direction, but cannot move.
+
+If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell's area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.
+
+Anyone in the room with the caster can see from the caster's perspective by looking into the crystal ball. If the ball is too small, the caster's hands may cover it and prevent others from seeing.
+
+Should someone use a true-seeing, detect magic, or other sort of divinations spells in the area, the spirit of the caster is revealed in their true likeness in the place they're standing. If the spirit form is struck with a magic weapon (Auto hit out of combat, AC10 in combat) or a dispel magic spell, the clairvoyance spell immediately ends. AOE spells have no effect on the spirit, but dragon fire and similar effects can."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clairvoyance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Same plane of Existance&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 minute&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">~300 radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round / level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Crystal Ball and a cloth mat&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A space needs to be cleared, a clean mat put down, and the crystal ball placed on top of it, and a previously seen and well known location held in the mind while the spell is cast. As long as the caster closes their eyes, keeps their hands on the ball, and maintains concentration on the spell, their spirit is projected through the ball to the location in mind. The character sees as if they were standing on the ground in the place. They can look in any direction, but cannot move.<br /><br />If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell&#039;s area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.<br /><br />Anyone in the room with the caster can see from the caster&#039;s perspective by looking into the crystal ball. If the ball is too small, the caster&#039;s hands may cover it and prevent others from seeing.<br /><br />Should someone use a true-seeing, detect magic, or other sort of divinations spells in the area, the spirit of the caster is revealed in their true likeness in the place they&#039;re standing. If the spirit form is struck with a magic weapon (Auto hit out of combat, AC10 in combat) or a dispel magic spell, the clairvoyance spell immediately ends. AOE spells have no effect on the spirit, but dragon fire and similar effects can.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Invisible spirit while the spell is going on.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="951" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"False Detection",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"5 feet",
+"aoe":"Special",
+"castingTime":"3",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"When the caster speaks the rhyming words, and performs the appropriate gesticulations, they create the residual effects of any spell the caster knows of equal or lesser level. This is extended to spells they cannot cast but are closely familiar with. Often times this may be invisible residue, or things only detectable by a detect magic spell.
+
+A true seeing spell, a gem of true seeing, or other similar magic effect will reveal the residue to be illusory."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">False Detection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 feet&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the caster speaks the rhyming words, and performs the appropriate gesticulations, they create the residual effects of any spell the caster knows of equal or lesser level. This is extended to spells they cannot cast but are closely familiar with. Often times this may be invisible residue, or things only detectable by a detect magic spell.<br /><br />A true seeing spell, a gem of true seeing, or other similar magic effect will reveal the residue to be illusory.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="985" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Beacon",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"beacon, map (100gp), lens (50gp)",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell is coupled with the second level Beacon spell to get the location of a specific beacon. The caster will need a beacon to lock onto, a high quality and accurate map of the region the beacon is suspected to be in, and a crystal lens worth 50gp that is consumed in the casting.
+
+If the beacon was created by the caster, no unusual preparations are needed; but if the beacon was created by another caster, then she must first cast Locate Beacon on the beacon itself. Preparation similar to that of Identify must be undertaken, clearing and cleaning a space, having silence and stillness, and ridding the room of any other magical items. After the cleansing is done, the Locate Beacon spell can be cast on the enchanted object to understand its resonance, and prepare the caster to seek it out later. Once prepared in this way, the caster need never prepare or attune to the beacon again. An Identify spell cast on the enchanted object will also work to link to the beacon.
+
+When a beacon is to be located, a map must be produced and the crystal lens placed on it. The Locate Beacon spell is cast on both the map and the lens (just the one casting) and the caster may then look through the lens at the map to find its location. If the map is detailed and accurate enough, and the beacon is somewhere depicted on the map, it will be seen as a pulsing green light about 1\" in diameter. The beacon is within the area of the light, but not exactly at its center. Two casters locating the same beacon on two different maps, one twice the size of the other and covering the same region, will have two different tolerances. A caster using a desk sized map of the world may only be able to pin the beacon down to a single kingdom. A map of that kingdom might reveal the beacon is in or near a specific city. A map of that city might reveal the beacon is in a neighborhood or perhaps a specific building, depending on specific circumstances.
+
+The map must be well made, well informed, accurate, and precise. Maps of this quality are often at least 100gp in value. 
+
+Beacon and Locate Beacon are often used by powerful merchants and nobles to track larges shipments of money. A single coin may be made a beacon, tossed in with the rest, and if the shipment doesn't get to where it was heading, can be tracked down hopefully before too much is spent or distributed."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Beacon</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >beacon, map (100gp), lens (50gp)&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell is coupled with the second level Beacon spell to get the location of a specific beacon. The caster will need a beacon to lock onto, a high quality and accurate map of the region the beacon is suspected to be in, and a crystal lens worth 50gp that is consumed in the casting.<br /><br />If the beacon was created by the caster, no unusual preparations are needed; but if the beacon was created by another caster, then she must first cast Locate Beacon on the beacon itself. Preparation similar to that of Identify must be undertaken, clearing and cleaning a space, having silence and stillness, and ridding the room of any other magical items. After the cleansing is done, the Locate Beacon spell can be cast on the enchanted object to understand its resonance, and prepare the caster to seek it out later. Once prepared in this way, the caster need never prepare or attune to the beacon again. An Identify spell cast on the enchanted object will also work to link to the beacon.<br /><br />When a beacon is to be located, a map must be produced and the crystal lens placed on it. The Locate Beacon spell is cast on both the map and the lens (just the one casting) and the caster may then look through the lens at the map to find its location. If the map is detailed and accurate enough, and the beacon is somewhere depicted on the map, it will be seen as a pulsing green light about 1&quot; in diameter. The beacon is within the area of the light, but not exactly at its center. Two casters locating the same beacon on two different maps, one twice the size of the other and covering the same region, will have two different tolerances. A caster using a desk sized map of the world may only be able to pin the beacon down to a single kingdom. A map of that kingdom might reveal the beacon is in or near a specific city. A map of that city might reveal the beacon is in a neighborhood or perhaps a specific building, depending on specific circumstances.<br /><br />The map must be well made, well informed, accurate, and precise. Maps of this quality are often at least 100gp in value. <br /><br />Beacon and Locate Beacon are often used by powerful merchants and nobles to track larges shipments of money. A single coin may be made a beacon, tossed in with the rest, and if the shipment doesn&#039;t get to where it was heading, can be tracked down hopefully before too much is spent or distributed.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">The lens dust retains magic for 1 day / caster level, and the beacon&#039;s signature changes while it is being located.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="963" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Translate",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Ink",
+"range":"Touch",
+"aoe":"50' radius",
+"castingTime":"Variable",
+"duration":"5 minutes / level",
+"save":"1/2",
+"damage":"",
+"description":"This divination spell allows a number of creatures to understand and be understood by other recipients of this spell. Each creature that is to understand must have their ears touched by the caster, while each of the creatures that is to be understood must have their mouth (or origin of their speech) touched. All subjects of the spell need to be smeared with ink on their forehead (or equivalent) by the caster, and the caster must continue intoning the words to the spell as they move between recipients. During the casting of the spell, none of the recipients that have been marked may leave the AOE, else their ink fades and they are removed from the spell's effects. It is possible to have 2 people who can speak and 10 people who can listen.
+
+When the spell ends, which happens when the duration expires, the caster cancels it, or the caster's light concentration is broken, the ink fades from each of the subjects of the spell.
+
+Example: A diviner wishes to hold an audience with a goblin queen and his party. The goblin queen does not speak common, so the diviner touches the ears of the party members, himself, and the queen, while touching the lips of the queen and himself. All are marked with ink. When the spell takes effect, the goblin will only understand the caster, while the party will understand the goblin. This way the party (caster not included) can speak in common without the goblin understanding, but all can understand the goblin."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Translate</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Variable&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">50' radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 minutes / level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Ink&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This divination spell allows a number of creatures to understand and be understood by other recipients of this spell. Each creature that is to understand must have their ears touched by the caster, while each of the creatures that is to be understood must have their mouth (or origin of their speech) touched. All subjects of the spell need to be smeared with ink on their forehead (or equivalent) by the caster, and the caster must continue intoning the words to the spell as they move between recipients. During the casting of the spell, none of the recipients that have been marked may leave the AOE, else their ink fades and they are removed from the spell&#039;s effects. It is possible to have 2 people who can speak and 10 people who can listen.<br /><br />When the spell ends, which happens when the duration expires, the caster cancels it, or the caster&#039;s light concentration is broken, the ink fades from each of the subjects of the spell.<br /><br />Example: A diviner wishes to hold an audience with a goblin queen and his party. The goblin queen does not speak common, so the diviner touches the ears of the party members, himself, and the queen, while touching the lips of the queen and himself. All are marked with ink. When the spell takes effect, the goblin will only understand the caster, while the party will understand the goblin. This way the party (caster not included) can speak in common without the goblin understanding, but all can understand the goblin.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Ink mark is visible and radiates light magic for 1 day.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="414" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Wizard Sight",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"3",
+"duration":"1 round/level",
+"save":"None",
+"damage":"",
+"description":"Upon completion of this spell, the caster's eyes glow blue and he is able to see the magical auras of spellcasters and enchanted objects. Only the auras of those things normally visible to the caster are seen; this spell does not grant the wizard the ability to see invisible objects, nor does it give him X-ray vision. This spell does not reveal the presence of good or evil or reveal alignment.
+
+While wizard sight is in effect, a wizard is able to see whether someone is a spellcaster and whether that person is a priest or a wizard (and what type of specialist, if any). He can sense if a nonspellcaster has the potential to learn and cast wizard spells (e.g., whether a fighter will someday gain the ability to cast a spell).
+
+Although a spellcaster's level cannot be discerned, the wizard can see the intensity of a spellcaster's aura and guess at the individual's magical power (dim, faint, moderate, strong, overwhelming). This can be extremely ambiguous even when a wizard has some method of comparison; the DM might announce that a subject's intensity is roughly equivalent to that of a companion, or he might announce that a subject's aura is the strongest the wizard has ever encountered.
+
+An object's magical abilities cannot be discerned. The fact that it is magical and the type of magic (abjuration, alteration, etc.) are obvious. The wizard can see the intensity of an item's magical aura and guess at its power, but cannot tell whether a magical item is cursed."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Wizard Sight</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Upon completion of this spell, the caster&#039;s eyes glow blue and he is able to see the magical auras of spellcasters and enchanted objects. Only the auras of those things normally visible to the caster are seen; this spell does not grant the wizard the ability to see invisible objects, nor does it give him X-ray vision. This spell does not reveal the presence of good or evil or reveal alignment.<br /><br />While wizard sight is in effect, a wizard is able to see whether someone is a spellcaster and whether that person is a priest or a wizard (and what type of specialist, if any). He can sense if a nonspellcaster has the potential to learn and cast wizard spells (e.g., whether a fighter will someday gain the ability to cast a spell).<br /><br />Although a spellcaster&#039;s level cannot be discerned, the wizard can see the intensity of a spellcaster&#039;s aura and guess at the individual&#039;s magical power (dim, faint, moderate, strong, overwhelming). This can be extremely ambiguous even when a wizard has some method of comparison; the DM might announce that a subject&#039;s intensity is roughly equivalent to that of a companion, or he might announce that a subject&#039;s aura is the strongest the wizard has ever encountered.<br /><br />An object&#039;s magical abilities cannot be discerned. The fact that it is magical and the type of magic (abjuration, alteration, etc.) are obvious. The wizard can see the intensity of an item&#039;s magical aura and guess at its power, but cannot tell whether a magical item is cursed.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 28</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="151" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Scrying",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a small piece of mirror and a miniature brass hearing trumpet",
+"range":"0",
+"aoe":"120-ft. radius",
+"castingTime":"3",
+"duration":"1d6 turns+ 1 turn/level",
+"save":"Special",
+"damage":"",
+"description":"By means of this spell, the wizard immediately becomes aware of any attempt to observe him by means of clairvoyance, clairaudience, or magic mirror. This also reveals the use of crystal balls or other magical scrying devices, provided the attempt is within the area of effect of the spell. 
+
+Since the spell is centered on the spellcaster, it moves with him, enabling him to \"sweep\" areas for the duration of the spell.
+When a scrying attempt is detected, the scryer must immediately roll a saving throw. If this is failed, the identity and general location of the scryer immediately become known to the wizard who cast this spell. The general location is a direction and significant landmark close to the scryer. Thus, the caster might learn, \"The wizard Sniggel spies on us from east, under the stairs\", or, \"You are watched by Asquil in the city of Samarquol.\"
+
+The material components for this spell are a small piece of mirror and a miniature brass hearing trumpet."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Scrying</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">120-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d6 turns+ 1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small piece of mirror and a miniature brass hearing trumpet&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the wizard immediately becomes aware of any attempt to observe him by means of clairvoyance, clairaudience, or magic mirror. This also reveals the use of crystal balls or other magical scrying devices, provided the attempt is within the area of effect of the spell. <br /><br />Since the spell is centered on the spellcaster, it moves with him, enabling him to &quot;sweep&quot; areas for the duration of the spell.<br />When a scrying attempt is detected, the scryer must immediately roll a saving throw. If this is failed, the identity and general location of the scryer immediately become known to the wizard who cast this spell. The general location is a direction and significant landmark close to the scryer. Thus, the caster might learn, &quot;The wizard Sniggel spies on us from east, under the stairs&quot;, or, &quot;You are watched by Asquil in the city of Samarquol.&quot;<br /><br />The material components for this spell are a small piece of mirror and a miniature brass hearing trumpet.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 199</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="419" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Creature",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a bit of a blood hounds fur",
+"range":"50 yards/level",
+"aoe":"One creature",
+"castingTime":"5",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"This spell is similar to the 2nd-level locate object spell. Instead of finding an inanimate object, however, it allows the wizard to find a creature. The wizard casts the spell, slowly turns, and is able to sense the direction of the person or creature, provided the subject is within range. The wizard learns how far away the creature is and in what direction it is moving (if at all).
+
+This spell can locate a general species of creature (a horse or umber hulk, for instance) or can be used to find a specific individual. The wizard must have physically seen the individual or the type of creature at least once from a distance of no more than 10 yards.
+
+Unlike locate object, this spell is not blocked by lead. It is blocked, however, by running water (such as a river or stream). Objects cannot be found through use of this spell.
+
+The material component is a bit of a bloodhounds fur."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Creature</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">50 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a bit of a blood hounds fur&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell is similar to the 2nd-level locate object spell. Instead of finding an inanimate object, however, it allows the wizard to find a creature. The wizard casts the spell, slowly turns, and is able to sense the direction of the person or creature, provided the subject is within range. The wizard learns how far away the creature is and in what direction it is moving (if at all).<br /><br />This spell can locate a general species of creature (a horse or umber hulk, for instance) or can be used to find a specific individual. The wizard must have physically seen the individual or the type of creature at least once from a distance of no more than 10 yards.<br /><br />Unlike locate object, this spell is not blocked by lead. It is blocked, however, by running water (such as a river or stream). Objects cannot be found through use of this spell.<br /><br />The material component is a bit of a bloodhounds fur.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 29</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="169" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Magic Mirror",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"the eye of a hawk, an eagle, or even a roc, and nitric acid, copper, and zinc",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1 hr.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the wizard changes a normal mirror into a scrying device similar to a crystal ball. The details of the use of such a scrying device are found in the DMG under the description for the crystal ball.
+
+The mirror used must be of finely wrought and highly polished silver of a minimum cost not less than 1,000gp. This mirror is not harmed by casting the spell, but the other material components - the eye of a hawk, an eagle, or even a roc, and nitric acid, copper, and zinc - are used up.
+
+The following spells can be cast through a magic mirror: comprehend languages, read magic, tongues, and infravision. The following spells have a 5% chance per level of the caster of operating correctly: detect magic, detect good or evil, and message. The base chances for the subject to detect any crystal ball-like spell is listed in the crystal ball entry in the DMG (see the \"Miscellaneous Magic\" section)."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Magic Mirror</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 hr.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >the eye of a hawk, an eagle, or even a roc, and nitric acid, copper, and zinc&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the wizard changes a normal mirror into a scrying device similar to a crystal ball. The details of the use of such a scrying device are found in the DMG under the description for the crystal ball.<br /><br />The mirror used must be of finely wrought and highly polished silver of a minimum cost not less than 1,000gp. This mirror is not harmed by casting the spell, but the other material components - the eye of a hawk, an eagle, or even a roc, and nitric acid, copper, and zinc - are used up.<br /><br />The following spells can be cast through a magic mirror: comprehend languages, read magic, tongues, and infravision. The following spells have a 5% chance per level of the caster of operating correctly: detect magic, detect good or evil, and message. The base chances for the subject to detect any crystal ball-like spell is listed in the crystal ball entry in the DMG (see the &quot;Miscellaneous Magic&quot; section).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 203</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="960" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Project Self",
+"school":"Divination",
+"verbal":"0",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Visual",
+"aoe":"",
+"castingTime":"1",
+"duration":"Concentration",
+"save":"1/2",
+"damage":"",
+"description":"With a closing of their eyes and a snap of their fingers, the caster projects an incorporeal image of themselves somewhere they can see. This projection can see, speak, and hear on behalf of the caster who must keep their eyes closed for the duration of the spell. Whatever the caster says or does, the projection says or does, the sole exception being the eyes of the projection are open despite the caster's eyes being closed. The projection has AC 10 and 0 hp; it can be dispelled by being disrupted with any physical interaction (such as waving a hand through the projection).
+
+This spell works with any form of vision, including spells such as Clairvoyance, allowing the caster to Clairvoyance into an area, and then project themselves there.
+
+A lining of silver or lead around a room blocks the spell from being cast into the area, and blocks sight to the area from the projection."}</textarea>
+ -->
+			<div class="components  somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Project Self</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Visual&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Concentration&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With a closing of their eyes and a snap of their fingers, the caster projects an incorporeal image of themselves somewhere they can see. This projection can see, speak, and hear on behalf of the caster who must keep their eyes closed for the duration of the spell. Whatever the caster says or does, the projection says or does, the sole exception being the eyes of the projection are open despite the caster&#039;s eyes being closed. The projection has AC 10 and 0 hp; it can be dispelled by being disrupted with any physical interaction (such as waving a hand through the projection).<br /><br />This spell works with any form of vision, including spells such as Clairvoyance, allowing the caster to Clairvoyance into an area, and then project themselves there.<br /><br />A lining of silver or lead around a room blocks the spell from being cast into the area, and blocks sight to the area from the projection.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">The caster&#039;s shadow radiates moderate magic and has details in the image of the caster.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="201" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Contact Other Plane",
+"school":"Divination",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the wizard sends his mind to another plane of existence in order to receive advice and information from powers there. As these powers resent such contact, only brief answers are given. (The DM answers all questions with \"yes,\" \"no,\" \"maybe,\" \"never,\" \"irrelevant,\" etc.) Any questions asked are answered by the power during the spell's duration. The character can contact an elemental plane or some plane farther removed. For every two levels of experience of the wizard, one question may be asked. Contact with minds far removed from the plane of the wizard increases the probability of the spellcaster going insane or dying, but the chance of the power knowing the answer, as well as the probability of the being telling the correct answer, are likewise increased by moving to distant planes. Once the Outer Planes are reached, the Intelligence of the power contacted determines the effects.
+
+The accompanying random table is subject to DM changes, development of extraplanar NPC beings, and so on.
+
+If insanity occurs, it strikes as soon as the first question is asked. This condition lasts for one week for each removal of the plane contacted (see the DMG or the Planescape Campaign Setting boxed set), to a maximum of 10 weeks. There is a 1% chance per plane that the wizard dies before recovering, unless a remove curse spell is cast upon him. A surviving wizard can recall the answer to the question.
+
+On rare occasions, this divination may be blocked by the action of certain lesser or greater powers.
+
+Plane               Insanity *  Knowledge  Veracity **
+Elemental Plane     20%         55% (90%)  62% (75%)
+Inner Plane         25%         60%        65%
+Astral Plane        30%         65%        67%
+Outer Plane, Int 19 35%         70%        70%
+Outer Plane, Int 20 40%         75%        73%
+Outer Plane, Int 21 45%         80%        75%
+Outer Plane, Int 22 50%         85%        78%
+Outer Plane, Int 23 55%         90%        81%
+Outer Plane, Int 24 60%         95%        85%
+Outer Plane, Int 25 65%         98%        90%
+
+* For every point of Intelligence over 15, the wizard reduces the chance of insanity by 5%.
+** If the being does not know an answer, and the chance of veracity is not made, the being will emphatically give an incorrect answer. If the chance of veracity is made, the being will answer “unknown.”
+
+Percentages in parentheses are for questions that pertain to the appropriate elemental plane.
+
+Optional Rule
+The DM may allow a specific Outer Plane to be contacted (see the Planescape Campaign Setting boxed set). In this case, the difference in alignment between the caster and the plane contacted alters the maximum Intelligence that can be contacted--each difference in moral or ethical alignment lowers the maximum Intelligence that can be contacted by 1. For example, an 18th-level lawful good caster could contact Mount Celestia (a lawful good plane) on the \"Intelligence 20\" line, or Elysium (a neutral good plane) on the \"Intelligence 19\" line."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Contact Other Plane</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the wizard sends his mind to another plane of existence in order to receive advice and information from powers there. As these powers resent such contact, only brief answers are given. (The DM answers all questions with &quot;yes,&quot; &quot;no,&quot; &quot;maybe,&quot; &quot;never,&quot; &quot;irrelevant,&quot; etc.) Any questions asked are answered by the power during the spell&#039;s duration. The character can contact an elemental plane or some plane farther removed. For every two levels of experience of the wizard, one question may be asked. Contact with minds far removed from the plane of the wizard increases the probability of the spellcaster going insane or dying, but the chance of the power knowing the answer, as well as the probability of the being telling the correct answer, are likewise increased by moving to distant planes. Once the Outer Planes are reached, the Intelligence of the power contacted determines the effects.<br /><br />The accompanying random table is subject to DM changes, development of extraplanar NPC beings, and so on.<br /><br />If insanity occurs, it strikes as soon as the first question is asked. This condition lasts for one week for each removal of the plane contacted (see the DMG or the Planescape Campaign Setting boxed set), to a maximum of 10 weeks. There is a 1% chance per plane that the wizard dies before recovering, unless a remove curse spell is cast upon him. A surviving wizard can recall the answer to the question.<br /><br />On rare occasions, this divination may be blocked by the action of certain lesser or greater powers.<br /><br />Plane               Insanity *  Knowledge  Veracity **<br />Elemental Plane     20%         55% (90%)  62% (75%)<br />Inner Plane         25%         60%        65%<br />Astral Plane        30%         65%        67%<br />Outer Plane, Int 19 35%         70%        70%<br />Outer Plane, Int 20 40%         75%        73%<br />Outer Plane, Int 21 45%         80%        75%<br />Outer Plane, Int 22 50%         85%        78%<br />Outer Plane, Int 23 55%         90%        81%<br />Outer Plane, Int 24 60%         95%        85%<br />Outer Plane, Int 25 65%         98%        90%<br /><br />* For every point of Intelligence over 15, the wizard reduces the chance of insanity by 5%.<br />** If the being does not know an answer, and the chance of veracity is not made, the being will emphatically give an incorrect answer. If the chance of veracity is made, the being will answer &ldquo;unknown.&rdquo;<br /><br />Percentages in parentheses are for questions that pertain to the appropriate elemental plane.<br /><br />Optional Rule<br />The DM may allow a specific Outer Plane to be contacted (see the Planescape Campaign Setting boxed set). In this case, the difference in alignment between the caster and the plane contacted alters the maximum Intelligence that can be contacted--each difference in moral or ethical alignment lowers the maximum Intelligence that can be contacted by 1. For example, an 18th-level lawful good caster could contact Mount Celestia (a lawful good plane) on the &quot;Intelligence 20&quot; line, or Elysium (a neutral good plane) on the &quot;Intelligence 19&quot; line.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 212</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="209" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"False Vision",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"the ground dust of an emerald",
+"range":"0",
+"aoe":"30-ft. radius",
+"castingTime":"5",
+"duration":"1d4 rds. + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the wizard is able to confound any attempt to scry (by means of either a spell or a magical device) any point within the area of effect of the spell. To use the spell, he must be aware of the scrying attempt, although knowledge of the scryer or the scryer's location is not necessary. Upon casting the spell, the caster and all he desires within the radius of the spell become undetectable to the scrying. Furthermore, the caster is able to send whatever message he desires, including vision and sound, according to the medium of the scrying method. To do this, the caster must concentrate on the message he is sending. Once concentration is broken, no further images can be sent, although the caster remains undetectable for the duration of the spell.
+
+The material component for this spell is the ground dust of an emerald worth at least 500 gp, which is sprinkled into the air when the spell is cast."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">False Vision</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d4 rds. + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >the ground dust of an emerald&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the wizard is able to confound any attempt to scry (by means of either a spell or a magical device) any point within the area of effect of the spell. To use the spell, he must be aware of the scrying attempt, although knowledge of the scryer or the scryer&#039;s location is not necessary. Upon casting the spell, the caster and all he desires within the radius of the spell become undetectable to the scrying. Furthermore, the caster is able to send whatever message he desires, including vision and sound, according to the medium of the scrying method. To do this, the caster must concentrate on the message he is sending. Once concentration is broken, no further images can be sent, although the caster remains undetectable for the duration of the spell.<br /><br />The material component for this spell is the ground dust of an emerald worth at least 500 gp, which is sprinkled into the air when the spell is cast.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 214</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="429" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Khazid's Procurement",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"exquisite silver mirror of no less than 10,000 gp value and a black opal worth at least 1,000 gp",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 round/level",
+"save":"None",
+"damage":"",
+"description":"This spell allows the caster to more easily access rare or dangerous spell components. The wizard casts this spell upon a silver mirror while concentrating on a mental image of the material he desires. The base chance of success is 50%, modified by the following factors:
+
++1% per level of the caster
++10% if the caster has seen the same type of substance or object before; this bonus is not cumulative with the following bonus
++20% if the caster has a sample of the material or the same type of object in his possession; this bonus is not cumulative with the bonus above
++30% if the wizard knows the location of the desired object
+-50% if the caster has never seen the same type of material or item before
+
+If the percentile roll indicates failure, the caster is unable to locate the desired ingredient and the spell ends. If the roll indicates success, the wizard has located the object or substance and the mirror becomes a magical gate through which the caster can see the target. The size of the gate is determined by the size of the mirror, to a maximum size of 3 feet by 2 feet.
+
+The gate always appears within arm's length of the target, allowing the wizard to reach through the mirror, grasp the object of his desire, and draw it back through the gate. The wizard must risk his own safety--the gate does not allow the use of probes, long-handled ladles, tongs, or other equipment to gather the material. The caster cannot move completely through the gate.
+
+The gate vanishes when the spell's duration expires or when the target or the wizard moves more than 10' away from it.
+
+The gate is visible from both sides, and other creatures can reach through the gate. Breath weapons, gaze attacks, missiles, spells, and similar attacks cannot be cast through the gate. Because creatures can pass their limbs through the gate, physical attacks and touch spells can be used.
+
+The only limit to the range of this spell is that the caster and the target must be on the same plane of existence. Elemental forces (not creatures) will not pass through the gate. Thus, the wizard does not run the risk of flooding his laboratory by opening a gate beneath the sea, for example. However, the spell does not provide any sort of protection against a hostile environment.
+
+The material components are an exquisite silver mirror of no less than 10,000 gp value and a black opal worth at least 1,000 gp which must be powdered and sprinkled on the mirror. The mirror is not lost after casting and may be used again, but the powdered opal is consumed in the casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Khazid's Procurement</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >exquisite silver mirror of no less than 10,000 gp value and a black opal worth at least 1,000 gp&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows the caster to more easily access rare or dangerous spell components. The wizard casts this spell upon a silver mirror while concentrating on a mental image of the material he desires. The base chance of success is 50%, modified by the following factors:<br /><br />+1% per level of the caster<br />+10% if the caster has seen the same type of substance or object before; this bonus is not cumulative with the following bonus<br />+20% if the caster has a sample of the material or the same type of object in his possession; this bonus is not cumulative with the bonus above<br />+30% if the wizard knows the location of the desired object<br />-50% if the caster has never seen the same type of material or item before<br /><br />If the percentile roll indicates failure, the caster is unable to locate the desired ingredient and the spell ends. If the roll indicates success, the wizard has located the object or substance and the mirror becomes a magical gate through which the caster can see the target. The size of the gate is determined by the size of the mirror, to a maximum size of 3 feet by 2 feet.<br /><br />The gate always appears within arm&#039;s length of the target, allowing the wizard to reach through the mirror, grasp the object of his desire, and draw it back through the gate. The wizard must risk his own safety--the gate does not allow the use of probes, long-handled ladles, tongs, or other equipment to gather the material. The caster cannot move completely through the gate.<br /><br />The gate vanishes when the spell&#039;s duration expires or when the target or the wizard moves more than 10&#039; away from it.<br /><br />The gate is visible from both sides, and other creatures can reach through the gate. Breath weapons, gaze attacks, missiles, spells, and similar attacks cannot be cast through the gate. Because creatures can pass their limbs through the gate, physical attacks and touch spells can be used.<br /><br />The only limit to the range of this spell is that the caster and the target must be on the same plane of existence. Elemental forces (not creatures) will not pass through the gate. Thus, the wizard does not run the risk of flooding his laboratory by opening a gate beneath the sea, for example. However, the spell does not provide any sort of protection against a hostile environment.<br /><br />The material components are an exquisite silver mirror of no less than 10,000 gp value and a black opal worth at least 1,000 gp which must be powdered and sprinkled on the mirror. The mirror is not lost after casting and may be used again, but the powdered opal is consumed in the casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 34</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="366" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Prying Eyes",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a handful of crystal marbles",
+"range":"1 mile",
+"aoe":"Creates 1d4+1 eyes/level",
+"castingTime":"1 turn",
+"duration":"1 hr./level",
+"save":"None",
+"damage":"",
+"description":"This spell conjures a small horde of semi-tangible magical orbs or eyes that can be used to reconnoiter an area at the wizard's command. Each of the eyes is about the size of a small apple and can see 120 feet(normal vision only) in all  direction. In order to report their findings, the eyes must return to the caster's hand to replay in the caster's mind everything they have seen during their existence. The eyes are subject to illusions, darkness, fog, and any other factors that would affect the wizard's ability to receive visual information about his surroundings. The eyes only see as a normal human would-abilities and spell effects including infravision do not alter the eyes' vision. It only takes the eye one round to replay one hour of recorded images.
+
+The spell conjures 1d4 eyes, plus 1 eye per caster level. The eyes exist for up to 1 hour per caster level, or until they return to the wizard; after relaying its findings, an eye disappears. Each eye is AC 16, flies by levitation at a rate of 12,and has only 1 hit point - a single hit from any weapon or damaging spell destroys it. A successful dispel magic destroys all eyes caught in the area of effect. While the individual eyes are quite fragile, they're small and difficult to spot, especially in conditions of poor visibility such as darkness, fog, or rain. Of course, if the eye is being sent into darkness, then it's very possible that it could hit a wall or other similar obstacle and destroy itself.
+
+When the wizard creates the eyes, he can specify any set of instruction or orders that he wishes, up to 25 words. Any knowledge the wizard possesses is assumed to be know by the eyes as well, so if the wizard knows what a typical Jakallian merchant looks like, the eyes do as well. Sample commands might be, \"Surround me at a range of 400 yards and return if you spot any dangerous creatures,\" or \"Spread out and search the town for Arweth; follow him for three turns, staying out of sight, and then return.\" Note that in the first command, the eye only returns if it spots a creature that the wizard would regard as dangerous; a seemingly innocuous peasant that is actually a shapechanged dragon wouldn't trigger the eye's return. In any event, if an eye is ever more than one mile distant from the wizard, it instantly ceases to exist. However, the wizard's link with the eye is such that he won't know if eye was destroyed or if just wandered out of range.  
+
+Some command words can be used to abbreviate the direction. For example, \"surround me\" directs the eyes to form an equally-spaced ring at whatever range is indicated, and then move with the wizard. As eyes return or are destroyed, the rest automatically space themselves to compensate. \"Spread out\" directs the eyes to move away from the wizard in all directions. Other commands that might be useful include having them form a line in a certain manner, making them move at random within a certain range, or have them follow a certain type of creature. The DM is the final judge of the suitability of the wizard's directions.
+
+The material component is a handful of crystal marbles."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Prying Eyes</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1 mile&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creates 1d4+1 eyes/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a handful of crystal marbles&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell conjures a small horde of semi-tangible magical orbs or eyes that can be used to reconnoiter an area at the wizard&#039;s command. Each of the eyes is about the size of a small apple and can see 120 feet(normal vision only) in all  direction. In order to report their findings, the eyes must return to the caster&#039;s hand to replay in the caster&#039;s mind everything they have seen during their existence. The eyes are subject to illusions, darkness, fog, and any other factors that would affect the wizard&#039;s ability to receive visual information about his surroundings. The eyes only see as a normal human would-abilities and spell effects including infravision do not alter the eyes&#039; vision. It only takes the eye one round to replay one hour of recorded images.<br /><br />The spell conjures 1d4 eyes, plus 1 eye per caster level. The eyes exist for up to 1 hour per caster level, or until they return to the wizard; after relaying its findings, an eye disappears. Each eye is AC 16, flies by levitation at a rate of 12,and has only 1 hit point - a single hit from any weapon or damaging spell destroys it. A successful dispel magic destroys all eyes caught in the area of effect. While the individual eyes are quite fragile, they&#039;re small and difficult to spot, especially in conditions of poor visibility such as darkness, fog, or rain. Of course, if the eye is being sent into darkness, then it&#039;s very possible that it could hit a wall or other similar obstacle and destroy itself.<br /><br />When the wizard creates the eyes, he can specify any set of instruction or orders that he wishes, up to 25 words. Any knowledge the wizard possesses is assumed to be know by the eyes as well, so if the wizard knows what a typical Jakallian merchant looks like, the eyes do as well. Sample commands might be, &quot;Surround me at a range of 400 yards and return if you spot any dangerous creatures,&quot; or &quot;Spread out and search the town for Arweth; follow him for three turns, staying out of sight, and then return.&quot; Note that in the first command, the eye only returns if it spots a creature that the wizard would regard as dangerous; a seemingly innocuous peasant that is actually a shapechanged dragon wouldn&#039;t trigger the eye&#039;s return. In any event, if an eye is ever more than one mile distant from the wizard, it instantly ceases to exist. However, the wizard&#039;s link with the eye is such that he won&#039;t know if eye was destroyed or if just wandered out of range.  <br /><br />Some command words can be used to abbreviate the direction. For example, &quot;surround me&quot; directs the eyes to form an equally-spaced ring at whatever range is indicated, and then move with the wizard. As eyes return or are destroyed, the rest automatically space themselves to compensate. &quot;Spread out&quot; directs the eyes to move away from the wizard in all directions. Other commands that might be useful include having them form a line in a certain manner, making them move at random within a certain range, or have them follow a certain type of creature. The DM is the final judge of the suitability of the wizard&#039;s directions.<br /><br />The material component is a handful of crystal marbles.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 149</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="952" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Greater False Detection",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"5 feet",
+"aoe":"Special",
+"castingTime":"3",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell functions identically to the 3rd level False Detection spell, except that it can create residue of any spell 6th level or lower."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Greater False Detection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 feet&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell functions identically to the 3rd level False Detection spell, except that it can create residue of any spell 6th level or lower.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="250" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Legend Lore",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"incense and strips of ivory",
+"range":"0",
+"aoe":"Special",
+"castingTime":"Special",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The legend lore spell is used to determine legendary information regarding a known person, place, or thing. If the person or thing is at hand, or if the wizard is in the place in question, the likelihood of the spell producing results is far greater and the casting time is only 1d4 turns. If only detailed information on the person, place, or thing is known, casting time is 1d10 days. If only rumors are known, casting time is 2d6 weeks.
+
+During the casting, the wizard cannot engage in activities other than the routine: eating, sleeping, etc. When completed, the divination reveals if legendary material is available. It often reveals where this material is--by place name, rhyme, or riddle. It sometimes gives certain information regarding the person, place, or thing (when the object of the legend lore is at hand), but this data is always in some cryptic form (rhyme, riddle, anagram, cipher, sign, etc.). Naturally, a legend lore spell reveals information only if the person, place, or thing is noteworthy or legendary.
+
+For example, suppose Delsenora came across an extremely well-made sword. It radiates magic, but when she used an identify spell, she could not learn any information. Even giving it to a trusted fighter didn't work, as the sword did not reveal any special powers. Finally, she casts a legend lore spell, hoping to gain more information. Since the sword is at hand, she completes the spell in three turns. In her mind comes the message, \"Once this was the sword of he who waits till Albion's time of greatest peril, when unto his hand it shall fly again. Fair was the hand that gave me and fair was the hand that reclaimed me.\" Clearly, Delsenora realizes, this must be a very powerful item, since her spell gave only a cryptic answer. But who is he who waits? And where is Albion? For more information, Delsenora is going to have to cast more spells. But now the process will take much longer, since she has only the vaguest of clues to follow.
+
+The legend lore spell is cast with incense and strips of ivory formed into a rectangle, but some item of value to the caster must be sacrificed in addition--a potion, magical scroll, magical item, etc."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Legend Lore</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Special&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >incense and strips of ivory&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The legend lore spell is used to determine legendary information regarding a known person, place, or thing. If the person or thing is at hand, or if the wizard is in the place in question, the likelihood of the spell producing results is far greater and the casting time is only 1d4 turns. If only detailed information on the person, place, or thing is known, casting time is 1d10 days. If only rumors are known, casting time is 2d6 weeks.<br /><br />During the casting, the wizard cannot engage in activities other than the routine: eating, sleeping, etc. When completed, the divination reveals if legendary material is available. It often reveals where this material is--by place name, rhyme, or riddle. It sometimes gives certain information regarding the person, place, or thing (when the object of the legend lore is at hand), but this data is always in some cryptic form (rhyme, riddle, anagram, cipher, sign, etc.). Naturally, a legend lore spell reveals information only if the person, place, or thing is noteworthy or legendary.<br /><br />For example, suppose Delsenora came across an extremely well-made sword. It radiates magic, but when she used an identify spell, she could not learn any information. Even giving it to a trusted fighter didn&#039;t work, as the sword did not reveal any special powers. Finally, she casts a legend lore spell, hoping to gain more information. Since the sword is at hand, she completes the spell in three turns. In her mind comes the message, &quot;Once this was the sword of he who waits till Albion&#039;s time of greatest peril, when unto his hand it shall fly again. Fair was the hand that gave me and fair was the hand that reclaimed me.&quot; Clearly, Delsenora realizes, this must be a very powerful item, since her spell gave only a cryptic answer. But who is he who waits? And where is Albion? For more information, Delsenora is going to have to cast more spells. But now the process will take much longer, since she has only the vaguest of clues to follow.<br /><br />The legend lore spell is cast with incense and strips of ivory formed into a rectangle, but some item of value to the caster must be sacrificed in addition--a potion, magical scroll, magical item, etc.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 226</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="956" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Postcognition",
+"school":"Divination",
+"verbal":"0",
+"somatic":"1",
+"material":"1",
+"materials":"Very hot fire and sand",
+"range":"Touch",
+"aoe":"",
+"castingTime":"6",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"To prepare for this spell, the caster must build a very hot fire. This can be through making a large fire, or a small fire of materials that burn very hot. The caster must also have an amount of sand on hand. Once the fire has reached the required intensity, the caster imbues a handful of sand with the magic of the spell and tosses it into the flames where they are quickly and brightly incinerated in an instant, and altering the flames to act as a window into the past. 
+
+Any who look upon the flames will see the same event or location as if viewed through a window whose shape flickers with the flame. The caster chooses a location and a time when enchanting the first handful of sand, and can change location and time with each subsequent imbued handful they add to the fire.
+
+The location must be public, something generally accessible to anyone, unless the caster adds to the fire a flammable personal affect of a specific person whose past they wish to view. The item should be relatively whole and personal in nature. Alternatively, a drop of blood or the root of a hair, freshly procured in the last 24 hours, may be used in lieu of a personal item. The location can be changed with a handful of sand. Regardless whether the caster is viewing a public area, or a specific person, a room lined with lead or silver will block the spell and the caster will see nothing but flames.
+
+The time frame is limited to the past, viewed in real time, and limited to increments of exactly 1 year. Should a caster wish to view the events of the previous day, they would have to wait a year minus a day to see them. The time may be changed with a handful of sand to any increment of 1 year that they wish.
+
+Postcognition can be channeled for as long as the caster is no more than 15 from the flames, their intensity is maintained, and the caster maintains concentration on the spell. They may converse with those around them as long as it is about what is happening in the fires. Other conversation is too distracting and will cause the caster to falter. Taking damage requires making a saving throw to maintain concentration.
+
+Because the onlooker sees the events only where flames are, one bigger or closer the flames, the better view the onlooker will have. Frequent users of this spell often have singed hairs and small burns on themselves, as well as a distant and unchanging gaze that feels removed from the world."}</textarea>
+ -->
+			<div class="components  somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Postcognition</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Very hot fire and sand&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">To prepare for this spell, the caster must build a very hot fire. This can be through making a large fire, or a small fire of materials that burn very hot. The caster must also have an amount of sand on hand. Once the fire has reached the required intensity, the caster imbues a handful of sand with the magic of the spell and tosses it into the flames where they are quickly and brightly incinerated in an instant, and altering the flames to act as a window into the past. <br /><br />Any who look upon the flames will see the same event or location as if viewed through a window whose shape flickers with the flame. The caster chooses a location and a time when enchanting the first handful of sand, and can change location and time with each subsequent imbued handful they add to the fire.<br /><br />The location must be public, something generally accessible to anyone, unless the caster adds to the fire a flammable personal affect of a specific person whose past they wish to view. The item should be relatively whole and personal in nature. Alternatively, a drop of blood or the root of a hair, freshly procured in the last 24 hours, may be used in lieu of a personal item. The location can be changed with a handful of sand. Regardless whether the caster is viewing a public area, or a specific person, a room lined with lead or silver will block the spell and the caster will see nothing but flames.<br /><br />The time frame is limited to the past, viewed in real time, and limited to increments of exactly 1 year. Should a caster wish to view the events of the previous day, they would have to wait a year minus a day to see them. The time may be changed with a handful of sand to any increment of 1 year that they wish.<br /><br />Postcognition can be channeled for as long as the caster is no more than 15 from the flames, their intensity is maintained, and the caster maintains concentration on the spell. They may converse with those around them as long as it is about what is happening in the fires. Other conversation is too distracting and will cause the caster to falter. Taking damage requires making a saving throw to maintain concentration.<br /><br />Because the onlooker sees the events only where flames are, one bigger or closer the flames, the better view the onlooker will have. Frequent users of this spell often have singed hairs and small burns on themselves, as well as a distant and unchanging gaze that feels removed from the world.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">The vessel of fire has a violet phantom flame that shows random events. Fades / blurs over a year.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="269" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"True Seeing",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"ointment",
+"range":"Touch",
+"aoe":"Line of sight,max. 60 ft.",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When the wizard employs this spell, he confers upon the recipient the ability to see all things as they actually are. The spell penetrates normal and magical darkness. Secret doors become plain. The exact location of displaced things is obvious. Invisible things become visible. Illusions and apparitions are seen through. Polymorphed, changed, or enchanted objects are apparent. (The real form appears translucently superimposed on the apparent form: A gold dragon polymorphed to human form would appear human with a ghostly dragon looming over the human form.) Unlike the clerical version of this spell, the recipient cannot determine alignment. The recipient can focus his vision to see into the Ethereal Plane or the bordering areas of adjacent planes. The range of vision conferred is 60 feet. True seeing does not penetrate solid objects; it in no way confers Xray vision or its equivalent. Furthermore, the spell effects cannot be enhanced with magic.
+
+The spell requires an ointment for the eyes that is made from a very rare mushroom powder, saffron, and fat. It costs no less than 300gp per use and must be aged for 1d6 months."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">True Seeing</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Line of sight,max. 60 ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >ointment&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the wizard employs this spell, he confers upon the recipient the ability to see all things as they actually are. The spell penetrates normal and magical darkness. Secret doors become plain. The exact location of displaced things is obvious. Invisible things become visible. Illusions and apparitions are seen through. Polymorphed, changed, or enchanted objects are apparent. (The real form appears translucently superimposed on the apparent form: A gold dragon polymorphed to human form would appear human with a ghostly dragon looming over the human form.) Unlike the clerical version of this spell, the recipient cannot determine alignment. The recipient can focus his vision to see into the Ethereal Plane or the bordering areas of adjacent planes. The range of vision conferred is 60 feet. True seeing does not penetrate solid objects; it in no way confers Xray vision or its equivalent. Furthermore, the spell effects cannot be enhanced with magic.<br /><br />The spell requires an ointment for the eyes that is made from a very rare mushroom powder, saffron, and fat. It costs no less than 300gp per use and must be aged for 1d6 months.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 231</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="378" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">8</button>
+<!--
+			<textarea class="spellJSON">{"name":"Analyze Dweomer",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a tiny lens of ruby",
+"range":"10 yards",
+"aoe":"1 object or creature",
+"castingTime":"8 hours",
+"duration":"1 rd./2 levels",
+"save":"None",
+"damage":"",
+"description":"  This spell reveals to the caster all spells, enchantments, dweomers, and magical properties present in one creature or object. One property, spell, or power is revealed each round in approximate order of when the spells were cast or the properties were acquired. (If the DM doesn't know which spells were placed on the subject first, a random roll for order of discovery is fine.) The caster has a base 50% chance to discern the existence and identity of a particular spell or property, +2% per level to a maximum of 99%. The only enchantments that remain inscrutable to analyze are those surrounding artifacts or relics.
+  A 16th level wizard finds an unknown wand and decides to use analyze dweomer to study it. The DM knows that it's a wind of fire, and he decides that the spells enchant an item, fireball,burning hands, and wall of fire were used to create the wand, in that order.In the first round,the wizard has an 82% chance to discover fireball;in the next round, an 82% chance to perceive burning hands; and so on, for all remaining enchantment.Note that the DM could have decided that any rare or unusual materials or process used to create the wand would also be revealed as if they were spells.
+  After the wizard analyzes one object or creature, the spell ends, even if its duration has not expired yet. Casting this spell is physically taxing;the wizard must pass a system shock check or be exhausted and unable to do anything but rest for the next 1d8 hours. While this spell is most frequently used in the comfort and safety of the wizard's laboratory, a mage could also cast analyze dweomer to study the magical seals and barriers on a portal, to determine just how a companion has been cursed, or to examine a potential opponent for defensive spells.
+  The material component for this spell is a tiny lens of ruby or sapphire set in a small golden loop.The gemstone must be worth at least 1000 gp."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Analyze Dweomer</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8 hours&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 object or creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./2 levels&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a tiny lens of ruby&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">  This spell reveals to the caster all spells, enchantments, dweomers, and magical properties present in one creature or object. One property, spell, or power is revealed each round in approximate order of when the spells were cast or the properties were acquired. (If the DM doesn&#039;t know which spells were placed on the subject first, a random roll for order of discovery is fine.) The caster has a base 50% chance to discern the existence and identity of a particular spell or property, +2% per level to a maximum of 99%. The only enchantments that remain inscrutable to analyze are those surrounding artifacts or relics.<br />  A 16th level wizard finds an unknown wand and decides to use analyze dweomer to study it. The DM knows that it&#039;s a wind of fire, and he decides that the spells enchant an item, fireball,burning hands, and wall of fire were used to create the wand, in that order.In the first round,the wizard has an 82% chance to discover fireball;in the next round, an 82% chance to perceive burning hands; and so on, for all remaining enchantment.Note that the DM could have decided that any rare or unusual materials or process used to create the wand would also be revealed as if they were spells.<br />  After the wizard analyzes one object or creature, the spell ends, even if its duration has not expired yet. Casting this spell is physically taxing;the wizard must pass a system shock check or be exhausted and unable to do anything but rest for the next 1d8 hours. While this spell is most frequently used in the comfort and safety of the wizard&#039;s laboratory, a mage could also cast analyze dweomer to study the magical seals and barriers on a portal, to determine just how a companion has been cursed, or to examine a potential opponent for defensive spells.<br />  The material component for this spell is a tiny lens of ruby or sapphire set in a small golden loop.The gemstone must be worth at least 1000 gp.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 156</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="322" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">9</button>
+<!--
+			<textarea class="spellJSON">{"name":"Foresight",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a hummingbird's feather.",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"2d4 rds. + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"  This spell grants the caster a powerful sixth sense in relation to himself or another.Although cast upon himself, the wizard can specify that he or another is the beneficiary of the spell. Once the spell is cast, the wizard receives instantaneous warnings of impending danger or harm to the object of the spell. Thus, if he were the object of the
+spell, the wizard would be warned in advance if a thief were about to attempt to backstab him, or if a creature were about to leap out from an unexpected direction, or if an attacker were specifically targeting him with a spell or missile weapon. When the warnings are about him personally, the wizard cannot be surprised and always knows the direction from which any attack on him is made. In addition, the spell gives the wizard a general idea of what action he might take to best protect himself--duck, jump right, close his eyes, etc.--and gives him a defensive bonus of 2 to his Armor Class.
+   When another person is the object of the spell, the wizard receives warnings about that person. He must still communicate this to the other person to negate any surprise. Shouting a warning, yanking the person back, and even telepathically communicating through a crystal ball can all be accomplished before the trap is sprung, if the wizard does not hesitate. However, the object of the spell does not gain the defensive bonus to his Armor Class.
+  The material component for this spell is a hummingbird's feather."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Foresight</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2d4 rds. + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a hummingbird's feather.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">  This spell grants the caster a powerful sixth sense in relation to himself or another.Although cast upon himself, the wizard can specify that he or another is the beneficiary of the spell. Once the spell is cast, the wizard receives instantaneous warnings of impending danger or harm to the object of the spell. Thus, if he were the object of the<br />spell, the wizard would be warned in advance if a thief were about to attempt to backstab him, or if a creature were about to leap out from an unexpected direction, or if an attacker were specifically targeting him with a spell or missile weapon. When the warnings are about him personally, the wizard cannot be surprised and always knows the direction from which any attack on him is made. In addition, the spell gives the wizard a general idea of what action he might take to best protect himself--duck, jump right, close his eyes, etc.--and gives him a defensive bonus of 2 to his Armor Class.<br />   When another person is the object of the spell, the wizard receives warnings about that person. He must still communicate this to the other person to negate any surprise. Shouting a warning, yanking the person back, and even telepathically communicating through a crystal ball can all be accomplished before the trap is sprung, if the wizard does not hesitate. However, the object of the spell does not gain the defensive bonus to his Armor Class.<br />  The material component for this spell is a hummingbird&#039;s feather.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 247</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

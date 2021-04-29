@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Astral Celerity",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"4",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This spell enhances the casters movement capabilities in extraplanar settings by attuning him to his new surroundings. While very few 1st-level priests find themselves in this situation, higher level characters often make use of this spell. Astral celerity doubles the characters movement rate on the Astral Plane; normally, characters move at a rate of 30 times their Intelligence score in feet per round, but this spell increases this to 60 feet times their Intelligence score. As an incidental benefit, the caster also attunes himself to the plane much faster and suffers no penalties for missile fire while astral.
+
+While astral celerity is most often used in the astral plane, it also offers a small benefit to ethereal characters, too: their movement rates are increased by 50%, so a character with a movement rate of 12 would enjoy a movement rate of 18 while this spell was in effect. Of course, time and distance have little meaning in the overall scheme of the Astral or Ethereal Planes, but relative speed could be very important in avoiding an unpleasant encounter or escaping from pursuit of some kind."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Astral Celerity</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enhances the casters movement capabilities in extraplanar settings by attuning him to his new surroundings. While very few 1st-level priests find themselves in this situation, higher level characters often make use of this spell. Astral celerity doubles the characters movement rate on the Astral Plane; normally, characters move at a rate of 30 times their Intelligence score in feet per round, but this spell increases this to 60 feet times their Intelligence score. As an incidental benefit, the caster also attunes himself to the plane much faster and suffers no penalties for missile fire while astral.<br /><br />While astral celerity is most often used in the astral plane, it also offers a small benefit to ethereal characters, too: their movement rates are increased by 50%, so a character with a movement rate of 12 would enjoy a movement rate of 18 while this spell was in effect. Of course, time and distance have little meaning in the overall scheme of the Astral or Ethereal Planes, but relative speed could be very important in avoiding an unpleasant encounter or escaping from pursuit of some kind.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 160</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="669" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Speak With Astral Traveler",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 round",
+"duration":"1 round/level",
+"save":"None",
+"damage":"",
+"description":"When a priest casts the 7th-level astral spell, he leaves his physical body in suspended animation while his astral body travels. By touching the comatose body and casting speak with astral traveler, a priest can mentally communicate with the projected individual. Although communication is mental, it takes the same amount of time as a normal, verbal dialogue. The spell ends abruptly when its duration expires."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Speak With Astral Traveler</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts the 7th-level astral spell, he leaves his physical body in suspended animation while his astral body travels. By touching the comatose body and casting speak with astral traveler, a priest can mentally communicate with the projected individual. Although communication is mental, it takes the same amount of time as a normal, verbal dialogue. The spell ends abruptly when its duration expires.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 55</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="840" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Astral Awareness",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"5",
+"duration":"1 hr./level",
+"save":"None",
+"damage":"",
+"description":"This divination attunes the caster's perceptions to the silver void of the Astral Plane or the misty grayness of the Ethereal Plane. While the spell is in effect, the caster automatically notes the approach of all kinds of astral or ethereal phenomena, including shifting conduits, the psychic wind, ether cyclones, demiplanes and debris, color pools, and curtains of vaporous color. The character has a 90% chance to detect a color pool from its invisible side and a 5% chance per level to determine which plane a curtain or pool leads to simply by studying its color.
+Astral Awareness In addition to his awareness of physical phenomena, the caster gains a +2 bonus to surprise checks against astral or ethereal monsters. He also has a 5% chance per level to detect the threat of creatures whose gaze extends into the Ethereal (basilisks, for instance) before he enters the range of the monster's gaze weapon."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Astral Awareness</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This divination attunes the caster&#039;s perceptions to the silver void of the Astral Plane or the misty grayness of the Ethereal Plane. While the spell is in effect, the caster automatically notes the approach of all kinds of astral or ethereal phenomena, including shifting conduits, the psychic wind, ether cyclones, demiplanes and debris, color pools, and curtains of vaporous color. The character has a 90% chance to detect a color pool from its invisible side and a 5% chance per level to determine which plane a curtain or pool leads to simply by studying its color.<br />Astral Awareness In addition to his awareness of physical phenomena, the caster gains a +2 bonus to surprise checks against astral or ethereal monsters. He also has a 5% chance per level to detect the threat of creatures whose gaze extends into the Ethereal (basilisks, for instance) before he enters the range of the monster&#039;s gaze weapon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 164</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="843" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Ethereal Barrier",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds",
+"aoe":"Two 10-ft.squares/level",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The ethereal barrier is a defense against the passage of extradimensional creatures, including characters or monsters that are phased, ethereal, or travelling via dimension door or shadow walk. The priest creates an imperceptible barrier of 10 square feet per level that may be arranged in any fashion the priest desires. For example, a 3rd-level character can ward six 10-foot by 10-foot surfaces, which would be sufficient to guard a 10-foot by 10-foot by 10-foot room (four walls, a ceiling, and a floor need to be protected.) Note that some monsters may be capable of abandoning their ethereal approach in order to simply enter the barred area on their own feet-the ethereal barrier only bars their passage as long as they are traveling in the Border Ethereal. Also, while this spell can't be worn down by any form of attack, it does not bar teleportation, gates, or the passage of astral creatures.
+Ethereal barrier may be cast as cooperative magic by several priests working together. As long as all involved characters can cast the spell, the areas of effect of each priest are added together. Total the levels of all priests involved and multiply by two to find the number of 10-foot by 10-foot squares that may be warded. For example, four 6th-level casters (24 total levels) can ward 48 10-foot by 10-foot squares. The duration is determined by the highest level priest involved, plus 1 turn for each additional priest. In the previous example, this would be 6 turns plus 3 turns for three additional priests for a total of 9 turns.
+This spell is also suitable for focus magic (see the spell focus in the Tome of Magic). The material component is a special compound of rare earths and lead worth at least 10 gp per application. One application is required for each 10-foot by 10-foot square to be warded."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Ethereal Barrier</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Two 10-ft.squares/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The ethereal barrier is a defense against the passage of extradimensional creatures, including characters or monsters that are phased, ethereal, or travelling via dimension door or shadow walk. The priest creates an imperceptible barrier of 10 square feet per level that may be arranged in any fashion the priest desires. For example, a 3rd-level character can ward six 10-foot by 10-foot surfaces, which would be sufficient to guard a 10-foot by 10-foot by 10-foot room (four walls, a ceiling, and a floor need to be protected.) Note that some monsters may be capable of abandoning their ethereal approach in order to simply enter the barred area on their own feet-the ethereal barrier only bars their passage as long as they are traveling in the Border Ethereal. Also, while this spell can&#039;t be worn down by any form of attack, it does not bar teleportation, gates, or the passage of astral creatures.<br />Ethereal barrier may be cast as cooperative magic by several priests working together. As long as all involved characters can cast the spell, the areas of effect of each priest are added together. Total the levels of all priests involved and multiply by two to find the number of 10-foot by 10-foot squares that may be warded. For example, four 6th-level casters (24 total levels) can ward 48 10-foot by 10-foot squares. The duration is determined by the highest level priest involved, plus 1 turn for each additional priest. In the previous example, this would be 6 turns plus 3 turns for three additional priests for a total of 9 turns.<br />This spell is also suitable for focus magic (see the spell focus in the Tome of Magic). The material component is a special compound of rare earths and lead worth at least 10 gp per application. One application is required for each 10-foot by 10-foot square to be warded.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 164</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="693" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Astral Window",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"5 yards",
+"aoe":"10'x10' area",
+"castingTime":"3",
+"duration":"2 rounds/level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, a \"window\" appears in the air before the priest, through which he (and any others present) can see into the Astral plane. The astral window ranges in size from one square foot up to a 10'x10' square, at the caster's choosing. The window is not mobile, and if the priest moves more than 5 yards away from it, it immediately vanishes and the spell ends.
+By stating a subject's name, the priest may view a specific creature or object in the window. More than one subject may be viewed during the spell's duration. Each time a new subject is chosen, the window becomes streaked with grey as the Astral plane flies past. This continues for 1d4 rounds, until the window finally focuses upon the chosen subject. If the person is not in the Astral plane, the window instead chooses a random location.
+The window operates from both sides; creatures in the Astral plane can see the priest as easily as he can see them. Verbal communication is not possible, however.
+Normally, creatures cannot pass through the window. If an attempt is made, there is a base 5% chance of success. This is modified by +1% per level or Hit Dice of the individual. In order to pass through, the creature or object must be small enough to fit through the window; otherwise, only a portion of the subject may reach through (such as a monster's arm or searching tongue).
+By casting the astral window spell, a character who subsequently casts the 7th-level astral spell may choose to arrive in the Astral plane at the place shown in the window."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Astral Window</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10'x10' area&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rounds/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, a &quot;window&quot; appears in the air before the priest, through which he (and any others present) can see into the Astral plane. The astral window ranges in size from one square foot up to a 10&#039;x10&#039; square, at the caster&#039;s choosing. The window is not mobile, and if the priest moves more than 5 yards away from it, it immediately vanishes and the spell ends.<br />By stating a subject&#039;s name, the priest may view a specific creature or object in the window. More than one subject may be viewed during the spell&#039;s duration. Each time a new subject is chosen, the window becomes streaked with grey as the Astral plane flies past. This continues for 1d4 rounds, until the window finally focuses upon the chosen subject. If the person is not in the Astral plane, the window instead chooses a random location.<br />The window operates from both sides; creatures in the Astral plane can see the priest as easily as he can see them. Verbal communication is not possible, however.<br />Normally, creatures cannot pass through the window. If an attempt is made, there is a base 5% chance of success. This is modified by +1% per level or Hit Dice of the individual. In order to pass through, the creature or object must be small enough to fit through the window; otherwise, only a portion of the subject may reach through (such as a monster&#039;s arm or searching tongue).<br />By casting the astral window spell, a character who subsequently casts the 7th-level astral spell may choose to arrive in the Astral plane at the place shown in the window.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 63</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="853" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Etherealness",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell resembles the 5th-level wizard spell etherealness in many respects, but there are a few important differences. First, the priest may not leave the Border Ethereal and venture into the Deep Ethereal; therefore, at the end of the spell's duration, he must return to the Prime Material Plane whether he wants to or not. Secondly, the priest may not use this spell on an unwilling target and can only make another creature ethereal if the subject is willing and in physical contact with the priest when the spell is cast. Besides himself, the caster can bring one creature per two experience levels (three at 5th, four at 7th, five at 9th, and so on) to the Ethereal Plane. Even if the priest abandons his charges in the Border Ethereal, the stranded characters will automatically materialize when the spell ends.
+While ethereal, the priest cannot be detected by any means short of a true seeing or detect phase spell. He perceives his surroundings as misty, gray, and otherworldly. No action he takes can affect the physical world, but he can pass through walls, doors, and other solid objects without hindrance. The priest can choose to end the spell voluntarily at any time, materializing in the physical world in one round. If the caster occupies a solid object when the spell ends, he is hurled into the Deep Ethereal and stranded in a catatonic stupor until he can be rescued."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Etherealness</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell resembles the 5th-level wizard spell etherealness in many respects, but there are a few important differences. First, the priest may not leave the Border Ethereal and venture into the Deep Ethereal; therefore, at the end of the spell&#039;s duration, he must return to the Prime Material Plane whether he wants to or not. Secondly, the priest may not use this spell on an unwilling target and can only make another creature ethereal if the subject is willing and in physical contact with the priest when the spell is cast. Besides himself, the caster can bring one creature per two experience levels (three at 5th, four at 7th, five at 9th, and so on) to the Ethereal Plane. Even if the priest abandons his charges in the Border Ethereal, the stranded characters will automatically materialize when the spell ends.<br />While ethereal, the priest cannot be detected by any means short of a true seeing or detect phase spell. He perceives his surroundings as misty, gray, and otherworldly. No action he takes can affect the physical world, but he can pass through walls, doors, and other solid objects without hindrance. The priest can choose to end the spell voluntarily at any time, materializing in the physical world in one round. If the caster occupies a solid object when the spell ends, he is hurled into the Deep Ethereal and stranded in a catatonic stupor until he can be rescued.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 167</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="732" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Join With Astral Traveler",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"When a priest casts the 7th-level astral spell, he leaves his physical body in suspended animation while his astral body travels. By touching the comatose body and casting join with astral traveler, a priest can cause his own astral body to leave his physical body in suspended animation. His astral body then travels along the silver cord of the originally projected priest. The caster joins the projected priest as if he were part of the original casting of the astral spell; i.e., his own silver cord is connected to the priest's silver cord, and he is dependent upon the originally projected priest.
+A priest who casts the 7th-level astral spell can project as many as seven other creatures along with himself. However, priests casting join with astral traveler are an exception to this limit. Any number of priests may join another priest in the Astral plane by use of this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Join With Astral Traveler</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts the 7th-level astral spell, he leaves his physical body in suspended animation while his astral body travels. By touching the comatose body and casting join with astral traveler, a priest can cause his own astral body to leave his physical body in suspended animation. His astral body then travels along the silver cord of the originally projected priest. The caster joins the projected priest as if he were part of the original casting of the astral spell; i.e., his own silver cord is connected to the priest&#039;s silver cord, and he is dependent upon the originally projected priest.<br />A priest who casts the 7th-level astral spell can project as many as seven other creatures along with himself. However, priests casting join with astral traveler are an exception to this limit. Any number of priests may join another priest in the Astral plane by use of this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 81</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="602" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Plane Shift",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"8",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"When the plane shift spell is cast, the priest moves himself or some other creature to another plane of existence. The recipient of the spell remains in the new plane until sent forth by some like means. If several persons link hands in a circle, up to eight can be affected by the plane shift at the same time.
+The material component of this spell is a small, forked metal rod. The size and metal type dictates to which plane of existence, including sub-planes and alternate dimensions, the spell sends the affected creatures. The DM will determine specifics regarding how and what planes are reached.
+An unwilling victim must be touched (successful attack roll) to be sent. In addition, the creature is also allowed a saving throw. If the saving throw is successful, the effect of the spell is negated. Note that pinpoint accuracy is rarely achieved; arriving at a random distance from an intended destination is common.
+The metal rod is not expended when the spell is cast. Forked rods keyed to certain planes may be difficult to come by, as decided by the DM."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Plane Shift</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the plane shift spell is cast, the priest moves himself or some other creature to another plane of existence. The recipient of the spell remains in the new plane until sent forth by some like means. If several persons link hands in a circle, up to eight can be affected by the plane shift at the same time.<br />The material component of this spell is a small, forked metal rod. The size and metal type dictates to which plane of existence, including sub-planes and alternate dimensions, the spell sends the affected creatures. The DM will determine specifics regarding how and what planes are reached.<br />An unwilling victim must be touched (successful attack roll) to be sent. In addition, the creature is also allowed a saving throw. If the saving throw is successful, the effect of the spell is negated. Note that pinpoint accuracy is rarely achieved; arriving at a random distance from an intended destination is common.<br />The metal rod is not expended when the spell is cast. Forked rods keyed to certain planes may be difficult to come by, as decided by the DM.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 283</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="634" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Astral Spell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1/2 Hour",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, a priest is able to project his astral body into the Astral plane, leaving his physical body and material possessions behind on the Prime Material plane.
+As the Astral plane touches upon the first levels of all the outer planes, the priest can travel astrally to the first level of any of these outer planes as he wills. The priest then leaves the Astral plane, forming a body on the plane of existence he has chosen to enter.
+It is also possible to travel astrally anywhere in the Prime Material plane by means of the astral spell. However, a second body cannot be formed on the Prime Material plane.
+As a general rule, a person astrally projected can be seen only by creatures on the Astral plane. The astral body is connected at all times to the material body by a silvery cord. If the cord is broken, the affected person is killed, astrally and materially, but generally only the psychic wind can cause the cord to break. When a second body is formed on a different plane, the silvery cord remains invisibly attached to the new body.
+If the second body or astral form is slain, the cord simply returns to the caster's body where the body rests on the Prime Material plane, reviving it from its state of suspended animation. Although astral projections are able to function on the Astral plane, their actions affect only creatures existing on the Astral plane; a physical body must be materialized on other planes.
+The spell lasts until the priest desires to end it, or until it is terminated by some outside means, such as dispel magic spell or destruction of the priest's body on the Prime Material plane--which kills the priest. The priest can project the astral forms of up to seven other creatures with himself by means of the astral spell, providing the creatures are linked in a circle with the priest. These fellow travelers are dependent upon the priest and can be stranded if something happens to the priest. Travel in the Astral plane can be slow or fast, according to the priest's desire. The ultimate destination arrived at is subject to the desire of the priest."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Astral Spell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1/2 Hour&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, a priest is able to project his astral body into the Astral plane, leaving his physical body and material possessions behind on the Prime Material plane.<br />As the Astral plane touches upon the first levels of all the outer planes, the priest can travel astrally to the first level of any of these outer planes as he wills. The priest then leaves the Astral plane, forming a body on the plane of existence he has chosen to enter.<br />It is also possible to travel astrally anywhere in the Prime Material plane by means of the astral spell. However, a second body cannot be formed on the Prime Material plane.<br />As a general rule, a person astrally projected can be seen only by creatures on the Astral plane. The astral body is connected at all times to the material body by a silvery cord. If the cord is broken, the affected person is killed, astrally and materially, but generally only the psychic wind can cause the cord to break. When a second body is formed on a different plane, the silvery cord remains invisibly attached to the new body.<br />If the second body or astral form is slain, the cord simply returns to the caster&#039;s body where the body rests on the Prime Material plane, reviving it from its state of suspended animation. Although astral projections are able to function on the Astral plane, their actions affect only creatures existing on the Astral plane; a physical body must be materialized on other planes.<br />The spell lasts until the priest desires to end it, or until it is terminated by some outside means, such as dispel magic spell or destruction of the priest&#039;s body on the Prime Material plane--which kills the priest. The priest can project the astral forms of up to seven other creatures with himself by means of the astral spell, providing the creatures are linked in a circle with the priest. These fellow travelers are dependent upon the priest and can be stranded if something happens to the priest. Travel in the Astral plane can be slow or fast, according to the priest&#039;s desire. The ultimate destination arrived at is subject to the desire of the priest.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 293</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="804" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Etherwalk",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"5 rounds",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"By casting this spell, the priest transports himself and as many as 50 followers (who must join hands at the time of casting) to the Border Ethereal. Unwilling creatures are allowed a saving throw at a -4 penalty to avoid transportation.
+The spell then allows the priest and his party to make as many as three round-trip journeys to and from the Inner Planes. It then allows them to return to the Prime Material plane.
+Travel rates in the Ethereal plane are at four times normal speed. Travel times for locating or searching along curtains are all at the minimum time possible. Encounters with monsters occur at one-fifth the normal frequency. The priest and his party are not affected by the ether cyclone.
+The spell expires when the priest and his party return to the Border Ethereal from an inner plane for the third time. They are then instantly transported to the Prime Material plane."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Etherwalk</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, the priest transports himself and as many as 50 followers (who must join hands at the time of casting) to the Border Ethereal. Unwilling creatures are allowed a saving throw at a -4 penalty to avoid transportation.<br />The spell then allows the priest and his party to make as many as three round-trip journeys to and from the Inner Planes. It then allows them to return to the Prime Material plane.<br />Travel rates in the Ethereal plane are at four times normal speed. Travel times for locating or searching along curtains are all at the minimum time possible. Encounters with monsters occur at one-fifth the normal frequency. The priest and his party are not affected by the ether cyclone.<br />The spell expires when the priest and his party return to the Border Ethereal from an inner plane for the third time. They are then instantly transported to the Prime Material plane.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="808" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Imago Interrogation",
+"school":"Enchantment/Charm",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The imago is a mental image--a form of mental magical body. After casting this spell (requiring 1 turn), the caster falls asleep. After 1d6 turns of sleep, the imago of the priest begins to travel. The imago is not subject to any forms of attack and has no effective attacks.
+The imago may travel to as many as four different locations separated by any distance, even across the planes and/or backward in time. At these locations, the imago may interrogate the imagos of as many as 10 other sentient creatures (other than Powers), compelling them to reply truthfully to its questions. A maximum of 40 questions may be asked during the spell duration.
+Asking one question and listening to the reply takes 4 rounds of time in the caster's world. Each planar/time jump lasts 3 turns in that world.
+Imago communications are telepathic. The questions must be able to be answered in a sentence of reasonable length, or the interrogated creature becomes confused and cannot answer.
+The imagos of interrogated creatures will have no recollection of their interrogations.
+As a result, history cannot be changed through backward time travel using this spell."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Imago Interrogation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The imago is a mental image--a form of mental magical body. After casting this spell (requiring 1 turn), the caster falls asleep. After 1d6 turns of sleep, the imago of the priest begins to travel. The imago is not subject to any forms of attack and has no effective attacks.<br />The imago may travel to as many as four different locations separated by any distance, even across the planes and/or backward in time. At these locations, the imago may interrogate the imagos of as many as 10 other sentient creatures (other than Powers), compelling them to reply truthfully to its questions. A maximum of 40 questions may be asked during the spell duration.<br />Asking one question and listening to the reply takes 4 rounds of time in the caster&#039;s world. Each planar/time jump lasts 3 turns in that world.<br />Imago communications are telepathic. The questions must be able to be answered in a sentence of reasonable length, or the interrogated creature becomes confused and cannot answer.<br />The imagos of interrogated creatures will have no recollection of their interrogations.<br />As a result, history cannot be changed through backward time travel using this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 116</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="812" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Planar Quest",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"5 rounds",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"By joining hands with as many as 12 companions and casting this spell, the priest transports his party to any other plane of existence. The priest and his party may arrive at a specific location in a plane (if one is known) or at an unknown destination. Travel time to the destination, whether known or unknown, will always be at the minimum possible.
+In an inner plane, a friendly guide will always be available to the priest. Hostile encounters occur at one-fifth normal frequency.
+Unwilling creatures are allowed a saving throw at a -4 penalty to avoid being transported.
+In the inner planes, the party is magically protected in any means necessary for survival. The party does not need to eat, drink, or rest if conditions make these activities impossible. Party members are immune to fire in the elemental plane of fire, and similar immunities are granted by the Power in other planes as necessary. The party can move through any terrain (including the elemental plane of Earth) at its normal movement rate.
+In the outer planes, similar immunities apply. The priest is also granted a power compass (described in Manual of the Plane). Hostile encounters in an outer plane occur only half as often as normal.
+The duration of this spell is decided by the Power who grants it. Normally, it is sufficient to allow the priest and his party to undertake the quest that the Power has set forth. When the quest has been completed successfully or has failed beyond recovery, the priest and his party are returned to the Prime Material plane."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Planar Quest</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By joining hands with as many as 12 companions and casting this spell, the priest transports his party to any other plane of existence. The priest and his party may arrive at a specific location in a plane (if one is known) or at an unknown destination. Travel time to the destination, whether known or unknown, will always be at the minimum possible.<br />In an inner plane, a friendly guide will always be available to the priest. Hostile encounters occur at one-fifth normal frequency.<br />Unwilling creatures are allowed a saving throw at a -4 penalty to avoid being transported.<br />In the inner planes, the party is magically protected in any means necessary for survival. The party does not need to eat, drink, or rest if conditions make these activities impossible. Party members are immune to fire in the elemental plane of fire, and similar immunities are granted by the Power in other planes as necessary. The party can move through any terrain (including the elemental plane of Earth) at its normal movement rate.<br />In the outer planes, similar immunities apply. The priest is also granted a power compass (described in Manual of the Plane). Hostile encounters in an outer plane occur only half as often as normal.<br />The duration of this spell is decided by the Power who grants it. Normally, it is sufficient to allow the priest and his party to undertake the quest that the Power has set forth. When the quest has been completed successfully or has failed beyond recovery, the priest and his party are returned to the Prime Material plane.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 117</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

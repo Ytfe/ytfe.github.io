@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Friendship",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy symbol and a piece of food liked by the animal",
+"range":"10 yds.",
+"aoe":"1 animal",
+"castingTime":"1 hr.",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"By means of this spell, the caster is able to show any animal of animal intelligence to semi-intelligence (i.e., Intelligence 1-4) that he desires friendship. If the animal does not roll a successful saving throw vs. spell immediately when the spell is begun, it stands quietly while the caster finishes the spell. Thereafter, it follows the caster about. The spell functions only if the caster actually wishes to be the animal's friend. If the caster has ulterior motives, the animal always senses them (for example, the caster intends to eat the animal, send it ahead to set off traps, etc.).
+
+The caster can teach the befriended animal three specific tricks or tasks for each point of Intelligence it possesses. Typical tasks are those taught to a dog or similar pet (i.e., they cannot be complex). Training for each such trick must be done over a period of one week, and all must be done within three months of acquiring the creature. During the three-month period, the animal will not harm the caster, but if the creature is left alone for more than a week, it will revert to its natural state and act accordingly.
+
+The caster can use this spell to attract up to 2 Hit Dice of animal(s) per experience level he possesses. This is also the maximum total Hit Dice of the animals that can be attracted and trained at one time: no more than twice the caster's experience level. Only unaligned animals can be attracted, befriended, and trained.
+
+The material components of this spell are the caster's holy symbol and a piece of food liked by the animal."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Friendship</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 hr.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 animal&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Holy symbol and a piece of food liked by the animal&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster is able to show any animal of animal intelligence to semi-intelligence (i.e., Intelligence 1-4) that he desires friendship. If the animal does not roll a successful saving throw vs. spell immediately when the spell is begun, it stands quietly while the caster finishes the spell. Thereafter, it follows the caster about. The spell functions only if the caster actually wishes to be the animal&#039;s friend. If the caster has ulterior motives, the animal always senses them (for example, the caster intends to eat the animal, send it ahead to set off traps, etc.).<br /><br />The caster can teach the befriended animal three specific tricks or tasks for each point of Intelligence it possesses. Typical tasks are those taught to a dog or similar pet (i.e., they cannot be complex). Training for each such trick must be done over a period of one week, and all must be done within three months of acquiring the creature. During the three-month period, the animal will not harm the caster, but if the creature is left alone for more than a week, it will revert to its natural state and act accordingly.<br /><br />The caster can use this spell to attract up to 2 Hit Dice of animal(s) per experience level he possesses. This is also the maximum total Hit Dice of the animals that can be attracted and trained at one time: no more than twice the caster&#039;s experience level. Only unaligned animals can be attracted, befriended, and trained.<br /><br />The material components of this spell are the caster&#039;s holy symbol and a piece of food liked by the animal.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 252</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="832" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Calm Animals",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds.",
+"aoe":"Special",
+"castingTime":"4",
+"duration":"1 turn + 1 rd./level",
+"save":"Special",
+"damage":"",
+"description":"This spell soothes and quiets normal animals, which renders them docile and harmless. Only creatures with Intelligence ratings of 1 to 4 (in other words, animal- or semi-intelligent creatures) can be affected by this spell. The caster can calm 2d4 Hit Dice of animals, plus 1 Hit Die per level, so a 4th-level priest could affect 2d4+4 Hit Dice of creatures. The caster can affect any animals he wishes to within the spell's range, but all the subjects must be of the same species. The subject creatures are not allowed a saving throw unless they have magical powers, abilities, or are clearly not entirely natural; a priest could calm a normal bear, war dog, or wolf with little trouble, but it's more difficult to affect a winter wolf, hell hound, or owlbear.
+
+While under the influence of this spell, the affected creatures remain where they are and do not attack or flee, unless they are attacked or confronted by a significant hazard such as a fire or a hungry predator. Once roused, the spell's magic is broken and the animals are free to act in whatever fashion they normally would. Note that creatures affected by this spell are not helpless and defend themselves normally if attacked."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Calm Animals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell soothes and quiets normal animals, which renders them docile and harmless. Only creatures with Intelligence ratings of 1 to 4 (in other words, animal- or semi-intelligent creatures) can be affected by this spell. The caster can calm 2d4 Hit Dice of animals, plus 1 Hit Die per level, so a 4th-level priest could affect 2d4+4 Hit Dice of creatures. The caster can affect any animals he wishes to within the spell&#039;s range, but all the subjects must be of the same species. The subject creatures are not allowed a saving throw unless they have magical powers, abilities, or are clearly not entirely natural; a priest could calm a normal bear, war dog, or wolf with little trouble, but it&#039;s more difficult to affect a winter wolf, hell hound, or owlbear.<br /><br />While under the influence of this spell, the affected creatures remain where they are and do not attack or flee, unless they are attacked or confronted by a significant hazard such as a fire or a hungry predator. Once roused, the spell&#039;s magic is broken and the animals are free to act in whatever fashion they normally would. Note that creatures affected by this spell are not helpless and defend themselves normally if attacked.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 161</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="491" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Invisibility to Animals",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature/level",
+"castingTime":"4",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When an invisibility to animals spell is cast, the creature touched becomes totally undetectable by normal animals with Intelligences under 6. Normal animals includes giant-sized varieties, but it excludes any with magical abilities or powers. The enchanted individual is able to walk among such animals or pass through them as if he did not exist.
+For example, this individual could stand before the hungriest of lions or a tyrannosaurus rex and not be molested or even noticed. However, a nightmare, hell hound, or winter wolf would certainly be aware of the individual. For every level the caster has achieved, one creature can be rendered invisible. Any recipient attacking while this spell is in effect ends the spell immediately (for himself only).
+The material component of this spell is holly rubbed over the recipient."}</textarea>
+ -->
+			<div class="components  somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Invisibility to Animals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When an invisibility to animals spell is cast, the creature touched becomes totally undetectable by normal animals with Intelligences under 6. Normal animals includes giant-sized varieties, but it excludes any with magical abilities or powers. The enchanted individual is able to walk among such animals or pass through them as if he did not exist.<br />For example, this individual could stand before the hungriest of lions or a tyrannosaurus rex and not be molested or even noticed. However, a nightmare, hell hound, or winter wolf would certainly be aware of the individual. For every level the caster has achieved, one creature can be rendered invisible. Any recipient attacking while this spell is in effect ends the spell immediately (for himself only).<br />The material component of this spell is holly rubbed over the recipient.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 255</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="494" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Animals or Plants",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"100 yds. + 20 yds./level",
+"aoe":"20 yds./level x 20 ft.",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"The caster can find the direction and distance of any one type of animal or plant he desires. The caster, facing in a direction, thinks of the animal or plant, and then knows if any such animal or plant is within range. If so, the exact distance and approximate number present is learned. During each round of the spell's duration, the caster can face in only one direction (i.e., only a 20-foot-wide path can be known). The spell lasts one round per level of experience of the caster, while the length of the path is 100 yards plus 20 yards per level of experience. (At the DM's option, some casters may be able to locate only those animals [or plants] associated closely with their own mythos.) While the exact chance of locating a specific type of animal or plant depends on the details and circumstances of the locale, the general frequency of the subject can be used as a guideline: common = 50%, uncommon = 30%, rare = 15%, and very rare = 5%. Most herbs grow in temperate regions, while most spices grow in tropical regions. Most plants sought as spell components or for magical research are rare or very rare. The results of this spell are always determined by the DM.
+The material component is the caster's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Animals or Plants</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">100 yds. + 20 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20 yds./level x 20 ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The caster can find the direction and distance of any one type of animal or plant he desires. The caster, facing in a direction, thinks of the animal or plant, and then knows if any such animal or plant is within range. If so, the exact distance and approximate number present is learned. During each round of the spell&#039;s duration, the caster can face in only one direction (i.e., only a 20-foot-wide path can be known). The spell lasts one round per level of experience of the caster, while the length of the path is 100 yards plus 20 yards per level of experience. (At the DM&#039;s option, some casters may be able to locate only those animals [or plants] associated closely with their own mythos.) While the exact chance of locating a specific type of animal or plant depends on the details and circumstances of the locale, the general frequency of the subject can be used as a guideline: common = 50%, uncommon = 30%, rare = 15%, and very rare = 5%. Most herbs grow in temperate regions, while most spices grow in tropical regions. Most plants sought as spell components or for magical research are rare or very rare. The results of this spell are always determined by the DM.<br />The material component is the caster&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 255</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="507" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Charm Person or Mammal",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"80 yds.",
+"aoe":"1 person or mammal",
+"castingTime":"5",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"This spell affects any single person or mammal it is cast upon. The creature then regards the caster as a trusted friend and ally to be heeded and protected. The term person includes any bipedal human, demihuman or humanoid of man size or smaller, including brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter is included, while an ogre is not.
+The spell does not enable the caster to control the charmed creature as if it were an automaton, but any word or action of the caster is viewed in the most favorable way.
+Thus, a charmed creature would not obey a suicide command, but might believe the caster if assured that the only chance to save the caster's life is for the creature to hold back an onrushing red dragon for \"just a minute or two\" and if the charmed creature's view of the situation suggests that this course of action still allows a reasonable chance of survival.
+The subject's attitudes and priorities are changed with respect to the caster, but basic personality and alignment are not. A request that a victim make itself defenseless, give up a valued item, or even use a charge from a valued item (especially against former associates or allies) might allow an immediate saving throw to see if the charm is thrown off. Likewise, a charmed creature does not necessarily reveal everything it knows or draw maps of entire areas. Any request may be refused, if such refusal is in character and does not directly harm the caster. The victim's regard for the caster does not necessarily extend to the caster's friends or allies. The victim does not react well to the charmer's allies making suggestions such as, \"Ask him this question. . .,\" nor does the charmed creature put up with verbal or physical abuse from the charmer's associates, if this is out of character.
+Note also that the spell does not empower the caster with linguistic capabilities beyond those he normally has. The duration of the spell is a function of the charmed creature's Intelligence, and it is tied to the saving throw. A successful saving throw breaks the spell.
+This saving throw is checked on a periodic basis according to the creature's Intelligence, even if the caster has not overly strained the relationship.
+Intelligence Score Period Between Checks 3 or less 3 months 4-6 2 months 7-9 1 month 10-12 3 weeks 13-14 2 weeks 15-16 1 week 17 3 days 18 2 days 19 or more 1 day If the caster harms, or attempts to harm, the charmed creature by some overt action, or if a dispel magic spell is successfully cast upon the charmed creature, the charm is broken automatically.
+If the subject of the charm person/charm mammal spell successfully rolls its saving throw vs. the spell, the effect is negated.
+This spell, if used in conjunction with the animal friendship spell, can keep the animal near the caster's home base, if the caster must leave for an extended period."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Charm Person or Mammal</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 person or mammal&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell affects any single person or mammal it is cast upon. The creature then regards the caster as a trusted friend and ally to be heeded and protected. The term person includes any bipedal human, demihuman or humanoid of man size or smaller, including brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter is included, while an ogre is not.<br />The spell does not enable the caster to control the charmed creature as if it were an automaton, but any word or action of the caster is viewed in the most favorable way.<br />Thus, a charmed creature would not obey a suicide command, but might believe the caster if assured that the only chance to save the caster&#039;s life is for the creature to hold back an onrushing red dragon for &quot;just a minute or two&quot; and if the charmed creature&#039;s view of the situation suggests that this course of action still allows a reasonable chance of survival.<br />The subject&#039;s attitudes and priorities are changed with respect to the caster, but basic personality and alignment are not. A request that a victim make itself defenseless, give up a valued item, or even use a charge from a valued item (especially against former associates or allies) might allow an immediate saving throw to see if the charm is thrown off. Likewise, a charmed creature does not necessarily reveal everything it knows or draw maps of entire areas. Any request may be refused, if such refusal is in character and does not directly harm the caster. The victim&#039;s regard for the caster does not necessarily extend to the caster&#039;s friends or allies. The victim does not react well to the charmer&#039;s allies making suggestions such as, &quot;Ask him this question. . .,&quot; nor does the charmed creature put up with verbal or physical abuse from the charmer&#039;s associates, if this is out of character.<br />Note also that the spell does not empower the caster with linguistic capabilities beyond those he normally has. The duration of the spell is a function of the charmed creature&#039;s Intelligence, and it is tied to the saving throw. A successful saving throw breaks the spell.<br />This saving throw is checked on a periodic basis according to the creature&#039;s Intelligence, even if the caster has not overly strained the relationship.<br />Intelligence Score Period Between Checks 3 or less 3 months 4-6 2 months 7-9 1 month 10-12 3 weeks 13-14 2 weeks 15-16 1 week 17 3 days 18 2 days 19 or more 1 day If the caster harms, or attempts to harm, the charmed creature by some overt action, or if a dispel magic spell is successfully cast upon the charmed creature, the charm is broken automatically.<br />If the subject of the charm person/charm mammal spell successfully rolls its saving throw vs. the spell, the effect is negated.<br />This spell, if used in conjunction with the animal friendship spell, can keep the animal near the caster&#039;s home base, if the caster must leave for an extended period.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 258</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="518" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Messenger",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"20 yds./level",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"1 day/level",
+"save":"Negate",
+"damage":"",
+"description":"This spell enables the priest to call upon a tiny (size T) creature of at least animal intelligence to act as his messenger. The spell does not affect giant animals and it does not work on creatures of low (i.e., 5) Intelligence or higher. If the creature is within range, the priest, using some type of food desirable to the animal as a lure, can call the animal to come. The animal is allowed a saving throw vs. spell. If the saving throw is failed, the animal advances toward the priest and awaits his bidding. The priest can communicate with the animal in a crude fashion, telling it to go to a certain place, but directions must be simple. The spellcaster can attach some small item or note to the animal. If so instructed, the animal will then wait at that location until the duration of the spell expires. (Note that unless the intended recipient of a message is expecting a messenger in the form of a small animal or bird, the carrier may be ignored.) When the spell's duration expires, the animal or bird returns to its normal activities. The intended recipient of a message gains no communication ability."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Messenger</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">20 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the priest to call upon a tiny (size T) creature of at least animal intelligence to act as his messenger. The spell does not affect giant animals and it does not work on creatures of low (i.e., 5) Intelligence or higher. If the creature is within range, the priest, using some type of food desirable to the animal as a lure, can call the animal to come. The animal is allowed a saving throw vs. spell. If the saving throw is failed, the animal advances toward the priest and awaits his bidding. The priest can communicate with the animal in a crude fashion, telling it to go to a certain place, but directions must be simple. The spellcaster can attach some small item or note to the animal. If so instructed, the animal will then wait at that location until the duration of the spell expires. (Note that unless the intended recipient of a message is expecting a messenger in the form of a small animal or bird, the carrier may be ignored.) When the spell&#039;s duration expires, the animal or bird returns to its normal activities. The intended recipient of a message gains no communication ability.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 262</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="524" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Snake Charm",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"30-ft. cube",
+"castingTime":"5",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, a hypnotic pattern is set up that causes one or more snakes to cease all activity except a semierect, swaying movement. If the snakes are charmed while in a torpor, the duration of the spell is 1d4+2 turns; if the snakes are not torpid, but are not aroused and angry, the charm lasts 1d3 turns; if the snakes are angry or attacking, the spell lasts 1d4+4 rounds. The priest casting the spell can charm snakes whose total hit points are less than or equal to those of the priest. On the average, a 1st-level priest could charm snakes with a total of 4 or 5 hit points; a 2nd-level priest could charm 9 hit points, etc. The hit points can be those of a single snake or those of several of the reptiles, but the total hit points cannot exceed those of the priest casting the spell. A 23-hit point caster charming a dozen 2-hit point snakes would charm 11 of them. This spell is also effective against any ophidian or ophidianoid monster, such as naga, couatl, etc., subject to magic resistance, hit points, and so forth.
+Variations of this spell may exist, allowing other creatures significant to a particular mythos to be affected. Your DM will inform you if such spells exist."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Snake Charm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, a hypnotic pattern is set up that causes one or more snakes to cease all activity except a semierect, swaying movement. If the snakes are charmed while in a torpor, the duration of the spell is 1d4+2 turns; if the snakes are not torpid, but are not aroused and angry, the charm lasts 1d3 turns; if the snakes are angry or attacking, the spell lasts 1d4+4 rounds. The priest casting the spell can charm snakes whose total hit points are less than or equal to those of the priest. On the average, a 1st-level priest could charm snakes with a total of 4 or 5 hit points; a 2nd-level priest could charm 9 hit points, etc. The hit points can be those of a single snake or those of several of the reptiles, but the total hit points cannot exceed those of the priest casting the spell. A 23-hit point caster charming a dozen 2-hit point snakes would charm 11 of them. This spell is also effective against any ophidian or ophidianoid monster, such as naga, couatl, etc., subject to magic resistance, hit points, and so forth.<br />Variations of this spell may exist, allowing other creatures significant to a particular mythos to be affected. Your DM will inform you if such spells exist.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 263</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="525" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Speak With Animals",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"1 animal within 30 ft.",
+"castingTime":"5",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"This spell empowers the priest to comprehend and communicate with any warm- or cold-blooded normal or giant animal that is not mindless. The priest is able to ask questions of and receive answers from the creature, although friendliness and cooperation are by no means assured. Furthermore, terseness and evasiveness are likely in basically wary and cunning creatures (the more stupid ones will instead make inane comments). If the animal is friendly or of the same general alignment as the priest, it may do some favor or service for the priest (as determined by the DM). Note that this spell differs from the speak with monsters spell, for this spell allows conversation only with normal or giant nonfantastic creatures such as apes, bears, cats, dogs, elephants, and so on."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Speak With Animals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 animal within 30 ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell empowers the priest to comprehend and communicate with any warm- or cold-blooded normal or giant animal that is not mindless. The priest is able to ask questions of and receive answers from the creature, although friendliness and cooperation are by no means assured. Furthermore, terseness and evasiveness are likely in basically wary and cunning creatures (the more stupid ones will instead make inane comments). If the animal is friendly or of the same general alignment as the priest, it may do some favor or service for the priest (as determined by the DM). Note that this spell differs from the speak with monsters spell, for this spell allows conversation only with normal or giant nonfantastic creatures such as apes, bears, cats, dogs, elephants, and so on.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 263</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="850" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Control Animal",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds. + 10 yds./level",
+"aoe":"1 animal",
+"castingTime":"6",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"",
+"description":"When a priest casts this spell, he forces an animal to do his bidding. The creature is entitled to a saving throw vs. spell; if it fails, the caster may direct the creature with simple commands to act in any fashion desired. Sample commands include attack, run, fetch, etc. Suicidal or self-destructive commands grant the subject another saving throw to break free of the caster's control, with a +1 to +4 bonus depending on the extremity of the caster's orders. Ordering an animal to engage in combat is not necessarily self-destructive, as long as the prospective opponent is not more than three times the animal's Hit Dice or more than two size categories larger than the subject. For example, a wolf (3 Hit Dice, size M) would attack a troll (6+6 Hit Dice, size L) without hesitation, but it might break free of the caster's control if ordered to attack a size H dragon or an 8+8 HD umber hulk.
+Control animal establishes a mental link between the caster and the subject, and the animal can be directed by silent mental command as long as it remains within range.
+Because the caster's intelligence directs the animal, the creature may be able to take actions normally beyond its own comprehension, such as manipulating objects with its paws and mouth. The caster need not concentrate in order to maintain control of the creature unless he is trying to direct it to do something it normally couldn't.
+Control animal only works on normal or giant-sized animals with Intelligence ratings between 1 and 4. Magical animals, monsters, and creatures of low Intelligence or higher are immune to the effects of this spell. Druids always avoid using this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Control Animal</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds. + 10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 animal&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts this spell, he forces an animal to do his bidding. The creature is entitled to a saving throw vs. spell; if it fails, the caster may direct the creature with simple commands to act in any fashion desired. Sample commands include attack, run, fetch, etc. Suicidal or self-destructive commands grant the subject another saving throw to break free of the caster&#039;s control, with a +1 to +4 bonus depending on the extremity of the caster&#039;s orders. Ordering an animal to engage in combat is not necessarily self-destructive, as long as the prospective opponent is not more than three times the animal&#039;s Hit Dice or more than two size categories larger than the subject. For example, a wolf (3 Hit Dice, size M) would attack a troll (6+6 Hit Dice, size L) without hesitation, but it might break free of the caster&#039;s control if ordered to attack a size H dragon or an 8+8 HD umber hulk.<br />Control animal establishes a mental link between the caster and the subject, and the animal can be directed by silent mental command as long as it remains within range.<br />Because the caster&#039;s intelligence directs the animal, the creature may be able to take actions normally beyond its own comprehension, such as manipulating objects with its paws and mouth. The caster need not concentrate in order to maintain control of the creature unless he is trying to direct it to do something it normally couldn&#039;t.<br />Control animal only works on normal or giant-sized animals with Intelligence ratings between 1 and 4. Magical animals, monsters, and creatures of low Intelligence or higher are immune to the effects of this spell. Druids always avoid using this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 166</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="541" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hold Animal",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"80 yds.",
+"aoe":"1-4 animals in 40-ft. cube",
+"castingTime":"6",
+"duration":"2 rds./level",
+"save":"Negate",
+"damage":"",
+"description":"By means of this spell, the caster holds one to four animals rigid. Animals affected are normal or giant-sized mammals, birds, or reptiles, but not monsters such as centaurs, gorgons, harpies, naga, etc. Apes, bears, crocodiles, dogs, eagles, foxes, giant beavers, and similar animals are subject to this spell. The hold lasts for two rounds per caster level. The caster decides how many animals can be affected, but the greater the number, the better chance each has to successfully save against the spell. Each animal gets a saving throw: If only one is the subject of the spell, it has a penalty of -4 on its roll; if two are subject, each receives a penalty of -2 on its roll; if three are subject, each receives a penalty of -1 on its roll; and if four are subject, each gets an unmodified saving throw.
+A maximum body weight of 400 pounds (100 pounds for nonmammals) per animal per caster level can be affected--for example, an 8th-level caster can affect up to four 3,200- pound mammals or a like number of 800-pound nonmammals, such as birds or reptiles."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hold Animal</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1-4 animals in 40-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster holds one to four animals rigid. Animals affected are normal or giant-sized mammals, birds, or reptiles, but not monsters such as centaurs, gorgons, harpies, naga, etc. Apes, bears, crocodiles, dogs, eagles, foxes, giant beavers, and similar animals are subject to this spell. The hold lasts for two rounds per caster level. The caster decides how many animals can be affected, but the greater the number, the better chance each has to successfully save against the spell. Each animal gets a saving throw: If only one is the subject of the spell, it has a penalty of -4 on its roll; if two are subject, each receives a penalty of -2 on its roll; if three are subject, each receives a penalty of -1 on its roll; and if four are subject, each gets an unmodified saving throw.<br />A maximum body weight of 400 pounds (100 pounds for nonmammals) per animal per caster level can be affected--for example, an 8th-level caster can affect up to four 3,200- pound mammals or a like number of 800-pound nonmammals, such as birds or reptiles.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 268</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="557" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Summon Insects",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"The summon insects spell attracts a cloud or swarm of normal insects to attack the foes of the caster. Flying insects appear 70% of the time, while crawling insects appear 30% of the time. The exact insects called are bees, biting flies, hornets, or wasps, if flying insects are indicated; biting ants or pinching beetles, if crawling insects are indicated. A cloud of the flying type, or a swarm of the crawling sort, appears after the spell is cast.
+This gathers at a point chosen by the caster, within the spell's range, and attacks any single creature the caster points to.
+The attacked creature sustains 2 points of damage if it does nothing but attempt to flee or fend off the insects during the time it is attacked; it suffers 4 points of damage per round otherwise. If the insects are ignored, the victim fights with a -2 penalty to his attack roll and a +2 penalty to his Armor Class. If he attempts to cast a spell, an initiative roll should be made for the insects to see if their damage occurs before the spell is cast. If it does, the victim's concentration is ruined and the spell is lost.
+The insects disperse and the spell ends if the victim enters thick smoke or hot flames.
+Besides being driven off by smoke or hot flames, the swarm might possibly be outrun, or evaded by plunging into a sufficient body of water. If evaded, the summoned insects can be sent against another opponent, but there will be at least a 1 round delay while they leave the former opponent and attack the new victim. Crawling insects can travel only about 10 feet per round (maximum speed over smooth ground) and flying insects travel 60 feet per round. The caster must concentrate to maintain the swarm; it dissipates if he moves or is disturbed.
+It is possible, in underground situations, that the caster might summon 1d4 giant ants by means of the spell, but the possibility is only 30% unless giant ants are nearby. This spell does not function under water.
+The materials needed for this spell are the caster's holy symbol, a flower petal, and a bit of mud or wet clay."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Summon Insects</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The summon insects spell attracts a cloud or swarm of normal insects to attack the foes of the caster. Flying insects appear 70% of the time, while crawling insects appear 30% of the time. The exact insects called are bees, biting flies, hornets, or wasps, if flying insects are indicated; biting ants or pinching beetles, if crawling insects are indicated. A cloud of the flying type, or a swarm of the crawling sort, appears after the spell is cast.<br />This gathers at a point chosen by the caster, within the spell&#039;s range, and attacks any single creature the caster points to.<br />The attacked creature sustains 2 points of damage if it does nothing but attempt to flee or fend off the insects during the time it is attacked; it suffers 4 points of damage per round otherwise. If the insects are ignored, the victim fights with a -2 penalty to his attack roll and a +2 penalty to his Armor Class. If he attempts to cast a spell, an initiative roll should be made for the insects to see if their damage occurs before the spell is cast. If it does, the victim&#039;s concentration is ruined and the spell is lost.<br />The insects disperse and the spell ends if the victim enters thick smoke or hot flames.<br />Besides being driven off by smoke or hot flames, the swarm might possibly be outrun, or evaded by plunging into a sufficient body of water. If evaded, the summoned insects can be sent against another opponent, but there will be at least a 1 round delay while they leave the former opponent and attack the new victim. Crawling insects can travel only about 10 feet per round (maximum speed over smooth ground) and flying insects travel 60 feet per round. The caster must concentrate to maintain the swarm; it dissipates if he moves or is disturbed.<br />It is possible, in underground situations, that the caster might summon 1d4 giant ants by means of the spell, but the possibility is only 30% unless giant ants are nearby. This spell does not function under water.<br />The materials needed for this spell are the caster&#039;s holy symbol, a flower petal, and a bit of mud or wet clay.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 272</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="562" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Summoning I",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"1 mi. radius",
+"aoe":"Special",
+"castingTime":"7",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster calls up to eight animals that have 4 Hit Dice or less, of whatever sort the caster names when the summoning is made. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals. For example, a caster first tries to summon wild dogs to no avail, then unsuccessfully tries to call hawks, and finally calls wild horses that may or may not be within summoning range. The DM must determine the chance of a summoned animal type being within the range of the spell. The animals summoned aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc. Only normal or giant animals can be summoned; fantastic animals or monsters cannot be summoned by this spell (no chimerae, dragons, gorgons, manticores, etc.)."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Summoning I</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1 mi. radius&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster calls up to eight animals that have 4 Hit Dice or less, of whatever sort the caster names when the summoning is made. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals. For example, a caster first tries to summon wild dogs to no avail, then unsuccessfully tries to call hawks, and finally calls wild horses that may or may not be within summoning range. The DM must determine the chance of a summoned animal type being within the range of the spell. The animals summoned aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc. Only normal or giant animals can be summoned; fantastic animals or monsters cannot be summoned by this spell (no chimerae, dragons, gorgons, manticores, etc.).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 274</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="563" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Call Woodland Beings",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"100 yds./level",
+"aoe":"Special",
+"castingTime":"Special",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"By means of this spell, the caster is able to summon certain woodland creatures to his location. Naturally, this spell works only outdoors, but not necessarily only in wooded areas. The caster begins the incantation and continues uninterrupted until some called creature appears or two turns have elapsed. (The verbalization and somatic gesturing are easy, so this is not particularly exhausting to the spellcaster.) Only one type of the following sorts of beings can be summoned by the spell. They come only if they are within the range of the call.
+The caster can call three times, for a different type each time. Once a call is successful, no other type can be called without another casting of the spell. (The DM will consult his outdoor map or base the probability of any such creature being within spell range upon the nature of the area the caster is in at the time of spellcasting.) The creature(s) called by the spell are entitled to a saving throw vs. spell (with a -4 penalty) to avoid the summons. Any woodland beings answering the call are favorably disposed to the spellcaster and give whatever aid they are capable of. However, if the caller or members of the caller's party are of evil alignment, the creatures are entitled to another saving throw vs. spell (this time with a +4 bonus) when they come within 10 yards of the caster or another evil character with him. These beings immediately seek to escape if their saving throws are successful. In any event, if the caster requests that the summoned creatures engage in combat on his behalf, they are required to roll a loyalty reaction check based on the caster's Charisma and whatever dealings he has had with them.
+This spell works with respect to neutral or good woodland creatures, as determined by the DM. Thus, the DM can freely add to or alter the list as he sees fit.
+If the caster personally knows a certain individual woodland being, that being can be summoned at double the normal range. If this is done, no other woodland creatures are affected.
+If a percentage chance is given in the accompanying table, druids and other naturebased priests add 1% per caster level. These chances can be used if no other campaign information on the area is available.
+The material components of this spell are a pine cone and eight holly berries.
+Creature ---------------- Type of Woodlands -------------- Type Called Light Moderate/Sylvan Dense/Virgin 2d8 brownies 30% 20% 10% 1d4 centaurs 5% 30% 5% 1d4 dryads 1% 25% 15% 1d8 pixies 10% 20% 10% 1d4 satyrs 1% 30% 10% 1d6 sprites 0% 5% 25% 1 treant -- 5% 25% 1 unicorn -- 15% 20%"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Call Woodland Beings</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">100 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Special&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster is able to summon certain woodland creatures to his location. Naturally, this spell works only outdoors, but not necessarily only in wooded areas. The caster begins the incantation and continues uninterrupted until some called creature appears or two turns have elapsed. (The verbalization and somatic gesturing are easy, so this is not particularly exhausting to the spellcaster.) Only one type of the following sorts of beings can be summoned by the spell. They come only if they are within the range of the call.<br />The caster can call three times, for a different type each time. Once a call is successful, no other type can be called without another casting of the spell. (The DM will consult his outdoor map or base the probability of any such creature being within spell range upon the nature of the area the caster is in at the time of spellcasting.) The creature(s) called by the spell are entitled to a saving throw vs. spell (with a -4 penalty) to avoid the summons. Any woodland beings answering the call are favorably disposed to the spellcaster and give whatever aid they are capable of. However, if the caller or members of the caller&#039;s party are of evil alignment, the creatures are entitled to another saving throw vs. spell (this time with a +4 bonus) when they come within 10 yards of the caster or another evil character with him. These beings immediately seek to escape if their saving throws are successful. In any event, if the caster requests that the summoned creatures engage in combat on his behalf, they are required to roll a loyalty reaction check based on the caster&#039;s Charisma and whatever dealings he has had with them.<br />This spell works with respect to neutral or good woodland creatures, as determined by the DM. Thus, the DM can freely add to or alter the list as he sees fit.<br />If the caster personally knows a certain individual woodland being, that being can be summoned at double the normal range. If this is done, no other woodland creatures are affected.<br />If a percentage chance is given in the accompanying table, druids and other naturebased priests add 1% per caster level. These chances can be used if no other campaign information on the area is available.<br />The material components of this spell are a pine cone and eight holly berries.<br />Creature ---------------- Type of Woodlands -------------- Type Called Light Moderate/Sylvan Dense/Virgin 2d8 brownies 30% 20% 10% 1d4 centaurs 5% 30% 5% 1d4 dryads 1% 25% 15% 1d8 pixies 10% 20% 10% 1d4 satyrs 1% 30% 10% 1d6 sprites 0% 5% 25% 1 treant -- 5% 25% 1 unicorn -- 15% 20%</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 274</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="570" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Giant Insect",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"20 yds.",
+"aoe":"1 to 6 insects",
+"castingTime":"7",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the priest can turn one or more normal-sized insects into larger forms resembling the giant insects described in the Monstrous Manual. Only one type of insect can be altered at one time (i.e., a single casting cannot affect both an ant and a fly) and all insects affected must be grown to the same size. The number of insects and the size to which they can be grown depends upon the priest's level: Priest's Insect Maximum Level Hit Dice Total HD 7-9 3 9 10-12 4 12 13+ 6 15 For example, an 8th-level priest can grow three insects to 3 Hit Dice, four insects to 2 Hit Dice, or nine insects to 1 Hit Die. Flying insects of 3 Hit Dice or more can carry a rider of human size (assume that such can carry 80 pounds per Hit Die).
+If the casting is interrupted for any reason, or if the insects are currently subject to any other magical effect (including this one), the insects die and the spell is ruined. The DM decides how many normal insects of what type are available; this is often a greater limitation on the spell than the limits above.
+If the insect created by this spell matches an existing monster description, use the monster description. Otherwise, unless the DM creates a special description, the giant form has an Armor Class of between 8 and 4, one attack, and inflicts 1d4 points of damage per Hit Die.
+For example, a 14th-level priest uses the giant insect spell to enlarge one beetle (all that is available) to 6 HD size. The DM decides the beetle has AC 5 and bites once for 6d4 points of damage.
+Note that the spell works only on actual insects. Arachnids, crustaceans, and other types of small creatures are not affected. Any giant insects created by this spell do not attempt to harm the priest, but the priest's control of such creatures is limited to simple commands (\"attack,\" \"defend,\" \"guard,\" and so forth). Orders to attack a certain creature when it appears or guard against a particular occurrence are too complex. Unless commanded to do otherwise, the giant insects attempt to attack whoever or whatever is near them.
+The reverse of the spell, shrink insect, reduces any giant insect to normal insect size.
+The number of Hit Dice affected by the priest is subtracted from the number of Hit Dice of the insects, and any insect reduced to 0 Hit Dice has been shrunk. Partial shrinking is ignored; an insect is either shrunk or unaffected. Thus, a 9th-level priest attacked by giant ants could shrink three warrior ants or four worker ants to normal insect size with no saving throw. This spell has no effect on intelligent insectlike creatures.
+The priest must use his holy symbol for either version of the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Giant Insect</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">20 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 to 6 insects&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the priest can turn one or more normal-sized insects into larger forms resembling the giant insects described in the Monstrous Manual. Only one type of insect can be altered at one time (i.e., a single casting cannot affect both an ant and a fly) and all insects affected must be grown to the same size. The number of insects and the size to which they can be grown depends upon the priest&#039;s level: Priest&#039;s Insect Maximum Level Hit Dice Total HD 7-9 3 9 10-12 4 12 13+ 6 15 For example, an 8th-level priest can grow three insects to 3 Hit Dice, four insects to 2 Hit Dice, or nine insects to 1 Hit Die. Flying insects of 3 Hit Dice or more can carry a rider of human size (assume that such can carry 80 pounds per Hit Die).<br />If the casting is interrupted for any reason, or if the insects are currently subject to any other magical effect (including this one), the insects die and the spell is ruined. The DM decides how many normal insects of what type are available; this is often a greater limitation on the spell than the limits above.<br />If the insect created by this spell matches an existing monster description, use the monster description. Otherwise, unless the DM creates a special description, the giant form has an Armor Class of between 8 and 4, one attack, and inflicts 1d4 points of damage per Hit Die.<br />For example, a 14th-level priest uses the giant insect spell to enlarge one beetle (all that is available) to 6 HD size. The DM decides the beetle has AC 5 and bites once for 6d4 points of damage.<br />Note that the spell works only on actual insects. Arachnids, crustaceans, and other types of small creatures are not affected. Any giant insects created by this spell do not attempt to harm the priest, but the priest&#039;s control of such creatures is limited to simple commands (&quot;attack,&quot; &quot;defend,&quot; &quot;guard,&quot; and so forth). Orders to attack a certain creature when it appears or guard against a particular occurrence are too complex. Unless commanded to do otherwise, the giant insects attempt to attack whoever or whatever is near them.<br />The reverse of the spell, shrink insect, reduces any giant insect to normal insect size.<br />The number of Hit Dice affected by the priest is subtracted from the number of Hit Dice of the insects, and any insect reduced to 0 Hit Dice has been shrunk. Partial shrinking is ignored; an insect is either shrunk or unaffected. Thus, a 9th-level priest attacked by giant ants could shrink three warrior ants or four worker ants to normal insect size with no saving throw. This spell has no effect on intelligent insectlike creatures.<br />The priest must use his holy symbol for either version of the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 276</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="581" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Repel Insects",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10-ft. radius",
+"castingTime":"1 rd.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the priest creates an invisible barrier to all sorts of insects, and normal insects do not approach within 10 feet of the caster while the spell is in effect.
+Giant insects with Hit Dice less than 1/3 of the caster's experience level are also repelled (for example, 2 Hit Dice for 7th- to 9th-level casters, 3 Hit Dice at 10th through 12th level, etc.). Insects with more Hit Dice can enter the protected area if the insect is especially aggressive and, in addition, rolls a successful saving throw vs. spell. Those that do sustain 1d6 points of damage from passing through the magical barrier. Note that the spell does not in any way affect arachnids, myriapods, and similar creatures--it affects only true insects.
+The material components of the repel insects spell include any one of the following: several crushed marigold flowers, a whole crushed leek, seven crushed stinging nettle leaves, or a small lump of resin from a camphor tree."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Repel Insects</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the priest creates an invisible barrier to all sorts of insects, and normal insects do not approach within 10 feet of the caster while the spell is in effect.<br />Giant insects with Hit Dice less than 1/3 of the caster&#039;s experience level are also repelled (for example, 2 Hit Dice for 7th- to 9th-level casters, 3 Hit Dice at 10th through 12th level, etc.). Insects with more Hit Dice can enter the protected area if the insect is especially aggressive and, in addition, rolls a successful saving throw vs. spell. Those that do sustain 1d6 points of damage from passing through the magical barrier. Note that the spell does not in any way affect arachnids, myriapods, and similar creatures--it affects only true insects.<br />The material components of the repel insects spell include any one of the following: several crushed marigold flowers, a whole crushed leek, seven crushed stinging nettle leaves, or a small lump of resin from a camphor tree.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 279</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="587" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Growth",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"80 yds.",
+"aoe":"Up to 8 animals in a 20-ft. sq.",
+"castingTime":"8",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is released, the caster causes up to eight animals within a 20-footsquare area to grow to twice their normal size. The effects of this growth are doubled Hit Dice (with resultant improvement in attack potential), doubled hit points (except hit points added to Hit Dice), and doubled damage in combat. Movement and AC are not affected. The spell lasts for two rounds for each level of the caster. The spell is particularly useful in conjunction with a charm person or mammal spell.
+The reverse reduces animal size by one-half, and likewise reduces Hit Dice, hit points, attack damage, etc.
+The material component for this spell and its reverse is the caster's holy symbol and a scrap of food."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Growth</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Up to 8 animals in a 20-ft. sq.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is released, the caster causes up to eight animals within a 20-footsquare area to grow to twice their normal size. The effects of this growth are doubled Hit Dice (with resultant improvement in attack potential), doubled hit points (except hit points added to Hit Dice), and doubled damage in combat. Movement and AC are not affected. The spell lasts for two rounds for each level of the caster. The spell is particularly useful in conjunction with a charm person or mammal spell.<br />The reverse reduces animal size by one-half, and likewise reduces Hit Dice, hit points, attack damage, etc.<br />The material component for this spell and its reverse is the caster&#039;s holy symbol and a scrap of food.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 280</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="588" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Summoning II",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds./level",
+"aoe":"Special",
+"castingTime":"8",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster calls up to six animals of 8 Hit Dice or less, or 12 animals of 4 Hit Dice or less--of whatever sort the caster names. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals. For example, suppose that wild dogs are first summoned to no avail, then hawks are unsuccessfully called, and finally the caster calls for wild horses. The DM determines the chance of a summoned animal type being within range of the spell. The animals summoned aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc. Only normal or giant animals can be summoned; fantastic animals or monsters cannot be effected by this spell (no chimerae, dragons, gorgons, manticores, etc.)."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Summoning II</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster calls up to six animals of 8 Hit Dice or less, or 12 animals of 4 Hit Dice or less--of whatever sort the caster names. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals. For example, suppose that wild dogs are first summoned to no avail, then hawks are unsuccessfully called, and finally the caster calls for wild horses. The DM determines the chance of a summoned animal type being within range of the spell. The animals summoned aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc. Only normal or giant animals can be summoned; fantastic animals or monsters cannot be effected by this spell (no chimerae, dragons, gorgons, manticores, etc.).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 281</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="592" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Commune With Nature",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to become one with nature, thus being empowered with knowledge of the surrounding territory. For each level of experience of the caster, he can \"know\" one fact--ahead, left, or right, about the following subjects: the ground, plants, minerals, bodies of water, people, general animal population, presence of woodland creatures, etc. The presence of powerful unnatural creatures also can be detected, as can the general state of the natural setting. The spell is most effective in outdoor settings, operating in a radius of one-half mile for each level of the caster. In natural underground settings--caves, cavern, etc.--the range is limited to 10 yards per caster level. In constructed settings (dungeons and towns), the spell will not function. The DM may limit the casting of this spell to once per month."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Commune With Nature</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to become one with nature, thus being empowered with knowledge of the surrounding territory. For each level of experience of the caster, he can &quot;know&quot; one fact--ahead, left, or right, about the following subjects: the ground, plants, minerals, bodies of water, people, general animal population, presence of woodland creatures, etc. The presence of powerful unnatural creatures also can be detected, as can the general state of the natural setting. The spell is most effective in outdoor settings, operating in a radius of one-half mile for each level of the caster. In natural underground settings--caves, cavern, etc.--the range is limited to 10 yards per caster level. In constructed settings (dungeons and towns), the spell will not function. The DM may limit the casting of this spell to once per month.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 281</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="597" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Insect Plague",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds.",
+"aoe":"180 ft. x 60 ft. cloud",
+"castingTime":"1 turn",
+"duration":"2 rds./level",
+"save":"1/2",
+"damage":"",
+"description":"When this spell is cast by the priest, a horde of creeping, hopping, and flying insects gather and swarm in a thick cloud. In an environment free of normal insects, the spell fails. The insects obscure vision, limiting it to 10 feet. Spellcasting within the cloud is impossible. Creatures in the insect plague, regardless of Armor Class, sustain 1 point of damage for each round they remain within, due to the bites and stings of the insects.
+Invisibility is no protection. All creatures with 2 or fewer Hit Dice will automatically move at their fastest possible speed in a random direction until they are more than 240 yards away from the insects. Creatures with fewer than 5 Hit Dice must check morale; failure means they run as described above.
+Heavy smoke drives off insects within its bounds. Fire also drives insects away. For example, a wall of fire in a ring shape keeps a subsequently cast insect plague outside its confines, but a fireball spell simply clears insects from its blast area for one round. A single torch is ineffective against this vast horde of insects. Lightning, cold, or ice are likewise ineffective, while a strong wind that covers the entire plague area disperses the insects and ends the spell. The plague lasts two rounds for each level of the caster, and thereafter the insects disperse. The insects swarm in an area that centers around a summoning point determined by the spellcaster. The point can be up to 120 yards away from the priest. The insect plague does not move thereafter for as long as it lasts. Note that the spell can be countered by a dispel magic spell.
+The material components of this spell are a few granules of sugar, some kernels of grain, and a smear of fat."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Insect Plague</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">180 ft. x 60 ft. cloud&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast by the priest, a horde of creeping, hopping, and flying insects gather and swarm in a thick cloud. In an environment free of normal insects, the spell fails. The insects obscure vision, limiting it to 10 feet. Spellcasting within the cloud is impossible. Creatures in the insect plague, regardless of Armor Class, sustain 1 point of damage for each round they remain within, due to the bites and stings of the insects.<br />Invisibility is no protection. All creatures with 2 or fewer Hit Dice will automatically move at their fastest possible speed in a random direction until they are more than 240 yards away from the insects. Creatures with fewer than 5 Hit Dice must check morale; failure means they run as described above.<br />Heavy smoke drives off insects within its bounds. Fire also drives insects away. For example, a wall of fire in a ring shape keeps a subsequently cast insect plague outside its confines, but a fireball spell simply clears insects from its blast area for one round. A single torch is ineffective against this vast horde of insects. Lightning, cold, or ice are likewise ineffective, while a strong wind that covers the entire plague area disperses the insects and ends the spell. The plague lasts two rounds for each level of the caster, and thereafter the insects disperse. The insects swarm in an area that centers around a summoning point determined by the spellcaster. The point can be up to 120 yards away from the priest. The insect plague does not move thereafter for as long as it lasts. Note that the spell can be countered by a dispel magic spell.<br />The material components of this spell are a few granules of sugar, some kernels of grain, and a smear of fat.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 282</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="612" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Summoning III",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"100 yds./level",
+"aoe":"Special",
+"castingTime":"9",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell is the same in duration and effect as the 4th-level animal summoning I spell, except that up to four animals of no more than 16 Hit Dice each can be summoned, or eight of no more than 8 Hit Dice, or 16 creatures of no more than 4 Hit Dice. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals[md]e.g., suppose that wild dogs are first summoned to no avail, then hawks are unsuccessfully called, and finally the caster calls for wild horses that may or may not be within summoning range. Your DM will determine the chance of a summoned animal type being within range of the spell.
+The animals summoned will aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc.
+Only normal or giant animals can be summoned; fantastic animals or monsters cannot be summoned by this spell (no chimerae, dragons, gorgons, manticores, etc.)."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Summoning III</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">100 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">9&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell is the same in duration and effect as the 4th-level animal summoning I spell, except that up to four animals of no more than 16 Hit Dice each can be summoned, or eight of no more than 8 Hit Dice, or 16 creatures of no more than 4 Hit Dice. Only animals within range of the caster at the time the spell is cast will come. The caster can try three times to summon three different types of animals[md]e.g., suppose that wild dogs are first summoned to no avail, then hawks are unsuccessfully called, and finally the caster calls for wild horses that may or may not be within summoning range. Your DM will determine the chance of a summoned animal type being within range of the spell.<br />The animals summoned will aid the caster by whatever means they possess, staying until a fight is over, a specific mission is finished, the caster is safe, he sends them away, etc.<br />Only normal or giant animals can be summoned; fantastic animals or monsters cannot be summoned by this spell (no chimerae, dragons, gorgons, manticores, etc.).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 287</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="614" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-Animal Shell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10-ft. radius",
+"castingTime":"1 rd.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"By casting this spell, the caster brings into being a hemispherical force field that prevents the entrance of any sort of living creature that is wholly or partially animal (not magical or extraplanar). Thus a sprite, a giant, or a chimera would be kept out, but undead or conjured creatures could pass through the shell of force, as could such monsters as aerial servants, imps, quasits, golems, elementals, etc. The anti-animal shell functions normally against crossbreeds, such as cambions, and lasts for one turn for each level of experience the caster has attained. Forcing the barrier against creatures strains and ultimately collapses the field.
+The spell requires the caster's holy symbol and a handful of pepper."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-Animal Shell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, the caster brings into being a hemispherical force field that prevents the entrance of any sort of living creature that is wholly or partially animal (not magical or extraplanar). Thus a sprite, a giant, or a chimera would be kept out, but undead or conjured creatures could pass through the shell of force, as could such monsters as aerial servants, imps, quasits, golems, elementals, etc. The anti-animal shell functions normally against crossbreeds, such as cambions, and lasts for one turn for each level of experience the caster has attained. Forcing the barrier against creatures strains and ultimately collapses the field.<br />The spell requires the caster&#039;s holy symbol and a handful of pepper.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 288</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="640" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Creeping Doom",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"4 rds./level",
+"save":"None",
+"damage":"",
+"description":"When the caster utters the spell of creeping doom, he calls forth a mass of from 500 to 1,000 ([1d6 + 4] x 100) venomous, biting and stinging arachnids, insects, and myriapods.
+This carpetlike mass swarms in an area 20 feet square. Upon command from the caster, the swarm creeps forth at 10 feet per round toward any prey within 80 yards, moving in the direction in which the caster commands. The creeping doom slays any creature subject to normal attacks, as each of the small horrors inflicts 1 point of damage (each then dies after its attack), so that up to 1,000 points of damage can be inflicted on creatures within the path of the creeping doom. If the creeping doom travels more than 80 yards away from the summoner, it loses 50 of its number for each 10 yards beyond 80 yards. For example, at 100 yards, its number has shrunk by 100. There are a number of ways to thwart or destroy the creatures forming the swarm. The solutions are left to the imaginations of players and DMs."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Creeping Doom</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">4 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the caster utters the spell of creeping doom, he calls forth a mass of from 500 to 1,000 ([1d6 + 4] x 100) venomous, biting and stinging arachnids, insects, and myriapods.<br />This carpetlike mass swarms in an area 20 feet square. Upon command from the caster, the swarm creeps forth at 10 feet per round toward any prey within 80 yards, moving in the direction in which the caster commands. The creeping doom slays any creature subject to normal attacks, as each of the small horrors inflicts 1 point of damage (each then dies after its attack), so that up to 1,000 points of damage can be inflicted on creatures within the path of the creeping doom. If the creeping doom travels more than 80 yards away from the summoner, it loses 50 of its number for each 10 yards beyond 80 yards. For example, at 100 yards, its number has shrunk by 100. There are a number of ways to thwart or destroy the creatures forming the swarm. The solutions are left to the imaginations of players and DMs.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 295</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="647" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Reincarnate",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 person",
+"castingTime":"1 turn",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"With this spell, the priest can bring back a dead person in another body, if death occurred no more than one week before the casting of the spell. Reincarnation does not require any saving throw, system shock, or resurrection survival roll. The corpse is touched, and a new incarnation of the person appears in the area in 1d6 turns. The person reincarnated recalls the majority of his former life and form, but the character class, if any, of the new incarnation might be very different indeed. The new incarnation is determined on the following table or by DM choice. If a player character race is indicated, the character must be created. At the DM's option, certain special (expensive) incenses can be used that may increase the chance for a character to return as a specific race or species. A wish spell can restore a reincarnated character to its original form and status.
+D100 Roll Incarnation 01-03 Badger 04-08 Bear, black 09-12 Bear, brown 13-16 Boar, wild 17-19 Centaur 20-23 Dryad 24-28 Eagle 29-31 Elf 32-34 Faun/satyr 35-36 Fox 37-40 Gnome 41-44 Hawk 45-58 Human 59-61 Lynx 62-64 Owl 65-68 Pixie 69-70 Raccoon 71-75 Stag 76-80 Wolf 81-85 Wolverine 86-00 DM's choice If an unusual creature form is indicated, the DM can (at his option only) use the guidelines for new player character races to allow the character to earn experience and advance in levels, although this may not be in the same class as before. If the reincarnated character returns as a creature eligible to be the same class as he was previously (i.e., a human fighter returns as an elf), the reincarnated character has half his previous levels and hit points. If the character returns as a new character class, his hit points are half his previous total, but he must begin again at 1st level. If the character returns as a creature unable to have a class, he has half the hit points and saving throws of his previous incarnation."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Reincarnate</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 person&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With this spell, the priest can bring back a dead person in another body, if death occurred no more than one week before the casting of the spell. Reincarnation does not require any saving throw, system shock, or resurrection survival roll. The corpse is touched, and a new incarnation of the person appears in the area in 1d6 turns. The person reincarnated recalls the majority of his former life and form, but the character class, if any, of the new incarnation might be very different indeed. The new incarnation is determined on the following table or by DM choice. If a player character race is indicated, the character must be created. At the DM&#039;s option, certain special (expensive) incenses can be used that may increase the chance for a character to return as a specific race or species. A wish spell can restore a reincarnated character to its original form and status.<br />D100 Roll Incarnation 01-03 Badger 04-08 Bear, black 09-12 Bear, brown 13-16 Boar, wild 17-19 Centaur 20-23 Dryad 24-28 Eagle 29-31 Elf 32-34 Faun/satyr 35-36 Fox 37-40 Gnome 41-44 Hawk 45-58 Human 59-61 Lynx 62-64 Owl 65-68 Pixie 69-70 Raccoon 71-75 Stag 76-80 Wolf 81-85 Wolverine 86-00 DM&#039;s choice If an unusual creature form is indicated, the DM can (at his option only) use the guidelines for new player character races to allow the character to earn experience and advance in levels, although this may not be in the same class as before. If the reincarnated character returns as a creature eligible to be the same class as he was previously (i.e., a human fighter returns as an elf), the reincarnated character has half his previous levels and hit points. If the character returns as a new character class, his hit points are half his previous total, but he must begin again at 1st level. If the character returns as a creature unable to have a class, he has half the hit points and saving throws of his previous incarnation.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 297</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="800" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animal Horde",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10-mile radius",
+"castingTime":"1 turn",
+"duration":"1 day",
+"save":"None",
+"damage":"",
+"description":"This potent spell summons a number of animals to the priest. For each level of the priest, a number of animals totaling 10 hit dice appear.
+The Power who grants the spell enables the priest to know exactly what types and numbers of animals are within the area of effect. The priest may specify the numbers of animals he wants; for instance, a 16th-level priest could summon 60 HD of wolves, 40 HD of bears, and 60 HD of wolverines. The animals will begin arriving in one round and will be assembled at the priest's location at the end of three turns.
+The animals will not fight among each other even if they are natural enemies.
+Monsters (dragons, gorgons, hell hounds, etc.) cannot be summoned with this spell.
+The summoned animals will aid the priest in any means of which they are capable.
+They will enter battle, protect the priest and his companions, or perform a specified mission until the priest dismisses them or the spell expires. During this time, the priest can automatically communicate with his animals.
+At the end of the spell, the animals instinctively return to their lairs. For the first three turns after the spell expires, the animals will not attack the caster, his companions, or other summoned animals. After this time, the animals will behave normally."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animal Horde</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-mile radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This potent spell summons a number of animals to the priest. For each level of the priest, a number of animals totaling 10 hit dice appear.<br />The Power who grants the spell enables the priest to know exactly what types and numbers of animals are within the area of effect. The priest may specify the numbers of animals he wants; for instance, a 16th-level priest could summon 60 HD of wolves, 40 HD of bears, and 60 HD of wolverines. The animals will begin arriving in one round and will be assembled at the priest&#039;s location at the end of three turns.<br />The animals will not fight among each other even if they are natural enemies.<br />Monsters (dragons, gorgons, hell hounds, etc.) cannot be summoned with this spell.<br />The summoned animals will aid the priest in any means of which they are capable.<br />They will enter battle, protect the priest and his companions, or perform a specified mission until the priest dismisses them or the spell expires. During this time, the priest can automatically communicate with his animals.<br />At the end of the spell, the animals instinctively return to their lairs. For the first three turns after the spell expires, the animals will not attack the caster, his companions, or other summoned animals. After this time, the animals will behave normally.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 112</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="827" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Wolf Spirits",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"30 yards",
+"aoe":"Special",
+"castingTime":"2 turns",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The priest casting this spell calls upon the \"spirits\" of wolves (or another animal, if appropriate). The notion of wolf spirits is akin to the Wild Hunt of Celtic mythology: a pack of enormous magical wolves led by a human master who range Celtic lands seeking to destroy evil. The wolf spirits spell summons 2d4+2 such entities to serve the priest as master.
+Wolf spirits' statistics are as follows: AC -4; MV 36 Fl 36 (B); HD 5+5; #AT 1; Dmg 3d6; AL N; SZ M; ML 20; THAC0 14. They are immune to all forms of mind control, illusions, gases, paralyzation, and spells which affect only corporeal creatures. They cannot be harmed by weapons of less than +2 enchantment.
+Wolf spirits can be instructed to perform a service in the manner of the animal summoning spells. In this variation in the Animal and Summoning spheres, the spell does not expire until the spirits have performed their commanded service, to a maximum duration of 14 days. In the Guardian variation of this spell, the spirits can only be commanded to keep watch over an area or creature. The spell lasts 100 days for this type of service."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Wolf Spirits</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The priest casting this spell calls upon the &quot;spirits&quot; of wolves (or another animal, if appropriate). The notion of wolf spirits is akin to the Wild Hunt of Celtic mythology: a pack of enormous magical wolves led by a human master who range Celtic lands seeking to destroy evil. The wolf spirits spell summons 2d4+2 such entities to serve the priest as master.<br />Wolf spirits&#039; statistics are as follows: AC -4; MV 36 Fl 36 (B); HD 5+5; #AT 1; Dmg 3d6; AL N; SZ M; ML 20; THAC0 14. They are immune to all forms of mind control, illusions, gases, paralyzation, and spells which affect only corporeal creatures. They cannot be harmed by weapons of less than +2 enchantment.<br />Wolf spirits can be instructed to perform a service in the manner of the animal summoning spells. In this variation in the Animal and Summoning spheres, the spell does not expire until the spirits have performed their commanded service, to a maximum duration of 14 days. In the Guardian variation of this spell, the spirits can only be commanded to keep watch over an area or creature. The spell lasts 100 days for this type of service.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 122</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

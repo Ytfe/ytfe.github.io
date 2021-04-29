@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Purify Metals",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"The metals being forged, not consumed",
+"range":"30'",
+"aoe":"1lb of metal / level",
+"castingTime":"1 rnd",
+"duration":"30 minutes",
+"save":"None",
+"damage":"",
+"description":"Cast upon ores or metals that is being smelted or forged, this spell removes impurities during the process, paving the way for high purity metals.
+
+This spell negates the need for any checks during the smelting process."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Purify Metals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30'&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rnd&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1lb of metal / level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">30 minutes&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >The metals being forged, not consumed&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Cast upon ores or metals that is being smelted or forged, this spell removes impurities during the process, paving the way for high purity metals.<br /><br />This spell negates the need for any checks during the smelting process.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="837" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Strength of Stone",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"3 rds.+ 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell grants supernatural strength to the recipient by raising his Strength score by 1d4 points or to a minimum of 16, whichever is higher. Each 10% of exceptional Strength counts as 1 point, so a character with a Strength of 17 could be raised as high as an 18/30, but no higher. Both the priest and the recipient must be in contact with solid stone or earth when the spell is cast-standing on the ground will do nicely, but flying or swimming will not. The spell lasts for 3 rounds plus 1 round per caster level or until the subject loses contact with the earth. Obviously, this can happen in a number of ways, including being picked up or grappled by a larger creature, being knocked through the air by an impact or explosion, or even being magically moved in some fashion.
+The material components are a chip of granite and a hair from a giant."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Strength of Stone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell grants supernatural strength to the recipient by raising his Strength score by 1d4 points or to a minimum of 16, whichever is higher. Each 10% of exceptional Strength counts as 1 point, so a character with a Strength of 17 could be raised as high as an 18/30, but no higher. Both the priest and the recipient must be in contact with solid stone or earth when the spell is cast-standing on the ground will do nicely, but flying or swimming will not. The spell lasts for 3 rounds plus 1 round per caster level or until the subject loses contact with the earth. Obviously, this can happen in a number of ways, including being picked up or grappled by a larger creature, being knocked through the air by an impact or explosion, or even being magically moved in some fashion.<br />The material components are a chip of granite and a hair from a giant.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 162</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="847" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Soften Earth and Stone",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yds./level",
+"aoe":"10-ft. square/level",
+"castingTime":"5",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, all natural, undressed earth or stone in the area of effect is softened. Wet earth becomes thick mud; dry earth becomes loose sand or dirt; and stone becomes soft clay, easily molded or chopped. The priest affects a 10-foot square area to a depth of 1 to 4 feet, depending on the toughness or resilience of the ground at that spot (DM option). Magical or enchanted stone cannot be affected by this spell, nor can dressed or worked stone.
+Creatures attempting to move through an area softened into mud are reduced to a move of 10 feet per round. Any creatures caught within the mud when the spell takes effect must make a saving throw vs. paralyzation or lose the ability to move, attack, or cast spells for 1d2 rounds as they flounder about in the muck. Loose dirt is not as troublesome as mud, and creatures are only reduced to half their normal movement rate, with no chance of being caught for a round or two. However, it is impossible to run, sprint, or charge over either surface.
+Restore Strength Soften Earth and Stone Stone softened into clay does not hinder movement, but it does allow characters to cut, shape, or excavate areas they may not have been able to affect before. For example, a party of PCs trying to break out of a cavern might use this spell to soften a wall.
+While soften earth and stone does not affect dressed or worked stone, vertical surfaces such as cliff faces or cavern ceilings can be affected. Usually, this causes a moderate collapse or landslide as the loosened material peels away from the face or roof and falls. A moderate amount of structural damage can be inflicted to man-made structures by softening the ground beneath a wall or tower, causing it to settle. However, most well-built structures will only be damaged by this spell, not destroyed. The material component is a bit of slip (wet clay) from the wheel of a master potter."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Soften Earth and Stone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. square/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, all natural, undressed earth or stone in the area of effect is softened. Wet earth becomes thick mud; dry earth becomes loose sand or dirt; and stone becomes soft clay, easily molded or chopped. The priest affects a 10-foot square area to a depth of 1 to 4 feet, depending on the toughness or resilience of the ground at that spot (DM option). Magical or enchanted stone cannot be affected by this spell, nor can dressed or worked stone.<br />Creatures attempting to move through an area softened into mud are reduced to a move of 10 feet per round. Any creatures caught within the mud when the spell takes effect must make a saving throw vs. paralyzation or lose the ability to move, attack, or cast spells for 1d2 rounds as they flounder about in the muck. Loose dirt is not as troublesome as mud, and creatures are only reduced to half their normal movement rate, with no chance of being caught for a round or two. However, it is impossible to run, sprint, or charge over either surface.<br />Restore Strength Soften Earth and Stone Stone softened into clay does not hinder movement, but it does allow characters to cut, shape, or excavate areas they may not have been able to affect before. For example, a party of PCs trying to break out of a cavern might use this spell to soften a wall.<br />While soften earth and stone does not affect dressed or worked stone, vertical surfaces such as cliff faces or cavern ceilings can be affected. Usually, this causes a moderate collapse or landslide as the loosened material peels away from the face or roof and falls. A moderate amount of structural damage can be inflicted to man-made structures by softening the ground beneath a wall or tower, causing it to settle. However, most well-built structures will only be damaged by this spell, not destroyed. The material component is a bit of slip (wet clay) from the wheel of a master potter.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 165</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="544" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Meld Into Stone",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"6",
+"duration":"8 rds. + 1d8 rds.",
+"save":"None",
+"damage":"",
+"description":"This spell enables the priest to meld his body and possessions into a single block of stone. The stone must be large enough to accommodate his body in all three dimensions.
+When the casting is complete, the priest and not more than 100 pounds of nonliving gear merge with the stone. If either condition is violated, the spell fails and is wasted.
+While in the stone, the priest remains in contact, however tenuous, with the face of the stone through which he melded. The priest remains aware of the passage of time. Nothing that goes on outside the stone can be seen or heard, however. Minor physical damage to the stone does not harm the priest, but its partial destruction, if enough so that the caster no longer fits, expels the priest with 4d8 points of damage. The stone's destruction expels the priest and slays him instantly, unless he rolls a successful saving throw vs. spell.
+The magic lasts for 1d8+8 rounds, with the variable part of the duration rolled secretly by the DM. At any time before the duration expires, the priest can step out of the stone through the stone surface he entered. If the duration runs out, or the effect is dispelled before the priest exits the stone, he is violently expelled and suffers 4d8 points of damage.
+The following spells harm the priest if cast upon the stone that he is occupying: stone to flesh expels the priest and inflicts 4d8 points of damage; stone shape causes 4d4 points of damage, but does not expel the priest; transmute rock to mud expels and slays him instantly unless he rolls a successful saving throw vs. spell; and passwall expels the priest without damage."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Meld Into Stone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">8 rds. + 1d8 rds.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the priest to meld his body and possessions into a single block of stone. The stone must be large enough to accommodate his body in all three dimensions.<br />When the casting is complete, the priest and not more than 100 pounds of nonliving gear merge with the stone. If either condition is violated, the spell fails and is wasted.<br />While in the stone, the priest remains in contact, however tenuous, with the face of the stone through which he melded. The priest remains aware of the passage of time. Nothing that goes on outside the stone can be seen or heard, however. Minor physical damage to the stone does not harm the priest, but its partial destruction, if enough so that the caster no longer fits, expels the priest with 4d8 points of damage. The stone&#039;s destruction expels the priest and slays him instantly, unless he rolls a successful saving throw vs. spell.<br />The magic lasts for 1d8+8 rounds, with the variable part of the duration rolled secretly by the DM. At any time before the duration expires, the priest can step out of the stone through the stone surface he entered. If the duration runs out, or the effect is dispelled before the priest exits the stone, he is violently expelled and suffers 4d8 points of damage.<br />The following spells harm the priest if cast upon the stone that he is occupying: stone to flesh expels the priest and inflicts 4d8 points of damage; stone shape causes 4d4 points of damage, but does not expel the priest; transmute rock to mud expels and slays him instantly unless he rolls a successful saving throw vs. spell; and passwall expels the priest without damage.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 269</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="556" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Stone Shape",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"9 cu. ft. + 1 cu. ft./level",
+"castingTime":"1 rd.",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster can form an existing piece of stone into any shape that suits his purposes. For example, he can make a stone weapon, a special trapdoor, or a crude idol. By the same token, it enables the spellcaster to shape a stone door, perhaps so as to escape imprisonment, providing the volume of stone involved is within the limits of the area of effect. While stone coffers can be thus formed, stone doors made, etc., the fineness of detail is not great. If the shaping has moving parts, there is a 30% chance they do not work.
+The material component of this spell is soft clay that must be worked into roughly the desired shape of the stone object, and then touched to the stone when the spell is uttered."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Stone Shape</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">9 cu. ft. + 1 cu. ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster can form an existing piece of stone into any shape that suits his purposes. For example, he can make a stone weapon, a special trapdoor, or a crude idol. By the same token, it enables the spellcaster to shape a stone door, perhaps so as to escape imprisonment, providing the volume of stone involved is within the limits of the area of effect. While stone coffers can be thus formed, stone doors made, etc., the fineness of detail is not great. If the shaping has moving parts, there is a 30% chance they do not work.<br />The material component of this spell is soft clay that must be worked into roughly the desired shape of the stone object, and then touched to the stone when the spell is uttered.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 272</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="861" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Adamantite Mace",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Caster",
+"castingTime":"7",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the priest transmutes his own cudgel, mace, or staff into an enchanted weapon of adamantite, the most magical mineral known. The adamantite mace gains a +2 bonus to attack and damage rolls, but it can strike creatures normally hit only by +4 or better weapons. As an incarnation of elemental earth, the mace inflicts up to twice the damage (roll twice the required damage dice) against creatures of elemental air or magical avians such as griffons, perytons, pegasi, and winged baatezu or tanar'ri. The adamantite mace retains its special properties for one round per level of experience of the caster.
+The material component is a special powder made from a diamond worth 100 gp, sprinkled over the weapon."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Adamantite Mace</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the priest transmutes his own cudgel, mace, or staff into an enchanted weapon of adamantite, the most magical mineral known. The adamantite mace gains a +2 bonus to attack and damage rolls, but it can strike creatures normally hit only by +4 or better weapons. As an incarnation of elemental earth, the mace inflicts up to twice the damage (roll twice the required damage dice) against creatures of elemental air or magical avians such as griffons, perytons, pegasi, and winged baatezu or tanar&#039;ri. The adamantite mace retains its special properties for one round per level of experience of the caster.<br />The material component is a special powder made from a diamond worth 100 gp, sprinkled over the weapon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 170</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="607" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spike Stones",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yds.",
+"aoe":"10 ft. sq./level, 1 spike/sq. ft.",
+"castingTime":"6",
+"duration":"3d4 turns +1/level",
+"save":"None",
+"damage":"",
+"description":"The spike stones spell causes rock to shape itself into long, sharp points that tend to blend into the background. It is effective on both natural rock and worked stone. The spike stones serve to impede progress through an area and to inflict damage. If an area is carefully observed, each observer is 25% likely to notice the sharp points of rock.
+Otherwise, those entering the spell's area of effect suffer 1d4 points of damage per round.
+The success of each attack is determined as if the caster of the spell were actually engaging in combat. Those entering the area are subject to attack immediately upon setting foot in the area and for each round spent in the area thereafter. The initial step enables the individual to become aware of some problem only if the initial attack succeeds; otherwise movement continues and the spike stones remain unnoticed until damage occurs. Charging or running victims suffer two attacks per round.
+Those falling into pits affected by spike stones suffer six such attacks for every 10 feet fallen, each attack having a +2 bonus to the attack roll. In addition, the damage inflicted by each attack increases by +2 for every 10 feet fallen. Finally, the creatures also suffer normal falling damage.
+The material component of this spell is four tiny stalactites."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spike Stones</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. sq./level, 1 spike/sq. ft.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3d4 turns +1/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The spike stones spell causes rock to shape itself into long, sharp points that tend to blend into the background. It is effective on both natural rock and worked stone. The spike stones serve to impede progress through an area and to inflict damage. If an area is carefully observed, each observer is 25% likely to notice the sharp points of rock.<br />Otherwise, those entering the spell&#039;s area of effect suffer 1d4 points of damage per round.<br />The success of each attack is determined as if the caster of the spell were actually engaging in combat. Those entering the area are subject to attack immediately upon setting foot in the area and for each round spent in the area thereafter. The initial step enables the individual to become aware of some problem only if the initial attack succeeds; otherwise movement continues and the spike stones remain unnoticed until damage occurs. Charging or running victims suffer two attacks per round.<br />Those falling into pits affected by spike stones suffer six such attacks for every 10 feet fallen, each attack having a +2 bonus to the attack roll. In addition, the damage inflicted by each attack increases by +2 for every 10 feet fallen. Finally, the creatures also suffer normal falling damage.<br />The material component of this spell is four tiny stalactites.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 285</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="608" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Transmute Rock to Mud",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"160 yds.",
+"aoe":"20-ft. cube/level",
+"castingTime":"8",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell turns natural rock of any sort into an equal volume of mud. If it is cast upon a rock, for example, the rock affected collapses into mud. Magical or enchanted stone is not affected by the spell. The depth of the mud created cannot exceed 10 feet. Creatures unable to levitate, fly, or otherwise free themselves from the mud sink at the rate of 1/3 of their height per round and eventually suffocate, save for lightweight creatures that could normally pass across such ground. Brush thrown atop the mud can support creatures able to climb on top of it, with the amount required decided by the DM. Creatures large enough to walk on the bottom can move through the area at a rate of 10 feet per round.
+The mud remains until a successful dispel magic or transmute mud to rock spell restores its substance--but not necessarily its form. Evaporation turns the mud to normal dirt at a rate of 1d6 days per 10 cubic feet. The exact time depends on exposure to the sun, wind, and normal drainage.
+The reverse, transmute mud to rock, hardens normal mud or quicksand into soft stone (sandstone or similar mineral) permanently unless magically changed. Creatures in the mud are allowed a saving throw to escape before the area is hardened to stone. Dry sand is unaffected.
+The material components for the spell are clay and water (or sand, lime, and water for the reverse)."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Transmute Rock to Mud</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">160 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft. cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell turns natural rock of any sort into an equal volume of mud. If it is cast upon a rock, for example, the rock affected collapses into mud. Magical or enchanted stone is not affected by the spell. The depth of the mud created cannot exceed 10 feet. Creatures unable to levitate, fly, or otherwise free themselves from the mud sink at the rate of 1/3 of their height per round and eventually suffocate, save for lightweight creatures that could normally pass across such ground. Brush thrown atop the mud can support creatures able to climb on top of it, with the amount required decided by the DM. Creatures large enough to walk on the bottom can move through the area at a rate of 10 feet per round.<br />The mud remains until a successful dispel magic or transmute mud to rock spell restores its substance--but not necessarily its form. Evaporation turns the mud to normal dirt at a rate of 1d6 days per 10 cubic feet. The exact time depends on exposure to the sun, wind, and normal drainage.<br />The reverse, transmute mud to rock, hardens normal mud or quicksand into soft stone (sandstone or similar mineral) permanently unless magically changed. Creatures in the mud are allowed a saving throw to escape before the area is hardened to stone. Dry sand is unaffected.<br />The material components for the spell are clay and water (or sand, lime, and water for the reverse).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 285</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="626" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Stone Tell",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 cu. yd.",
+"castingTime":"1 turn",
+"duration":"1 turn",
+"save":"None",
+"damage":"",
+"description":"When the priest casts a stone tell spell upon an area, the very stones speak and relate to the caster who or what has touched them as well as revealing what is covered, concealed, or simply behind them. The stones relate complete descriptions, if asked. Note that a stone's perspective, perception, and knowledge may hinder this divination. Such details, if any, are decided by the DM.
+The material components for this spell are a drop of mercury and a bit of clay."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Stone Tell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 cu. yd.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the priest casts a stone tell spell upon an area, the very stones speak and relate to the caster who or what has touched them as well as revealing what is covered, concealed, or simply behind them. The stones relate complete descriptions, if asked. Note that a stone&#039;s perspective, perception, and knowledge may hinder this divination. Such details, if any, are decided by the DM.<br />The material components for this spell are a drop of mercury and a bit of clay.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 290</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="633" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animate Rock",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"40 yds.",
+"aoe":"2 cu. ft./level",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By employing an animate rock spell, the caster causes a stone object of up to the indicated size to move (see the 6th-level animate object spell.). The animated stone object must be separate (not a part of a huge boulder or the like). It follows the desire of the caster--attacking, breaking objects, blocking--while the magic lasts. It has no intelligence or volition of its own, but it follows instructions exactly as spoken. Only one set of instructions for one single action can be given to the animated rock, and the directions must be brief, about a dozen words or so. The rock remains animated for one round per experience level of the caster. The volume of rock that can be animated is also based on the experience level of the caster--2 cubic feet of stone per level, such as 24 cubic feet, a mass of about man-sized, at 12th level.
+While the exact details of the animated rock are decided by the DM, its Armor Class is no worse than 5, and it has 1d3 hit points per cubic foot of volume. It uses the attack roll of the caster. The maximum damage it can inflict is 1d2 points per caster level. Thus, a 12th-level caster's rock might inflict 12 to 24 points of damage. Movement for a mansized rock is 60 feet per round. A rock generally weighs from 100 to 300 pounds per cubic foot.
+The material components for the spell are a stone and drop of the caster's blood."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animate Rock</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">40 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">2 cu. ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By employing an animate rock spell, the caster causes a stone object of up to the indicated size to move (see the 6th-level animate object spell.). The animated stone object must be separate (not a part of a huge boulder or the like). It follows the desire of the caster--attacking, breaking objects, blocking--while the magic lasts. It has no intelligence or volition of its own, but it follows instructions exactly as spoken. Only one set of instructions for one single action can be given to the animated rock, and the directions must be brief, about a dozen words or so. The rock remains animated for one round per experience level of the caster. The volume of rock that can be animated is also based on the experience level of the caster--2 cubic feet of stone per level, such as 24 cubic feet, a mass of about man-sized, at 12th level.<br />While the exact details of the animated rock are decided by the DM, its Armor Class is no worse than 5, and it has 1d3 hit points per cubic foot of volume. It uses the attack roll of the caster. The maximum damage it can inflict is 1d2 points per caster level. Thus, a 12th-level caster&#039;s rock might inflict 12 to 24 points of damage. Movement for a mansized rock is 60 feet per round. A rock generally weighs from 100 to 300 pounds per cubic foot.<br />The material components for the spell are a stone and drop of the caster&#039;s blood.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 292</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="879" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-mineral Shell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10-ft. radius",
+"castingTime":"1 round",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"When a priest casts this spell, he creates an invisible force field or barrier that blocks the entrance of animated or living mineral creatures. It is effective against elementals and creatures of elemental origin such as aerial servants, djinns, and mephits; golems and other constructs; creatures of living stone, such as galeb duhr or xorn; and objects, weapons, or armor animated by some outside force. It does not bar the passage of undead monsters, living creatures carrying inanimate material, or nonanimated minerals such as a giant-thrown boulder or a common rockslide. The antimineral shell moves with the caster, but if the caster tries to force it against a creature affected by this spell, the antimineral shell fails. The material component is a drop of some caustic solvent, such as acid from a black dragon."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-mineral Shell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts this spell, he creates an invisible force field or barrier that blocks the entrance of animated or living mineral creatures. It is effective against elementals and creatures of elemental origin such as aerial servants, djinns, and mephits; golems and other constructs; creatures of living stone, such as galeb duhr or xorn; and objects, weapons, or armor animated by some outside force. It does not bar the passage of undead monsters, living creatures carrying inanimate material, or nonanimated minerals such as a giant-thrown boulder or a common rockslide. The antimineral shell moves with the caster, but if the caster tries to force it against a creature affected by this spell, the antimineral shell fails. The material component is a drop of some caustic solvent, such as acid from a black dragon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 178</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="638" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Conjure Earth Elemental",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"40 yds.",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"A caster who performs a conjure earth elemental spell summons an earth elemental to do his bidding. The elemental is 60% likely to have 12 Hit Dice, 35% likely to have 16 Hit Dice, and 5% likely have 21 to 24 Hit Dice (20 + 1d4). Further, the caster needs but to command it, and it does as desired. The elemental regards the caster as a friend to be obeyed. The elemental remains until destroyed, dispelled, sent away by dismissal or a holy word spell (see the conjure fire elemental spell), or the spell duration expires."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Conjure Earth Elemental</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">40 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A caster who performs a conjure earth elemental spell summons an earth elemental to do his bidding. The elemental is 60% likely to have 12 Hit Dice, 35% likely to have 16 Hit Dice, and 5% likely have 21 to 24 Hit Dice (20 + 1d4). Further, the caster needs but to command it, and it does as desired. The elemental regards the caster as a friend to be obeyed. The elemental remains until destroyed, dispelled, sent away by dismissal or a holy word spell (see the conjure fire elemental spell), or the spell duration expires.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 294</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="641" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Earthquake",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds.",
+"aoe":"5-ft. diameter/level",
+"castingTime":"1 turn",
+"duration":"1 rd.",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast by a priest, a local tremor of fairly high strength rips the ground.
+The shock is over in one round. The earthquake affects all terrain, vegetation, structures, and creatures in its area of effect. The area of effect of the earthquake spell is circular, with a diameter of 5 feet for every experience level of the priest casting it. Thus a 20thlevel priest casts an earthquake spell with a 100-foot-diameter area of effect.
+Solidly built structures with foundations reaching down to bedrock sustain one-half damage; one-quarter damage if they score above 50% on a saving throw. An earth elemental opposed to the caster in the area of effect can negate 10% to 100% (roll 1d10, 0 = 100%) of the effect. Other magical protections and wards allowed by the DM may also reduce or negate this effect. If cast undersea, this spell may, at the discretion of the DM, create a tsunami or tidal wave.
+The material components for this spell are a pinch of dirt, a piece of rock, and a lump of clay.
+Earthquake Effects TERRAIN Cave or cavern--Collapses roof Cliffs--Crumble, causing landslide Ground--Cracks open, causing the following fractions of creatures to fall in and die: Size S: 1 in 4 Size M: 1 in 6 Size L: 1 in 8 Marsh--Drains water to form muddy, rough ground.
+Tunnel--Caves in VEGETATION Small growth--No effect Trees--1 in 3 are uprooted and fall STRUCTURES All structures--Sustain 5d12 points of structural damage; those suffering full damage are thrown down in rubble CREATURES (See TERRAIN entry)"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Earthquake</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5-ft. diameter/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast by a priest, a local tremor of fairly high strength rips the ground.<br />The shock is over in one round. The earthquake affects all terrain, vegetation, structures, and creatures in its area of effect. The area of effect of the earthquake spell is circular, with a diameter of 5 feet for every experience level of the priest casting it. Thus a 20thlevel priest casts an earthquake spell with a 100-foot-diameter area of effect.<br />Solidly built structures with foundations reaching down to bedrock sustain one-half damage; one-quarter damage if they score above 50% on a saving throw. An earth elemental opposed to the caster in the area of effect can negate 10% to 100% (roll 1d10, 0 = 100%) of the effect. Other magical protections and wards allowed by the DM may also reduce or negate this effect. If cast undersea, this spell may, at the discretion of the DM, create a tsunami or tidal wave.<br />The material components for this spell are a pinch of dirt, a piece of rock, and a lump of clay.<br />Earthquake Effects TERRAIN Cave or cavern--Collapses roof Cliffs--Crumble, causing landslide Ground--Cracks open, causing the following fractions of creatures to fall in and die: Size S: 1 in 4 Size M: 1 in 6 Size L: 1 in 8 Marsh--Drains water to form muddy, rough ground.<br />Tunnel--Caves in VEGETATION Small growth--No effect Trees--1 in 3 are uprooted and fall STRUCTURES All structures--Sustain 5d12 points of structural damage; those suffering full damage are thrown down in rubble CREATURES (See TERRAIN entry)</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 295</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="653" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Transmute Metal to Wood",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"80 yds.",
+"aoe":"1 metal object",
+"castingTime":"1 rd.",
+"duration":"Permanent",
+"save":"Special",
+"damage":"",
+"description":"The transmute metal to wood spell enables the caster to change an object from metal to wood. The volume of metal cannot exceed a maximum weight of 10 pounds per experience level of the priest. Magical objects made of metal are 90% resistant to the spell, and those on the person of a creature receive the creature's saving throw as well.
+Artifacts and relics cannot be transmuted. Note that only a wish spell or similar magic can restore a transmuted object to its metallic state. Otherwise, for example, a metal door changed to wood would be forevermore a wooden door."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Transmute Metal to Wood</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 metal object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The transmute metal to wood spell enables the caster to change an object from metal to wood. The volume of metal cannot exceed a maximum weight of 10 pounds per experience level of the priest. Magical objects made of metal are 90% resistant to the spell, and those on the person of a creature receive the creature&#039;s saving throw as well.<br />Artifacts and relics cannot be transmuted. Note that only a wish spell or similar magic can restore a transmuted object to its metallic state. Otherwise, for example, a metal door changed to wood would be forevermore a wooden door.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 299</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="803" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Elemental Swarm",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"240 yards",
+"aoe":"Special",
+"castingTime":"3 turns",
+"duration":"6 turns",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.
+After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.
+These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.
+They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Elemental Swarm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">240 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.<br />After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.<br />These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.<br />They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="822" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Storm of Vengeance",
+"school":"Invocation/Evocation",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"400 yards",
+"aoe":"120-yard radius circle",
+"castingTime":"1 turn",
+"duration":"1 turn",
+"save":"Special",
+"damage":"",
+"description":"This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.
+In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.
+On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.
+No saving throw is allowed.
+On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).
+On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).
+On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.
+The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Storm of Vengeance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">400 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">120-yard radius circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.<br />In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.<br />On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.<br />No saving throw is allowed.<br />On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).<br />On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).<br />On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.<br />The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 121</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

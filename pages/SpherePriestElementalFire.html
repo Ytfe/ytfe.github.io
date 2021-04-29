@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Firelight",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Resin an incense",
+"range":"Touch",
+"aoe":"1 object",
+"castingTime":"4",
+"duration":"4 hrs. + 1 hr./2 levels",
+"save":"None",
+"damage":"",
+"description":"This variant of the spell log of everburning changes one small fire no larger than a campfire into firelight. The flame ceases to produce smoke and becomes much cooler; within 1 turn of the spell's casting, the fire cools enough to be handled or touched barehanded without causing harm. The firelight is resistant to gusts of wind or poor burning conditions (pouring rain, lack of air, and so on), but complete immersion in water, vacuum, or magical darkness extinguishes the flame immediately. Firelight burns brighter and steadier than a normal flame, and a torch enchanted with this spell sheds light in a 30-foot radius instead of the normal 15-foot radius. The fuel source lasts throughout the duration of the spell. Unlike log of everburning, this spell is not at all useful for staying warm since firelight produces very little heat.
+Firelight inflicts 1d2 points of damage per caster level if cast on creatures of living or elemental fire, but has no other effect on these monsters. The material component is a mix of resins and incense, thrown into the flame to be affected."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Firelight</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">4 hrs. + 1 hr./2 levels&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Resin an incense&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This variant of the spell log of everburning changes one small fire no larger than a campfire into firelight. The flame ceases to produce smoke and becomes much cooler; within 1 turn of the spell&#039;s casting, the fire cools enough to be handled or touched barehanded without causing harm. The firelight is resistant to gusts of wind or poor burning conditions (pouring rain, lack of air, and so on), but complete immersion in water, vacuum, or magical darkness extinguishes the flame immediately. Firelight burns brighter and steadier than a normal flame, and a torch enchanted with this spell sheds light in a 30-foot radius instead of the normal 15-foot radius. The fuel source lasts throughout the duration of the spell. Unlike log of everburning, this spell is not at all useful for staying warm since firelight produces very little heat.<br />Firelight inflicts 1d2 points of damage per caster level if cast on creatures of living or elemental fire, but has no other effect on these monsters. The material component is a mix of resins and incense, thrown into the flame to be affected.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 161</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="663" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Log of Everburning",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This spell increases the amount of time that a wooden object will burn before being consumed. Wood that is enchanted in this manner burns brightly without being consumed for the duration of the spell. When the spell ends, the wooden object crumbles to ash.
+This spell does not cause the wood to catch fire; it must be ignited normally. While it burns, the wood gives off twice the normal amount of heat; thus, a single log can make a cozy fire.
+The affected wood radiates magic. The priest may enchant up to 1 cubic foot of wood per level of experience. The spell is effective on torches."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Log of Everburning</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell increases the amount of time that a wooden object will burn before being consumed. Wood that is enchanted in this manner burns brightly without being consumed for the duration of the spell. When the spell ends, the wooden object crumbles to ash.<br />This spell does not cause the wood to catch fire; it must be ignited normally. While it burns, the wood gives off twice the normal amount of heat; thus, a single log can make a cozy fire.<br />The affected wood radiates magic. The priest may enchant up to 1 cubic foot of wood per level of experience. The spell is effective on torches.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 53</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="512" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Fire Trap",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"holly berries",
+"range":"Touch",
+"aoe":"Object touched",
+"castingTime":"1 turn",
+"duration":"Permanent until discharged",
+"save":"1/2",
+"damage":"1d4+ 1/level",
+"description":"Any closeable item (book, box, bottle, chest, coffer, coffin, door, drawer, and so forth) can be warded by a fire trap spell. The spell is centered on a point selected by the spellcaster. The item so trapped cannot have a second closure or warding spell placed upon it. 
+A knock spell cannot affect a fire trap in any way - as soon as the offending party opens the item, the trap discharges. As with most magical traps, a thief has only half his normal find traps score to detect a fire trap. Failure to remove it succesfully detonates it immediately. An unsuccessful dispel magic spell will not detonate the spell. 
+When the trap is discharged, there will be an explosion of five-foot radius from the spell's center. All creatures within this area must roll saving throws vs. spell. Damage is 1d4 points plus 1 point per level of the caster; half that total amount for creatures successfully saving. (Underwater, this ward inflicts half damage and creates a large cloud of steam.) The item trapped is not harmed by this explosion.
+The caster can use the trapped object without discharging it, as can any individual to whom the spell was specifically attuned when cast (the method usually involves a keyword).
+To place this spell, the caster must trace the outline of the closure with a stick of charcoal and touch the center of the effect. Attunement to another individual requires a hair or similar object from the individual.
+The material components are holly berries."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Fire Trap</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Object touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent until discharged&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d4+ 1/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >holly berries&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Any closeable item (book, box, bottle, chest, coffer, coffin, door, drawer, and so forth) can be warded by a fire trap spell. The spell is centered on a point selected by the spellcaster. The item so trapped cannot have a second closure or warding spell placed upon it. <br />A knock spell cannot affect a fire trap in any way - as soon as the offending party opens the item, the trap discharges. As with most magical traps, a thief has only half his normal find traps score to detect a fire trap. Failure to remove it succesfully detonates it immediately. An unsuccessful dispel magic spell will not detonate the spell. <br />When the trap is discharged, there will be an explosion of five-foot radius from the spell&#039;s center. All creatures within this area must roll saving throws vs. spell. Damage is 1d4 points plus 1 point per level of the caster; half that total amount for creatures successfully saving. (Underwater, this ward inflicts half damage and creates a large cloud of steam.) The item trapped is not harmed by this explosion.<br />The caster can use the trapped object without discharging it, as can any individual to whom the spell was specifically attuned when cast (the method usually involves a keyword).<br />To place this spell, the caster must trace the outline of the closure with a stick of charcoal and touch the center of the effect. Attunement to another individual requires a hair or similar object from the individual.<br />The material components are holly berries.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 260</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="513" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Flame Blade",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"3-ft. long blade",
+"castingTime":"4",
+"duration":"4 rds. + 1 rd./2 levels",
+"save":"None",
+"damage":"",
+"description":"With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. This bladelike ray is wielded as if it were a scimitar. If the caster successfully hits with the flame blade in melee combat, the creature struck suffers 1d4+4 points of damage, with a damage bonus of +2 (i. e., 7-10 points) if the creature is undead or is especially vulnerable to fire. If the creature is protected from fire, the damage inflicted is reduced by 2 (i.e., 1d4+2 points). Fire dwellers and those using fire as an innate attack form suffer no damage from the spell. The flame blade can ignite combustible materials such as parchment, straw, dry sticks, cloth, etc. However, it is not a magical weapon in the normal sense of the term, so creatures (other than undead) struck only by magical weapons are not harmed by it. This spell does not function under water.
+In addition to the caster's holy symbol, the spell requires a leaf of sumac as a material component."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Flame Blade</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">3-ft. long blade&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">4 rds. + 1 rd./2 levels&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. This bladelike ray is wielded as if it were a scimitar. If the caster successfully hits with the flame blade in melee combat, the creature struck suffers 1d4+4 points of damage, with a damage bonus of +2 (i. e., 7-10 points) if the creature is undead or is especially vulnerable to fire. If the creature is protected from fire, the damage inflicted is reduced by 2 (i.e., 1d4+2 points). Fire dwellers and those using fire as an innate attack form suffer no damage from the spell. The flame blade can ignite combustible materials such as parchment, straw, dry sticks, cloth, etc. However, it is not a magical weapon in the normal sense of the term, so creatures (other than undead) struck only by magical weapons are not harmed by it. This spell does not function under water.<br />In addition to the caster&#039;s holy symbol, the spell requires a leaf of sumac as a material component.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 260</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="515" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Heat Metal",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"40 yds.",
+"aoe":"Special",
+"castingTime":"5",
+"duration":"7 rds.",
+"save":"Special",
+"damage":"",
+"description":"By means of the heat metal spell, the caster is able to make ferrous metal (iron, iron alloys, steel) extremely hot. Elven chain mail is not affected, and magical metal armor receives an item saving throw vs. magical fire to avoid being heated. The material component is a holy symbol.
+On the first round of the spell, the metal merely becomes very warm and uncomfortable to touch (this is also the effect on the last melee round of the spell's duration). During the second and sixth (next to the last) rounds, heat causes blisters and damage; in the third, fourth, and fifth rounds, the metal becomes searing hot, causing damage to exposed flesh, as shown below: Metal Temperature Damage per Round very warm none hot 1d4 points searing* 2d4 points * On the final round of searing, the afflicted creature must roll a successful saving throw vs. spell or suffer one of the following disabilities: hand or foot--becomes unusable for 2d4 days; body--becomes disabled for 1d4 days; head--fall unconscious for 1d4 turns.
+This effect can be completely removed by the 6th-level priest spell heal spell or by normal rest.
+Note also that materials such as wood, leather, or flammable cloth smolder and burn if exposed to searing hot metal. Such materials cause searing damage to exposed flesh on the next round. Fire resistance (spell, potion, or ring) or a protection from fire spell totally negates the effects of a heat metal spell, as does immersion in water or snow, or exposure to a cold or ice storm spell. This version of the spell does not function under water. For every two experience levels of the caster, the metal of one man-sized creature can be affected (i.e., arms and armor, or a single mass of metal equal to 50 pounds of weight).
+Thus, a 3rd-level caster would affect one such creature, a 4th- or 5th-level caster two, etc.
+The reverse of the spell, chill metal, counters a heat metal spell or else causes metal to act as follows: Metal Temperature Damage per Round cold none icy 1-2 points freezing* 1d4 points * On the final round of freezing, the afflicted creature must roll a successful saving throw vs. spell or suffer from the numbing effects of the cold. This causes the loss of all feeling in a hand (or hands, if the DM rules the saving throw was failed badly) for 1d4 days. During this time, the character's grip is extremely weak and he cannot use that hand for fighting or any other activity requiring a firm grasp.
+The chill metal spell is countered by a resist cold spell, or by any great heat--proximity to a blazing fire (not a mere torch), a magical flaming sword, a wall of fire spell, etc.
+Under water, this version of the spell inflicts no damage, but ice immediately forms around the affected metal, exerting an upward buoyancy."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Heat Metal</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">40 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">7 rds.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of the heat metal spell, the caster is able to make ferrous metal (iron, iron alloys, steel) extremely hot. Elven chain mail is not affected, and magical metal armor receives an item saving throw vs. magical fire to avoid being heated. The material component is a holy symbol.<br />On the first round of the spell, the metal merely becomes very warm and uncomfortable to touch (this is also the effect on the last melee round of the spell&#039;s duration). During the second and sixth (next to the last) rounds, heat causes blisters and damage; in the third, fourth, and fifth rounds, the metal becomes searing hot, causing damage to exposed flesh, as shown below: Metal Temperature Damage per Round very warm none hot 1d4 points searing* 2d4 points * On the final round of searing, the afflicted creature must roll a successful saving throw vs. spell or suffer one of the following disabilities: hand or foot--becomes unusable for 2d4 days; body--becomes disabled for 1d4 days; head--fall unconscious for 1d4 turns.<br />This effect can be completely removed by the 6th-level priest spell heal spell or by normal rest.<br />Note also that materials such as wood, leather, or flammable cloth smolder and burn if exposed to searing hot metal. Such materials cause searing damage to exposed flesh on the next round. Fire resistance (spell, potion, or ring) or a protection from fire spell totally negates the effects of a heat metal spell, as does immersion in water or snow, or exposure to a cold or ice storm spell. This version of the spell does not function under water. For every two experience levels of the caster, the metal of one man-sized creature can be affected (i.e., arms and armor, or a single mass of metal equal to 50 pounds of weight).<br />Thus, a 3rd-level caster would affect one such creature, a 4th- or 5th-level caster two, etc.<br />The reverse of the spell, chill metal, counters a heat metal spell or else causes metal to act as follows: Metal Temperature Damage per Round cold none icy 1-2 points freezing* 1d4 points * On the final round of freezing, the afflicted creature must roll a successful saving throw vs. spell or suffer from the numbing effects of the cold. This causes the loss of all feeling in a hand (or hands, if the DM rules the saving throw was failed badly) for 1d4 days. During this time, the character&#039;s grip is extremely weak and he cannot use that hand for fighting or any other activity requiring a firm grasp.<br />The chill metal spell is countered by a resist cold spell, or by any great heat--proximity to a blazing fire (not a mere torch), a magical flaming sword, a wall of fire spell, etc.<br />Under water, this version of the spell inflicts no damage, but ice immediately forms around the affected metal, exerting an upward buoyancy.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 261</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="520" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Produce Flame",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"5",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"A bright flame, equal in brightness to a torch, springs forth from the caster's palm when he casts a produce flame spell. The flame does not harm the caster, but it is hot and it causes the combustion of flammable materials (paper, cloth, dry wood, oil, etc.). The caster is capable of hurling the magical flame as a missile, with a range of 40 yards (considered short range). The flame flashes on impact, igniting combustibles within a 3- foot diameter of its center of impact, and then it goes out. A creature struck by the flame suffers 1d4+1 points of damage and, if combustion occurs, must spend a round extinguishing the fire or suffer additional damage assigned by the DM until the fire is extinguished. A miss is resolved as a grenadelike missile. If any duration remains to the spell, another flame immediately appears in the caster's hand. The caster can hurl a maximum of one flame per level, but no more than one flame per round.
+The caster can snuff out magical flame any time he desires, but fire caused by the flame cannot be so extinguished. This spell does not function under water."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Produce Flame</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A bright flame, equal in brightness to a torch, springs forth from the caster&#039;s palm when he casts a produce flame spell. The flame does not harm the caster, but it is hot and it causes the combustion of flammable materials (paper, cloth, dry wood, oil, etc.). The caster is capable of hurling the magical flame as a missile, with a range of 40 yards (considered short range). The flame flashes on impact, igniting combustibles within a 3- foot diameter of its center of impact, and then it goes out. A creature struck by the flame suffers 1d4+1 points of damage and, if combustion occurs, must spend a round extinguishing the fire or suffer additional damage assigned by the DM until the fire is extinguished. A miss is resolved as a grenadelike missile. If any duration remains to the spell, another flame immediately appears in the caster&#039;s hand. The caster can hurl a maximum of one flame per level, but no more than one flame per round.<br />The caster can snuff out magical flame any time he desires, but fire caused by the flame cannot be so extinguished. This spell does not function under water.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 262</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="539" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Flame Walk",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature(s) touched",
+"castingTime":"5",
+"duration":"1 rd. + 1/level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster empowers one or more creatures to withstand nonmagical fires of temperatures up to 2,000 F. (enabling them to walk upon molten lava). It also confers a +2 bonus to saving throws against magical fire and reduces damage from such fires by one-half, even if the saving throw is failed. For every experience level above the minimum required to cast the spell (5th), the priest can affect an additional creature. This spell is not cumulative with resist fire spells or similar protections.
+The material components of the spell are the priest's holy symbol and at least 500 gp of powdered ruby per affected creature."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Flame Walk</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature(s) touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd. + 1/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster empowers one or more creatures to withstand nonmagical fires of temperatures up to 2,000 F. (enabling them to walk upon molten lava). It also confers a +2 bonus to saving throws against magical fire and reduces damage from such fires by one-half, even if the saving throw is failed. For every experience level above the minimum required to cast the spell (5th), the priest can affect an additional creature. This spell is not cumulative with resist fire spells or similar protections.<br />The material components of the spell are the priest&#039;s holy symbol and at least 500 gp of powdered ruby per affected creature.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 268</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="548" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Protection From Fire",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"6",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The effect of a protection from fire spell differs according to whether the recipient of the magic is the caster or some other creature. In either case, the spell lasts no longer than one turn per caster level.
+If the spell is cast upon the caster, it confers complete invulnerability to: normal fires (torches, bonfires, oil fires, and the like); exposure to magical fires such as fiery dragon breath; spells such as burning hands, fireball, fire seeds, fire storm, flame strike, and meteor swarm; hell hound or pyrohydra breath, etc. The invulnerability lasts until the spell has absorbed 12 points of heat or fire damage per level of the caster, at which time the spell is negated.
+If the spell is cast upon another creature, it gives invulnerability to normal fire, gives a bonus of +4 to saving throw die rolls vs. fire attacks, and reduces damage sustained from magical fires by 50%.
+The caster's holy symbol is the material component."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Protection From Fire</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The effect of a protection from fire spell differs according to whether the recipient of the magic is the caster or some other creature. In either case, the spell lasts no longer than one turn per caster level.<br />If the spell is cast upon the caster, it confers complete invulnerability to: normal fires (torches, bonfires, oil fires, and the like); exposure to magical fires such as fiery dragon breath; spells such as burning hands, fireball, fire seeds, fire storm, flame strike, and meteor swarm; hell hound or pyrohydra breath, etc. The invulnerability lasts until the spell has absorbed 12 points of heat or fire damage per level of the caster, at which time the spell is negated.<br />If the spell is cast upon another creature, it gives invulnerability to normal fire, gives a bonus of +4 to saving throw die rolls vs. fire attacks, and reduces damage sustained from magical fires by 50%.<br />The caster&#039;s holy symbol is the material component.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 270</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="549" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Pyrotechnics",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"160 yds.",
+"aoe":"10 or 100 (TS) fire",
+"castingTime":"6",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"A pyrotechnics spell draws on an existing fire source to produce either of two effects, at the option of the caster.
+First, it can produce a flashing and fiery burst of glowing, colored aerial fireworks that lasts one round. Creatures in, under, or within 120 feet of the area that have an unobstructed line of sight to the effect are blinded for 1d4+1 rounds unless they roll successful saving throws vs. spell. The fireworks fill a volume 10 times greater than the original fire source.
+Second, it can cause a thick, writhing stream of smoke to arise from the source and form a choking cloud that lasts for one round per experience level of the caster. This covers a roughly hemispherical volume from the ground or floor up (or conforming to the shape of a confined area) that totally obscures vision beyond 2 feet. The smoke fills a volume 100 times that of the fire source.
+The spell uses one fire source within the area of effect, which is immediately extinguished. If an extremely large fire is used as the source, it is only partially extinguished by the casting. Magical fires are not extinguished, although a fire-based creature (such as a fire elemental) used as a source suffers 1d4 points of damage, plus 1 point of damage per caster level. This spell does not function under water."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Pyrotechnics</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">160 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 or 100 (TS) fire&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A pyrotechnics spell draws on an existing fire source to produce either of two effects, at the option of the caster.<br />First, it can produce a flashing and fiery burst of glowing, colored aerial fireworks that lasts one round. Creatures in, under, or within 120 feet of the area that have an unobstructed line of sight to the effect are blinded for 1d4+1 rounds unless they roll successful saving throws vs. spell. The fireworks fill a volume 10 times greater than the original fire source.<br />Second, it can cause a thick, writhing stream of smoke to arise from the source and form a choking cloud that lasts for one round per experience level of the caster. This covers a roughly hemispherical volume from the ground or floor up (or conforming to the shape of a confined area) that totally obscures vision beyond 2 feet. The smoke fills a volume 100 times that of the fire source.<br />The spell uses one fire source within the area of effect, which is immediately extinguished. If an extremely large fire is used as the source, it is only partially extinguished by the casting. Magical fires are not extinguished, although a fire-based creature (such as a fire elemental) used as a source suffers 1d4 points of damage, plus 1 point of damage per caster level. This spell does not function under water.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 270</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="577" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Produce Fire",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"40 yds.",
+"aoe":"12-ft. sq.",
+"castingTime":"7",
+"duration":"1 rd.",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster creates a common fire of up to 12 feet per side in area. Though it lasts only a single round (unless it ignites additional flammable material), the fire produced by the spell inflicts 1d4 points of damage plus 1 point per caster level (1d4 + 1/level) upon creatures within its area. It ignites combustible materials, such as cloth, oil, paper, parchment, wood, and the like, so as to cause continued burning.
+The reverse, quench fire, extinguishes any normal fire (coals, oil, tallow, wax, wood, etc.) within the area of effect.
+The material component for either version is a paste of sulfur and wax, formed into a ball and thrown at the target."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Produce Fire</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">40 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">12-ft. sq.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster creates a common fire of up to 12 feet per side in area. Though it lasts only a single round (unless it ignites additional flammable material), the fire produced by the spell inflicts 1d4 points of damage plus 1 point per caster level (1d4 + 1/level) upon creatures within its area. It ignites combustible materials, such as cloth, oil, paper, parchment, wood, and the like, so as to cause continued burning.<br />The reverse, quench fire, extinguishes any normal fire (coals, oil, tallow, wax, wood, etc.) within the area of effect.<br />The material component for either version is a paste of sulfur and wax, formed into a ball and thrown at the target.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 278</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="870" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animate Flame",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"120 yds.",
+"aoe":"1-ft. diameter/level",
+"castingTime":"8",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"While using this spell, the priest can command a flame to leave its source of fuel and move at his direction. The flame is magically preserved at the intensity it possessed when animated and does not weaken or fail even if it has nothing to burn. The priest can affect any natural fire within range, but magical fires (including breath weapons) can only be animated and controlled on a roll of 11 or higher on a d20, "}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animate Flame</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1-ft. diameter/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">While using this spell, the priest can command a flame to leave its source of fuel and move at his direction. The flame is magically preserved at the intensity it possessed when animated and does not weaken or fail even if it has nothing to burn. The priest can affect any natural fire within range, but magical fires (including breath weapons) can only be animated and controlled on a roll of 11 or higher on a d20, </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 173</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="610" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Wall of Fire",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"80 yds.",
+"aoe":"Special",
+"castingTime":"8",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The wall of fire spell brings forth an immobile, blazing curtain of magical fire of shimmering color--yellow-green or amber (different from the 4th-level wizard version).
+The spell creates an opaque sheet of flame up to one 20-foot square per level of the spellcaster, or a ring with a radius of up to 10 feet + 5 feet for every two levels of experience of the wizard, and 20 feet high.
+The wall of fire must be cast so that it is vertical with respect to the caster. One side of the wall, selected by the caster, sends forth waves of heat, inflicting 2d4 points of damage upon creatures within 10 feet and 1d4 points of damage upon those within 20 feet. In addition, the wall inflicts 4d4 points of damage, plus 1 point of damage per level of the spellcaster, to any creature passing through it. Creatures especially subject to fire may take additional damage, and undead always take twice normal damage. Note that attempting to directly catch moving creatures with a newly created wall of fire is difficult. A successful saving throw enables the creature to avoid the wall, while its rate and direction of movement determine which side of the created wall it is on. The wall of fire lasts as long as the priest concentrates on maintaining it, or one round per level of experience of the priest in the event he does not wish to concentrate upon it.
+The material component of the spell is phosphorus."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Wall of Fire</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The wall of fire spell brings forth an immobile, blazing curtain of magical fire of shimmering color--yellow-green or amber (different from the 4th-level wizard version).<br />The spell creates an opaque sheet of flame up to one 20-foot square per level of the spellcaster, or a ring with a radius of up to 10 feet + 5 feet for every two levels of experience of the wizard, and 20 feet high.<br />The wall of fire must be cast so that it is vertical with respect to the caster. One side of the wall, selected by the caster, sends forth waves of heat, inflicting 2d4 points of damage upon creatures within 10 feet and 1d4 points of damage upon those within 20 feet. In addition, the wall inflicts 4d4 points of damage, plus 1 point of damage per level of the spellcaster, to any creature passing through it. Creatures especially subject to fire may take additional damage, and undead always take twice normal damage. Note that attempting to directly catch moving creatures with a newly created wall of fire is difficult. A successful saving throw enables the creature to avoid the wall, while its rate and direction of movement determine which side of the created wall it is on. The wall of fire lasts as long as the priest concentrates on maintaining it, or one round per level of experience of the priest in the event he does not wish to concentrate upon it.<br />The material component of the spell is phosphorus.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 286</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="617" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Conjure Fire Elemental",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"80 yds.",
+"aoe":"Special",
+"castingTime":"6 rds.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"Upon casting a conjure fire elemental spell, the caster opens a special gate to the elemental plane of Fire, and a fire elemental is summoned to the vicinity of the spellcaster. It is 65% likely that a 12 Hit Dice elemental appears, 20% likely that a 16 Hit Dice elemental appears, 9% likely that two to four salamanders appear, 4% likely that an efreeti appears, and 2% likely that a huge fire elemental of 21 to 24 Hit Dice appears. The caster need not fear that the elemental force summoned will turn on him, so concentration upon the activities of the fire elemental (or other creatures summoned) or protection from the creature is not necessary. The elemental summoned helps the caster however possible, including attacking the caster's opponents. The fire elemental or other creature summoned remains for a maximum of one turn per level of the caster, or until it is slain, sent back by a dispel magic spell, the reverse of this spell, dismiss fire elemental, or similar magic."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Conjure Fire Elemental</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Upon casting a conjure fire elemental spell, the caster opens a special gate to the elemental plane of Fire, and a fire elemental is summoned to the vicinity of the spellcaster. It is 65% likely that a 12 Hit Dice elemental appears, 20% likely that a 16 Hit Dice elemental appears, 9% likely that two to four salamanders appear, 4% likely that an efreeti appears, and 2% likely that a huge fire elemental of 21 to 24 Hit Dice appears. The caster need not fear that the elemental force summoned will turn on him, so concentration upon the activities of the fire elemental (or other creatures summoned) or protection from the creature is not necessary. The elemental summoned helps the caster however possible, including attacking the caster&#039;s opponents. The fire elemental or other creature summoned remains for a maximum of one turn per level of the caster, or until it is slain, sent back by a dispel magic spell, the reverse of this spell, dismiss fire elemental, or similar magic.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 288</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="619" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Fire Seeds",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1 rd./seed",
+"duration":"Special",
+"save":"1/2",
+"damage":"",
+"description":"The fire seeds spell creates special missiles or timed incendiaries that burn with great heat. The spell can be cast to create either fire seed missiles or fire seed incendiaries, as chosen when the spell is cast.
+Fire seed missiles: This casting turns up to four acorns into special grenadelike missiles that can be hurled up to 40 yards. An attack roll is required to strike the intended target, and proficiency penalties are considered. Each acorn bursts upon striking any hard surface, causing 2d8 points of damage and igniting any combustible materials within a 10-foot diameter of the point of impact. If a successful saving throw vs. spell is made, a creature within the burst area receives only one-half damage, but a creature struck directly suffers full damage (i.e., no saving throw).
+Fire seed incendiaries: This casting turns up to eight holly berries into special incendiaries. The holly berries are most often placed, being too light to make effective missiles. They can be tossed only up to 6 feet away. They burst into flame if the caster is within 40 yards and speaks a word of command. The berries instantly ignite, causing 1d8 points of damage to any creature and igniting any combustible within a 5-foot-diameter burst area. Creatures within the area that successfully save vs. spell suffer half damage.
+All fire seeds lose their power after a duration equal to one turn per experience level of the caster--e.g., the seeds of a 13th-level caster remain potent for a maximum of 13 turns after their creation.
+No other material components beyond acorns or holly berries are needed for this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Fire Seeds</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd./seed&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The fire seeds spell creates special missiles or timed incendiaries that burn with great heat. The spell can be cast to create either fire seed missiles or fire seed incendiaries, as chosen when the spell is cast.<br />Fire seed missiles: This casting turns up to four acorns into special grenadelike missiles that can be hurled up to 40 yards. An attack roll is required to strike the intended target, and proficiency penalties are considered. Each acorn bursts upon striking any hard surface, causing 2d8 points of damage and igniting any combustible materials within a 10-foot diameter of the point of impact. If a successful saving throw vs. spell is made, a creature within the burst area receives only one-half damage, but a creature struck directly suffers full damage (i.e., no saving throw).<br />Fire seed incendiaries: This casting turns up to eight holly berries into special incendiaries. The holly berries are most often placed, being too light to make effective missiles. They can be tossed only up to 6 feet away. They burst into flame if the caster is within 40 yards and speaks a word of command. The berries instantly ignite, causing 1d8 points of damage to any creature and igniting any combustible within a 5-foot-diameter burst area. Creatures within the area that successfully save vs. spell suffer half damage.<br />All fire seeds lose their power after a duration equal to one turn per experience level of the caster--e.g., the seeds of a 13th-level caster remain potent for a maximum of 13 turns after their creation.<br />No other material components beyond acorns or holly berries are needed for this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 289</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="636" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Chariot of Sustarre",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yds.",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"12 hours",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, it brings forth a large, flaming chariot pulled by two fiery horses from the elemental plane of Fire. These appear in a clap of thunder amid a cloud of smoke. The vehicle moves at 24 on the ground, 48 flying, and can carry the caster and up to seven other creatures of man-size or less. The passengers must be touched by the caster to protect them from the flames of the chariot. Creatures other than the caster and his designated passengers sustain 2d4 points of fire damage each round if they come within 5 feet of the horses or chariot. Such creatures suffer no damage if they evade the area by rolling successful saving throws vs. petrification, with Dexterity adjustments.
+The caster controls the chariot by verbal command, causing the flaming steeds to stop or go, walk, trot, run or fly, and turn left or right as he desires. Note that the chariot of Sustarre is a physical manifestation and can sustain damage. The vehicle and steeds are struck only by magical weapons or by water (one quart of which inflicts 1 point of damage). They are Armor Class 2, and each requires 30 points of damage to dispel.
+Naturally, fire has no effect upon either the vehicle or its steeds, but magical fires other than those of the chariot can affect the riders. Other spells, such as a successful dispel magic or holy word, will force the chariot back to its home plane, without its passengers.
+The chariot can be summoned only once per week.
+The material components are a small piece of wood, two holly berries, and a fire source at least equal to a torch."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Chariot of Sustarre</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">12 hours&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, it brings forth a large, flaming chariot pulled by two fiery horses from the elemental plane of Fire. These appear in a clap of thunder amid a cloud of smoke. The vehicle moves at 24 on the ground, 48 flying, and can carry the caster and up to seven other creatures of man-size or less. The passengers must be touched by the caster to protect them from the flames of the chariot. Creatures other than the caster and his designated passengers sustain 2d4 points of fire damage each round if they come within 5 feet of the horses or chariot. Such creatures suffer no damage if they evade the area by rolling successful saving throws vs. petrification, with Dexterity adjustments.<br />The caster controls the chariot by verbal command, causing the flaming steeds to stop or go, walk, trot, run or fly, and turn left or right as he desires. Note that the chariot of Sustarre is a physical manifestation and can sustain damage. The vehicle and steeds are struck only by magical weapons or by water (one quart of which inflicts 1 point of damage). They are Armor Class 2, and each requires 30 points of damage to dispel.<br />Naturally, fire has no effect upon either the vehicle or its steeds, but magical fires other than those of the chariot can affect the riders. Other spells, such as a successful dispel magic or holy word, will force the chariot back to its home plane, without its passengers.<br />The chariot can be summoned only once per week.<br />The material components are a small piece of wood, two holly berries, and a fire source at least equal to a torch.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 294</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="643" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Fire Storm",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"160 yds.",
+"aoe":"two 10-ft. cubes/level",
+"castingTime":"1 rd.",
+"duration":"1 rd.",
+"save":"1/2",
+"damage":"",
+"description":"When a fire storm spell is cast, the whole area is shot through with sheets of roaring flame that equal a wall of fire spell in effect. Creatures within the area of fire and 10 feet or less from the edge of the affected area receive 2d8 points of damage plus additional damage equal to the caster's level (2d8 +1/level). Creatures that roll successful saving throws vs. spell suffer only one-half damage. The damage is inflicted each round the creature stays in the area of effect. The area of effect is equal to two 10-foot x 10-foot cubes per level of the cater--e.g., a 13th-level caster can cast a fire storm measuring 130 feet x 20 feet x 10 feet. The height of the storm is 10 or 20 feet; the imbalance of its area must be in length and width.
+The reverse spell, fire quench, smothers twice the area of effect of a fire storm spell with respect to normal fires, and the normal area of effect with respect to magical fires.
+Fire-based creatures, such as elementals, salamanders, etc., of less than demigod status have a 5% chance per experience level of the caster of being extinguished. If cast only against a flametongue sword, the sword must roll a successful saving throw vs. crushing blow or be rendered nonmagical. Such a sword in the possession of a creature first receives the creature's saving throw, and if this is successful, the second saving throw is automatically successful."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Fire Storm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">160 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">two 10-ft. cubes/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a fire storm spell is cast, the whole area is shot through with sheets of roaring flame that equal a wall of fire spell in effect. Creatures within the area of fire and 10 feet or less from the edge of the affected area receive 2d8 points of damage plus additional damage equal to the caster&#039;s level (2d8 +1/level). Creatures that roll successful saving throws vs. spell suffer only one-half damage. The damage is inflicted each round the creature stays in the area of effect. The area of effect is equal to two 10-foot x 10-foot cubes per level of the cater--e.g., a 13th-level caster can cast a fire storm measuring 130 feet x 20 feet x 10 feet. The height of the storm is 10 or 20 feet; the imbalance of its area must be in length and width.<br />The reverse spell, fire quench, smothers twice the area of effect of a fire storm spell with respect to normal fires, and the normal area of effect with respect to magical fires.<br />Fire-based creatures, such as elementals, salamanders, etc., of less than demigod status have a 5% chance per experience level of the caster of being extinguished. If cast only against a flametongue sword, the sword must roll a successful saving throw vs. crushing blow or be rendered nonmagical. Such a sword in the possession of a creature first receives the creature&#039;s saving throw, and if this is successful, the second saving throw is automatically successful.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 296</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="803" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Elemental Swarm",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"240 yards",
+"aoe":"Special",
+"castingTime":"3 turns",
+"duration":"6 turns",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.
+After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.
+These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.
+They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Elemental Swarm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">240 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to open a portal to one elemental plane of his choice (as appropriate for his patron Power). He can then summon elementals from that plane.<br />After the first turn of casting, 3d3 elementals of 12HD each appear; after the second turn, 2d3 elementals of 16HD each appear; after the third turn, 1d3 elementals of 20HD each appear. Each elemental has at least 5 hit points per hit die. The elementals remain for six turns from the time they first appear.<br />These elementals will obey the priest explicitly and cannot be turned against the caster. The priest does not need to concentrate to maintain control over the elementals.<br />They cannot be dismissed with spells such as dismissal; the elementals remain for the duration of the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="822" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Storm of Vengeance",
+"school":"Invocation/Evocation",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"400 yards",
+"aoe":"120-yard radius circle",
+"castingTime":"1 turn",
+"duration":"1 turn",
+"save":"Special",
+"damage":"",
+"description":"This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.
+In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.
+On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.
+No saving throw is allowed.
+On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).
+On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).
+On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.
+The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Storm of Vengeance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">400 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">120-yard radius circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell requires the priest to concentrate and cast the spell for the full duration of the spell. The casting time and duration are simultaneous; both activities occur in the same turn.<br />In the first round of casting, the priest summons an enormous black storm cloud over the area of effect. Lightning and crashing claps of thunder appear within the storm; creatures in the area of effect must make a saving throw or be deafened for 1d4 turns.<br />On the second round, acid rains down in the area, inflicting 1d4+1 points of damage.<br />No saving throw is allowed.<br />On the third round, the caster calls six lightning bolts down from the cloud. Each is directed at a target by the priest (all may be directed at a single target or they may be directed at six separate targets). Each lightning bolt strike causes 8d8 points of damage (a successful saving throw indicates half damage).<br />On the fourth round, hailstones rain down in the area, causing 3d10 points of damage (no saving throw).<br />On the fifth through tenth (and final) rounds, violent rain and wind gusts reduce visibility to five feet. Movement is reduced 75%. Missile fire and spellcasting from within the area of effect are impossible.<br />The sequence of effects ceases immediately if the priest is disrupted from spellcasting during the 1 turn duration of the spell. The priest may opt to cancel the effects at any time.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 121</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+
