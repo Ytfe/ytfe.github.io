@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-Vermin Barrier",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-foot cube/level",
+"castingTime":"1 rd.",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"With this spell, the caster creates an invisible force field that repels nonmagical insects, rodents, spiders, snakes, worms, and similar vermin of less than 1 Hit Die. The spell has no effect on giant-sized versions of these creatures unless they are less than 1 Hit Die. The barrier affects summoned creatures, such as those called by a summon insects spell. Any vermin within the area of effect when the spell is cast are not affected; however, when these creatures exit the area, they cannot return.
+
+The spell affects a cubic area whose sides are 10 feet times the caster's level (for instance, a 2nd-level priest could affect a 20'x 20'x 20' cube.
+
+The material components are the caster's holy symbol and a rodent's whisker."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-Vermin Barrier</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With this spell, the caster creates an invisible force field that repels nonmagical insects, rodents, spiders, snakes, worms, and similar vermin of less than 1 Hit Die. The spell has no effect on giant-sized versions of these creatures unless they are less than 1 Hit Die. The barrier affects summoned creatures, such as those called by a summon insects spell. Any vermin within the area of effect when the spell is cast are not affected; however, when these creatures exit the area, they cannot return.<br /><br />The spell affects a cubic area whose sides are 10 feet times the caster&#039;s level (for instance, a 2nd-level priest could affect a 20&#039;x 20&#039;x 20&#039; cube.<br /><br />The material components are the caster&#039;s holy symbol and a rodent&#039;s whisker.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 51</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="843" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Ethereal Barrier",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds",
+"aoe":"Two 10-ft.squares/level",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The ethereal barrier is a defense against the passage of extradimensional creatures, including characters or monsters that are phased, ethereal, or travelling via dimension door or shadow walk. The priest creates an imperceptible barrier of 10 square feet per level that may be arranged in any fashion the priest desires. For example, a 3rd-level character can ward six 10-foot by 10-foot surfaces, which would be sufficient to guard a 10-foot by 10-foot by 10-foot room (four walls, a ceiling, and a floor need to be protected.) Note that some monsters may be capable of abandoning their ethereal approach in order to simply enter the barred area on their own feet-the ethereal barrier only bars their passage as long as they are traveling in the Border Ethereal. Also, while this spell can't be worn down by any form of attack, it does not bar teleportation, gates, or the passage of astral creatures.
+Ethereal barrier may be cast as cooperative magic by several priests working together. As long as all involved characters can cast the spell, the areas of effect of each priest are added together. Total the levels of all priests involved and multiply by two to find the number of 10-foot by 10-foot squares that may be warded. For example, four 6th-level casters (24 total levels) can ward 48 10-foot by 10-foot squares. The duration is determined by the highest level priest involved, plus 1 turn for each additional priest. In the previous example, this would be 6 turns plus 3 turns for three additional priests for a total of 9 turns.
+This spell is also suitable for focus magic (see the spell focus in the Tome of Magic). The material component is a special compound of rare earths and lead worth at least 10 gp per application. One application is required for each 10-foot by 10-foot square to be warded."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Ethereal Barrier</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Two 10-ft.squares/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The ethereal barrier is a defense against the passage of extradimensional creatures, including characters or monsters that are phased, ethereal, or travelling via dimension door or shadow walk. The priest creates an imperceptible barrier of 10 square feet per level that may be arranged in any fashion the priest desires. For example, a 3rd-level character can ward six 10-foot by 10-foot surfaces, which would be sufficient to guard a 10-foot by 10-foot by 10-foot room (four walls, a ceiling, and a floor need to be protected.) Note that some monsters may be capable of abandoning their ethereal approach in order to simply enter the barred area on their own feet-the ethereal barrier only bars their passage as long as they are traveling in the Border Ethereal. Also, while this spell can&#039;t be worn down by any form of attack, it does not bar teleportation, gates, or the passage of astral creatures.<br />Ethereal barrier may be cast as cooperative magic by several priests working together. As long as all involved characters can cast the spell, the areas of effect of each priest are added together. Total the levels of all priests involved and multiply by two to find the number of 10-foot by 10-foot squares that may be warded. For example, four 6th-level casters (24 total levels) can ward 48 10-foot by 10-foot squares. The duration is determined by the highest level priest involved, plus 1 turn for each additional priest. In the previous example, this would be 6 turns plus 3 turns for three additional priests for a total of 9 turns.<br />This spell is also suitable for focus magic (see the spell focus in the Tome of Magic). The material component is a special compound of rare earths and lead worth at least 10 gp per application. One application is required for each 10-foot by 10-foot square to be warded.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 164</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="678" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Frisky Chest",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"10-foot cube/level",
+"castingTime":"2",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"With this spell, the caster can enchant a chest, book, or any other nonliving object no larger than a 10'x10'x10' cube. When any creature other than the caster comes within three feet of the enchanted object, it instantly sprouts appendages and moves away from the creature as quickly as possible. The enchanted object continues to move until it is at least 10 feet away from the nearest creatures in the area.
+After the enchanted object has moved a satisfactory distance from the nearest creature, the appendages disappear. When a creature again comes within three feet of the enchanted object, the enchanted object sprouts appendages and flees. This process continues until the enchantment is negated (through a dispel magic or similar spell) or the enchanted object is subdued or destroyed.
+The enchanted object can sprout feet (MV 24), wings (Fl 24, maneuverability class B), or fins (Sw 24), whichever is most advantageous. Thus, a book on a shelf might sprout wings and fly away, while a table might gallop around a room. The enchanted object can freely and instantly trade appendages as necessary.
+The enchanted object will move only through open spaces. It will not crash through windows, shatter a closed door, or dig through the earth. It cannot attack or take any actions other than movement. If surrounded or cornered, the enchanted object moves in random directions until it is restrained or destroyed.
+The enchantment ends if the caster voluntarily negates it, if the enchanted object is destroyed (the object has the same vulnerabilities as it has in its normal state), or if the enchanted object is restrained for 2-5 (1d4+1) consecutive rounds. Restraint means that the object is prevented from fleeing; if a creature is able to grapple, lift, or sit on the object, it is considered restrained. A creature capable of lifting the object in its normal state is considered strong enough to restrain it (for instance, a person capable of lifting a 50-pound box is also capable of restraining such a box enchanted by frisky chest). The object may also be restrained by tossing a net or heavy blanket over it or by surrounding it with several characters.
+The material components are a dried frog's leg, a feather, and a fish scale."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Frisky Chest</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With this spell, the caster can enchant a chest, book, or any other nonliving object no larger than a 10&#039;x10&#039;x10&#039; cube. When any creature other than the caster comes within three feet of the enchanted object, it instantly sprouts appendages and moves away from the creature as quickly as possible. The enchanted object continues to move until it is at least 10 feet away from the nearest creatures in the area.<br />After the enchanted object has moved a satisfactory distance from the nearest creature, the appendages disappear. When a creature again comes within three feet of the enchanted object, the enchanted object sprouts appendages and flees. This process continues until the enchantment is negated (through a dispel magic or similar spell) or the enchanted object is subdued or destroyed.<br />The enchanted object can sprout feet (MV 24), wings (Fl 24, maneuverability class B), or fins (Sw 24), whichever is most advantageous. Thus, a book on a shelf might sprout wings and fly away, while a table might gallop around a room. The enchanted object can freely and instantly trade appendages as necessary.<br />The enchanted object will move only through open spaces. It will not crash through windows, shatter a closed door, or dig through the earth. It cannot attack or take any actions other than movement. If surrounded or cornered, the enchanted object moves in random directions until it is restrained or destroyed.<br />The enchantment ends if the caster voluntarily negates it, if the enchanted object is destroyed (the object has the same vulnerabilities as it has in its normal state), or if the enchanted object is restrained for 2-5 (1d4+1) consecutive rounds. Restraint means that the object is prevented from fleeing; if a creature is able to grapple, lift, or sit on the object, it is considered restrained. A creature capable of lifting the object in its normal state is considered strong enough to restrain it (for instance, a person capable of lifting a 50-pound box is also capable of restraining such a box enchanted by frisky chest). The object may also be restrained by tossing a net or heavy blanket over it or by surrounding it with several characters.<br />The material components are a dried frog&#039;s leg, a feather, and a fish scale.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 58</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="690" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Zone of Truth",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"5-foot square/level",
+"castingTime":"2",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"",
+"description":"This spell prevents creatures within the area of effect (or those who enter it) from speaking any deliberate and knowing lies. Creatures are allowed a saving throw to avoid the effects; those who fail the save are affected fully. Affected characters are aware of this enchantment; therefore, they may avoid answering questions to which they would normally respond with a lie or they may be evasive as long as they remain within the boundaries of the truth. When a character leaves the area, he is free to speak as he chooses.
+The spell affects a square whose sides are five feet long per level of the caster; thus, a 4th-level priest could affect a 20 foot by 20 foot square.
+The material components are the priest's holy symbol and a phony emerald, ruby, or diamond."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Zone of Truth</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5-foot square/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell prevents creatures within the area of effect (or those who enter it) from speaking any deliberate and knowing lies. Creatures are allowed a saving throw to avoid the effects; those who fail the save are affected fully. Affected characters are aware of this enchantment; therefore, they may avoid answering questions to which they would normally respond with a lie or they may be evasive as long as they remain within the boundaries of the truth. When a character leaves the area, he is free to speak as he chooses.<br />The spell affects a square whose sides are five feet long per level of the caster; thus, a 4th-level priest could affect a 20 foot by 20 foot square.<br />The material components are the priest&#039;s holy symbol and a phony emerald, ruby, or diamond.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 62</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="697" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Efficacious Monster Ward",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-foot cube/level",
+"castingTime":"3",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"",
+"description":"This spell prevents monsters of 2 or fewer Hit Dice from entering the area of effect.
+Such creatures are allowed a saving throw; success indicates that they avoid the spell's effects and are able to enter the area of effect.
+The spell affects a cubic area whose sides equal the caster's level times 10 feet (for example, a 9th-level caster could affect an area equal to a 90' x 90'x 90' cube).
+Monsters within the area of effect when the spell is cast are not affected; however, when they leave the area of effect, they cannot return. Monsters outside the area of effect can hurl rocks, spears, and other missile weapons at targets inside and can also cast spells into the warded area.
+The material components are the priest's holy symbol and a pinch of salt."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Efficacious Monster Ward</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell prevents monsters of 2 or fewer Hit Dice from entering the area of effect.<br />Such creatures are allowed a saving throw; success indicates that they avoid the spell&#039;s effects and are able to enter the area of effect.<br />The spell affects a cubic area whose sides equal the caster&#039;s level times 10 feet (for example, a 9th-level caster could affect an area equal to a 90&#039; x 90&#039;x 90&#039; cube).<br />Monsters within the area of effect when the spell is cast are not affected; however, when they leave the area of effect, they cannot return. Monsters outside the area of effect can hurl rocks, spears, and other missile weapons at targets inside and can also cast spells into the warded area.<br />The material components are the priest&#039;s holy symbol and a pinch of salt.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 65</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="701" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Invisibility Purge",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-foot square/priest",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"All invisible creatures who enter an area enchanted with invisibility purge instantly become visible. Invisibility -related spells do not take effect within the boundaries of the enchanted area, and magical devices such as potions of invisibility do not function.
+Creatures with the natural ability to become invisible are unable to use this ability within the area of effect. Invisible objects carried into the warded area also become visible.
+Invisible creatures or persons within the area of effect when invisibility purge is cast remain invisible; however, if such creatures exit the area of effect and later re-enter, they instantly become visible. Such creatures also lose any natural ability to turn invisible as long as they remain within the area of effect.
+A creature who consumes a potion of invisibility outside the warded area becomes invisible normally, but becomes visible when he enters the area of effect; if the duration of the potion of invisibility has not yet expired when he exits the area of effect, he becomes invisible again outside the area.
+Creatures who are invisible in their natural state or have no visible form (such as invisible stalkers) are not affected by this spell.
+The material components are the priest's holy symbol and a silver mirror no more than three inches in diameter.
+The invisibility purge can be cast as a cooperative magic spell. The potency of this spell can be increased if several priests cast it at the same time. The duration of the spell is then equal to one turn per level of the most powerful priest, plus one turn for every contributing priest. Each priest also increases the area of effect by one 10'x 10' square (these areas must be contiguous). Thus, a 9th-level priest and two 5th-level priests could create a 30'x 10' invisibility purge area having a duration of 11 turns."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Invisibility Purge</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot square/priest&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">All invisible creatures who enter an area enchanted with invisibility purge instantly become visible. Invisibility -related spells do not take effect within the boundaries of the enchanted area, and magical devices such as potions of invisibility do not function.<br />Creatures with the natural ability to become invisible are unable to use this ability within the area of effect. Invisible objects carried into the warded area also become visible.<br />Invisible creatures or persons within the area of effect when invisibility purge is cast remain invisible; however, if such creatures exit the area of effect and later re-enter, they instantly become visible. Such creatures also lose any natural ability to turn invisible as long as they remain within the area of effect.<br />A creature who consumes a potion of invisibility outside the warded area becomes invisible normally, but becomes visible when he enters the area of effect; if the duration of the potion of invisibility has not yet expired when he exits the area of effect, he becomes invisible again outside the area.<br />Creatures who are invisible in their natural state or have no visible form (such as invisible stalkers) are not affected by this spell.<br />The material components are the priest&#039;s holy symbol and a silver mirror no more than three inches in diameter.<br />The invisibility purge can be cast as a cooperative magic spell. The potency of this spell can be increased if several priests cast it at the same time. The duration of the spell is then equal to one turn per level of the most powerful priest, plus one turn for every contributing priest. Each priest also increases the area of effect by one 10&#039;x 10&#039; square (these areas must be contiguous). Thus, a 9th-level priest and two 5th-level priests could create a 30&#039;x 10&#039; invisibility purge area having a duration of 11 turns.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 67</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="710" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Squeaking Floor",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-foot square/level",
+"castingTime":"3 rounds",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"A surface affected by squeaking floors squeaks loudly when any creature larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds) steps on it or touches it. The spell affects a square whose sides equal the caster's level times 10 feet (a 9th-level priest could affect a square whose sides are 90 feet long).
+The squeaks can be heard in a 100-foot radius, regardless of interposing barriers such as walls and doors. The squeaks occur regardless of the surface, whether wood, stone, dirt, or any other solid material. Listeners automatically know the direction of the sounds.
+Characters who successfully move silently reduce the radius of the noise to 50 feet.
+Those able to fly or otherwise avoid direct contact with the affected surface will not activate the squeaking floor.
+The material component is a rusty iron hinge that squeaks when moved."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Squeaking Floor</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot square/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A surface affected by squeaking floors squeaks loudly when any creature larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds) steps on it or touches it. The spell affects a square whose sides equal the caster&#039;s level times 10 feet (a 9th-level priest could affect a square whose sides are 90 feet long).<br />The squeaks can be heard in a 100-foot radius, regardless of interposing barriers such as walls and doors. The squeaks occur regardless of the surface, whether wood, stone, dirt, or any other solid material. Listeners automatically know the direction of the sounds.<br />Characters who successfully move silently reduce the radius of the noise to 50 feet.<br />Those able to fly or otherwise avoid direct contact with the affected surface will not activate the squeaking floor.<br />The material component is a rusty iron hinge that squeaks when moved.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 70</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="714" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Thief's Lament",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards/level",
+"aoe":"5-foot cube/level",
+"castingTime":"3",
+"duration":"1 hour/level",
+"save":"Negate",
+"damage":"",
+"description":"A thief entering an area enchanted with thief's lament suffers a great reduction in his thieving skills. The thief is allowed a saving throw to resist the effects of the spell; failure indicates that he suffers the full effects of the lament. All attempts to pick pockets, open locks, find/remove traps, move silently, detect noise, climb walls, and hide in shadows are reduced by 25% (although a skill cannot be reduced below 5%, presuming the character has at least a score of 5% in any skill).
+The spell affects a cube whose sides equal the caster's level times five feet (a 10thlevel caster could affect a cube whose sides equal 50 feet).
+The material components are the priest's holy symbol and a silver key."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Thief's Lament</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A thief entering an area enchanted with thief&#039;s lament suffers a great reduction in his thieving skills. The thief is allowed a saving throw to resist the effects of the spell; failure indicates that he suffers the full effects of the lament. All attempts to pick pockets, open locks, find/remove traps, move silently, detect noise, climb walls, and hide in shadows are reduced by 25% (although a skill cannot be reduced below 5%, presuming the character has at least a score of 5% in any skill).<br />The spell affects a cube whose sides equal the caster&#039;s level times five feet (a 10thlevel caster could affect a cube whose sides equal 50 feet).<br />The material components are the priest&#039;s holy symbol and a silver key.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 72</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="716" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Zone of Sweet Air",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards/level",
+"aoe":"10-foot cube/level",
+"castingTime":"3 rounds",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"Zone of sweet air creates an invisible barrier around the area of effect that repels all noxious elements from poisonous vapors, including those created magically (such as a stinking cloud). The spell offers no protection against poisonous vapors created by a dragon's breath weapon (such as the chlorine gas of a green dragon). Noxious gases already within the area of effect when the spell is cast are not affected. Fresh air passes into the area normally.
+If a poisonous vapor is expelled within the area of effect (for example, a stinking cloud is cast), the spell takes effect normally but dissipates in half the time normally required.
+The spell affects a cube whose sides equal the caster's level times 10 feet (for instance, a 10th-level caster could affect a cube whose sides are 100 feet long).
+The material components are the priest's holy symbol, a silk handkerchief, and a strand of spider web."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Zone of Sweet Air</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Zone of sweet air creates an invisible barrier around the area of effect that repels all noxious elements from poisonous vapors, including those created magically (such as a stinking cloud). The spell offers no protection against poisonous vapors created by a dragon&#039;s breath weapon (such as the chlorine gas of a green dragon). Noxious gases already within the area of effect when the spell is cast are not affected. Fresh air passes into the area normally.<br />If a poisonous vapor is expelled within the area of effect (for example, a stinking cloud is cast), the spell takes effect normally but dissipates in half the time normally required.<br />The spell affects a cube whose sides equal the caster&#039;s level times 10 feet (for instance, a 10th-level caster could affect a cube whose sides are 100 feet long).<br />The material components are the priest&#039;s holy symbol, a silk handkerchief, and a strand of spider web.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 73</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="727" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Fire Purge",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards/level",
+"aoe":"10-yard square/priest",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"An area enchanted with fire purge is protected against all types of normal and magical fires. Normal fires (including camp fires, torches, and oil fires) cannot burn in the area of effect. Magical fires (including fiery dragon breath, other creature-generated fires, and spell-related fires such as burning hands and fireball) cause only 50% of their normal damage. Additionally, creatures within the area of effect receive a +4 bonus to saving throws made vs. fire attacks, regardless of whether the attacks originate inside or outside the warded area.
+Fire purge has no effect on fires that are within the area of effect when the spell is cast, (i.e., it does not extinguish existing fires).
+The material components are the priest's holy symbol and a scorched sliver of wood.
+Fire purge can be cast as cooperative magic. If a number of priests cast this spell simultaneously, its effectiveness is significantly increased. The duration of the spell is then equal to 1 turn per level of the most powerful priest plus 1 turn for every other contributing priest. The area of effect is a square whose sides equal the number of priests times 10 yards (thus, six priests could create a 60-yard by 60-yard square of protection)."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Fire Purge</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-yard square/priest&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">An area enchanted with fire purge is protected against all types of normal and magical fires. Normal fires (including camp fires, torches, and oil fires) cannot burn in the area of effect. Magical fires (including fiery dragon breath, other creature-generated fires, and spell-related fires such as burning hands and fireball) cause only 50% of their normal damage. Additionally, creatures within the area of effect receive a +4 bonus to saving throws made vs. fire attacks, regardless of whether the attacks originate inside or outside the warded area.<br />Fire purge has no effect on fires that are within the area of effect when the spell is cast, (i.e., it does not extinguish existing fires).<br />The material components are the priest&#039;s holy symbol and a scorched sliver of wood.<br />Fire purge can be cast as cooperative magic. If a number of priests cast this spell simultaneously, its effectiveness is significantly increased. The duration of the spell is then equal to 1 turn per level of the most powerful priest plus 1 turn for every other contributing priest. The area of effect is a square whose sides equal the number of priests times 10 yards (thus, six priests could create a 60-yard by 60-yard square of protection).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 78</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="743" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Weather Stasis",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-foot cube/level",
+"castingTime":"1 turn",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"Weather stasis maintains the weather conditions prevalent in the area of effect when the spell is cast. The spell affects a cube whose sides equal the caster's level times 10 feet (a 10th-level caster could affect a 100' x 100' x 100' cube).
+An area protected by weather stasis is unaffected by temperature variations in the surrounding environment. The spell also acts as a shield against rain, snow, and hail, which cannot enter the protected area. If conditions of precipitation existed in the area of effect when the spell was cast, the identical weather will continue for the duration of the spell.
+For example, weather stasis is cast in an area where the temperature is 75 F. and no precipitation is falling. Half an hour later, the temperature drops to 60 degrees and rain begins to fall. The protected area remains dry and the temperature stays at 75 degrees. If the spell had been cast while rain was falling in the area of effect, rain would continue to fall for the duration of the spell, even after it stopped raining in the surrounding area.
+All physical objects other than rain, snow, and hail can pass into the protected area.
+All creatures and characters can move freely into and out of the area. The spell does not prevent water-based spells or water-based creatures (such as water elementals) from operating in the area.
+The spell protects against both natural and magically generated weather. Night and day pass normally in the protected area, although temperature variations associated with night and day do not occur.
+The material components are the priest's holy symbol and a drop of rain."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Weather Stasis</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Weather stasis maintains the weather conditions prevalent in the area of effect when the spell is cast. The spell affects a cube whose sides equal the caster&#039;s level times 10 feet (a 10th-level caster could affect a 100&#039; x 100&#039; x 100&#039; cube).<br />An area protected by weather stasis is unaffected by temperature variations in the surrounding environment. The spell also acts as a shield against rain, snow, and hail, which cannot enter the protected area. If conditions of precipitation existed in the area of effect when the spell was cast, the identical weather will continue for the duration of the spell.<br />For example, weather stasis is cast in an area where the temperature is 75 F. and no precipitation is falling. Half an hour later, the temperature drops to 60 degrees and rain begins to fall. The protected area remains dry and the temperature stays at 75 degrees. If the spell had been cast while rain was falling in the area of effect, rain would continue to fall for the duration of the spell, even after it stopped raining in the surrounding area.<br />All physical objects other than rain, snow, and hail can pass into the protected area.<br />All creatures and characters can move freely into and out of the area. The spell does not prevent water-based spells or water-based creatures (such as water elementals) from operating in the area.<br />The spell protects against both natural and magically generated weather. Night and day pass normally in the protected area, although temperature variations associated with night and day do not occur.<br />The material components are the priest&#039;s holy symbol and a drop of rain.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 87</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="745" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Barrier of Retention",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Special",
+"aoe":"10'-cube/level",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"1/2",
+"damage":"",
+"description":"This spell creates a one-way invisible force field around the area of effect. The spell creates one 10' x 10' x 10' cube for every level of the caster. These can be arranged into any rectangular shape the caster desires.
+Intruders entering the protected area suffer no ill effects, but the barrier of retention prevents them from leaving. The spell affects all creatures who fail a saving throw vs.
+spell. The caster can pass in and out of the barrier freely.
+Intruders trapped by the barrier of retention can cast spells out of the barrier and can use spells such as teleport to escape the protected area. Objects cannot be hurled out of the barrier but can be carried out by an escaping creature. Dispel magic and similar spells negate the barrier.
+The material component is a small cage made of silver wire. The caster must walk around the perimeter of the area of effect when casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Barrier of Retention</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10'-cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates a one-way invisible force field around the area of effect. The spell creates one 10&#039; x 10&#039; x 10&#039; cube for every level of the caster. These can be arranged into any rectangular shape the caster desires.<br />Intruders entering the protected area suffer no ill effects, but the barrier of retention prevents them from leaving. The spell affects all creatures who fail a saving throw vs.<br />spell. The caster can pass in and out of the barrier freely.<br />Intruders trapped by the barrier of retention can cast spells out of the barrier and can use spells such as teleport to escape the protected area. Objects cannot be hurled out of the barrier but can be carried out by an escaping creature. Dispel magic and similar spells negate the barrier.<br />The material component is a small cage made of silver wire. The caster must walk around the perimeter of the area of effect when casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 88</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="754" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Elemental Forbiddance",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Special",
+"aoe":"5'-cube/level",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"This spell prevents the entry of all elementals into the area of effect. Further, elementals outside the area of effect cannot make physical attacks against those inside.
+Spells and missile attacks can be cast into the area by elementals.
+The spell affects a cube whose sides equal the caster's level times 5 feet (a 12th-level priest could affect an area equal to a 60' x 60'x 60' cube).
+Elemental forbiddance has no effect on elementals that are within the area of effect when the spell is cast. If such elementals leave the area of effect, they cannot reenter.
+The material components are the priest's holy symbol and four glass beads, each of a different color (green, blue, red, and yellow). The priest must pace out the perimeter of the warded area at the time of casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Elemental Forbiddance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5'-cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell prevents the entry of all elementals into the area of effect. Further, elementals outside the area of effect cannot make physical attacks against those inside.<br />Spells and missile attacks can be cast into the area by elementals.<br />The spell affects a cube whose sides equal the caster&#039;s level times 5 feet (a 12th-level priest could affect an area equal to a 60&#039; x 60&#039;x 60&#039; cube).<br />Elemental forbiddance has no effect on elementals that are within the area of effect when the spell is cast. If such elementals leave the area of effect, they cannot reenter.<br />The material components are the priest&#039;s holy symbol and four glass beads, each of a different color (green, blue, red, and yellow). The priest must pace out the perimeter of the warded area at the time of casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 91</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="757" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Grounding",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yards",
+"aoe":"10-yard square/priest",
+"castingTime":"1 turn",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"Grounding offers protection against normal and magical electrical attacks within the area of effect. The protected area and creatures within it suffer no damage from normal electrical attacks (such as those caused by lightning bolts in a thunderstorm and nonmagical creatures such as electric eels). Magical electrical attacks (including lightning bolt breath weapons) cause only 50% of their normal damage. Additionally, creatures within the area of effect receive a +2 bonus to saving throws made against electrical attacks, regardless of whether the attacks originate inside or outside the warded area.
+The material components are the priest's holy symbol and a coil of silver wire."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Grounding</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-yard square/priest&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Grounding offers protection against normal and magical electrical attacks within the area of effect. The protected area and creatures within it suffer no damage from normal electrical attacks (such as those caused by lightning bolts in a thunderstorm and nonmagical creatures such as electric eels). Magical electrical attacks (including lightning bolt breath weapons) cause only 50% of their normal damage. Additionally, creatures within the area of effect receive a +2 bonus to saving throws made against electrical attacks, regardless of whether the attacks originate inside or outside the warded area.<br />The material components are the priest&#039;s holy symbol and a coil of silver wire.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 92</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="764" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Shrieking Walls",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"20'-cub",
+"castingTime":"1 turn",
+"duration":"1 day/level",
+"save":"None",
+"damage":"",
+"description":"This spell enchants any single room no larger than the area of effect. When any creature larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds) enters the room, shrill shrieks begin to emanate from the walls. The shrieks persist for 2-5 (1d4+1) rounds. The walls do not undergo any physical change.
+The shrieks can be heard only by creatures inside the room. Creatures hearing the shrieks experience no ill effects on the first round, allowing them time to leave the room or cover their ears. Silence, 15' radius protects against the effects.
+Creatures who remain in the room during the second or subsequent rounds of the shrieks who have not protected their hearing are penalized as follows: "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Shrieking Walls</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20'-cub&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enchants any single room no larger than the area of effect. When any creature larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds) enters the room, shrill shrieks begin to emanate from the walls. The shrieks persist for 2-5 (1d4+1) rounds. The walls do not undergo any physical change.<br />The shrieks can be heard only by creatures inside the room. Creatures hearing the shrieks experience no ill effects on the first round, allowing them time to leave the room or cover their ears. Silence, 15&#039; radius protects against the effects.<br />Creatures who remain in the room during the second or subsequent rounds of the shrieks who have not protected their hearing are penalized as follows: </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 95</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="768" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Undead Ward",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Special",
+"aoe":"5-foot cube/level",
+"castingTime":"2 turns",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"This spell prevents most types of undead creatures from entering the area of effect (a cube whose sides equal the caster's level times 5 feet--a 15th-level caster could affect a cube whose sides equal 75 feet).
+When an undead creature attempts to enter the protected area, the creature is affected by the ward as if it were being turned by a priest two levels lower than the caster. The casting priest need not have the ability to turn undead himself. Thus, an undead ward created by a 10th-level priest would turn creatures as if by an 8th-level priest.
+The results of the turning attempt are calculated normally. If a large number of undead assault the warded area, not all of them are turned by the spell, since the normal limitations apply. Undead who are unaffected by the turning attempt ignore the undead ward for its duration. Undead within the area of effect when the spell is cast are not affected. However, when such undead leave the area of effect, they are subject to the effects of the spell if they attempt to reenter.
+The material component is the priest's holy symbol, which must be carried around the perimeter of the area to be warded."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Undead Ward</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell prevents most types of undead creatures from entering the area of effect (a cube whose sides equal the caster&#039;s level times 5 feet--a 15th-level caster could affect a cube whose sides equal 75 feet).<br />When an undead creature attempts to enter the protected area, the creature is affected by the ward as if it were being turned by a priest two levels lower than the caster. The casting priest need not have the ability to turn undead himself. Thus, an undead ward created by a 10th-level priest would turn creatures as if by an 8th-level priest.<br />The results of the turning attempt are calculated normally. If a large number of undead assault the warded area, not all of them are turned by the spell, since the normal limitations apply. Undead who are unaffected by the turning attempt ignore the undead ward for its duration. Undead within the area of effect when the spell is cast are not affected. However, when such undead leave the area of effect, they are subject to the effects of the spell if they attempt to reenter.<br />The material component is the priest&#039;s holy symbol, which must be carried around the perimeter of the area to be warded.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 97</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="770" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Crushing Walls",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"Permanent until activated",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to enchant a floor, ceiling, or single wall of a room to crush intruders. The enchanted surface can be no larger than a square whose sides equal the caster's level times 2 feet (a 13th-level priest could affect a 26' x 26' surface).
+The spell activates 1d4 rounds after any creature other than the caster enters the room.
+The intruder must be larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds). When activated, the enchanted surface moves toward the opposite surface at a rate of 3 feet per round. Unless the spell is canceled by the caster, the enchanted surface continues to move until one of the following events occurs: "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Crushing Walls</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent until activated&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to enchant a floor, ceiling, or single wall of a room to crush intruders. The enchanted surface can be no larger than a square whose sides equal the caster&#039;s level times 2 feet (a 13th-level priest could affect a 26&#039; x 26&#039; surface).<br />The spell activates 1d4 rounds after any creature other than the caster enters the room.<br />The intruder must be larger than a normal rat (larger than one-half cubic foot or weighing more than three pounds). When activated, the enchanted surface moves toward the opposite surface at a rate of 3 feet per round. Unless the spell is canceled by the caster, the enchanted surface continues to move until one of the following events occurs: </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 98</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="772" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Dragonbane",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards/level",
+"aoe":"5'-cube/level",
+"castingTime":"1 round",
+"duration":"1d4 rounds+1 round/2 levels",
+"save":"Negate",
+"damage":"",
+"description":"This spell prevents any dragon who fails its saving throw from entering the area of effect. The spell affects a cubic area whose sides equal the caster's level times 5 feet; thus, a 16th-level caster could affect a cube whose sides each equal 80 feet. The dragon can cast spells, blast breath weapon, or hurl missiles (if possible) into the area of effect.
+Dragons within the area of effect when the spell is cast are not affected. If such dragons leave the area of effect, they must succeed a saving throw to reenter the area.
+The material components are the priest's holy symbol and a dragon scale.
+The spell's effectiveness can be greatly increased with the casting of a focus spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Dragonbane</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5'-cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d4 rounds+1 round/2 levels&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell prevents any dragon who fails its saving throw from entering the area of effect. The spell affects a cubic area whose sides equal the caster&#039;s level times 5 feet; thus, a 16th-level caster could affect a cube whose sides each equal 80 feet. The dragon can cast spells, blast breath weapon, or hurl missiles (if possible) into the area of effect.<br />Dragons within the area of effect when the spell is cast are not affected. If such dragons leave the area of effect, they must succeed a saving throw to reenter the area.<br />The material components are the priest&#039;s holy symbol and a dragon scale.<br />The spell&#039;s effectiveness can be greatly increased with the casting of a focus spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 99</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="778" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Land of Stability",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards/level",
+"aoe":"10-foot-cube/level",
+"castingTime":"6",
+"duration":"1 day/level",
+"save":"None",
+"damage":"",
+"description":"Land of stability protects the area of effect and all creatures and objects within it from the following natural disasters: "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Land of Stability</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards/level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot-cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Land of stability protects the area of effect and all creatures and objects within it from the following natural disasters: </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 101</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="796" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Tentacle Walls",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"50-foot cube",
+"castingTime":"1 round",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"Tentacle walls enables the caster to enchant a single room whose volume is less than or equal to the area of effect. The spell activates 1d4 rounds after any creature other than the caster enters the room. The intruder must be larger than a normal rat; that is, it must be larger than one-half cubic foot or weigh more than three pounds.
+When the spell is activated, six black, leathery tentacles sprout inside the room; the tentacles are evenly divided among the room's surfaces (for instance, if the room is a cube, one tentacle sprouts from the floor, one sprouts from the ceiling, and one sprouts from each of the four walls).
+The whip-like tentacles grow to the length of the room and swing wildly. Each round, a tentacle has a 30% chance of striking a random creature in the room, inflicting 1d6 points of damage (save vs. spell for half damage). Each tentacle has AC 0 and 25 hit points. When a tentacle is reduced to 0 hit points, it disappears in a puff of black smoke.
+If all creatures are killed or withdraw from the room, the surviving tentacles withdraw, disappearing into the walls. If the spell is activated again, six tentacles reappear; new tentacles are created to replace any destroyed previously. As long as one tentacle survives an encounter, the tentacles will continue to be replaced. Only when all six tentacles are destroyed is the spell permanently negated.
+The material component is the dried tentacle of an octopus."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Tentacle Walls</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">50-foot cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Tentacle walls enables the caster to enchant a single room whose volume is less than or equal to the area of effect. The spell activates 1d4 rounds after any creature other than the caster enters the room. The intruder must be larger than a normal rat; that is, it must be larger than one-half cubic foot or weigh more than three pounds.<br />When the spell is activated, six black, leathery tentacles sprout inside the room; the tentacles are evenly divided among the room&#039;s surfaces (for instance, if the room is a cube, one tentacle sprouts from the floor, one sprouts from the ceiling, and one sprouts from each of the four walls).<br />The whip-like tentacles grow to the length of the room and swing wildly. Each round, a tentacle has a 30% chance of striking a random creature in the room, inflicting 1d6 points of damage (save vs. spell for half damage). Each tentacle has AC 0 and 25 hit points. When a tentacle is reduced to 0 hit points, it disappears in a puff of black smoke.<br />If all creatures are killed or withdraw from the room, the surviving tentacles withdraw, disappearing into the walls. If the spell is activated again, six tentacles reappear; new tentacles are created to replace any destroyed previously. As long as one tentacle survives an encounter, the tentacles will continue to be replaced. Only when all six tentacles are destroyed is the spell permanently negated.<br />The material component is the dried tentacle of an octopus.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 110</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="810" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Interdiction",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"240 yards",
+"aoe":"200-foot cube/level",
+"castingTime":"2 turns",
+"duration":"1 day",
+"save":"Special",
+"damage":"",
+"description":"This powerful spell affects all enemies of the spellcasting priest who enter the area of effect. The spell inflicts a -2 penalty on saving throws, a -1 penalty to armor class, and a - 1 penalty to attack and damage rolls. Creatures friendly to the cleric gain corresponding bonuses--+2 to saving throws, +1 to attack and damage rolls, and a bonus of 1 to AC.
+Additional effects are possible, depending on the Power granting the spell; effects must correspond (or at least not conflict) with the spheres the priest normally uses. Multiple effects are possible.
+The variation for the Sphere of Wards requires that each hostile creature entering the area of effect make a saving throw vs. spells with a -4 penalty or suffer 4d6 points of damage. An affected creature must then flee the area; it is unable to return. The creature must make a second saving throw vs. spell with a -4 penalty as it leaves the area or be blinded until magically cured.
+The variation for the sphere of Law requires that a hostile creature make a saving throw every time it wishes to change an action. Thus, if a creature wishes to stop running and draw a weapon, a successful save is needed or the creature continues to run. Actions that cannot be continued (e.g., firing an arrow if the archer has no more arrows) are repeated as empty automatisms. In addition, creatures hostile to the priest automatically fail saving throws against Enchantment/Charm spells cast by the priest.
+The variation for the Sphere of Chaos requires that hostile creatures make saving throws vs. spells at -4 or be affected by confusion (as per the spell). Affected creatures have a 5% chance per round of suddenly being attacked by a phantasmal killer.
+All creatures who enter the area of effect are subject to the effects of the spell. All effects except blindness cease 3 rounds after an affected creature leaves the area.
+Creatures reentering the area of effect must make new saving throws."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Interdiction</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">240 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">200-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This powerful spell affects all enemies of the spellcasting priest who enter the area of effect. The spell inflicts a -2 penalty on saving throws, a -1 penalty to armor class, and a - 1 penalty to attack and damage rolls. Creatures friendly to the cleric gain corresponding bonuses--+2 to saving throws, +1 to attack and damage rolls, and a bonus of 1 to AC.<br />Additional effects are possible, depending on the Power granting the spell; effects must correspond (or at least not conflict) with the spheres the priest normally uses. Multiple effects are possible.<br />The variation for the Sphere of Wards requires that each hostile creature entering the area of effect make a saving throw vs. spells with a -4 penalty or suffer 4d6 points of damage. An affected creature must then flee the area; it is unable to return. The creature must make a second saving throw vs. spell with a -4 penalty as it leaves the area or be blinded until magically cured.<br />The variation for the sphere of Law requires that a hostile creature make a saving throw every time it wishes to change an action. Thus, if a creature wishes to stop running and draw a weapon, a successful save is needed or the creature continues to run. Actions that cannot be continued (e.g., firing an arrow if the archer has no more arrows) are repeated as empty automatisms. In addition, creatures hostile to the priest automatically fail saving throws against Enchantment/Charm spells cast by the priest.<br />The variation for the Sphere of Chaos requires that hostile creatures make saving throws vs. spells at -4 or be affected by confusion (as per the spell). Affected creatures have a 5% chance per round of suddenly being attacked by a phantasmal killer.<br />All creatures who enter the area of effect are subject to the effects of the spell. All effects except blindness cease 3 rounds after an affected creature leaves the area.<br />Creatures reentering the area of effect must make new saving throws.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 116</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="813" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Preservation",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"480 yards",
+"aoe":"One structure",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell creates a powerful set of protective wards that operate on a single fortified building, temple complex, tower, or similar structure. These wards protect the physical integrity of the structure and prevent magical access.
+A building protected by preservation suffers only 25% of normal structural damage from sources such as siege engines, earthquakes (both natural and magical), and powerful weather-affecting spells. Spells which directly affect the physical integrity of the structure (e.g., passwall, stone shape, transmute rock to mud) simply fail when cast on the protected building.
+Preservation creates a permanent protection from evil spell on the affected building.
+Every surface of the building benefits from the effects of the spell.
+Magical spells allowing access to the building fail. Thus, creatures attempting to teleport or fly into the building are stopped. Birds and creatures with natural flight may enter the building normally.
+If the building is a temple (or other consecrated building) dedicated to the Power that granted the spell, all priests inside it gain the benefit of a sanctuary spell for the duration of the preservation.
+The preservation spell expires if the building is destroyed or after 60 days have passed."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Preservation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">480 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One structure&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates a powerful set of protective wards that operate on a single fortified building, temple complex, tower, or similar structure. These wards protect the physical integrity of the structure and prevent magical access.<br />A building protected by preservation suffers only 25% of normal structural damage from sources such as siege engines, earthquakes (both natural and magical), and powerful weather-affecting spells. Spells which directly affect the physical integrity of the structure (e.g., passwall, stone shape, transmute rock to mud) simply fail when cast on the protected building.<br />Preservation creates a permanent protection from evil spell on the affected building.<br />Every surface of the building benefits from the effects of the spell.<br />Magical spells allowing access to the building fail. Thus, creatures attempting to teleport or fly into the building are stopped. Birds and creatures with natural flight may enter the building normally.<br />If the building is a temple (or other consecrated building) dedicated to the Power that granted the spell, all priests inside it gain the benefit of a sanctuary spell for the duration of the preservation.<br />The preservation spell expires if the building is destroyed or after 60 days have passed.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 118</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="826" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Ward Matrix",
+"school":"Invocation/Evocation",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"6 turns",
+"duration":"60 days",
+"save":"None",
+"damage":"",
+"description":"The ward matrix spell links as many as six locations within the Prime Material plane.
+Only locations that have a functioning Wards spell may be linked. Ward matrix conjoins the different Wards spells so that each linked site gains the protection of all other wards in the network.
+From the place where the ward matrix is cast, magical connections spread to the other designated sites. These can be seen with a true seeing or similar spell as tendrils of magical energy running through the air just above ground level. The connections target their destinations and move toward them at a rate of 40 miles per turn. They can evade barriers such as anti-magic shells by moving above or around them. When the connections reach their destinations, they multiply and spread to connect all other locations in the network; this secondary linkage is established at a rate of 20 miles per turn.
+The conjoining of Wards lasts for 60 days unless a linked area is destroyed or a Wards spell is dispelled. Any location that is destroyed or has its Wards spell dispelled is removed from the matrix; other connections remain intact for the duration."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Ward Matrix</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">60 days&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The ward matrix spell links as many as six locations within the Prime Material plane.<br />Only locations that have a functioning Wards spell may be linked. Ward matrix conjoins the different Wards spells so that each linked site gains the protection of all other wards in the network.<br />From the place where the ward matrix is cast, magical connections spread to the other designated sites. These can be seen with a true seeing or similar spell as tendrils of magical energy running through the air just above ground level. The connections target their destinations and move toward them at a rate of 40 miles per turn. They can evade barriers such as anti-magic shells by moving above or around them. When the connections reach their destinations, they multiply and spread to connect all other locations in the network; this secondary linkage is established at a rate of 20 miles per turn.<br />The conjoining of Wards lasts for 60 days unless a linked area is destroyed or a Wards spell is dispelled. Any location that is destroyed or has its Wards spell dispelled is removed from the matrix; other connections remain intact for the duration.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 122</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

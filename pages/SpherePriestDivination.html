@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Analyze Balance",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"4 iron coins",
+"range":"80 yards",
+"aoe":"One creature, object, or 10' square",
+"castingTime":"1 round",
+"duration":"5 rounds+1 round/level",
+"save":"None",
+"damage":"",
+"description":"This spell allows a priest to sense how far a character, creature, object, or area is from a condition of balance -- in other words, the degree to which its alignment is removed from true Neutral. The spell gives no indication of the \"direction\" in which the alignment is removed from true Neutral except under certain conditions which follow. The spell does, however, indicate along which axis or axes of alignment the variation lies.
+
+For example, a priest uses this spell to analyze the balance of a Chaotic Neutral creature. The spell indicates that the creature is removed from Neutral by one grade, and the variation is along the Law/Chaos axis; thus, the creature must be either Chaotic Neutral or Lawful Neutral. If the creature were Chaotic Evil, the spell would indicate that it is removed from balance by two grades, one along each axis; thus, the creature must be Chaotic Evil, Chaotic Good, Lawful Evil, or Lawful Good.
+
+A priest has a 5% chance per level of correctly determining the direction of variation along one randomly chosen axis. This means that a 10th-level priest evaluating the balance of a Chaotic Neutral creature would have a 50% chance of learning that the creature is Chaotic (and hence Chaotic Neutral, since it is only one step away from balance).
+
+Similar to spells such as detect evil, this spell will not yield a result on a hidden trap. If cast on a creature with an intelligence level of \"animal\" or \"non-,\" it will always read true Neutral (i.e., zero steps removed from balance).
+
+The material components are four iron coins which the priest tosses in his hand while concentrating on the spell. The coins are not consumed in the casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Analyze Balance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">80 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature, object, or 10' square&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rounds+1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >4 iron coins&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows a priest to sense how far a character, creature, object, or area is from a condition of balance -- in other words, the degree to which its alignment is removed from true Neutral. The spell gives no indication of the &quot;direction&quot; in which the alignment is removed from true Neutral except under certain conditions which follow. The spell does, however, indicate along which axis or axes of alignment the variation lies.<br /><br />For example, a priest uses this spell to analyze the balance of a Chaotic Neutral creature. The spell indicates that the creature is removed from Neutral by one grade, and the variation is along the Law/Chaos axis; thus, the creature must be either Chaotic Neutral or Lawful Neutral. If the creature were Chaotic Evil, the spell would indicate that it is removed from balance by two grades, one along each axis; thus, the creature must be Chaotic Evil, Chaotic Good, Lawful Evil, or Lawful Good.<br /><br />A priest has a 5% chance per level of correctly determining the direction of variation along one randomly chosen axis. This means that a 10th-level priest evaluating the balance of a Chaotic Neutral creature would have a 50% chance of learning that the creature is Chaotic (and hence Chaotic Neutral, since it is only one step away from balance).<br /><br />Similar to spells such as detect evil, this spell will not yield a result on a hidden trap. If cast on a creature with an intelligence level of &quot;animal&quot; or &quot;non-,&quot; it will always read true Neutral (i.e., zero steps removed from balance).<br /><br />The material components are four iron coins which the priest tosses in his hand while concentrating on the spell. The coins are not consumed in the casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 51</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="484" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Evil",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy Symbol",
+"range":"0",
+"aoe":"10 ft. x 120 yds.",
+"castingTime":"1 rd.",
+"duration":"1 turn + 5 rds./level",
+"save":"None",
+"damage":"",
+"description":"This spell discovers emanations of evil, or of good in the case of the reverse spell, from any creature, object, or area. Character alignment, however, is revealed only under unusual circumstances: characters who are strongly aligned, who do not stray from their faith, and who are of at least 9th level might radiate good or evil if intent upon appropriate actions. Powerful monsters, such as rakshasas or ki-rin, send forth emanations of evil or good, even if polymorphed. Aligned undead radiate evil, for it is this power and negative force that enable them to continue existing. An evilly cursed object or unholy water radiates evil, but a hidden trap or an unintelligent viper does not.
+The degree of evil (dim, faint, moderate, strong, or overwhelming) and possibly its general nature (expectant, malignant, gloating, etc.) can be noted. If the evil is overwhelming, the priest has a 10% chance per level of detecting its general bent (lawful, neutral, or chaotic). The duration of a detect evil (or detect good) spell is one turn plus five rounds per level of the priest. Thus, a 1st-level priest can cast a spell with a 15-round duration, a 2nd-level priest can cast a spell with a 20-round duration, etc. The spell has a path of detection 10 feet wide in the direction the priest is facing. The priest must concentrate--stop, have quiet, and intently seek to detect the aura--for at least one round to receive a reading.
+The spell requires the use of the priest's holy symbol as its material component, with the priest holding it before him."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Evil</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. x 120 yds.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Holy Symbol&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell discovers emanations of evil, or of good in the case of the reverse spell, from any creature, object, or area. Character alignment, however, is revealed only under unusual circumstances: characters who are strongly aligned, who do not stray from their faith, and who are of at least 9th level might radiate good or evil if intent upon appropriate actions. Powerful monsters, such as rakshasas or ki-rin, send forth emanations of evil or good, even if polymorphed. Aligned undead radiate evil, for it is this power and negative force that enable them to continue existing. An evilly cursed object or unholy water radiates evil, but a hidden trap or an unintelligent viper does not.<br />The degree of evil (dim, faint, moderate, strong, or overwhelming) and possibly its general nature (expectant, malignant, gloating, etc.) can be noted. If the evil is overwhelming, the priest has a 10% chance per level of detecting its general bent (lawful, neutral, or chaotic). The duration of a detect evil (or detect good) spell is one turn plus five rounds per level of the priest. Thus, a 1st-level priest can cast a spell with a 15-round duration, a 2nd-level priest can cast a spell with a 20-round duration, etc. The spell has a path of detection 10 feet wide in the direction the priest is facing. The priest must concentrate--stop, have quiet, and intently seek to detect the aura--for at least one round to receive a reading.<br />The spell requires the use of the priest&#039;s holy symbol as its material component, with the priest holding it before him.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 253</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="486" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Poison",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Blessed Vellum",
+"range":"0",
+"aoe":"Special",
+"castingTime":"4",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell enables the priest to determine if an object has been poisoned or is poisonous. One object, or one 5-foot cubic mass, can be checked per round. The priest has a 5% chance per level of determining the exact type of poison.
+The material component is a strip of specially blessed vellum, which turns black if poison is present."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Poison</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Blessed Vellum&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the priest to determine if an object has been poisoned or is poisonous. One object, or one 5-foot cubic mass, can be checked per round. The priest has a 5% chance per level of determining the exact type of poison.<br />The material component is a strip of specially blessed vellum, which turns black if poison is present.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 254</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="504" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Augury",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"2 rds.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The priest casting an augury spell seeks to divine whether an action in the immediate future (within one-half hour) will benefit or harm the party. For example, if a party is considering the destruction of a weird seal that closes a portal, an augury spell can be used to find if weal or woe will be the immediate result. If the spell is successful, the DM yields some indication of the probable outcome: \"weal,\" \"woe,\" or possibly a cryptic puzzle or rhyme. The base chance for receiving a meaningful reply is 70%, plus 1% for each level of the priest casting the spell; for example, 71% at 1st level, 72% at 2nd, etc.
+Your DM determines any adjustments for the particular conditions of each augury.
+For example, if the question is \"Will we do well if we venture to the third level?\" and a terrible troll guarding 10,000 sp and a shield +1 lurks near the entrance to the level (which the DM estimates the party could beat after a hard fight), the augury might be: \"Great risk brings great reward.\" If the troll is too strong for the party, the augury might be: \"Woe and destruction await!\" Likewise, a party casting several auguries about the same action in quick succession might receive identical answers, regardless of the dice rolls.
+The material component for an augury spell is a set of gem-inlaid sticks, dragon bones, or similar tokens of at least 1,000 gp value (which are not expended in casting)."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Augury</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The priest casting an augury spell seeks to divine whether an action in the immediate future (within one-half hour) will benefit or harm the party. For example, if a party is considering the destruction of a weird seal that closes a portal, an augury spell can be used to find if weal or woe will be the immediate result. If the spell is successful, the DM yields some indication of the probable outcome: &quot;weal,&quot; &quot;woe,&quot; or possibly a cryptic puzzle or rhyme. The base chance for receiving a meaningful reply is 70%, plus 1% for each level of the priest casting the spell; for example, 71% at 1st level, 72% at 2nd, etc.<br />Your DM determines any adjustments for the particular conditions of each augury.<br />For example, if the question is &quot;Will we do well if we venture to the third level?&quot; and a terrible troll guarding 10,000 sp and a shield +1 lurks near the entrance to the level (which the DM estimates the party could beat after a hard fight), the augury might be: &quot;Great risk brings great reward.&quot; If the troll is too strong for the party, the augury might be: &quot;Woe and destruction await!&quot; Likewise, a party casting several auguries about the same action in quick succession might receive identical answers, regardless of the dice rolls.<br />The material component for an augury spell is a set of gem-inlaid sticks, dragon bones, or similar tokens of at least 1,000 gp value (which are not expended in casting).</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 257</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="508" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Charm",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 creature/rd.",
+"castingTime":"1 rd.",
+"duration":"1 turn",
+"save":"Negate",
+"damage":"",
+"description":"When used by a priest, this spell can detect if a person or monster is under the influence of a charm spell, or similar control such as hypnosis, suggestion, beguiling, possession, etc. The creature rolls a saving throw vs. spell and, if successful, the caster learns nothing about that particular creature from the casting. A caster who learns that a creature is being influenced has a 5% chance per level to determine the exact type of influence. Up to 10 different creatures can be checked before the spell wanes. If the creature is under more than one such effect, only the information that the charms exist is gained. The type (since there are conflicting emanations) is impossible to determine.
+The reverse of the spell, undetectable charm, completely masks all charms on a single creature for 24 hours."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Charm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature/rd.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When used by a priest, this spell can detect if a person or monster is under the influence of a charm spell, or similar control such as hypnosis, suggestion, beguiling, possession, etc. The creature rolls a saving throw vs. spell and, if successful, the caster learns nothing about that particular creature from the casting. A caster who learns that a creature is being influenced has a 5% chance per level to determine the exact type of influence. Up to 10 different creatures can be checked before the spell wanes. If the creature is under more than one such effect, only the information that the charms exist is gained. The type (since there are conflicting emanations) is impossible to determine.<br />The reverse of the spell, undetectable charm, completely masks all charms on a single creature for 24 hours.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 259</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="511" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Find Traps",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10 ft. x 30 yds.",
+"castingTime":"5",
+"duration":"3 turns",
+"save":"None",
+"damage":"",
+"description":"When a priest casts a find traps spell, all traps--concealed normally or magically--of magical or mechanical nature become apparent to him. Note that this spell is directional, and the caster must face the desired direction in order to determine if a trap is laid in that particular direction.
+A trap is any device or magical ward that meets three criteria: it can inflict a sudden or unexpected result, the spellcaster would view the result as undesirable or harmful, and the harmful or undesirable result was specifically intended as such by the creator. Thus, traps include alarms, glyphs, and similar spells or devices.
+The caster learns the general nature of the trap (magical or mechanical) but not its exact effect, nor how to disarm it. Close examination will, however, enable the caster to sense what intended actions might trigger it. Note that the caster's divination is limited to his knowledge of what might be unexpected and harmful. The spell cannot predict actions of creatures (hence, a concealed murder hole or ambush is not a trap), nor are natural hazards considered traps (a cavern that floods during a rain, a wall weakened by age, a naturally poisonous plant, etc.). If the DM is using specific glyphs or sigils to identify magical wards (see the 3rd-level spell glyph of warding), this spell shows the form of the glyph or mark. The spell does not detect traps that have been disarmed or are otherwise inactive."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Find Traps</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. x 30 yds.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts a find traps spell, all traps--concealed normally or magically--of magical or mechanical nature become apparent to him. Note that this spell is directional, and the caster must face the desired direction in order to determine if a trap is laid in that particular direction.<br />A trap is any device or magical ward that meets three criteria: it can inflict a sudden or unexpected result, the spellcaster would view the result as undesirable or harmful, and the harmful or undesirable result was specifically intended as such by the creator. Thus, traps include alarms, glyphs, and similar spells or devices.<br />The caster learns the general nature of the trap (magical or mechanical) but not its exact effect, nor how to disarm it. Close examination will, however, enable the caster to sense what intended actions might trigger it. Note that the caster&#039;s divination is limited to his knowledge of what might be unexpected and harmful. The spell cannot predict actions of creatures (hence, a concealed murder hole or ambush is not a trap), nor are natural hazards considered traps (a cavern that floods during a rain, a wall weakened by age, a naturally poisonous plant, etc.). If the DM is using specific glyphs or sigils to identify magical wards (see the 3rd-level spell glyph of warding), this spell shows the form of the glyph or mark. The spell does not detect traps that have been disarmed or are otherwise inactive.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 260</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="517" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Know Alignment",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 Yds.",
+"aoe":"1 creature or object",
+"castingTime":"1 rd.",
+"duration":"1 turn",
+"save":"Negate",
+"damage":"",
+"description":"A know alignment spell enables the priest to exactly read the aura of a creature or an aligned object (unaligned objects reveal nothing). The caster must remain stationary and concentrate on the subject for a full round. If the creature rolls a successful saving throw vs. spell, the caster learns nothing about that particular creature from the casting. Certain magical devices negate the power of the know alignment spell.
+The reverse, undetectable alignment, conceals the alignment of an object or creature for 24 hours."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Know Alignment</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 Yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature or object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A know alignment spell enables the priest to exactly read the aura of a creature or an aligned object (unaligned objects reveal nothing). The caster must remain stationary and concentrate on the subject for a full round. If the creature rolls a successful saving throw vs. spell, the caster learns nothing about that particular creature from the casting. Certain magical devices negate the power of the know alignment spell.<br />The reverse, undetectable alignment, conceals the alignment of an object or creature for 24 hours.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 261</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="851" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Spirits",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10 x 60 ft. path",
+"castingTime":"6",
+"duration":"1 turn + 1 turn/level",
+"save":"None",
+"damage":"",
+"description":"This divination reveals the presence of disembodied or noncorporeal spirits of all types, including wraiths, ghosts, spectres, astrally-projecting creatures, characters or monsters employing magic jar or possession, and (of course) animal spirits and spirits of nature. Characters or monsters who are simply invisible, phased, or ethereal do not count as spirits, since they are physically present in the flesh despite their unusual status. The caster detects spirits in a path 10 feet wide and 60 feet long; any within the area of effect are revealed in their preferred form or appearance for all to see. Simply detecting a spirit doesn't give the caster any special ability to communicate with or attack the entity.
+The material component for this spell is a small pendant of copper wire worth at least 20 gp."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Spirits</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 x 60 ft. path&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This divination reveals the presence of disembodied or noncorporeal spirits of all types, including wraiths, ghosts, spectres, astrally-projecting creatures, characters or monsters employing magic jar or possession, and (of course) animal spirits and spirits of nature. Characters or monsters who are simply invisible, phased, or ethereal do not count as spirits, since they are physically present in the flesh despite their unusual status. The caster detects spirits in a path 10 feet wide and 60 feet long; any within the area of effect are revealed in their preferred form or appearance for all to see. Simply detecting a spirit doesn&#039;t give the caster any special ability to communicate with or attack the entity.<br />The material component for this spell is a small pendant of copper wire worth at least 20 gp.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 167</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="699" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Extradimensional Detection",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"One 10'-wide path, 60 feet long",
+"castingTime":"3",
+"duration":"1 round/level",
+"save":"None",
+"damage":"",
+"description":"When extradimensional detection is cast, the priest detects the existence of any extradimensional spaces or pockets in a path 10 feet wide and 60 feet long in the direction he is facing. The priest may turn, scanning a 60 arc each round, or may move slowly while the spell is in effect to change the sweep of the detection.
+Extradimensional spaces include those created by spells such as rope trick and those contained within such items as bags of holding and portable holes. The priest does not automatically know the size of the space or its source.
+This spell detects interplanar gates and the \"gate\" opened by the spell extradimensional folding.
+The spell can be blocked by a stone wall of one foot thickness or more, a one-inch thickness of solid metal, or one yard or more of solid wood."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Extradimensional Detection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One 10'-wide path, 60 feet long&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When extradimensional detection is cast, the priest detects the existence of any extradimensional spaces or pockets in a path 10 feet wide and 60 feet long in the direction he is facing. The priest may turn, scanning a 60 arc each round, or may move slowly while the spell is in effect to change the sweep of the detection.<br />Extradimensional spaces include those created by spells such as rope trick and those contained within such items as bags of holding and portable holes. The priest does not automatically know the size of the space or its source.<br />This spell detects interplanar gates and the &quot;gate&quot; opened by the spell extradimensional folding.<br />The spell can be blocked by a stone wall of one foot thickness or more, a one-inch thickness of solid metal, or one yard or more of solid wood.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 66</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="542" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Object",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"60 yds. + 10 yds./level",
+"aoe":"1 object ",
+"castingTime":"1 turn",
+"duration":"8 hrs.",
+"save":"None",
+"damage":"",
+"description":"This spell helps locate a known or familiar object. The priest casts the spell, slowly turns, and will sense when he is facing in the direction of the object to be located, provided the object is within range--for example, 90 yards for 3rd-level priests, 100 yards for 4th, 110 yards for 5th, etc. The spell locates such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Once the caster has fixed in his mind the items sought, the spell locates only that item. Attempting to find a specific item, such as a kingdom's crown, requires an accurate mental image. If the image is not close enough to the actual item, the spell does not work; in short, desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.
+The casting requires the use of a piece of lodestone.
+The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. The caster must touch the object being concealed.
+Neither application of the spell affects living creatures."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Object</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds. + 10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 object &nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">8 hrs.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell helps locate a known or familiar object. The priest casts the spell, slowly turns, and will sense when he is facing in the direction of the object to be located, provided the object is within range--for example, 90 yards for 3rd-level priests, 100 yards for 4th, 110 yards for 5th, etc. The spell locates such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Once the caster has fixed in his mind the items sought, the spell locates only that item. Attempting to find a specific item, such as a kingdom&#039;s crown, requires an accurate mental image. If the image is not close enough to the actual item, the spell does not work; in short, desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.<br />The casting requires the use of a piece of lodestone.<br />The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. The caster must touch the object being concealed.<br />Neither application of the spell affects living creatures.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 268</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="553" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Speak With Dead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"1",
+"aoe":"1 creature",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"Upon casting a speak with dead spell, the priest is able to ask several questions of a dead creature in a set period of time and receive answers according to the knowledge of that creature. Of course, the priest must be able to converse in the language that the dead creature once used. The length of time the creature has been dead is a factor, since only higher level priests can converse with a long-dead creature. The number of questions that can be answered and the length of time in which the questions can be asked depend on the level of experience of the priest. Even if the casting is successful, such creatures are as evasive as possible when questioned. The dead tend to give extremely brief and limited answers, often cryptic, and to take questions literally. Furthermore, their knowledge is often limited to what they knew in life.
+A dead creature of different alignment or of higher level or Hit Dice than the caster's level receives a saving throw vs. spell. A dead creature that successfully saves can refuse to answer questions, ending the spell. At the DM's option, the casting of this spell on a given creature might be restricted to once per week.
+The priest needs a holy symbol and burning incense in order to cast this spell upon the body, remains, or a portion thereof. The remains are not expended. This spell does not function under water.
+Caster Level / Max Length of Time Dead / Time Questioned / # of Questions
+1-7 / 1 week / 1 round / 2
+7-8 / 1 month / 3 rounds / 3
+9-12 / 1 year / 1 turn / 4
+13-15 / 10 years / 2 turns / 5
+16-20 / 100 years / 3 turns / 6
+21+ / 1,000 years / 1 hour / 7"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Speak With Dead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Upon casting a speak with dead spell, the priest is able to ask several questions of a dead creature in a set period of time and receive answers according to the knowledge of that creature. Of course, the priest must be able to converse in the language that the dead creature once used. The length of time the creature has been dead is a factor, since only higher level priests can converse with a long-dead creature. The number of questions that can be answered and the length of time in which the questions can be asked depend on the level of experience of the priest. Even if the casting is successful, such creatures are as evasive as possible when questioned. The dead tend to give extremely brief and limited answers, often cryptic, and to take questions literally. Furthermore, their knowledge is often limited to what they knew in life.<br />A dead creature of different alignment or of higher level or Hit Dice than the caster&#039;s level receives a saving throw vs. spell. A dead creature that successfully saves can refuse to answer questions, ending the spell. At the DM&#039;s option, the casting of this spell on a given creature might be restricted to once per week.<br />The priest needs a holy symbol and burning incense in order to cast this spell upon the body, remains, or a portion thereof. The remains are not expended. This spell does not function under water.<br />Caster Level / Max Length of Time Dead / Time Questioned / # of Questions<br />1-7 / 1 week / 1 round / 2<br />7-8 / 1 month / 3 rounds / 3<br />9-12 / 1 year / 1 turn / 4<br />13-15 / 10 years / 2 turns / 5<br />16-20 / 100 years / 3 turns / 6<br />21+ / 1,000 years / 1 hour / 7</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 271</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="567" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Lie",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 creature",
+"castingTime":"7",
+"duration":"1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"A priest who casts this spell is immediately able to determine if the subject creature deliberately and knowingly speaks a lie. It does not reveal the truth, uncover unintentional inaccuracies, or necessarily reveal evasions. The subject receives a saving throw vs. spell, which is adjusted only by the Wisdom of the caster--for example, if the caster has a Wisdom of 18, the subject's saving throw roll is reduced by 4 (see Table 5: Wisdom).
+The material component for the detect lie spell is one gp worth of gold dust.
+The spell's reverse, undetectable lie, prevents the magical detection of lies spoken by the creature for 24 hours.
+The reverse requires brass dust as its material component."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Lie</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A priest who casts this spell is immediately able to determine if the subject creature deliberately and knowingly speaks a lie. It does not reveal the truth, uncover unintentional inaccuracies, or necessarily reveal evasions. The subject receives a saving throw vs. spell, which is adjusted only by the Wisdom of the caster--for example, if the caster has a Wisdom of 18, the subject&#039;s saving throw roll is reduced by 4 (see Table 5: Wisdom).<br />The material component for the detect lie spell is one gp worth of gold dust.<br />The spell&#039;s reverse, undetectable lie, prevents the magical detection of lies spoken by the creature for 24 hours.<br />The reverse requires brass dust as its material component.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 275</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="568" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Divination",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"A divination spell is used to garner a useful piece of advice concerning a specific goal, event, or activity that will occur within a one-week period. This can be as simple as a short phrase, or it might take the form of a cryptic rhyme or omen. Unlike the augury spell, this gives a specific piece of advice.
+For example, if the question is \"Will we do well if we venture to the third level?\" and a terrible troll guarding 10,000 gp and a shield +1 lurks near the entrance to the level (the DM estimates the party could beat the troll after a hard fight), the divination response might be: \"Ready oil and open flame light your way to wealth.\" In all cases, the DM controls what information is received and whether additional divinations will supply additional information. Note that if the information is not acted upon, the conditions probably change so that the information is no longer useful (in the example, the troll might move away and take the treasure with it).
+The base chance for a correct divination is 60%, plus 1% for each experience level of the priest casting the spell. The DM makes adjustments to this base chance considering the actions being divined (if, for example, unusual precautions against the spell have been taken). If the dice roll is failed, the caster knows the spell failed, unless specific magic yielding false information is at work.
+The material components of the divination spell are a sacrificial offering, incense, and the holy symbol of the priest. If an unusually important divination is attempted, sacrifice of particularly valuable gems, jewelry, or magical items may be required."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Divination</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A divination spell is used to garner a useful piece of advice concerning a specific goal, event, or activity that will occur within a one-week period. This can be as simple as a short phrase, or it might take the form of a cryptic rhyme or omen. Unlike the augury spell, this gives a specific piece of advice.<br />For example, if the question is &quot;Will we do well if we venture to the third level?&quot; and a terrible troll guarding 10,000 gp and a shield +1 lurks near the entrance to the level (the DM estimates the party could beat the troll after a hard fight), the divination response might be: &quot;Ready oil and open flame light your way to wealth.&quot; In all cases, the DM controls what information is received and whether additional divinations will supply additional information. Note that if the information is not acted upon, the conditions probably change so that the information is no longer useful (in the example, the troll might move away and take the treasure with it).<br />The base chance for a correct divination is 60%, plus 1% for each experience level of the priest casting the spell. The DM makes adjustments to this base chance considering the actions being divined (if, for example, unusual precautions against the spell have been taken). If the dice roll is failed, the caster knows the spell failed, unless specific magic yielding false information is at work.<br />The material components of the divination spell are a sacrificial offering, incense, and the holy symbol of the priest. If an unusually important divination is attempted, sacrifice of particularly valuable gems, jewelry, or magical items may be required.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 275</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="864" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Omniscient Eye",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"7",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This divination enhances the caster's vision by allowing him to see through any normal or magical darkness, fog, or mist to a range of 60 feet. In addition, the caster has a chance of piercing magical illusions, blending, and invisibility equal to 70% plus 1% per level of experience, less 2% per spell level. For example, a 7th-level priest has a 70% + 7% - 4%, or 73% chance, to spot a wizard concealing himself by using the 2nd-level spell invisibility.
+Unlike the 5th-level spell true seeing, the omniscient eye does not grant the caster the ability to perceive secret doors, traps, lost or misplaced objects, or creature alignments; it simply ensures that the caster can see the surroundings as they would appear without the interference of weather, lighting, or illusionary magic. Thus, the omniscient eye can be deceived by careful camouflage, concealment, or other purely physical precautions. Other phenomena that may bypass this spell's power include psionic invisibility, true transparency, or extradimensional objects or creatures.
+The material component of this spell is a special ointment for the eyes that is composed of rare powders and herbs. The ointment costs at least 100 gold pieces for a single application."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Omniscient Eye</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This divination enhances the caster&#039;s vision by allowing him to see through any normal or magical darkness, fog, or mist to a range of 60 feet. In addition, the caster has a chance of piercing magical illusions, blending, and invisibility equal to 70% plus 1% per level of experience, less 2% per spell level. For example, a 7th-level priest has a 70% + 7% - 4%, or 73% chance, to spot a wizard concealing himself by using the 2nd-level spell invisibility.<br />Unlike the 5th-level spell true seeing, the omniscient eye does not grant the caster the ability to perceive secret doors, traps, lost or misplaced objects, or creature alignments; it simply ensures that the caster can see the surroundings as they would appear without the interference of weather, lighting, or illusionary magic. Thus, the omniscient eye can be deceived by careful camouflage, concealment, or other purely physical precautions. Other phenomena that may bypass this spell&#039;s power include psionic invisibility, true transparency, or extradimensional objects or creatures.<br />The material component of this spell is a special ointment for the eyes that is composed of rare powders and herbs. The ointment costs at least 100 gold pieces for a single application.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 171</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="751" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Consequence",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 round",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"This spell allows the priest to determine how one recent event fits into the \"grand scheme.\" By casting this spell, the priest can determine whether the sequence or situation that gave rise to the specific event is complete or whether it is ongoing; whether it was a significant or insignificant event in the larger picture; or whether it will continue to have repercussions for the participants.
+Using his knowledge of circumstances, the DM communicates these facts to the caster's player. This \"arcane message\" is normally straightforward and easy to understand, but in the case of highly complex circumstances, the message might be cryptic. In any case, the message will always be truthful.
+As an example, consider a priest and his party who are on a holy quest to retrieve an item of power. On the way to the location of this item, the party is ambushed by evil creatures from the Inner Planes but manages to defeat them. Concerned that these creatures might be outlying guards protecting the item of interest, the priest casts consequence, hoping for guidance. The DM knows that these creatures have nothing to do with the quest; the encounter was coincidental. However, the surviving monsters will soon be returning with reinforcements to avenge their dead. Therefore, the DM tells the priest's player, \"To your goals these have no place, but still they can cause more woe.\" Casting this spell \"taints\" subsequent castings of the same spell within a 24-hour span. A second attempt within this period always results in the same message as the first, regardless of the true situation. If a second priest casts the spell within 24 hours of another casting, he receives an accurate reading.
+The material component is three special coins or dice made of platinum (total value of at least 1,000 gp), which the priest tosses in his hand while concentrating on the spell.
+The coins or dice are not consumed in the casting."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Consequence</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows the priest to determine how one recent event fits into the &quot;grand scheme.&quot; By casting this spell, the priest can determine whether the sequence or situation that gave rise to the specific event is complete or whether it is ongoing; whether it was a significant or insignificant event in the larger picture; or whether it will continue to have repercussions for the participants.<br />Using his knowledge of circumstances, the DM communicates these facts to the caster&#039;s player. This &quot;arcane message&quot; is normally straightforward and easy to understand, but in the case of highly complex circumstances, the message might be cryptic. In any case, the message will always be truthful.<br />As an example, consider a priest and his party who are on a holy quest to retrieve an item of power. On the way to the location of this item, the party is ambushed by evil creatures from the Inner Planes but manages to defeat them. Concerned that these creatures might be outlying guards protecting the item of interest, the priest casts consequence, hoping for guidance. The DM knows that these creatures have nothing to do with the quest; the encounter was coincidental. However, the surviving monsters will soon be returning with reinforcements to avenge their dead. Therefore, the DM tells the priest&#039;s player, &quot;To your goals these have no place, but still they can cause more woe.&quot; Casting this spell &quot;taints&quot; subsequent castings of the same spell within a 24-hour span. A second attempt within this period always results in the same message as the first, regardless of the true situation. If a second priest casts the spell within 24 hours of another casting, he receives an accurate reading.<br />The material component is three special coins or dice made of platinum (total value of at least 1,000 gp), which the priest tosses in his hand while concentrating on the spell.<br />The coins or dice are not consumed in the casting.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 89</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="598" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Magic Font",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Special",
+"castingTime":"1 hr.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The spell causes a holy water font to serve as a scrying device. The spell does not function unless the priest is in good standing with his deity. The basin of holy water becomes similar to a crystal ball. For each vial of capacity of the basin, the priest may scry for one round, up to a maximum of one hour. Thus, the duration of the magic font spell is directly related to the size of the holy water receptacle. The DM will know the chances of a character being able to detect scrying.
+The priest's holy symbol and the font and its trappings are not consumed by the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Magic Font</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 hr.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The spell causes a holy water font to serve as a scrying device. The spell does not function unless the priest is in good standing with his deity. The basin of holy water becomes similar to a crystal ball. For each vial of capacity of the basin, the priest may scry for one round, up to a maximum of one hour. Thus, the duration of the magic font spell is directly related to the size of the holy water receptacle. The DM will know the chances of a character being able to detect scrying.<br />The priest&#039;s holy symbol and the font and its trappings are not consumed by the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 283</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="618" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Find the Path",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"3 rds.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The recipient of this spell can find the shortest, most direct physical route that he is seeking, be it the way into or out of a locale. The locale can be outdoors or under ground, a trap, or even a maze spell. Note that the spell works with respect to locales, not objects or creatures within a locale. Thus, the spell could not find the way to \"a forest where a green dragon lives\" or to the location of \"a hoard of platinum pieces.\" The location must be in the same plane as the caster.
+The spell enables the subject to sense the correct direction that will eventually lead him to his destination, indicating at the appropriate times the exact path to follow or physical actions to take. For example, with concentration the spell enables the subject to sense trip wires or the proper word to bypass a glyph. The spell ends when the destination is reached or when one turn for each caster level has elapsed. The spell frees the subject, and those with him, from a maze spell in a single round, and will continue to do so as long as the spell lasts.
+Note that this divination is keyed to the caster, not his companions, and that, like the find traps spell, it does not predict or allow for the actions of creatures.
+The spell requires a set of divination counters of the sort favored by the priest--bones, ivory counters, sticks, carved runes, or whatever.
+The reverse spell, lose the path, makes the creature touched totally lost and unable to find its way for the duration of the spell--although it can be led, of course."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Find the Path</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The recipient of this spell can find the shortest, most direct physical route that he is seeking, be it the way into or out of a locale. The locale can be outdoors or under ground, a trap, or even a maze spell. Note that the spell works with respect to locales, not objects or creatures within a locale. Thus, the spell could not find the way to &quot;a forest where a green dragon lives&quot; or to the location of &quot;a hoard of platinum pieces.&quot; The location must be in the same plane as the caster.<br />The spell enables the subject to sense the correct direction that will eventually lead him to his destination, indicating at the appropriate times the exact path to follow or physical actions to take. For example, with concentration the spell enables the subject to sense trip wires or the proper word to bypass a glyph. The spell ends when the destination is reached or when one turn for each caster level has elapsed. The spell frees the subject, and those with him, from a maze spell in a single round, and will continue to do so as long as the spell lasts.<br />Note that this divination is keyed to the caster, not his companions, and that, like the find traps spell, it does not predict or allow for the actions of creatures.<br />The spell requires a set of divination counters of the sort favored by the priest--bones, ivory counters, sticks, carved runes, or whatever.<br />The reverse spell, lose the path, makes the creature touched totally lost and unable to find its way for the duration of the spell--although it can be led, of course.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 288</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="626" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Stone Tell",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 cu. yd.",
+"castingTime":"1 turn",
+"duration":"1 turn",
+"save":"None",
+"damage":"",
+"description":"When the priest casts a stone tell spell upon an area, the very stones speak and relate to the caster who or what has touched them as well as revealing what is covered, concealed, or simply behind them. The stones relate complete descriptions, if asked. Note that a stone's perspective, perception, and knowledge may hinder this divination. Such details, if any, are decided by the DM.
+The material components for this spell are a drop of mercury and a bit of clay."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Stone Tell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 cu. yd.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the priest casts a stone tell spell upon an area, the very stones speak and relate to the caster who or what has touched them as well as revealing what is covered, concealed, or simply behind them. The stones relate complete descriptions, if asked. Note that a stone&#039;s perspective, perception, and knowledge may hinder this divination. Such details, if any, are decided by the DM.<br />The material components for this spell are a drop of mercury and a bit of clay.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 290</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="789" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Divine Inspiration",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"5",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"This spell is a more powerful version of the genius spell. The priest's player may ask the DM one question about the current situation or about events that will occur within the next five rounds. Questions about the future must relate to external events, such as \"Will the guards respond to the sentry's yell?\" Questions cannot refer to the outcome of combat, such as \"Will we win the battle?\" The priest's player is allowed to use this spell to ask the DM for advice. In this case, the spell is the equivalent of asking the gods, \"Okay, how do we get out of this one?\" Like the genius spell, the DM must be careful in adjudicating this spell. The answer to the question is always relevant and correct, although not necessarily complete. The answer can also be cryptic, in the form of a riddle or rhyme, depending on the DM's assessment of the situation and how potentially unbalancing the answer might be. In general, the answer will be a short phrase of no more than eight to ten words.
+The material component is a gem of at least 500 gp value. This spell can be cast only once in any 24-hour period."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Divine Inspiration</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell is a more powerful version of the genius spell. The priest&#039;s player may ask the DM one question about the current situation or about events that will occur within the next five rounds. Questions about the future must relate to external events, such as &quot;Will the guards respond to the sentry&#039;s yell?&quot; Questions cannot refer to the outcome of combat, such as &quot;Will we win the battle?&quot; The priest&#039;s player is allowed to use this spell to ask the DM for advice. In this case, the spell is the equivalent of asking the gods, &quot;Okay, how do we get out of this one?&quot; Like the genius spell, the DM must be careful in adjudicating this spell. The answer to the question is always relevant and correct, although not necessarily complete. The answer can also be cryptic, in the form of a riddle or rhyme, depending on the DM&#039;s assessment of the situation and how potentially unbalancing the answer might be. In general, the answer will be a short phrase of no more than eight to ten words.<br />The material component is a gem of at least 500 gp value. This spell can be cast only once in any 24-hour period.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 106</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="808" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Imago Interrogation",
+"school":"Enchantment/Charm",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The imago is a mental image--a form of mental magical body. After casting this spell (requiring 1 turn), the caster falls asleep. After 1d6 turns of sleep, the imago of the priest begins to travel. The imago is not subject to any forms of attack and has no effective attacks.
+The imago may travel to as many as four different locations separated by any distance, even across the planes and/or backward in time. At these locations, the imago may interrogate the imagos of as many as 10 other sentient creatures (other than Powers), compelling them to reply truthfully to its questions. A maximum of 40 questions may be asked during the spell duration.
+Asking one question and listening to the reply takes 4 rounds of time in the caster's world. Each planar/time jump lasts 3 turns in that world.
+Imago communications are telepathic. The questions must be able to be answered in a sentence of reasonable length, or the interrogated creature becomes confused and cannot answer.
+The imagos of interrogated creatures will have no recollection of their interrogations.
+As a result, history cannot be changed through backward time travel using this spell."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Imago Interrogation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The imago is a mental image--a form of mental magical body. After casting this spell (requiring 1 turn), the caster falls asleep. After 1d6 turns of sleep, the imago of the priest begins to travel. The imago is not subject to any forms of attack and has no effective attacks.<br />The imago may travel to as many as four different locations separated by any distance, even across the planes and/or backward in time. At these locations, the imago may interrogate the imagos of as many as 10 other sentient creatures (other than Powers), compelling them to reply truthfully to its questions. A maximum of 40 questions may be asked during the spell duration.<br />Asking one question and listening to the reply takes 4 rounds of time in the caster&#039;s world. Each planar/time jump lasts 3 turns in that world.<br />Imago communications are telepathic. The questions must be able to be answered in a sentence of reasonable length, or the interrogated creature becomes confused and cannot answer.<br />The imagos of interrogated creatures will have no recollection of their interrogations.<br />As a result, history cannot be changed through backward time travel using this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 116</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="814" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Revelation",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 day",
+"save":"None",
+"damage":"",
+"description":"The revelation spell grants the priest extraordinary divination powers. He gains the following abilities that are effective to a range of 240 yards.
+"}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Revelation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The revelation spell grants the priest extraordinary divination powers. He gains the following abilities that are effective to a range of 240 yards.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 118</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

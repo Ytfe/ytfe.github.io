@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Command",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 creature",
+"castingTime":"1",
+"duration":"1 rd.",
+"save":"None",
+"damage":"",
+"description":"This spell enables the priest to command another creature with a single word. The command must be uttered in a language understood by the creature. The subject will obey to the best of his/its ability only as long as the command is absolutely clear and unequivocal; thus, a command of \"Suicide!\" is ignored. A command to \"Die!\" causes the creature to fall in a faint or cataleptic state for one round, but thereafter the creature revives and is alive and well. Typical commands are back, halt, flee, run, stop, fall, go, leave, surrender, sleep, rest, etc. No command affects a creature for more than one round; undead are not affected at all. Creatures with Intelligence of 13 (high) or more, or those with 6 or more Hit Dice (or experience levels) are entitled to a saving throw vs. spell, adjusted for Wisdom. (Creatures with 13 or higher Intelligence and 6 Hit Dice/levels get only one saving throw!)"}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Command</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the priest to command another creature with a single word. The command must be uttered in a language understood by the creature. The subject will obey to the best of his/its ability only as long as the command is absolutely clear and unequivocal; thus, a command of &quot;Suicide!&quot; is ignored. A command to &quot;Die!&quot; causes the creature to fall in a faint or cataleptic state for one round, but thereafter the creature revives and is alive and well. Typical commands are back, halt, flee, run, stop, fall, go, leave, surrender, sleep, rest, etc. No command affects a creature for more than one round; undead are not affected at all. Creatures with Intelligence of 13 (high) or more, or those with 6 or more Hit Dice (or experience levels) are entitled to a saving throw vs. spell, adjusted for Wisdom. (Creatures with 13 or higher Intelligence and 6 Hit Dice/levels get only one saving throw!)</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 252</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="836" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Protection from Chaos",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"3 rds./level",
+"save":"None",
+"damage":"",
+"description":"Resembling the spell protection from evil, this abjuration wards the creature touched from the attacks of minions of chaos. Chaotic creatures suffer a -2 penalty to attack rolls against the spell recipient, and the subject gains a +2 bonus to saving throws against spells or other attacks employed by chaotic creatures. Attempts to possess, dominate, or exercise other forms of mental control against the recipient are automatically blocked by this spell.
+Protection from chaos also wards the recipient against contact with extraplanar creatures of chaotic origin, including tanar'ri, slaad, and eladrin. Unlike protection from evil, this spell does not necessarily guard against summoned or conjured creatures unless the creatures in question are chaotic in alignment. However, protection from chaos does protect the recipient from creatures influenced by confusion and chaos spells and effects.
+The natural or bodily attacks of such creatures automatically fail, as long as the recipient does not use the spell's power to trap, pin, or drive back the chaotic creatures in question.
+The spell ends if the recipient makes a melee attack against creatures that are prevented from attacking him by this spell.
+The material component is a small ring of gold or lead tempered by a chaotic smith. Note that this spell is not reversible."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Protection from Chaos</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Resembling the spell protection from evil, this abjuration wards the creature touched from the attacks of minions of chaos. Chaotic creatures suffer a -2 penalty to attack rolls against the spell recipient, and the subject gains a +2 bonus to saving throws against spells or other attacks employed by chaotic creatures. Attempts to possess, dominate, or exercise other forms of mental control against the recipient are automatically blocked by this spell.<br />Protection from chaos also wards the recipient against contact with extraplanar creatures of chaotic origin, including tanar&#039;ri, slaad, and eladrin. Unlike protection from evil, this spell does not necessarily guard against summoned or conjured creatures unless the creatures in question are chaotic in alignment. However, protection from chaos does protect the recipient from creatures influenced by confusion and chaos spells and effects.<br />The natural or bodily attacks of such creatures automatically fail, as long as the recipient does not use the spell&#039;s power to trap, pin, or drive back the chaotic creatures in question.<br />The spell ends if the recipient makes a melee attack against creatures that are prevented from attacking him by this spell.<br />The material component is a small ring of gold or lead tempered by a chaotic smith. Note that this spell is not reversible.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 162</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="673" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Calm Chaos",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"20 yards",
+"aoe":"1d6 creatures/level",
+"castingTime":"1 ",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"This spell temporarily calms a chaotic situation involving a group of people. The situation may involve any range of emotions from violence (as in a barroom brawl) to joy and merrymaking (as in a festival or carnival).
+Unlike the emotion spell, calm chaos does not cause a change in the emotions of affected creatures--anger, fear, or intense joy remain in each individual. The emotion is simply restrained rather than released. Thus, an angry character intent on attacking someone will still feel the desire to do so, but he will withhold his action as long as the spell remains in effect.
+Creatures to be affected are allowed a saving throw vs. spell at a -4 penalty to avoid the effects. If more creatures are present than can be affected, creatures nearest the caster are affected first.
+After casting the spell, the priest makes a Charisma check. If successful, all characters affected by the spell are compelled to stop what they are doing. They are filled with the sensation that something important is about to occur. At this time, the priest or a character of his choosing must gain the attention of the affected creatures by giving a speech, performing for the crowd, or casting spells with intriguing visual effects (such as dancing lights). The attention of the crowd is then held for as long as the distraction continues. A character could filibuster and maintain control over the affected characters for hours or days.
+Two conditions will cause the group to resume its original actions. In the first, the method of entertaining the crowd ceases for one round--the speech ends or the spell expires. If this action is not replaced with another distraction within one round, the crowd is freed of the spell.
+In the second condition, if an event occurs that is more immediate than the distraction, the crowd will divert its attention to that event. Thus, if the spell were used to stop a barroom brawl and the building caught fire or was attacked, the crowd's attention would be diverted and the individuals could act freely.
+Creatures whose attention is held by the spell cannot be instructed to attack or perform any action. Such creatures will ignore suggestions of this nature. Depending on the nature of the request, the DM may deem that the suggestion causes a distraction that ends the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Calm Chaos</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">20 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 &nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d6 creatures/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell temporarily calms a chaotic situation involving a group of people. The situation may involve any range of emotions from violence (as in a barroom brawl) to joy and merrymaking (as in a festival or carnival).<br />Unlike the emotion spell, calm chaos does not cause a change in the emotions of affected creatures--anger, fear, or intense joy remain in each individual. The emotion is simply restrained rather than released. Thus, an angry character intent on attacking someone will still feel the desire to do so, but he will withhold his action as long as the spell remains in effect.<br />Creatures to be affected are allowed a saving throw vs. spell at a -4 penalty to avoid the effects. If more creatures are present than can be affected, creatures nearest the caster are affected first.<br />After casting the spell, the priest makes a Charisma check. If successful, all characters affected by the spell are compelled to stop what they are doing. They are filled with the sensation that something important is about to occur. At this time, the priest or a character of his choosing must gain the attention of the affected creatures by giving a speech, performing for the crowd, or casting spells with intriguing visual effects (such as dancing lights). The attention of the crowd is then held for as long as the distraction continues. A character could filibuster and maintain control over the affected characters for hours or days.<br />Two conditions will cause the group to resume its original actions. In the first, the method of entertaining the crowd ceases for one round--the speech ends or the spell expires. If this action is not replaced with another distraction within one round, the crowd is freed of the spell.<br />In the second condition, if an event occurs that is more immediate than the distraction, the crowd will divert its attention to that event. Thus, if the spell were used to stop a barroom brawl and the building caught fire or was attacked, the crowd&#039;s attention would be diverted and the individuals could act freely.<br />Creatures whose attention is held by the spell cannot be instructed to attack or perform any action. Such creatures will ignore suggestions of this nature. Depending on the nature of the request, the DM may deem that the suggestion causes a distraction that ends the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 56</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="510" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Enthrall",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"90-ft. radius",
+"castingTime":"1 rd.",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"A priest using this spell can enthrall an audience that can fully understand his language. Those in the area of effect must successfully save vs. spell or give the caster their undivided attention, totally ignoring their surroundings. Those of a race or religion unfriendly to the caster's have a +4 bonus to the roll. Any Wisdom adjustment also applies. Creatures with 4 or more levels or Hit Dice, or with a Wisdom of 16 or better, are unaffected.
+To cast the spell, the caster must speak without interruption for a full round.
+Thereafter, the enchantment lasts as long as the priest speaks, to a maximum of one hour.
+Those enthralled take no action while the priest speaks, and for 1d3 rounds thereafter while they discuss the matter. Those entering the area of effect must also successfully save vs. spell or become enthralled. Those not enthralled are 50% likely every turn to hoot and jeer in unison. If there is excessive jeering, the rest are allowed a new saving throw. The speech ends (but the 1d3 round delay still applies) if the priest is successfully attacked or performs any action other than speaking.
+If the audience is attacked, the spell ends and the audience reacts immediately, rolling a reaction check with respect to the source of the interruption, at a penalty of -10.
+Note: When handling a large number of saving throws for similar creatures, the DM can assume an average to save time; for example, a crowd of 20 men with a base saving throw of 16 (25% success chance) will have 15 men enthralled and five not."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Enthrall</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">90-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A priest using this spell can enthrall an audience that can fully understand his language. Those in the area of effect must successfully save vs. spell or give the caster their undivided attention, totally ignoring their surroundings. Those of a race or religion unfriendly to the caster&#039;s have a +4 bonus to the roll. Any Wisdom adjustment also applies. Creatures with 4 or more levels or Hit Dice, or with a Wisdom of 16 or better, are unaffected.<br />To cast the spell, the caster must speak without interruption for a full round.<br />Thereafter, the enchantment lasts as long as the priest speaks, to a maximum of one hour.<br />Those enthralled take no action while the priest speaks, and for 1d3 rounds thereafter while they discuss the matter. Those entering the area of effect must also successfully save vs. spell or become enthralled. Those not enthralled are 50% likely every turn to hoot and jeer in unison. If there is excessive jeering, the rest are allowed a new saving throw. The speech ends (but the 1d3 round delay still applies) if the priest is successfully attacked or performs any action other than speaking.<br />If the audience is attacked, the spell ends and the audience reacts immediately, rolling a reaction check with respect to the source of the interruption, at a penalty of -10.<br />Note: When handling a large number of saving throws for similar creatures, the DM can assume an average to save time; for example, a crowd of 20 men with a base saving throw of 16 (25% success chance) will have 15 men enthralled and five not.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 259</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="516" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hold Person",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"120 yds.",
+"aoe":"1d4 persons in 20-ft. cube",
+"castingTime":"5",
+"duration":"2 rds./level",
+"save":"Negate",
+"damage":"",
+"description":"This spell holds 1d4 humans, demihumans, or humanoid creatures rigidly immobile and in place for a minimum of six rounds (the spell lasts 2 rounds per caster level, and the priest must be of at least 3rd level to cast the spell).
+The hold person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, halfelves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not.
+The effect is centered on a point selected by the caster, and it affects persons selected by the caster within the area of effect. If the spell is cast at three persons, each gets a normal saving throw; if only two persons are being enspelled, each rolls his saving throw with a -1 penalty; if the spell is cast at only one person, the saving throw die roll suffers a -2 penalty. Saving throws are adjusted for Wisdom. Those who succeed on their saving throws are totally unaffected by the spell. Undead creatures cannot be held.
+Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subjects' condition due to wounds, disease, or poison. The priest casting the hold person spell can end the spell with a single utterance at any time; otherwise, the duration is six rounds at 3rd level, eight rounds at 4th level, etc.
+The spellcaster needs a small, straight piece of iron as the material component of this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hold Person</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d4 persons in 20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell holds 1d4 humans, demihumans, or humanoid creatures rigidly immobile and in place for a minimum of six rounds (the spell lasts 2 rounds per caster level, and the priest must be of at least 3rd level to cast the spell).<br />The hold person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, halfelves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not.<br />The effect is centered on a point selected by the caster, and it affects persons selected by the caster within the area of effect. If the spell is cast at three persons, each gets a normal saving throw; if only two persons are being enspelled, each rolls his saving throw with a -1 penalty; if the spell is cast at only one person, the saving throw die roll suffers a -2 penalty. Saving throws are adjusted for Wisdom. Those who succeed on their saving throws are totally unaffected by the spell. Undead creatures cannot be held.<br />Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subjects&#039; condition due to wounds, disease, or poison. The priest casting the hold person spell can end the spell with a single utterance at any time; otherwise, the duration is six rounds at 3rd level, eight rounds at 4th level, etc.<br />The spellcaster needs a small, straight piece of iron as the material component of this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 261</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="852" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Dictate",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"Up to 6 creatures in a 20-ft. cube",
+"castingTime":"6",
+"duration":"1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"Originally developed by the Harmonium faction of the Outer Planes, this useful spell has come into more widespread use in recent years. While the spell is available as a 2nd-level enchantment for members of the Harmonium, the general version is not quite as efficient and is considered a 3rd-level spell.
+The dictate spell is an improved version of command, affecting up to 6 creatures in a 20-foot cube. The caster is not limited to a single word and can issue an order of no more than a dozen words in length. All the specified targets who fail their saving throws must attempt to obey the caster's instructions. For example, a priest could issue a dictate such as \"Stay here until I return,\" \"Throw down your weapons,\" or \"Seize that elf!\" The subjects will continue to obey non-immediate orders for up to one round per experience level of the caster.
+Subjects who cannot understand the caster are not affected, so characters who do not understand the caster's language are immune to this spell. In addition, the order must Detect Spirits Dictate create an immediate and obvious course of action for the subject; a dictate to \"Die!\" or \"Feel sorry for him!\" would simply cause the subject to stand still in confusion for one round. Poorly worded or confusing commands grant the subjects a +1 to +4 bonus on their saving throws at the DM's discretion. Similarly, if after the subject fails his saving throw he is given an obviously self-destructive dictate, the subject simply loses his next round as he fights off the compulsion."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Dictate</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Up to 6 creatures in a 20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Originally developed by the Harmonium faction of the Outer Planes, this useful spell has come into more widespread use in recent years. While the spell is available as a 2nd-level enchantment for members of the Harmonium, the general version is not quite as efficient and is considered a 3rd-level spell.<br />The dictate spell is an improved version of command, affecting up to 6 creatures in a 20-foot cube. The caster is not limited to a single word and can issue an order of no more than a dozen words in length. All the specified targets who fail their saving throws must attempt to obey the caster&#039;s instructions. For example, a priest could issue a dictate such as &quot;Stay here until I return,&quot; &quot;Throw down your weapons,&quot; or &quot;Seize that elf!&quot; The subjects will continue to obey non-immediate orders for up to one round per experience level of the caster.<br />Subjects who cannot understand the caster are not affected, so characters who do not understand the caster&#039;s language are immune to this spell. In addition, the order must Detect Spirits Dictate create an immediate and obvious course of action for the subject; a dictate to &quot;Die!&quot; or &quot;Feel sorry for him!&quot; would simply cause the subject to stand still in confusion for one round. Poorly worded or confusing commands grant the subjects a +1 to +4 bonus on their saving throws at the DM&#039;s discretion. Similarly, if after the subject fails his saving throw he is given an obviously self-destructive dictate, the subject simply loses his next round as he fights off the compulsion.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 167</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="708" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Rigid Thinking",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yards",
+"aoe":"One creature",
+"castingTime":"1 turn",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"",
+"description":"Rigid thinking can be cast only upon a creature with Intelligence of 3 or greater. The creature is allowed a saving throw to avoid the effects.
+The creature affected by rigid thinking is in capable of performing any action other than the activity he is involved in when the spell takes effect. The creature's mind simply cannot decide on another course of action--it becomes frozen into a single thought and cannot change even if new circumstances would suggest otherwise. Thus, a warrior fighting a kobold will ignore the arrival of a beholder, and a thief picking a lock will pay no heed to the arrival of three guards.
+The affected creature does not mechanically repeat the action; he is not an automaton.
+He will not continue to fire his bow at a dragon if he runs out of arrows, but will choose another means of attacking the dragon to the exclusion of all other activities.
+A spellcaster in the process of casting a spell when rigid thinking takes effect will not attempt to repeat the spell (unless the spell has been memorized more than once). The spellcaster will, however, devote his attention to the target of that spell until his goal is met (e.g., if the caster were attacking a creature, he would continue to direct attacks at that creature; if the caster were trying to open a door, he would continue to work on the door until it opens).
+The spell expires when the creature accomplishes his goal (i.e., the kobold is killed or the lock is opened) or when the duration of the spell has ended."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Rigid Thinking</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Rigid thinking can be cast only upon a creature with Intelligence of 3 or greater. The creature is allowed a saving throw to avoid the effects.<br />The creature affected by rigid thinking is in capable of performing any action other than the activity he is involved in when the spell takes effect. The creature&#039;s mind simply cannot decide on another course of action--it becomes frozen into a single thought and cannot change even if new circumstances would suggest otherwise. Thus, a warrior fighting a kobold will ignore the arrival of a beholder, and a thief picking a lock will pay no heed to the arrival of three guards.<br />The affected creature does not mechanically repeat the action; he is not an automaton.<br />He will not continue to fire his bow at a dragon if he runs out of arrows, but will choose another means of attacking the dragon to the exclusion of all other activities.<br />A spellcaster in the process of casting a spell when rigid thinking takes effect will not attempt to repeat the spell (unless the spell has been memorized more than once). The spellcaster will, however, devote his attention to the target of that spell until his goal is met (e.g., if the caster were attacking a creature, he would continue to direct attacks at that creature; if the caster were trying to open a door, he would continue to work on the door until it opens).<br />The spell expires when the creature accomplishes his goal (i.e., the kobold is killed or the lock is opened) or when the duration of the spell has ended.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 70</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="711" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Strength of One",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yards",
+"aoe":"One creature+1creature/2 levels",
+"castingTime":"3 rds.",
+"duration":"2d6 rounds",
+"save":"None",
+"damage":"",
+"description":"By casting this spell on a group of lawful creatures, the priest imbues each creature with a Strength bonus equal to that of the strongest creature in the group. To be affected by the spell, all creatures must touch the hand of the priest at the time of casting. Only human, demihuman, and humanoid creatures of man-size or smaller may be affected. The characters can be a mixed group of Lawful Neutral, Lawful Good, or Lawful Evil alignments. The spell will not take effect if any creature of Neutral or Chaotic alignment is included in the group.
+Prior to casting, one creature is designated the keystone. There may never be more than one keystone in a group, even if another creature has equal strength.
+Upon completion of the spell, all affected characters gain a bonus to damage equal to the keystone's bonus to damage from Strength. Any magical bonuses belonging to the keystone are not added; only the keystone's natural strength is conferred on the group.
+This bonus supersedes any bonus a character might normally receive. Thus, a warrior with 16 Strength (a +1 bonus to damage) who benefits from this spell with a keystone who has Strength 18/07 (a damage bonus of +3) gains a total bonus of +3 to damage (not +4 to damage). The keystone receives no bonus.
+Affected creatures gain no improvements to THAC0, bend bars/lift gates, or other functions of Strength.
+The spell ends if the keystone is killed before the duration expires. The bonus and duration are not affected if a member of the group is killed within the duration of the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Strength of One</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature+1creature/2 levels&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2d6 rounds&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell on a group of lawful creatures, the priest imbues each creature with a Strength bonus equal to that of the strongest creature in the group. To be affected by the spell, all creatures must touch the hand of the priest at the time of casting. Only human, demihuman, and humanoid creatures of man-size or smaller may be affected. The characters can be a mixed group of Lawful Neutral, Lawful Good, or Lawful Evil alignments. The spell will not take effect if any creature of Neutral or Chaotic alignment is included in the group.<br />Prior to casting, one creature is designated the keystone. There may never be more than one keystone in a group, even if another creature has equal strength.<br />Upon completion of the spell, all affected characters gain a bonus to damage equal to the keystone&#039;s bonus to damage from Strength. Any magical bonuses belonging to the keystone are not added; only the keystone&#039;s natural strength is conferred on the group.<br />This bonus supersedes any bonus a character might normally receive. Thus, a warrior with 16 Strength (a +1 bonus to damage) who benefits from this spell with a keystone who has Strength 18/07 (a damage bonus of +3) gains a total bonus of +3 to damage (not +4 to damage). The keystone receives no bonus.<br />Affected creatures gain no improvements to THAC0, bend bars/lift gates, or other functions of Strength.<br />The spell ends if the keystone is killed before the duration expires. The bonus and duration are not affected if a member of the group is killed within the duration of the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 71</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="724" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Compulsive Order",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards",
+"aoe":"One creature",
+"castingTime":"5",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"The victim of compulsive order is compelled to place everything he encounters into perfect order. If he discovers treasure, he divides it into tidy piles or containers of silver, gold, and copper. He is reluctant to enter a dungeon because it is a messy place, but once inside, he is obsessed with cleaning it. A character under the power of this spell will sweep dirt from dungeon corridors into neat piles, arrange the corpses of a defeated orc band according to size, dash forward to remove a bit of lint on clothing, and insist that the party organize themselves alphabetically, then by size, and then by age. While the spell does not affect a character's abilities, the overwhelming desire for order impairs the character's usefulness in most adventures.
+When a character afflicted by this spell attempts to undertake a new event (begin a battle, haggle with the merchant, etc.), the player must rationalize the action on the basis of his compulsion for order. Thus, the character cannot simply attack a goblin; he must announce a condition such as attacking the tallest goblin and fighting his way down according to size. Once stated, the character must follow through with this plan.
+If the player cannot conceive a rationale for his character's behavior, the character is forced to delay his actions for 1d6 rounds, with the time spent in preparation for the subsequent action. The character spends time arranging spell components artistically, deciding how to hold his sword, cleaning his weapon, etc.
+Anyone affected by compulsive order may become violent if he is prevented from being neat. He will do what he must to make the world around him more orderly. If he is allowed to organize his surroundings, he will quickly calm down again. The victim will constantly petition the people around him to be neat and organized.
+The victim is allowed a saving throw to avoid the effects of the spell. Compulsive order can be removed with a dispel magic spell.
+The material component is a perfect cube made of metal."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Compulsive Order</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The victim of compulsive order is compelled to place everything he encounters into perfect order. If he discovers treasure, he divides it into tidy piles or containers of silver, gold, and copper. He is reluctant to enter a dungeon because it is a messy place, but once inside, he is obsessed with cleaning it. A character under the power of this spell will sweep dirt from dungeon corridors into neat piles, arrange the corpses of a defeated orc band according to size, dash forward to remove a bit of lint on clothing, and insist that the party organize themselves alphabetically, then by size, and then by age. While the spell does not affect a character&#039;s abilities, the overwhelming desire for order impairs the character&#039;s usefulness in most adventures.<br />When a character afflicted by this spell attempts to undertake a new event (begin a battle, haggle with the merchant, etc.), the player must rationalize the action on the basis of his compulsion for order. Thus, the character cannot simply attack a goblin; he must announce a condition such as attacking the tallest goblin and fighting his way down according to size. Once stated, the character must follow through with this plan.<br />If the player cannot conceive a rationale for his character&#039;s behavior, the character is forced to delay his actions for 1d6 rounds, with the time spent in preparation for the subsequent action. The character spends time arranging spell components artistically, deciding how to hold his sword, cleaning his weapon, etc.<br />Anyone affected by compulsive order may become violent if he is prevented from being neat. He will do what he must to make the world around him more orderly. If he is allowed to organize his surroundings, he will quickly calm down again. The victim will constantly petition the people around him to be neat and organized.<br />The victim is allowed a saving throw to avoid the effects of the spell. Compulsive order can be removed with a dispel magic spell.<br />The material component is a perfect cube made of metal.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 76</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="725" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Defensive Harmony",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"5 yards",
+"aoe":"One creature/two levels",
+"castingTime":"1 rd.",
+"duration":"1 round+2d4 rounds",
+"save":"None",
+"damage":"",
+"description":"This spell must be cast on at least two creatures. The priest may affect one creature per two levels of his experience, and all creatures to be affected must be within three feet of each other at the time of casting. After the spell is completed, affected characters may move about freely.
+Defensive harmony grants affected creatures a defensive bonus by bestowing an enhanced coordination of their attacks and defenses. The affected creatures must be involved in a single battle so that their efforts harmonize to the benefit of all involved.
+For example, the affected creatures can attack one dragon or a group of orcs in a single area. They can also attack additional enemy forces that arrive in the same combat. If the enemy forces divide and flee, the affected creatures can follow, continue to attack, and benefit from the spell. If the affected group is split into two smaller groups when attacked, however, it gains no benefit from defensive harmony.
+While the spell is in effect, each affected creature gains a +1 bonus to armor class for every other creature benefitting from the spell, to a maximum bonus of +5 (although more than five characters may be affected by the spell). Thus, if four creatures are affected by defensive harmony, each creature gains a +3 bonus to armor class.
+This bonus represents a mystical coordination of effort on the part of all affected creatures. A fighter will naturally wage his attack to distract the troll attacking the thief.
+The ranger will instinctively block the swing of an orc, thereby protecting the wizard.
+Creatures affected by the spell are not consciously aware of these efforts, and they are unable to create specific strategies and tactics."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Defensive Harmony</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature/two levels&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round+2d4 rounds&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell must be cast on at least two creatures. The priest may affect one creature per two levels of his experience, and all creatures to be affected must be within three feet of each other at the time of casting. After the spell is completed, affected characters may move about freely.<br />Defensive harmony grants affected creatures a defensive bonus by bestowing an enhanced coordination of their attacks and defenses. The affected creatures must be involved in a single battle so that their efforts harmonize to the benefit of all involved.<br />For example, the affected creatures can attack one dragon or a group of orcs in a single area. They can also attack additional enemy forces that arrive in the same combat. If the enemy forces divide and flee, the affected creatures can follow, continue to attack, and benefit from the spell. If the affected group is split into two smaller groups when attacked, however, it gains no benefit from defensive harmony.<br />While the spell is in effect, each affected creature gains a +1 bonus to armor class for every other creature benefitting from the spell, to a maximum bonus of +5 (although more than five characters may be affected by the spell). Thus, if four creatures are affected by defensive harmony, each creature gains a +3 bonus to armor class.<br />This bonus represents a mystical coordination of effort on the part of all affected creatures. A fighter will naturally wage his attack to distract the troll attacking the thief.<br />The ranger will instinctively block the swing of an orc, thereby protecting the wizard.<br />Creatures affected by the spell are not consciously aware of these efforts, and they are unable to create specific strategies and tactics.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 77</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="747" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Champion's Strength",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"2",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"Champion's strength bestows one member of a group with attack and damage bonuses from the rest of the group. The recipient of the spell can then fight as the group's champion.
+The spell draws bonuses from one person for every two levels of the priest. All characters involved must be within a 30'-radius of the priest. At the time of casting, the priest designates the recipient of the spell and the contributors. All characters who contribute to the spell must do so willingly.
+When the spell is completed, the designated character (the group's champion) gains any non-magical bonuses to THAC0 and damage possessed by the characters who contributed to the spell. Characters without bonuses or with combat penalties could conceivably be included in the spell; such characters count against the maximum number of creatures that can be affected. Penalties are likewise applied to the champion; contributors to this spell must be chosen carefully.
+The bonuses gained through this spell are added to the character's own bonuses (if any). The champion channels the energy of others through himself, improving his fighting ability.
+The champion must be in the line of sight and within 30 feet of the characters aiding him. Characters who contribute their bonuses must concentrate on the champion for the duration of the spell. If this concentration is broken (by moving more than 10 feet per round, fighting, being struck, or losing sight of the champion), that character's contribution is immediately lost.
+The spell expires when the last character contributing power to the champion ceases concentration.
+A champion may benefit from only one champion's strength spell at one time.
+Contributors can aid only one champion at one time.
+The material component is a chain of five gold links worth at least 1,000 gp."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Champion's Strength</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Champion&#039;s strength bestows one member of a group with attack and damage bonuses from the rest of the group. The recipient of the spell can then fight as the group&#039;s champion.<br />The spell draws bonuses from one person for every two levels of the priest. All characters involved must be within a 30&#039;-radius of the priest. At the time of casting, the priest designates the recipient of the spell and the contributors. All characters who contribute to the spell must do so willingly.<br />When the spell is completed, the designated character (the group&#039;s champion) gains any non-magical bonuses to THAC0 and damage possessed by the characters who contributed to the spell. Characters without bonuses or with combat penalties could conceivably be included in the spell; such characters count against the maximum number of creatures that can be affected. Penalties are likewise applied to the champion; contributors to this spell must be chosen carefully.<br />The bonuses gained through this spell are added to the character&#039;s own bonuses (if any). The champion channels the energy of others through himself, improving his fighting ability.<br />The champion must be in the line of sight and within 30 feet of the characters aiding him. Characters who contribute their bonuses must concentrate on the champion for the duration of the spell. If this concentration is broken (by moving more than 10 feet per round, fighting, being struck, or losing sight of the champion), that character&#039;s contribution is immediately lost.<br />The spell expires when the last character contributing power to the champion ceases concentration.<br />A champion may benefit from only one champion&#039;s strength spell at one time.<br />Contributors can aid only one champion at one time.<br />The material component is a chain of five gold links worth at least 1,000 gp.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 88</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="759" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Impeding Permission",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"150 yards",
+"aoe":"One creature",
+"castingTime":"3 rounds",
+"duration":"1 turn/level",
+"save":"Negate",
+"damage":"",
+"description":"This spell may be cast only on creatures with Intelligence of 2 or greater and the ability to communicate with the caster. The spell interferes with the victim's ability to make decisions. It prevents the victim from performing any action without first gaining the permission of the caster or a character designated by the caster. The victim will heed only the person designated by the caster.
+Before the victim undertakes any action, he must gain permission. He will not follow through with an action until he gains permission. If permission is denied, the victim cannot act until he thinks of an alternate action and gains permission for that action.
+Every round, the victim must decide his action for that round; at the victim's initiative, he must ask permission to perform his action. If permission is denied, the victim can take no other action that round.
+The only actions exempt from the need for permission are involuntary actions such as breathing.
+Asking and gaining permission takes only a short amount of time in most cases. A simple request, such as asking for permission to swing a sword in the middle of combat, can be accomplished quickly. Complicated requests, such as getting permission to act on a complicated plan, will naturally take more time. The DM may consider adding a modifier to the victim's initiative roll in such cases."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Impeding Permission</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">150 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell may be cast only on creatures with Intelligence of 2 or greater and the ability to communicate with the caster. The spell interferes with the victim&#039;s ability to make decisions. It prevents the victim from performing any action without first gaining the permission of the caster or a character designated by the caster. The victim will heed only the person designated by the caster.<br />Before the victim undertakes any action, he must gain permission. He will not follow through with an action until he gains permission. If permission is denied, the victim cannot act until he thinks of an alternate action and gains permission for that action.<br />Every round, the victim must decide his action for that round; at the victim&#039;s initiative, he must ask permission to perform his action. If permission is denied, the victim can take no other action that round.<br />The only actions exempt from the need for permission are involuntary actions such as breathing.<br />Asking and gaining permission takes only a short amount of time in most cases. A simple request, such as asking for permission to swing a sword in the middle of combat, can be accomplished quickly. Complicated requests, such as getting permission to act on a complicated plan, will naturally take more time. The DM may consider adding a modifier to the victim&#039;s initiative roll in such cases.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 92</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="779" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Legal Thoughts",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yards",
+"aoe":"One creature",
+"castingTime":"1 turn",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"A priest casting this spell forces the victim of the spell to follow one specific law. The priest may choose any law prevalent in the area in which the priest and the victim currently reside. Thus, if a city has no laws about murder, the priest cannot command the person not to kill.
+The victim of the spell is forced to obey the letter of the law to the best of his ability.
+Thus, if a victim were commanded not to commit murder, he would go to any length to avoid murdering someone.
+Since the essence of this spell is tied to legal (and not moral) interpretation, characters may find loopholes that will allow them to work around the law in specific cases or to ignore the law in light of extenuating circumstances.
+When casting the spell, the priest must speak the law to the recipient in such a way that he can hear it. The victim is allowed a saving throw vs. spell to avoid the effect. If the save is failed, the victim will never willingly violate the stated law as long as the spell is in effect.
+Legal thoughts can be negated by dispel magic. The victim of this spell never perceives anything wrong with adhering to the law, and therefore never seeks to have the spell removed."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Legal Thoughts</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A priest casting this spell forces the victim of the spell to follow one specific law. The priest may choose any law prevalent in the area in which the priest and the victim currently reside. Thus, if a city has no laws about murder, the priest cannot command the person not to kill.<br />The victim of the spell is forced to obey the letter of the law to the best of his ability.<br />Thus, if a victim were commanded not to commit murder, he would go to any length to avoid murdering someone.<br />Since the essence of this spell is tied to legal (and not moral) interpretation, characters may find loopholes that will allow them to work around the law in specific cases or to ignore the law in light of extenuating circumstances.<br />When casting the spell, the priest must speak the law to the recipient in such a way that he can hear it. The victim is allowed a saving throw vs. spell to avoid the effect. If the save is failed, the victim will never willingly violate the stated law as long as the spell is in effect.<br />Legal thoughts can be negated by dispel magic. The victim of this spell never perceives anything wrong with adhering to the law, and therefore never seeks to have the spell removed.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 101</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="802" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Conformance",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"80-foot-diameter sphere",
+"castingTime":"1 round",
+"duration":"6 turns",
+"save":"None",
+"damage":"",
+"description":"The conformance spell has a simple principle with a profound effect: probable events always manifest.
+In game terms, this means that events with a probability of 51% or better always occur. Thus, if a saving throw of 9 is required to avoid an effect, no roll is necessary; the save is automatically successful. If a warrior must roll 10 or better to hit an enemy, he automatically hits.
+Conversely, improbable actions (those with less than a 50% chance) always fail. If a warrior must roll 12 or better to hit an enemy, he automatically fails. If a thief's chance to hide in shadows is 49%, he automatically fails.
+There are two conditions that affect this spell. First, a prayer spell is continuously operative in the area of effect, shifting the balance of combat probabilities toward the favor of the priest who casts this spell and his companions. Second, probabilities of exactly 50% always shift in favor of the spellcasting priest. For example, if a roll of 11 or better is needed to save against a spell effect, this is a 50% chance for success. In such cases, the priest and his friends always make the save and enemies always fail.
+This spell is particularly potent if bless and chant spells are cast in the area of effect."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Conformance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">80-foot-diameter sphere&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The conformance spell has a simple principle with a profound effect: probable events always manifest.<br />In game terms, this means that events with a probability of 51% or better always occur. Thus, if a saving throw of 9 is required to avoid an effect, no roll is necessary; the save is automatically successful. If a warrior must roll 10 or better to hit an enemy, he automatically hits.<br />Conversely, improbable actions (those with less than a 50% chance) always fail. If a warrior must roll 12 or better to hit an enemy, he automatically fails. If a thief&#039;s chance to hide in shadows is 49%, he automatically fails.<br />There are two conditions that affect this spell. First, a prayer spell is continuously operative in the area of effect, shifting the balance of combat probabilities toward the favor of the priest who casts this spell and his companions. Second, probabilities of exactly 50% always shift in favor of the spellcasting priest. For example, if a roll of 11 or better is needed to save against a spell effect, this is a 50% chance for success. In such cases, the priest and his friends always make the save and enemies always fail.<br />This spell is particularly potent if bless and chant spells are cast in the area of effect.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="810" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Interdiction",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"240 yards",
+"aoe":"200-foot cube/level",
+"castingTime":"2 turns",
+"duration":"1 day",
+"save":"Special",
+"damage":"",
+"description":"This powerful spell affects all enemies of the spellcasting priest who enter the area of effect. The spell inflicts a -2 penalty on saving throws, a -1 penalty to armor class, and a - 1 penalty to attack and damage rolls. Creatures friendly to the cleric gain corresponding bonuses--+2 to saving throws, +1 to attack and damage rolls, and a bonus of 1 to AC.
+Additional effects are possible, depending on the Power granting the spell; effects must correspond (or at least not conflict) with the spheres the priest normally uses. Multiple effects are possible.
+The variation for the Sphere of Wards requires that each hostile creature entering the area of effect make a saving throw vs. spells with a -4 penalty or suffer 4d6 points of damage. An affected creature must then flee the area; it is unable to return. The creature must make a second saving throw vs. spell with a -4 penalty as it leaves the area or be blinded until magically cured.
+The variation for the sphere of Law requires that a hostile creature make a saving throw every time it wishes to change an action. Thus, if a creature wishes to stop running and draw a weapon, a successful save is needed or the creature continues to run. Actions that cannot be continued (e.g., firing an arrow if the archer has no more arrows) are repeated as empty automatisms. In addition, creatures hostile to the priest automatically fail saving throws against Enchantment/Charm spells cast by the priest.
+The variation for the Sphere of Chaos requires that hostile creatures make saving throws vs. spells at -4 or be affected by confusion (as per the spell). Affected creatures have a 5% chance per round of suddenly being attacked by a phantasmal killer.
+All creatures who enter the area of effect are subject to the effects of the spell. All effects except blindness cease 3 rounds after an affected creature leaves the area.
+Creatures reentering the area of effect must make new saving throws."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Interdiction</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">240 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">200-foot cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This powerful spell affects all enemies of the spellcasting priest who enter the area of effect. The spell inflicts a -2 penalty on saving throws, a -1 penalty to armor class, and a - 1 penalty to attack and damage rolls. Creatures friendly to the cleric gain corresponding bonuses--+2 to saving throws, +1 to attack and damage rolls, and a bonus of 1 to AC.<br />Additional effects are possible, depending on the Power granting the spell; effects must correspond (or at least not conflict) with the spheres the priest normally uses. Multiple effects are possible.<br />The variation for the Sphere of Wards requires that each hostile creature entering the area of effect make a saving throw vs. spells with a -4 penalty or suffer 4d6 points of damage. An affected creature must then flee the area; it is unable to return. The creature must make a second saving throw vs. spell with a -4 penalty as it leaves the area or be blinded until magically cured.<br />The variation for the sphere of Law requires that a hostile creature make a saving throw every time it wishes to change an action. Thus, if a creature wishes to stop running and draw a weapon, a successful save is needed or the creature continues to run. Actions that cannot be continued (e.g., firing an arrow if the archer has no more arrows) are repeated as empty automatisms. In addition, creatures hostile to the priest automatically fail saving throws against Enchantment/Charm spells cast by the priest.<br />The variation for the Sphere of Chaos requires that hostile creatures make saving throws vs. spells at -4 or be affected by confusion (as per the spell). Affected creatures have a 5% chance per round of suddenly being attacked by a phantasmal killer.<br />All creatures who enter the area of effect are subject to the effects of the spell. All effects except blindness cease 3 rounds after an affected creature leaves the area.<br />Creatures reentering the area of effect must make new saving throws.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 116</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

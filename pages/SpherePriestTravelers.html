@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Know Direction",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 ",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"Know direction allows the caster to instantly know the direction of north. The spell is effective in any environment, whether underwater, underground, or in darkness (including magical darkness).
+The material component is a small scrap of a parchment map that is at least 100 years old."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Know Direction</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 &nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Know direction allows the caster to instantly know the direction of north. The spell is effective in any environment, whether underwater, underground, or in darkness (including magical darkness).<br />The material component is a small scrap of a parchment map that is at least 100 years old.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 52</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="883" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Water to Wine",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy Symbol",
+"range":"Touch",
+"aoe":"1 wineskin / Level",
+"castingTime":"10",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.
+
+At level 7, the caster may pair the wines specifically with foods."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Water to Wine</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">10&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 wineskin / Level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Holy Symbol&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.<br /><br />At level 7, the caster may pair the wines specifically with foods.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="672" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Aura of Comfort",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"2",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, a faintly shimmering aura surrounds the recipient. The aura insulates the recipient from the effects of nonmagical heat and cold in a range of -20 F. to 140 F. Any time a traveler encounters temperatures in this range, he maintains a comfortable temperature of 70 F., regardless of prevailing weather conditions.
+Additionally, the spell acts as a shield against rain, snow, and hail, which are blocked by the aura.
+If a recipient encounters a temperature above or below the stated range, the temperature within the aura is altered by an equal number of degrees. For example, a recipient who encounters a temperature of 150 will actually experience a temperature of 80"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Aura of Comfort</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, a faintly shimmering aura surrounds the recipient. The aura insulates the recipient from the effects of nonmagical heat and cold in a range of -20 F. to 140 F. Any time a traveler encounters temperatures in this range, he maintains a comfortable temperature of 70 F., regardless of prevailing weather conditions.<br />Additionally, the spell acts as a shield against rain, snow, and hail, which are blocked by the aura.<br />If a recipient encounters a temperature above or below the stated range, the temperature within the aura is altered by an equal number of degrees. For example, a recipient who encounters a temperature of 150 will actually experience a temperature of 80</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 56</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="696" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Create Campsite",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"50-foot radius",
+"castingTime":"3 rds.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"With this spell, the caster generates a squadron of tiny invisible servants who create a campsite for the caster and his companions. The caster indicates the desired area for the campsite (an area of 50-foot radius or less) and the number of persons the campsite is to accommodate (a number of persons equal to three times the level of the caster).
+The servants clear the area of debris, set up tents and bedrolls, start a campfire, fetch water, and prepare a bland meal. The campsite is so skillfully prepared that it blends with the surrounding terrain, reducing the chance that the camp could be noticed by 50%.
+Campfires, loud noises, and other activities can negate this.
+The entire process takes 4-16 (4d4) rounds to complete.
+The servants make camp with the gear and equipment provided for them; otherwise, the servants will improvise with materials available in the immediate area (50 yards of the designated campsite). For instance, if the party has no tents or beds, the servants will construct crude but comfortable beds of weeds and grass and temporary shelters of leaves and branches. If no materials are available, such as in the desert or similarly barren terrain, the servants will do their best to make the party as comfortable as possible within the environmental limitations.
+The servants cannot fight for the party, deliver messages, or take any other actions other than creating the campsite.
+The material components are a piece of string, a bit of wood, and a drop of water.
+The reverse, break camp, causes the invisible servants to strike a campsite (an area of 50-foot radius or less). The servants extinguish fires, dispose of debris, and pack gear for a number of people equal to three times the level of the caster. The entire process takes 4- 16 (4d4) rounds to complete. When completed, all traces of the campsite are eliminated.
+The material components are the same as those for create campsite."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Create Campsite</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">50-foot radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">With this spell, the caster generates a squadron of tiny invisible servants who create a campsite for the caster and his companions. The caster indicates the desired area for the campsite (an area of 50-foot radius or less) and the number of persons the campsite is to accommodate (a number of persons equal to three times the level of the caster).<br />The servants clear the area of debris, set up tents and bedrolls, start a campfire, fetch water, and prepare a bland meal. The campsite is so skillfully prepared that it blends with the surrounding terrain, reducing the chance that the camp could be noticed by 50%.<br />Campfires, loud noises, and other activities can negate this.<br />The entire process takes 4-16 (4d4) rounds to complete.<br />The servants make camp with the gear and equipment provided for them; otherwise, the servants will improvise with materials available in the immediate area (50 yards of the designated campsite). For instance, if the party has no tents or beds, the servants will construct crude but comfortable beds of weeds and grass and temporary shelters of leaves and branches. If no materials are available, such as in the desert or similarly barren terrain, the servants will do their best to make the party as comfortable as possible within the environmental limitations.<br />The servants cannot fight for the party, deliver messages, or take any other actions other than creating the campsite.<br />The material components are a piece of string, a bit of wood, and a drop of water.<br />The reverse, break camp, causes the invisible servants to strike a campsite (an area of 50-foot radius or less). The servants extinguish fires, dispose of debris, and pack gear for a number of people equal to three times the level of the caster. The entire process takes 4- 16 (4d4) rounds to complete. When completed, all traces of the campsite are eliminated.<br />The material components are the same as those for create campsite.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 64</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="700" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Helping Hand",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"1 round",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"When a priest is trapped or otherwise endangered, this spell can summon help. The spell creates a hovering, ghostly image of a hand about one foot high. The caster can command it to locate a character or creature of the caster's choice based on a physical description. The caster can specify race, sex, and appearance, but not ambiguous factors such as level, alignment, or class.
+After the hand receives its orders, it begins to search for the indicated creature, flying at a movement rate of 48. The hand can search within a 5-mile radius of the caster.
+If the hand is unable to locate the indicated creature, it returns to the caster (provided he is still within the area of effect). The hand displays an outstretched palm, indicating that no such character or creature could be found. The hand then disappears.
+If the hand locates the indicated subject, the hand beckons the subject to follow it. If the subject follows, the hand points in the direction of the caster, leading the subject in the most direct, feasible route. The hand hovers 10 feet in front of the subject, moving before him. Once the hand leads the subject to the caster, it disappears.
+The subject is not compelled to follow the hand or help the caster. If the subject chooses not to follow the hand, the hand continues to beckon for the duration of the spell, then disappears. If the spell expires while the subject is en route to the caster, the hand disappears; the subject will have to rely on his own devices to locate the caster.
+If there is more than one subject within a 5-mile radius that meets the caster's description, the hand locates the closest creature. If that creature refuses to follow the hand, the hand will not seek out a second subject.
+The ghostly hand has no physical form. The hand can be seen only by the caster and potential targets. It cannot engage in combat or execute any other task aside from locating the subject and leading him back to the caster. The hand will not pass through solid objects, but can pass through small cracks and slits.
+The material component is a black silk glove."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Helping Hand</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest is trapped or otherwise endangered, this spell can summon help. The spell creates a hovering, ghostly image of a hand about one foot high. The caster can command it to locate a character or creature of the caster&#039;s choice based on a physical description. The caster can specify race, sex, and appearance, but not ambiguous factors such as level, alignment, or class.<br />After the hand receives its orders, it begins to search for the indicated creature, flying at a movement rate of 48. The hand can search within a 5-mile radius of the caster.<br />If the hand is unable to locate the indicated creature, it returns to the caster (provided he is still within the area of effect). The hand displays an outstretched palm, indicating that no such character or creature could be found. The hand then disappears.<br />If the hand locates the indicated subject, the hand beckons the subject to follow it. If the subject follows, the hand points in the direction of the caster, leading the subject in the most direct, feasible route. The hand hovers 10 feet in front of the subject, moving before him. Once the hand leads the subject to the caster, it disappears.<br />The subject is not compelled to follow the hand or help the caster. If the subject chooses not to follow the hand, the hand continues to beckon for the duration of the spell, then disappears. If the spell expires while the subject is en route to the caster, the hand disappears; the subject will have to rely on his own devices to locate the caster.<br />If there is more than one subject within a 5-mile radius that meets the caster&#039;s description, the hand locates the closest creature. If that creature refuses to follow the hand, the hand will not seek out a second subject.<br />The ghostly hand has no physical form. The hand can be seen only by the caster and potential targets. It cannot engage in combat or execute any other task aside from locating the subject and leading him back to the caster. The hand will not pass through solid objects, but can pass through small cracks and slits.<br />The material component is a black silk glove.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 66</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="702" class="card divination" data-school="Divination" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Know Customs",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Special",
+"aoe":"The caster",
+"castingTime":"3",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"This spell allows a caster to gain general knowledge of the customs, laws, and social etiquette of a tribe or village. The caster must be within 30 yards of a member of the tribe or village for the spell to have effect. The selected villager must possess the knowledge sought by the caster; for instance, he cannot be an infant, nor can he be mentally unstable or dead (although he can be asleep or unconscious).
+The selected villager is allowed a saving throw; if he succeeds, the spell fails.
+If the saving throw fails, the caster gains a general knowledge of the villager's local laws and customs, including those that apply to relevant tribal or clan types (such as customs observed by all giants). Typical information revealed by know customs includes common courtesies (outsiders must avert their eyes when addressing local officials), local restrictions (no animals or unaccompanied elves within the city limits), important festivals, and common passwords that are known by the majority of citizens (such as a phrase necessary to pass the guards at the main gate). Additionally, the spell gives the caster a +1 reaction adjustment to encounters with members of the relevant tribe or village.
+Knowing the local laws and customs does not guarantee that the caster will conduct himself properly. Know customs is to be used as a guide; the DM is free to adjust the quality of information provided by a villager."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Know Customs</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows a caster to gain general knowledge of the customs, laws, and social etiquette of a tribe or village. The caster must be within 30 yards of a member of the tribe or village for the spell to have effect. The selected villager must possess the knowledge sought by the caster; for instance, he cannot be an infant, nor can he be mentally unstable or dead (although he can be asleep or unconscious).<br />The selected villager is allowed a saving throw; if he succeeds, the spell fails.<br />If the saving throw fails, the caster gains a general knowledge of the villager&#039;s local laws and customs, including those that apply to relevant tribal or clan types (such as customs observed by all giants). Typical information revealed by know customs includes common courtesies (outsiders must avert their eyes when addressing local officials), local restrictions (no animals or unaccompanied elves within the city limits), important festivals, and common passwords that are known by the majority of citizens (such as a phrase necessary to pass the guards at the main gate). Additionally, the spell gives the caster a +1 reaction adjustment to encounters with members of the relevant tribe or village.<br />Knowing the local laws and customs does not guarantee that the caster will conduct himself properly. Know customs is to be used as a guide; the DM is free to adjust the quality of information provided by a villager.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 67</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="723" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Circle of Privacy",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Special",
+"aoe":"50-foot-diameter circle",
+"castingTime":"4",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This spell helps to discourage predators and trespassers from disturbing a campsite.
+The caster sprinkles salt in a circle enclosing an area up to 50 feet in diameter. For the duration of the spell, all sounds and scents generated within the circle are muted, making the area less noticeable to those outside the circle. Therefore, the group's chance of encounter is reduced by 50% for the duration of the spell. The spell provides no protection against infravision or other forms of magical detection.
+The material components are a hair from a skunk, a whisker from a mouse, and enough salt to make a 50-foot-diameter circle."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Circle of Privacy</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">50-foot-diameter circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell helps to discourage predators and trespassers from disturbing a campsite.<br />The caster sprinkles salt in a circle enclosing an area up to 50 feet in diameter. For the duration of the spell, all sounds and scents generated within the circle are muted, making the area less noticeable to those outside the circle. Therefore, the group&#039;s chance of encounter is reduced by 50% for the duration of the spell. The spell provides no protection against infravision or other forms of magical detection.<br />The material components are a hair from a skunk, a whisker from a mouse, and enough salt to make a 50-foot-diameter circle.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 76</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="741" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Tree Steed",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yards",
+"aoe":"One log or plank",
+"castingTime":"4",
+"duration":"1 round/level",
+"save":"None",
+"damage":"",
+"description":"This spell enchants a log, plank, or similar piece of wood to become a temporary steed. The log or plank must be at least one foot wide, three inches thick, and three to ten feet long. Any type of wood is suitable.
+When the spell is cast, the log sprouts four wooden, horselike legs. The tree steed may be ridden like a normal horse and may be used to carry equipment. The tree steed can carry up to 600 pounds of riders and gear before breaking. If the tree steed breaks under the weight of the riders or gear, the enchantment instantly ends and the tree steed again becomes a normal (although broken) log or plank.
+The tree steed obeys all of the caster's verbal commands to move, slow, speed up, stop, and turn. It has a movement rate of 12 on land. It can move in the water (Sw 6), floating on the surface and paddling with its legs. The tree steed must remain within 10 yards of the caster in order to move; if the distance between the tree steed and the caster exceeds 10 yards, the tree steed stops until the caster is again within range.
+The tree steed will not fight for the caster and is incapable of any action other than movement. The tree steed does not become fatigued and does not eat. It has all the vulnerabilities of normal wood, including fire, and can be damaged by both magical and physical attacks. It has AC 8 and 20 hit points.
+The material components are a log or plank of suitable size and a horseshoe."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Tree Steed</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One log or plank&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enchants a log, plank, or similar piece of wood to become a temporary steed. The log or plank must be at least one foot wide, three inches thick, and three to ten feet long. Any type of wood is suitable.<br />When the spell is cast, the log sprouts four wooden, horselike legs. The tree steed may be ridden like a normal horse and may be used to carry equipment. The tree steed can carry up to 600 pounds of riders and gear before breaking. If the tree steed breaks under the weight of the riders or gear, the enchantment instantly ends and the tree steed again becomes a normal (although broken) log or plank.<br />The tree steed obeys all of the caster&#039;s verbal commands to move, slow, speed up, stop, and turn. It has a movement rate of 12 on land. It can move in the water (Sw 6), floating on the surface and paddling with its legs. The tree steed must remain within 10 yards of the caster in order to move; if the distance between the tree steed and the caster exceeds 10 yards, the tree steed stops until the caster is again within range.<br />The tree steed will not fight for the caster and is incapable of any action other than movement. The tree steed does not become fatigued and does not eat. It has all the vulnerabilities of normal wood, including fire, and can be damaged by both magical and physical attacks. It has AC 8 and 20 hit points.<br />The material components are a log or plank of suitable size and a horseshoe.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 86</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="749" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clear Path",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"5",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This spell clears away weeds, stones, and other debris in a 10-foot-wide path extending 10 feet in front of the caster. The caster can create a continuous path for the duration of the spell, clearing a 10-foot-square ahead of him as long as he continues to move forward. The spell affects jungles, forests, rocky ground, and snow.
+The result of the cleared path is that movement costs are reduced by half. This is reflected in a reduction of the penalty against movement in rough terrain. (See Table 74 of the Dungeon Master's Guide for terrain costs for movement.) For example, if clear path is used in heavy jungle, the movement cost is reduced from 8 to 4. In no case can clear path reduce movement cost below 1.
+Clear path has no effect on rivers, lakes, or other bodies of water, nor does it affect quicksand, lava, or similar natural obstacles. It also has no effect on magically-created terrain or manmade barricades.
+A priest using the clear path spell can be tracked easily. Tracking proficiency is not required.
+The material components are a knife blade and a straw from a broom.
+The reverse, clutter path, causes weeds, small stones, and similar debris to litter a 10- foot path extending 10 feet behind the caster. This hides a trail, making tracking more difficult. The caster can create a continuous path for the duration of the spell. The chance to successfully track on a cluttered path is reduced by 50%.
+The material components are a handful of pebbles and a handful of weeds."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clear Path</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell clears away weeds, stones, and other debris in a 10-foot-wide path extending 10 feet in front of the caster. The caster can create a continuous path for the duration of the spell, clearing a 10-foot-square ahead of him as long as he continues to move forward. The spell affects jungles, forests, rocky ground, and snow.<br />The result of the cleared path is that movement costs are reduced by half. This is reflected in a reduction of the penalty against movement in rough terrain. (See Table 74 of the Dungeon Master&#039;s Guide for terrain costs for movement.) For example, if clear path is used in heavy jungle, the movement cost is reduced from 8 to 4. In no case can clear path reduce movement cost below 1.<br />Clear path has no effect on rivers, lakes, or other bodies of water, nor does it affect quicksand, lava, or similar natural obstacles. It also has no effect on magically-created terrain or manmade barricades.<br />A priest using the clear path spell can be tracked easily. Tracking proficiency is not required.<br />The material components are a knife blade and a straw from a broom.<br />The reverse, clutter path, causes weeds, small stones, and similar debris to litter a 10- foot path extending 10 feet behind the caster. This hides a trail, making tracking more difficult. The caster can create a continuous path for the duration of the spell. The chance to successfully track on a cluttered path is reduced by 50%.<br />The material components are a handful of pebbles and a handful of weeds.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 89</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="753" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Easy March",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"50 feet",
+"aoe":"1 creature/level",
+"castingTime":"1 turn",
+"duration":"1 day/level",
+"save":"None",
+"damage":"",
+"description":"This spell enables a number of creatures equal to the caster's level to force march for a number of days equal to the caster's level. Creatures affected by easy march can travel 2½ times their normal movement rate without any risk of fatigue; thus, they are not required to make a Constitution check at the end of the day.
+
+All creatures affected by this spell suffer a -1 penalty to their attack rolls for the duration of the spell; this modifier is not cumulative (that is, a party experiencing its second day of easy march suffers only a -1 penalty). The modifier cannot be negated by resting.
+
+Easy march has no effect on modifiers to movement due to terrain, fatigue, weather, or other normal factors. (Refer to Chapter 14 of the Player's Handbook for more about force marching.) The material component is a piece of shoe leather."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Easy March</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">50 feet&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables a number of creatures equal to the caster&#039;s level to force march for a number of days equal to the caster&#039;s level. Creatures affected by easy march can travel 2&frac12; times their normal movement rate without any risk of fatigue; thus, they are not required to make a Constitution check at the end of the day.<br /><br />All creatures affected by this spell suffer a -1 penalty to their attack rolls for the duration of the spell; this modifier is not cumulative (that is, a party experiencing its second day of easy march suffers only a -1 penalty). The modifier cannot be negated by resting.<br /><br />Easy march has no effect on modifiers to movement due to terrain, fatigue, weather, or other normal factors. (Refer to Chapter 14 of the Player&#039;s Handbook for more about force marching.) The material component is a piece of shoe leather.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 90</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="780" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Monster Mount",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yards",
+"aoe":"20-foot radius circle",
+"castingTime":"6",
+"duration":"1 hour/level",
+"save":"Negate",
+"damage":"",
+"description":"This spell compels one or more living creatures to serve as mounts for the caster and his companions. The spell affects up to 10 Hit Dice or levels of creatures with Intelligence of 4 or lower. Creatures used as mounts must be of suitable size to carry at least one rider; smaller creatures can be used as pack animals.
+Each intended mount receives a saving throw vs. spell. Creatures failing their rolls become docile and obedient, allowing riders to mount them, and moving at the speed and direction indicated by the caster.
+To maintain the enchantment, the caster must remain within 10 yards of one of the affected creatures, and each affected creature must remain within 10 yards of another.
+The affected creatures will do nothing for the caster other than carrying riders and gear; they will not fight (although they will fight to defend themselves), nor will they intentionally endanger themselves. Any overtly hostile act by the caster or a rider against any mount breaks the enchantment for all the mounts.
+When the enchantment ends or is broken, the creatures take no action for one round, then behave as their natural instincts direct."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Monster Mount</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-foot radius circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell compels one or more living creatures to serve as mounts for the caster and his companions. The spell affects up to 10 Hit Dice or levels of creatures with Intelligence of 4 or lower. Creatures used as mounts must be of suitable size to carry at least one rider; smaller creatures can be used as pack animals.<br />Each intended mount receives a saving throw vs. spell. Creatures failing their rolls become docile and obedient, allowing riders to mount them, and moving at the speed and direction indicated by the caster.<br />To maintain the enchantment, the caster must remain within 10 yards of one of the affected creatures, and each affected creature must remain within 10 yards of another.<br />The affected creatures will do nothing for the caster other than carrying riders and gear; they will not fight (although they will fight to defend themselves), nor will they intentionally endanger themselves. Any overtly hostile act by the caster or a rider against any mount breaks the enchantment for all the mounts.<br />When the enchantment ends or is broken, the creatures take no action for one round, then behave as their natural instincts direct.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 102</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="790" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hovering Road",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 round",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"This spell enables the caster to create a magical 10-foot-wide road extending 10 feet in front of him. The caster can create an unbroken road for the duration of the spell, creating a 10-foot area ahead of him as long as he continues to move forward.
+The road is approximately one foot thick and hovers in the air. It has the texture and color of black granite. Characters and creatures can move on the hovering road at their normal movement rate, ignoring the effects of surrounding terrain.
+The hovering road must originate from a solid surface. Once anchored, the caster controls the contour of the road, causing it to rise and fall as he wishes. The road can thus be used to traverse rivers (if the road is anchored on the shore), swamps, and similarly hostile terrain. The caster can cause the hovering road to rise over a jungle or cross a chasm.
+The road has AC 0. It is impervious to non-magical weapons. If the road suffers 100 points of damage (from magical weapons or other magical forces), it dissipates in a black mist; all those on the road fall to the ground below.
+Unless the road is destroyed, the entire hovering road remains intact from beginning to end for the duration of the spell, even if the caster is killed or incapacitated. At the end of the spell's duration, the entire road dissipates.
+The material components are a chunk of black marble and a loop of gold wire."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hovering Road</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the caster to create a magical 10-foot-wide road extending 10 feet in front of him. The caster can create an unbroken road for the duration of the spell, creating a 10-foot area ahead of him as long as he continues to move forward.<br />The road is approximately one foot thick and hovers in the air. It has the texture and color of black granite. Characters and creatures can move on the hovering road at their normal movement rate, ignoring the effects of surrounding terrain.<br />The hovering road must originate from a solid surface. Once anchored, the caster controls the contour of the road, causing it to rise and fall as he wishes. The road can thus be used to traverse rivers (if the road is anchored on the shore), swamps, and similarly hostile terrain. The caster can cause the hovering road to rise over a jungle or cross a chasm.<br />The road has AC 0. It is impervious to non-magical weapons. If the road suffers 100 points of damage (from magical weapons or other magical forces), it dissipates in a black mist; all those on the road fall to the ground below.<br />Unless the road is destroyed, the entire hovering road remains intact from beginning to end for the duration of the spell, even if the caster is killed or incapacitated. At the end of the spell&#039;s duration, the entire road dissipates.<br />The material components are a chunk of black marble and a loop of gold wire.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 106</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="804" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Etherwalk",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"5 rounds",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"By casting this spell, the priest transports himself and as many as 50 followers (who must join hands at the time of casting) to the Border Ethereal. Unwilling creatures are allowed a saving throw at a -4 penalty to avoid transportation.
+The spell then allows the priest and his party to make as many as three round-trip journeys to and from the Inner Planes. It then allows them to return to the Prime Material plane.
+Travel rates in the Ethereal plane are at four times normal speed. Travel times for locating or searching along curtains are all at the minimum time possible. Encounters with monsters occur at one-fifth the normal frequency. The priest and his party are not affected by the ether cyclone.
+The spell expires when the priest and his party return to the Border Ethereal from an inner plane for the third time. They are then instantly transported to the Prime Material plane."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Etherwalk</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, the priest transports himself and as many as 50 followers (who must join hands at the time of casting) to the Border Ethereal. Unwilling creatures are allowed a saving throw at a -4 penalty to avoid transportation.<br />The spell then allows the priest and his party to make as many as three round-trip journeys to and from the Inner Planes. It then allows them to return to the Prime Material plane.<br />Travel rates in the Ethereal plane are at four times normal speed. Travel times for locating or searching along curtains are all at the minimum time possible. Encounters with monsters occur at one-fifth the normal frequency. The priest and his party are not affected by the ether cyclone.<br />The spell expires when the priest and his party return to the Border Ethereal from an inner plane for the third time. They are then instantly transported to the Prime Material plane.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 113</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="807" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Highway",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"1,000 square yards",
+"castingTime":"1 turn",
+"duration":"1 day",
+"save":"None",
+"damage":"",
+"description":"The highway spell creates a shimmering plane of force that acts as a magical conveyor for the priest. By standing at the forward edge of the 10 x 100 yard plane, the priest and as many followers as can fit onto the square can travel as outlined below.
+The highway travels 30 miles per hour (MV 88) over all terrains. The priest sets the height of the highway in a range from 1 foot to 100 yards above ground level. The highway moves as the priest wills; if the priest wishes to fix a destination in his mind, the highway will take the shortest route to that destination until the priest changes the course in his mind.
+The highway cannot be used offensively. It will automatically travel over or around obstacles such as buildings and large creatures. It protects creatures traveling on it from adverse effects of the elements (ice, rain, gales, etc.). The highway can hover in place, but hovering can be achieved only at a height of 12 inches above ground level.
+When the spell expires or the destination is reached, the highway gently lowers the priest and his party to the ground. The priest may order the highway to drop off creatures and collect others at intermediate destinations, although the priest who cast the spell must remain on the highway or it will disappear."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Highway</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1,000 square yards&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The highway spell creates a shimmering plane of force that acts as a magical conveyor for the priest. By standing at the forward edge of the 10 x 100 yard plane, the priest and as many followers as can fit onto the square can travel as outlined below.<br />The highway travels 30 miles per hour (MV 88) over all terrains. The priest sets the height of the highway in a range from 1 foot to 100 yards above ground level. The highway moves as the priest wills; if the priest wishes to fix a destination in his mind, the highway will take the shortest route to that destination until the priest changes the course in his mind.<br />The highway cannot be used offensively. It will automatically travel over or around obstacles such as buildings and large creatures. It protects creatures traveling on it from adverse effects of the elements (ice, rain, gales, etc.). The highway can hover in place, but hovering can be achieved only at a height of 12 inches above ground level.<br />When the spell expires or the destination is reached, the highway gently lowers the priest and his party to the ground. The priest may order the highway to drop off creatures and collect others at intermediate destinations, although the priest who cast the spell must remain on the highway or it will disappear.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 114</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

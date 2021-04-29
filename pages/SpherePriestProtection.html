@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Endure Cold/Endure Heat",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"1 rd.",
+"duration":"1 _ hrs./level",
+"save":"None",
+"damage":"",
+"description":"The creature receiving this spell is protected from normal extremes of cold or heat (depending on which application the priest selects at the time of casting). The creature can stand unprotected in temperatures as low as -30 F. or as high as 130 F. (depending on application) with no ill effect. Temperatures beyond these limits inflict 1 point of damage per hour of exposure for every degree beyond the limit. The spell is immediately cancelled if the recipient is affected by any non-normal heat or cold, such as magic, breath weapons, and so on. The cancellation occurs regardless of the application and regardless of whether a heat or cold effect hits the character (for example, an endure cold spell is cancelled by magical heat or fire as well as by magical cold). The recipient of the spell does not suffer the first 10 points of damage (after any applicable saving throws) from the heat or cold during the round in which the spell is broken. The spell ends instantly if either resist fire or resist cold is cast upon the recipient."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Endure Cold/Endure Heat</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 _ hrs./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The creature receiving this spell is protected from normal extremes of cold or heat (depending on which application the priest selects at the time of casting). The creature can stand unprotected in temperatures as low as -30 F. or as high as 130 F. (depending on application) with no ill effect. Temperatures beyond these limits inflict 1 point of damage per hour of exposure for every degree beyond the limit. The spell is immediately cancelled if the recipient is affected by any non-normal heat or cold, such as magic, breath weapons, and so on. The cancellation occurs regardless of the application and regardless of whether a heat or cold effect hits the character (for example, an endure cold spell is cancelled by magical heat or fire as well as by magical cold). The recipient of the spell does not suffer the first 10 points of damage (after any applicable saving throws) from the heat or cold during the round in which the spell is broken. The spell ends instantly if either resist fire or resist cold is cast upon the recipient.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 254</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="497" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Protection From Evil",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy Water or Burning Incense",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"3 rds./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, it creates a magical barrier around the recipient at a distance of 1 foot. The barrier moves with the recipient and has three major effects: First, all attacks made by evil or evilly enchanted creatures against the protected creature receive a penalty of -2 to each attack roll, and any saving throws caused by such attacks are made by the protected creature with a +2 bonus.
+Second, any attempt to exercise mental control over the protected creature (if, for example, it has been charmed by a vampire) or to invade and take over its mind (as by a ghost's magic jar attack) is blocked by this spell. Note that the protection does not prevent a vampire's charm itself, nor end it, but it does prevent the vampire from exercising mental control through the barrier. Likewise, an outside life force is merely kept out, and would not be expelled if in place before the protection was cast.
+Third, the spell prevents bodily contact by creatures of an extraplanar or conjured nature (such as aerial servants, elementals, imps, invisible stalkers, salamanders, water weirds, xorn, and others). This causes the natural (body) weapon attacks of such creatures to fail and the creature to recoil if such attacks require touching the protected creature.
+Animals or monsters summoned or conjured by spells or similar magic are likewise hedged from the character. This protection ends if the protected character makes a melee attack against or tries to force the barrier against the blocked creature.
+To complete this spell, the priest uses holy water or burning incense.
+This spell can be reversed to become protection from good, with the second and third benefits remaining unchanged.
+The material components for the reverse are a circle of unholy water or smoldering dung."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Protection From Evil</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Holy Water or Burning Incense&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, it creates a magical barrier around the recipient at a distance of 1 foot. The barrier moves with the recipient and has three major effects: First, all attacks made by evil or evilly enchanted creatures against the protected creature receive a penalty of -2 to each attack roll, and any saving throws caused by such attacks are made by the protected creature with a +2 bonus.<br />Second, any attempt to exercise mental control over the protected creature (if, for example, it has been charmed by a vampire) or to invade and take over its mind (as by a ghost&#039;s magic jar attack) is blocked by this spell. Note that the protection does not prevent a vampire&#039;s charm itself, nor end it, but it does prevent the vampire from exercising mental control through the barrier. Likewise, an outside life force is merely kept out, and would not be expelled if in place before the protection was cast.<br />Third, the spell prevents bodily contact by creatures of an extraplanar or conjured nature (such as aerial servants, elementals, imps, invisible stalkers, salamanders, water weirds, xorn, and others). This causes the natural (body) weapon attacks of such creatures to fail and the creature to recoil if such attacks require touching the protected creature.<br />Animals or monsters summoned or conjured by spells or similar magic are likewise hedged from the character. This protection ends if the protected character makes a melee attack against or tries to force the barrier against the blocked creature.<br />To complete this spell, the priest uses holy water or burning incense.<br />This spell can be reversed to become protection from good, with the second and third benefits remaining unchanged.<br />The material components for the reverse are a circle of unholy water or smoldering dung.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 256</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="667" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Ring of Hands",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"5",
+"duration":"2d10 rounds",
+"save":"None",
+"damage":"",
+"description":"This is a cooperative magic spell. It requires a minimum of two priests and can accommodate a maximum of ten. Each priest must cast ring of hands on the same round.
+At the end of the casting, the priests involved join hands, thus completing the spell. If any priest breaks the circle, the spell immediately ceases. The priests may not move from their locations but are free to speak. They may not cast spells requiring a somatic or material component while the ring is formed.
+The ring of hands forms a protective barrier around the priests and everything within their circle. For each priest, assume a five-foot circumference of the circle; thus, three priests would create a circle of 15-foot circumference. For easy calculation, assume that for each priest, the circle can accommodate four persons.
+The barrier functions as a protection from evil spell. Attacks by evil creatures suffer a -1 penalty for every priest forming the circle. Saving throws made by the priests or anyone in the circle against attacks from such creatures receive a +1 bonus for every priest in the circle.
+Attempts at mental control over protected creatures are blocked. Extraplanar and conjured creatures are unable to touch the priests and those within the circle, although melee attacks against such creatures by those within the ring break the barrier.
+Because the priests casting the spell cannot move and must hold hands, they do not receive any Dexterity bonuses to Armor Class. Furthermore, opponents gain a +2 bonus on attack rolls against the priests, since there is little they can do to avoid a blow.
+Creatures within the ring are free to act as they wish. Melee attacks by those within the ring are limited to piercing weapons and suffer a -1 penalty to attack rolls since the priests intervene.
+The reverse of this spell, ring of woe, functions as detailed above except the effect applies to good creatures as would a protection from good spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Ring of Hands</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2d10 rounds&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This is a cooperative magic spell. It requires a minimum of two priests and can accommodate a maximum of ten. Each priest must cast ring of hands on the same round.<br />At the end of the casting, the priests involved join hands, thus completing the spell. If any priest breaks the circle, the spell immediately ceases. The priests may not move from their locations but are free to speak. They may not cast spells requiring a somatic or material component while the ring is formed.<br />The ring of hands forms a protective barrier around the priests and everything within their circle. For each priest, assume a five-foot circumference of the circle; thus, three priests would create a circle of 15-foot circumference. For easy calculation, assume that for each priest, the circle can accommodate four persons.<br />The barrier functions as a protection from evil spell. Attacks by evil creatures suffer a -1 penalty for every priest forming the circle. Saving throws made by the priests or anyone in the circle against attacks from such creatures receive a +1 bonus for every priest in the circle.<br />Attempts at mental control over protected creatures are blocked. Extraplanar and conjured creatures are unable to touch the priests and those within the circle, although melee attacks against such creatures by those within the ring break the barrier.<br />Because the priests casting the spell cannot move and must hold hands, they do not receive any Dexterity bonuses to Armor Class. Furthermore, opponents gain a +2 bonus on attack rolls against the priests, since there is little they can do to avoid a blow.<br />Creatures within the ring are free to act as they wish. Melee attacks by those within the ring are limited to piercing weapons and suffer a -1 penalty to attack rolls since the priests intervene.<br />The reverse of this spell, ring of woe, functions as detailed above except the effect applies to good creatures as would a protection from good spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 54</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="500" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Sanctuary",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"2 rds. + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When the priest casts a sanctuary spell, any opponent attempting to strike or otherwise directly attack the protected creature must roll a saving throw vs. spell. If the saving throw is successful, the opponent can attack normally and is unaffected by that casting of the spell. If the saving throw is failed, the opponent loses track of and totally ignores the warded creature for the duration of the spell. Those not attempting to attack the subject remain unaffected. Note that this spell does not prevent the operation of area attacks (fireball, ice storm, etc.). While protected by this spell, the subject cannot take direct offensive action without breaking the spell, but may use nonattack spells or otherwise act in any way that does not violate the prohibition against offensive action. This allows a warded priest to heal wounds, for example, or to bless, perform an augury, chant, cast a light in the area (but not upon an opponent), and so on.
+The components of the spell include the priest's holy symbol and a small silver mirror."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Sanctuary</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds. + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the priest casts a sanctuary spell, any opponent attempting to strike or otherwise directly attack the protected creature must roll a saving throw vs. spell. If the saving throw is successful, the opponent can attack normally and is unaffected by that casting of the spell. If the saving throw is failed, the opponent loses track of and totally ignores the warded creature for the duration of the spell. Those not attempting to attack the subject remain unaffected. Note that this spell does not prevent the operation of area attacks (fireball, ice storm, etc.). While protected by this spell, the subject cannot take direct offensive action without breaking the spell, but may use nonattack spells or otherwise act in any way that does not violate the prohibition against offensive action. This allows a warded priest to heal wounds, for example, or to bless, perform an augury, chant, cast a light in the area (but not upon an opponent), and so on.<br />The components of the spell include the priest&#039;s holy symbol and a small silver mirror.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 257</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="845" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Resist Acid and Corrosion",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"5",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell provides a subject with a better resistance to acid, corrosives, and caustic substances of all kinds. Mild corrosives cannot harm the subject at all, although they can still damage his gear. More intense acids and corrosives (black dragon breath, Melf's acid arrow, and the natural attacks of various puddings, oozes, slimes, and jellies) inflict only half the normal damage on the protected character. If the attack requires a Iron Vigil Resist Acid and Corrosion saving throw, the subject gains a +3 bonus, sustaining half damage with a failed save or one-quarter damage with a successful saving throw."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Resist Acid and Corrosion</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell provides a subject with a better resistance to acid, corrosives, and caustic substances of all kinds. Mild corrosives cannot harm the subject at all, although they can still damage his gear. More intense acids and corrosives (black dragon breath, Melf&#039;s acid arrow, and the natural attacks of various puddings, oozes, slimes, and jellies) inflict only half the normal damage on the protected character. If the attack requires a Iron Vigil Resist Acid and Corrosion saving throw, the subject gains a +3 bonus, sustaining half damage with a failed save or one-quarter damage with a successful saving throw.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 165</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="521" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Resist Fire/Resist Cold",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"5",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is placed upon a creature by a priest, the creature's body is toughened to withstand heat or cold, as chosen by the caster. The spell grants the creature complete immunity to mild conditions (standing naked in the snow or reaching into an ordinary fire to pluck out a note). The recipient can somewhat resist intense heat or cold (whether natural or magical in origin), such as red-hot charcoal, a large amount of burning oil, flaming swords, fire storms, fireballs, meteor swarms, red dragon's breath, frostbrand swords, ice storms, wands of frost, or white dragon's breath. In all of these cases, the temperature affects the creature to some extent. The recipient of the spell gains a bonus of +3 to saving throws against such attack forms and all damage sustained is reduced by 50%; therefore, if the saving throw is failed, the creature sustains one-half damage, and if the saving throw is successful, the creature sustains only one-quarter damage. Resistance to fire lasts for one round for each experience level of the priest placing the spell.
+The caster needs a drop of mercury as the material component of this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Resist Fire/Resist Cold</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is placed upon a creature by a priest, the creature&#039;s body is toughened to withstand heat or cold, as chosen by the caster. The spell grants the creature complete immunity to mild conditions (standing naked in the snow or reaching into an ordinary fire to pluck out a note). The recipient can somewhat resist intense heat or cold (whether natural or magical in origin), such as red-hot charcoal, a large amount of burning oil, flaming swords, fire storms, fireballs, meteor swarms, red dragon&#039;s breath, frostbrand swords, ice storms, wands of frost, or white dragon&#039;s breath. In all of these cases, the temperature affects the creature to some extent. The recipient of the spell gains a bonus of +3 to saving throws against such attack forms and all damage sustained is reduced by 50%; therefore, if the saving throw is failed, the creature sustains one-half damage, and if the saving throw is successful, the creature sustains only one-quarter damage. Resistance to fire lasts for one round for each experience level of the priest placing the spell.<br />The caster needs a drop of mercury as the material component of this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 262</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="529" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Withdraw",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"5",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of a withdraw spell, the priest in effect alters the flow of time with regard to himself. While but one round of time passes for those not affected by the spell, the priest is able to spend two rounds, plus one round per level, in contemplation. Thus, a 5th-level priest can withdraw for seven rounds to cogitate on some matter while one round passes for all others. (The DM should allow the player one minute of real time per round withdrawn to ponder some problem or question. No discussion with other players is permitted.) Note that while affected by the withdraw spell, the caster can use only the following spells: any divination spell or any curing or healing spell, the latter on himself only. The casting of any of these spells in different fashion (for example, a cure light wounds spell bestowed upon a companion) negates the withdraw spell. Similarly, the withdrawn caster cannot walk or run, become invisible, or engage in actions other than thinking, reading, and the like. He can be affected by the actions of others, losing any Dexterity or shield bonus. Any successful attack upon the caster breaks the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Withdraw</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of a withdraw spell, the priest in effect alters the flow of time with regard to himself. While but one round of time passes for those not affected by the spell, the priest is able to spend two rounds, plus one round per level, in contemplation. Thus, a 5th-level priest can withdraw for seven rounds to cogitate on some matter while one round passes for all others. (The DM should allow the player one minute of real time per round withdrawn to ponder some problem or question. No discussion with other players is permitted.) Note that while affected by the withdraw spell, the caster can use only the following spells: any divination spell or any curing or healing spell, the latter on himself only. The casting of any of these spells in different fashion (for example, a cure light wounds spell bestowed upon a companion) negates the withdraw spell. Similarly, the withdrawn caster cannot walk or run, become invisible, or engage in actions other than thinking, reading, and the like. He can be affected by the actions of others, losing any Dexterity or shield bonus. Any successful attack upon the caster breaks the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 264</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="703" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Line of Protection",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"30-yard line",
+"castingTime":"1 round",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"",
+"description":"This cooperative spell requires at least two priests to cast the spell simultaneously.
+During the casting, the priests determine whether the line will be stationary or portable.
+If the spell is stationary, each priest must inscribe a magical sigil on parallel facing surfaces, such as facing walls of a gatehouse or two tree trunks. If the spell is portable, the priests must stand at each end of the line, thereby anchoring it.
+After the spell is cast, a shimmering field of force appears between the two anchors (the sigils or priests). The field is 10 feet high and sparkles with energy. Objects on the opposite side of the translucent field, while recognizable, are hazy and indistinct.
+The field causes 1d3 points of damage to all creatures passing through it; evil creatures and undead suffer 1d8 points of damage from the field. Creatures that roll a successful saving throw suffer no damage. Creatures that can fly over the field, burrow under it, or teleport to the other side are immune to damage.
+If the spell is cast in its portable form, the priests can move at half their movement rates (limited to the rate of the slower priest). The priests can take no other action, since all their energy is spent in walking and maintaining the field.
+Once created, the field cannot be increased or decreased in length and must remain straight. The priests could maneuver by pivoting, but could not walk toward each other or bend the field around a corner. If the line of sight between the two priests is blocked by any object of greater than 5' diameter, the spell immediately fails. Thus, creatures, low walls, young trees, pillars, and similar objects will not disrupt the spell.
+As a cooperative spell, several priests can link together to create a longer field. Each priest (or sigil) forms the end of one field and the beginning of another, much like fenceposts. Each section of the spell must extend in a straight line, but the field can be bent at each junction. Four priests could form a long line, a square, or a Z pattern. The restrictions on moving the fields apply as outlined above. The DM may apply movement penalties depending on the complexity of the pattern.
+The material components are the priests' croziers, staves, or religious standards, held aloft by each caster.
+The reverse of this spell, line of destruction, causes 1d3 damage to all creatures passing through it. It causes 1d8 damage to paladins and creatures of good alignment who pass through it. Creatures that roll a successful saving throw suffer no damage."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Line of Protection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-yard line&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This cooperative spell requires at least two priests to cast the spell simultaneously.<br />During the casting, the priests determine whether the line will be stationary or portable.<br />If the spell is stationary, each priest must inscribe a magical sigil on parallel facing surfaces, such as facing walls of a gatehouse or two tree trunks. If the spell is portable, the priests must stand at each end of the line, thereby anchoring it.<br />After the spell is cast, a shimmering field of force appears between the two anchors (the sigils or priests). The field is 10 feet high and sparkles with energy. Objects on the opposite side of the translucent field, while recognizable, are hazy and indistinct.<br />The field causes 1d3 points of damage to all creatures passing through it; evil creatures and undead suffer 1d8 points of damage from the field. Creatures that roll a successful saving throw suffer no damage. Creatures that can fly over the field, burrow under it, or teleport to the other side are immune to damage.<br />If the spell is cast in its portable form, the priests can move at half their movement rates (limited to the rate of the slower priest). The priests can take no other action, since all their energy is spent in walking and maintaining the field.<br />Once created, the field cannot be increased or decreased in length and must remain straight. The priests could maneuver by pivoting, but could not walk toward each other or bend the field around a corner. If the line of sight between the two priests is blocked by any object of greater than 5&#039; diameter, the spell immediately fails. Thus, creatures, low walls, young trees, pillars, and similar objects will not disrupt the spell.<br />As a cooperative spell, several priests can link together to create a longer field. Each priest (or sigil) forms the end of one field and the beginning of another, much like fenceposts. Each section of the spell must extend in a straight line, but the field can be bent at each junction. Four priests could form a long line, a square, or a Z pattern. The restrictions on moving the fields apply as outlined above. The DM may apply movement penalties depending on the complexity of the pattern.<br />The material components are the priests&#039; croziers, staves, or religious standards, held aloft by each caster.<br />The reverse of this spell, line of destruction, causes 1d3 damage to all creatures passing through it. It causes 1d8 damage to paladins and creatures of good alignment who pass through it. Creatures that roll a successful saving throw suffer no damage.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 67</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="543" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Magical Vestment",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 rd.",
+"duration":"5 rds./level",
+"save":"None",
+"damage":"",
+"description":"This spell enchants the caster's vestment, providing protection at least the equivalent of chain mail (AC 5). The vestment gains a +1 enchantment for each three levels of the priest beyond 5th level, to a maximum of AC 1 at 17th level. The magic lasts for five rounds per level of the caster, or until the caster loses consciousness. If the vestment is worn with other armors, only the best AC (either the armor or the vestment) is used; this protection is not cumulative with any other AC protection.
+The material components are the vestment to be enchanted and the priest's holy symbol, which are not expended."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Magical Vestment</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enchants the caster&#039;s vestment, providing protection at least the equivalent of chain mail (AC 5). The vestment gains a +1 enchantment for each three levels of the priest beyond 5th level, to a maximum of AC 1 at 17th level. The magic lasts for five rounds per level of the caster, or until the caster loses consciousness. If the vestment is worn with other armors, only the best AC (either the armor or the vestment) is used; this protection is not cumulative with any other AC protection.<br />The material components are the vestment to be enchanted and the priest&#039;s holy symbol, which are not expended.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 269</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="545" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Negative Plane Protection",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell affords the caster or touched creature partial protection from undead monsters with Negative Energy plane connections (such as shadows, wights, wraiths, spectres, or vampires) and certain weapons and spells that drain energy levels. The negative plane protection spell opens a channel to the Positive Energy plane, possibly offsetting the effect of the negative energy attack. A protected creature struck by a negative energy attack is allowed a saving throw vs. death magic. If successful, the energies cancel with a bright flash of light and a thunderclap. The protected creature suffers only normal hit point damage from the attack and does not suffer any drain of experience or Strength, regardless of the number of levels the attack would have drained.
+An attacking undead creature suffers 2d6 points of damage from the positive energy; a draining wizard or weapon receives no damage.
+This protection is proof against only one such attack, dissipating immediately whether or not the saving throw was successful. If the saving throw is failed, the spell recipient suffers double the usual physical damage, in addition to the loss of experience or Strength that normally occurs. The protection lasts for one turn per level of the priest casting the spell, or until the protected creature is struck by a negative energy attack. This spell cannot be cast on the Negative Energy plane."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Negative Plane Protection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell affords the caster or touched creature partial protection from undead monsters with Negative Energy plane connections (such as shadows, wights, wraiths, spectres, or vampires) and certain weapons and spells that drain energy levels. The negative plane protection spell opens a channel to the Positive Energy plane, possibly offsetting the effect of the negative energy attack. A protected creature struck by a negative energy attack is allowed a saving throw vs. death magic. If successful, the energies cancel with a bright flash of light and a thunderclap. The protected creature suffers only normal hit point damage from the attack and does not suffer any drain of experience or Strength, regardless of the number of levels the attack would have drained.<br />An attacking undead creature suffers 2d6 points of damage from the positive energy; a draining wizard or weapon receives no damage.<br />This protection is proof against only one such attack, dissipating immediately whether or not the saving throw was successful. If the saving throw is failed, the spell recipient suffers double the usual physical damage, in addition to the loss of experience or Strength that normally occurs. The protection lasts for one turn per level of the priest casting the spell, or until the protected creature is struck by a negative energy attack. This spell cannot be cast on the Negative Energy plane.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 269</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="551" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Remove Paralysis",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yds./level",
+"aoe":"1d4 creatures in 20-ft. cube",
+"castingTime":"6",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"By the use of this spell, the priest can free one or more creatures from the effects of any paralyzation or from related magic (such as a ghoul touch, or a hold or slow spell). If the spell is cast on one creature, the paralyzation is negated. If cast on two creatures, each receives another saving throw vs. the effect that afflicts it, with a +4 bonus. If cast on three or four creatures, each receives another saving throw with a +2 bonus. There must be no physical or magical barrier between the caster and the creatures to be affected, or the spell fails and is wasted."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Remove Paralysis</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d4 creatures in 20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By the use of this spell, the priest can free one or more creatures from the effects of any paralyzation or from related magic (such as a ghoul touch, or a hold or slow spell). If the spell is cast on one creature, the paralyzation is negated. If cast on two creatures, each receives another saving throw vs. the effect that afflicts it, with a +4 bonus. If cast on three or four creatures, each receives another saving throw with a +2 bonus. There must be no physical or magical barrier between the caster and the creatures to be affected, or the spell fails and is wasted.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 271</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="894" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Steelskin",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Sheet of forged steel",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"5",
+"duration":"special",
+"save":"None",
+"damage":"",
+"description":"The subject of this spell is enchanted giving their skin steel like properties. Incoming physical damage is reduced based on the casters level and the damage type. Magical damage is ignored, so magic missiles still deal their full damage and a magical weapon that deals damage will not have damage from the magic bonus reduced. For example a +1 sword always deals at least 1 point of magic damage on a hit.
+
+At level 5 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 2, Piercing is reduced by 1, Slashing is reduced by 2.
+
+At level 9 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 2, Piercing is reduced by 3, Slashing is reduced by 6.
+
+At level 13 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 4, Piercing is reduced by 6, Slashing is reduced by 9.
+
+The spell will last for 24 hours, or until its charges are expended. The spell has a number of charges equal to 1d4+(caster level/2).
+
+The components are a sheet of steel forged by a dwarven armor smith and blessed by a cleric, costing ~25gp. Only 4 steel coins are needed for materials, the rest of the costs are in the craftsmanship."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Steelskin</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Sheet of forged steel&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The subject of this spell is enchanted giving their skin steel like properties. Incoming physical damage is reduced based on the casters level and the damage type. Magical damage is ignored, so magic missiles still deal their full damage and a magical weapon that deals damage will not have damage from the magic bonus reduced. For example a +1 sword always deals at least 1 point of magic damage on a hit.<br /><br />At level 5 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 2, Piercing is reduced by 1, Slashing is reduced by 2.<br /><br />At level 9 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 2, Piercing is reduced by 3, Slashing is reduced by 6.<br /><br />At level 13 the caster reduces damage accordingly: Bludgeoning / Hacking is reduced by 4, Piercing is reduced by 6, Slashing is reduced by 9.<br /><br />The spell will last for 24 hours, or until its charges are expended. The spell has a number of charges equal to 1d4+(caster level/2).<br /><br />The components are a sheet of steel forged by a dwarven armor smith and blessed by a cleric, costing ~25gp. Only 4 steel coins are needed for materials, the rest of the costs are in the craftsmanship.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="578" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Protection From Evil, 10' Radius",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"10-ft. radius",
+"castingTime":"7",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The globe of protection of this spell is identical in all respects to that of a protection from evil spell, except that it encompasses a much larger area and its duration is greater.
+The effect is centered on and moves with the creature touched. Any protected creature within the circle will break the warding against enchanted/summoned monsters if he attacks those monsters. A creature unable to fit completely into the area of effect (for example, a 21-foot-tall titan) remains partially exposed and subject to whatever penalties the DM decides. If such a creature is the recipient of the spell, the spell acts as a normal protection from evil spell for that creature only.
+The reverse, protection from good, 10"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Protection From Evil, 10' Radius</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The globe of protection of this spell is identical in all respects to that of a protection from evil spell, except that it encompasses a much larger area and its duration is greater.<br />The effect is centered on and moves with the creature touched. Any protected creature within the circle will break the warding against enchanted/summoned monsters if he attacks those monsters. A creature unable to fit completely into the area of effect (for example, a 21-foot-tall titan) remains partially exposed and subject to whatever penalties the DM decides. If such a creature is the recipient of the spell, the spell acts as a normal protection from evil spell for that creature only.<br />The reverse, protection from good, 10</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 278</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="583" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spell Immunity",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the priest renders a creature touched immune to the effects of a specified spell of 4th level or lower. It protects against spells, spell-like effects of magical items, and innate spell-like abilities of creatures. It does not protect against breath weapons or gaze attacks of any type.
+The spell has several additional limitations. First, the caster must have directly experienced the effect of the specified spell. For example, if the caster has been attacked by a fireball spell at some time, he can use the spell immunity spell to provide protection from a fireball. Second, the spell cannot affect a creature already magically protected by a potion, protective spell, ring, or other device. Third, only a particular spell can be protected against, not a certain sphere of spells or a group of spells that are similar in effect; thus, a creature given immunity to the lightning bolt spell is still vulnerable to a shocking grasp spell.
+The material component for spell immunity is the same as that for the spell to be protected against."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spell Immunity</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the priest renders a creature touched immune to the effects of a specified spell of 4th level or lower. It protects against spells, spell-like effects of magical items, and innate spell-like abilities of creatures. It does not protect against breath weapons or gaze attacks of any type.<br />The spell has several additional limitations. First, the caster must have directly experienced the effect of the specified spell. For example, if the caster has been attacked by a fireball spell at some time, he can use the spell immunity spell to provide protection from a fireball. Second, the spell cannot affect a creature already magically protected by a potion, protective spell, ring, or other device. Third, only a particular spell can be protected against, not a certain sphere of spells or a group of spells that are similar in effect; thus, a creature given immunity to the lightning bolt spell is still vulnerable to a shocking grasp spell.<br />The material component for spell immunity is the same as that for the spell to be protected against.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 279</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="589" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-Plant Shell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"15-ft. diameter",
+"castingTime":"8",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"The anti-plant shell spell creates an invisible, mobile barrier that keeps all creatures within the shell protected from attacking plants or vegetable creatures such as shambling mounds or treants. Any attempt to force the barrier against such creatures shatters the barrier immediately. The spell lasts for one turn for each experience level of the caster."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-Plant Shell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">8&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">15-ft. diameter&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The anti-plant shell spell creates an invisible, mobile barrier that keeps all creatures within the shell protected from attacking plants or vegetable creatures such as shambling mounds or treants. Any attempt to force the barrier against such creatures shatters the barrier immediately. The spell lasts for one turn for each experience level of the caster.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 281</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="872" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Impregnable Mind",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"1",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell guards the spell recipient against magical or psionic attacks that affect the mind. This includes beguiling, charm, domination, feeblemind, hold, and similar effects, as well as most telepathic psionic powers and attacks. Against magical influences, impregnable mind grants a +4 bonus to saving throws; if the attack normally allows no saving throw, the spell recipient may attempt one at no modifier. Against telepathic psionics, the spell inflicts a -6 penalty to the attacking psionicist's power checks, making it more likely that a psionic attack or telepathic contact will fail.
+Impregnable mind offers no protection against nontelepathic psionics, such as a telekinetic thrashing or other psionics that affect the body."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Impregnable Mind</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell guards the spell recipient against magical or psionic attacks that affect the mind. This includes beguiling, charm, domination, feeblemind, hold, and similar effects, as well as most telepathic psionic powers and attacks. Against magical influences, impregnable mind grants a +4 bonus to saving throws; if the attack normally allows no saving throw, the spell recipient may attempt one at no modifier. Against telepathic psionics, the spell inflicts a -6 penalty to the attacking psionicist&#039;s power checks, making it more likely that a psionic attack or telepathic contact will fail.<br />Impregnable mind offers no protection against nontelepathic psionics, such as a telekinetic thrashing or other psionics that affect the body.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 174</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="614" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-Animal Shell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10-ft. radius",
+"castingTime":"1 rd.",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"By casting this spell, the caster brings into being a hemispherical force field that prevents the entrance of any sort of living creature that is wholly or partially animal (not magical or extraplanar). Thus a sprite, a giant, or a chimera would be kept out, but undead or conjured creatures could pass through the shell of force, as could such monsters as aerial servants, imps, quasits, golems, elementals, etc. The anti-animal shell functions normally against crossbreeds, such as cambions, and lasts for one turn for each level of experience the caster has attained. Forcing the barrier against creatures strains and ultimately collapses the field.
+The spell requires the caster's holy symbol and a handful of pepper."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-Animal Shell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, the caster brings into being a hemispherical force field that prevents the entrance of any sort of living creature that is wholly or partially animal (not magical or extraplanar). Thus a sprite, a giant, or a chimera would be kept out, but undead or conjured creatures could pass through the shell of force, as could such monsters as aerial servants, imps, quasits, golems, elementals, etc. The anti-animal shell functions normally against crossbreeds, such as cambions, and lasts for one turn for each level of experience the caster has attained. Forcing the barrier against creatures strains and ultimately collapses the field.<br />The spell requires the caster&#039;s holy symbol and a handful of pepper.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 288</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="879" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Anti-mineral Shell",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"10-ft. radius",
+"castingTime":"1 round",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"When a priest casts this spell, he creates an invisible force field or barrier that blocks the entrance of animated or living mineral creatures. It is effective against elementals and creatures of elemental origin such as aerial servants, djinns, and mephits; golems and other constructs; creatures of living stone, such as galeb duhr or xorn; and objects, weapons, or armor animated by some outside force. It does not bar the passage of undead monsters, living creatures carrying inanimate material, or nonanimated minerals such as a giant-thrown boulder or a common rockslide. The antimineral shell moves with the caster, but if the caster tries to force it against a creature affected by this spell, the antimineral shell fails. The material component is a drop of some caustic solvent, such as acid from a black dragon."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Anti-mineral Shell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a priest casts this spell, he creates an invisible force field or barrier that blocks the entrance of animated or living mineral creatures. It is effective against elementals and creatures of elemental origin such as aerial servants, djinns, and mephits; golems and other constructs; creatures of living stone, such as galeb duhr or xorn; and objects, weapons, or armor animated by some outside force. It does not bar the passage of undead monsters, living creatures carrying inanimate material, or nonanimated minerals such as a giant-thrown boulder or a common rockslide. The antimineral shell moves with the caster, but if the caster tries to force it against a creature affected by this spell, the antimineral shell fails. The material component is a drop of some caustic solvent, such as acid from a black dragon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 178</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="881" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Impervious Sanctity of Mind",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 round",
+"duration":"1 turn/level",
+"save":"None",
+"damage":"",
+"description":"When using this spell, the priest renders his mind completely immune to any mind-affecting spell, power, or psionic effect. This includes amnesia, awe, beguiling, charm, command, confusion, domination, emotion, empathy, ESP, fascination, fear, feeblemind, hold, hypnotism, insanity, magic jar, mind blast, phantasmal killer, possession, rulership, sleep, soul trapping, suggestion, telepathy, and any psionic attack or power of the telepathic discipline. In short, if the spell or effect coerces the priest into taking an action or forming an impression that he doesn't wish to, it fails while impervious sanctity of mind is in effect. The only mind-affecting spells or powers that can affect the protected priest are those of exceedingly powerful creatures or artifacts and relics.
+Unlike the wizard spell mind blank, the impervious sanctity of mind offers no protection against detection or scrying. However, it is effective against some attacks and powers that mind blank is powerless against. The spell requires a small ring of lead that was once breathed upon by a red dragon."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Impervious Sanctity of Mind</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When using this spell, the priest renders his mind completely immune to any mind-affecting spell, power, or psionic effect. This includes amnesia, awe, beguiling, charm, command, confusion, domination, emotion, empathy, ESP, fascination, fear, feeblemind, hold, hypnotism, insanity, magic jar, mind blast, phantasmal killer, possession, rulership, sleep, soul trapping, suggestion, telepathy, and any psionic attack or power of the telepathic discipline. In short, if the spell or effect coerces the priest into taking an action or forming an impression that he doesn&#039;t wish to, it fails while impervious sanctity of mind is in effect. The only mind-affecting spells or powers that can affect the protected priest are those of exceedingly powerful creatures or artifacts and relics.<br />Unlike the wizard spell mind blank, the impervious sanctity of mind offers no protection against detection or scrying. However, it is effective against some attacks and powers that mind blank is powerless against. The spell requires a small ring of lead that was once breathed upon by a red dragon.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 178</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="819" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Sphere of Security",
+"school":"Abjuration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10-foot-radius sphere",
+"castingTime":"Special",
+"duration":"6 turns",
+"save":"None",
+"damage":"",
+"description":"Sphere of security protects the priest who casts the spell and his companions within the area of effect. Enemy creatures within the area are unaffected.
+The sphere grants affected creatures a +2 bonus to armor class, a +2 bonus to all saving throws vs. magic, and 50% magic resistance. Casting this portion of the spell requires 1 round.
+In addition, the priest can specify as many as four additional specific protection effects from the List of Protection Scrolls in Appendix 3 of the DMG. Each additional protection lengthens casting time by 1 round. The priest may create one effect per 5 levels of his experience, to a maximum of four effects."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Sphere of Security</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Special&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10-foot-radius sphere&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 turns&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Sphere of security protects the priest who casts the spell and his companions within the area of effect. Enemy creatures within the area are unaffected.<br />The sphere grants affected creatures a +2 bonus to armor class, a +2 bonus to all saving throws vs. magic, and 50% magic resistance. Casting this portion of the spell requires 1 round.<br />In addition, the priest can specify as many as four additional specific protection effects from the List of Protection Scrolls in Appendix 3 of the DMG. Each additional protection lengthens casting time by 1 round. The priest may create one effect per 5 levels of his experience, to a maximum of four effects.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 119</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

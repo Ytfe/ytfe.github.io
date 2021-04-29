@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Light",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"120 yds.",
+"aoe":"20-ft.-radius globe",
+"castingTime":"4",
+"duration":"1 hr. + 1 turn/level",
+"save":"Special",
+"damage":"",
+"description":"This spell causes a luminous glow within 20 feet of the spell's center. The area of light thus caused is equal in brightness to torchlight. Objects in darkness beyond this sphere can be seen, at best, as vague and shadowy shapes. The spell is centered on a point selected by the caster, and he must have a line of sight or unobstructed path to that point when the spell is cast. Light can spring from air, rock, metal, wood, or almost any similar substance. The effect is immobile unless it is specifically centered on a movable object or mobile creature. If this spell is cast upon a creature, any applicable magic resistance and saving throws must be rolled. Successful resistance negates the spell, while a successful saving throw indicates that the spell is centered immediately behind the creature, rather than upon the creature itself. A light spell centered on the visual organs of a creature blinds it, reducing its attack and saving throw rolls by 4 and worsening its Armor Class by 4. The caster can extinguish the light at any time by uttering a single word. Light spells are not cumulative--multiple castings do not provide a brighter light.
+The spell is reversible, causing darkness in the same area and under the same conditions as the light spell, but with half the duration. Magical darkness is equal to that of an unlit interior room--pitch darkness. Any normal light source or magical light source of lesser intensity than full daylight does not function in magical darkness. A darkness spell cast directly against a light spell cancels both, and vice versa."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Light</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft.-radius globe&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr. + 1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes a luminous glow within 20 feet of the spell&#039;s center. The area of light thus caused is equal in brightness to torchlight. Objects in darkness beyond this sphere can be seen, at best, as vague and shadowy shapes. The spell is centered on a point selected by the caster, and he must have a line of sight or unobstructed path to that point when the spell is cast. Light can spring from air, rock, metal, wood, or almost any similar substance. The effect is immobile unless it is specifically centered on a movable object or mobile creature. If this spell is cast upon a creature, any applicable magic resistance and saving throws must be rolled. Successful resistance negates the spell, while a successful saving throw indicates that the spell is centered immediately behind the creature, rather than upon the creature itself. A light spell centered on the visual organs of a creature blinds it, reducing its attack and saving throw rolls by 4 and worsening its Armor Class by 4. The caster can extinguish the light at any time by uttering a single word. Light spells are not cumulative--multiple castings do not provide a brighter light.<br />The spell is reversible, causing darkness in the same area and under the same conditions as the light spell, but with half the duration. Magical darkness is equal to that of an unlit interior room--pitch darkness. Any normal light source or magical light source of lesser intensity than full daylight does not function in magical darkness. A darkness spell cast directly against a light spell cancels both, and vice versa.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 255</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="889" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Purify Metals",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"The metals being forged, not consumed",
+"range":"30'",
+"aoe":"1lb of metal / level",
+"castingTime":"1 rnd",
+"duration":"30 minutes",
+"save":"None",
+"damage":"",
+"description":"Cast upon ores or metals that is being smelted or forged, this spell removes impurities during the process, paving the way for high purity metals.
+
+This spell negates the need for any checks during the smelting process."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Purify Metals</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30'&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rnd&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1lb of metal / level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">30 minutes&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >The metals being forged, not consumed&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Cast upon ores or metals that is being smelted or forged, this spell removes impurities during the process, paving the way for high purity metals.<br /><br />This spell negates the need for any checks during the smelting process.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="883" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Water to Wine",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Holy Symbol",
+"range":"Touch",
+"aoe":"1 wineskin / Level",
+"castingTime":"10",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.
+
+At level 7, the caster may pair the wines specifically with foods."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Water to Wine</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">10&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 wineskin / Level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Holy Symbol&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Turns one wineskin (per level) worth of water into wine. The caster may choose red or white.<br /><br />At level 7, the caster may pair the wines specifically with foods.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="674" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Create Holy Symbol",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"2",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"When the words of this spell are uttered, a holy symbol appropriate to the priest's deity appears out of thin air. The item appears in the priest's hands. It may be used as a component for spells or for any other purpose for which the priest would normally use his holy symbol (such as turning undead). He may also opt to give it to a lower level priest of the same deity. The holy symbol is a permanent object."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Create Holy Symbol</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the words of this spell are uttered, a holy symbol appropriate to the priest&#039;s deity appears out of thin air. The item appears in the priest&#039;s hands. It may be used as a component for spells or for any other purpose for which the priest would normally use his holy symbol (such as turning undead). He may also opt to give it to a lower level priest of the same deity. The holy symbol is a permanent object.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 57</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="890" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hellish Halberd ",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"The item to be forged. Value must be at least 50,000 copper.",
+"range":"Touch",
+"aoe":"1 Item",
+"castingTime":"1 Hour",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"This spell enchants a weapon that is being forged to be especially brutal when wielded in combat. The weapon must be of exquisite quality (minimum cost of 50,000 copper) and be in the forging process when the spell is cast. On a natural attack roll of 18, 19, or 20, roll a d10 to determine critical effects.
+
+1-4: Bleed | The target takes 1 damage per round until the wound is healed/bandaged.
+
+5-7: Stun | The target is stunned for 1 round.
+
+8-9: Maim | Roll for an arm or leg hit (50/50 chance). If an arm is hit, -4 to hit and half attack rate. If a leg is hit, -4 AC and half move. Lasts for 1d4 rounds.
+
+10: Roll for 2 more effects. Effects can stack."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hellish Halberd </div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 Hour&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 Item&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >The item to be forged. Value must be at least 50,000 copper.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enchants a weapon that is being forged to be especially brutal when wielded in combat. The weapon must be of exquisite quality (minimum cost of 50,000 copper) and be in the forging process when the spell is cast. On a natural attack roll of 18, 19, or 20, roll a d10 to determine critical effects.<br /><br />1-4: Bleed | The target takes 1 damage per round until the wound is healed/bandaged.<br /><br />5-7: Stun | The target is stunned for 1 round.<br /><br />8-9: Maim | Roll for an arm or leg hit (50/50 chance). If an arm is hit, -4 to hit and half attack rate. If a leg is hit, -4 AC and half move. Lasts for 1d4 rounds.<br /><br />10: Roll for 2 more effects. Effects can stack.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Handbook page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="533" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Continual Light",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"120 yds.",
+"aoe":"60-ft. radius",
+"castingTime":"6",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"This spell is similar to a light spell, except that it is as bright as full daylight and lasts until negated by magical darkness or by a dispel magic spell. Creatures with penalties in bright light suffer them in this spell's area of effect. As with the light spell, this can be cast into the air, onto an object, or at a creature. In the third case, the continual light affects the space about 1 foot behind a creature that successfully rolls its saving throw vs.
+spell (a failed saving throw means the continual light is centered on the creature and moves as it moves). Note that this spell also blinds a creature if it is successfully cast upon the creature's visual organs. If the spell is cast on a small object that is then placed in a light-proof covering, the spell effects are blocked until the covering is removed.
+Continual light brought into an area of magical darkness (or vice versa) cancels the darkness so that the otherwise prevailing light conditions exist in the overlapping areas of effect. A direct casting of a continual light spell against a similar or weaker magical darkness cancels both.
+This spell eventually consumes the material it is cast upon, but the process takes far longer than the time in a typical campaign. Extremely hard and expensive materials might last hundreds or even thousands of years.
+The reverse spell, continual darkness, causes complete absence of light (pitch blackness), similar to the darkness spell but of greater duration and area."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Continual Light</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">60-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell is similar to a light spell, except that it is as bright as full daylight and lasts until negated by magical darkness or by a dispel magic spell. Creatures with penalties in bright light suffer them in this spell&#039;s area of effect. As with the light spell, this can be cast into the air, onto an object, or at a creature. In the third case, the continual light affects the space about 1 foot behind a creature that successfully rolls its saving throw vs.<br />spell (a failed saving throw means the continual light is centered on the creature and moves as it moves). Note that this spell also blinds a creature if it is successfully cast upon the creature&#039;s visual organs. If the spell is cast on a small object that is then placed in a light-proof covering, the spell effects are blocked until the covering is removed.<br />Continual light brought into an area of magical darkness (or vice versa) cancels the darkness so that the otherwise prevailing light conditions exist in the overlapping areas of effect. A direct casting of a continual light spell against a similar or weaker magical darkness cancels both.<br />This spell eventually consumes the material it is cast upon, but the process takes far longer than the time in a typical campaign. Extremely hard and expensive materials might last hundreds or even thousands of years.<br />The reverse spell, continual darkness, causes complete absence of light (pitch blackness), similar to the darkness spell but of greater duration and area.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 266</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="534" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Create Food & Water",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 Yds.",
+"aoe":"1 cu. ft./level",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the priest causes food and water to appear. The food thus created is highly nourishing if rather bland; each cubic foot of the material sustains three human-sized creatures or one horse-sized creature for a full day. The food decays and becomes inedible within 24 hours, although it can be restored for another 24 hours by casting a purify food and water spell upon it. The water created by this spell is the same as that created by the 1st-level priest spell create water. For each experience level the priest has attained, 1 cubic foot of food or water is created by the spell. For example, a 2nd-level priest could create 1 cubic foot of food and 1 cubic foot of water."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Create Food & Water</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 Yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 cu. ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the priest causes food and water to appear. The food thus created is highly nourishing if rather bland; each cubic foot of the material sustains three human-sized creatures or one horse-sized creature for a full day. The food decays and becomes inedible within 24 hours, although it can be restored for another 24 hours by casting a purify food and water spell upon it. The water created by this spell is the same as that created by the 1st-level priest spell create water. For each experience level the priest has attained, 1 cubic foot of food or water is created by the spell. For example, a 2nd-level priest could create 1 cubic foot of food and 1 cubic foot of water.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 266</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="892" class="card charm" data-school="Enchantment/Charm" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Zweihard's Grips",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Blessed Leather",
+"range":"Touch",
+"aoe":"1 weapon",
+"castingTime":"Special",
+"duration":"1 week / level",
+"save":"None",
+"damage":"",
+"description":"This spell imbues a weapon with a greater bless spell, granting +1 to hit and saves as per the bless spell, lasting for 1 week per caster level.
+
+This spell does not stack with bless or aid.
+
+The leather used must be harvested by the cleric and be of superior quality, and must be integrated into the weapon somehow: e.g. wrapped in the handle. "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Zweihard's Grips</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">Special&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 weapon&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 week / level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Blessed Leather&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell imbues a weapon with a greater bless spell, granting +1 to hit and saves as per the bless spell, lasting for 1 week per caster level.<br /><br />This spell does not stack with bless or aid.<br /><br />The leather used must be harvested by the cleric and be of superior quality, and must be integrated into the weapon somehow: e.g. wrapped in the handle. </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>PHB page 00</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="746" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Blessed Abundance",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 cubic foot/level",
+"castingTime":"1 round",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"This spell allows a priest to duplicate a specified amount of animal or vegetable matter. Magical items and minerals (including rocks, metals, and gemstones) cannot be duplicated. Although organic materials (such as food or living plants) can be duplicated, living creatures cannot be copied by this spell.
+The caster can create 1 cubic foot of material per his experience level. The material to be duplicated must be equal to or less than 1 cubic foot in size or volume. For example, a 9th-level priest can create up to 9 cubic feet of animal or vegetable matter. Using a loaf of bread 1 cubic foot in size, he can produce nine such loaves; using a bucket of apples totaling 1 cubic foot in volume, he can create nine such buckets.
+The material component is the priest's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Blessed Abundance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 cubic foot/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows a priest to duplicate a specified amount of animal or vegetable matter. Magical items and minerals (including rocks, metals, and gemstones) cannot be duplicated. Although organic materials (such as food or living plants) can be duplicated, living creatures cannot be copied by this spell.<br />The caster can create 1 cubic foot of material per his experience level. The material to be duplicated must be equal to or less than 1 cubic foot in size or volume. For example, a 9th-level priest can create up to 9 cubic feet of animal or vegetable matter. Using a loaf of bread 1 cubic foot in size, he can produce nine such loaves; using a bucket of apples totaling 1 cubic foot in volume, he can create nine such buckets.<br />The material component is the priest&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 88</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="615" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Blade Barrier",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"5-60 ft. sq.",
+"castingTime":"9",
+"duration":"3 rds./level",
+"save":"Special",
+"damage":"",
+"description":"The priest employs this spell to set up a wall of circling, razor-sharp blades. These whirl and flash around a central point, creating an immobile barrier. Any creature attempting to pass through the blade barrier suffers 8d8 points of damage. The plane of rotation of the blades can be horizontal, vertical, or in between. Creatures within the area of the barrier when it is invoked are entitled to a saving throw vs. spell. If this is successful, the blades are avoided and no damage is suffered; the creature escapes the area of the blade barrier by the shortest possible route. The barrier remains for three rounds for every experience level of the priest casting it. The barrier can cover an area from as small as 5 feet square to as large as 60 feet square."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Blade Barrier</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">9&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5-60 ft. sq.&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The priest employs this spell to set up a wall of circling, razor-sharp blades. These whirl and flash around a central point, creating an immobile barrier. Any creature attempting to pass through the blade barrier suffers 8d8 points of damage. The plane of rotation of the blades can be horizontal, vertical, or in between. Creatures within the area of the barrier when it is invoked are entitled to a saving throw vs. spell. If this is successful, the blades are avoided and no damage is suffered; the creature escapes the area of the blade barrier by the shortest possible route. The barrier remains for three rounds for every experience level of the priest casting it. The barrier can cover an area from as small as 5 feet square to as large as 60 feet square.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 288</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="622" class="card evocation" data-school="Invocation/Evocation" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Heroes' Feast",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 yds.",
+"aoe":"1 feaster/level",
+"castingTime":"1 turn",
+"duration":"1 hour",
+"save":"None",
+"damage":"",
+"description":"This spell enables the priest to bring forth a great feast that serves as many creatures as the priest has levels of experience. The spell creates a magnificent table, chairs, service, and all the necessary food and drink. The feast takes one full hour to consume, and the beneficial effects do not set in until after this hour is over. Those partaking of the feast are cured of all diseases, are immune to poison for 12 hours, and are healed of 1d4+4 points of damage after imbibing the nectarlike beverage that is part of the feast. The ambrosia like food that is consumed is equal to a bless spell that lasts for 12 hours. Also, during this same period, the people who consumed the feast are immune to fear, hopelessness, and panic. If the feast is interrupted for any reason, the spell is ruined and all effects of the spell are negated.
+The material components of the spell are the priest's holy symbol and specially fermented honey taken from the cells of bee larvae destined for royal status."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Heroes' Feast</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 feaster/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the priest to bring forth a great feast that serves as many creatures as the priest has levels of experience. The spell creates a magnificent table, chairs, service, and all the necessary food and drink. The feast takes one full hour to consume, and the beneficial effects do not set in until after this hour is over. Those partaking of the feast are cured of all diseases, are immune to poison for 12 hours, and are healed of 1d4+4 points of damage after imbibing the nectarlike beverage that is part of the feast. The ambrosia like food that is consumed is equal to a bless spell that lasts for 12 hours. Also, during this same period, the people who consumed the feast are immune to fear, hopelessness, and panic. If the feast is interrupted for any reason, the spell is ruined and all effects of the spell are negated.<br />The material components of the spell are the priest&#039;s holy symbol and specially fermented honey taken from the cells of bee larvae destined for royal status.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 289</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="774" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"The Great Circle",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"6 turns",
+"duration":"1 round",
+"save":"Special",
+"damage":"",
+"description":"The great circle is a powerful cooperative spell that can be used only by four or more priests, each casting the spell simultaneously. Because of the nature of this spell and its casting time, it is often used to cleanse grounds in preparation for the construction of a temple or sanctuary.
+When casting the great circle, the priests stand in a circle of no more than 20-foot diameter. Each faces inward; when the spell is completed, each priest faces outward, directing the energy of the spell.
+When the casting is complete, the spell takes the form of a radiant halo of golden light 20 feet above the ground. This halo quickly expands in a shimmering wave. It can pass through objects, with small arcs of the halo disappearing momentarily and reappearing on the far side. As the halo moves, it generates a high-pitched hum that varies in pitch, almost like a chorus. The halo moves slowly at first, but builds speed, reaching its maximum range at the end of one round.
+The radius of the golden halo is dependent on the number of priests casting the spell.
+Each priest adds 60 feet to the radius. Thus, four priests could generate a halo that extends 240 feet in all directions from the circle of priests. Theoretically, there is no limit to the number of priests who may contribute to this spell, but the need for the priests to be within a 20-foot diameter circle sets a practical limit of 20 casters.
+The halo is pure energy tapped from the Positive Material plane. It causes harm to undead and evil beings within the area of effect. Undead creatures of 8 or fewer hit dice are instantly destroyed and are not allowed a saving throw to avoid the effect. More powerful undead suffer 1d8 points of damage per caster. A successful saving throw vs.
+death magic reduces this damage to half. Creatures of evil alignment suffer 1d6 points of damage per caster (a saving throw is allowed for half-damage).
+The reverse of this spell, the black circle, creates a ring of shimmering black energy.
+Paladins and priests of good alignment suffer 1d10 points of damage per priest in the circle. All other good creatures suffer 1d4 points of damage per caster. Affected creatures are allowed a saving throw vs. death magic to reduce the damage to one-half."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">The Great Circle</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6 turns&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The great circle is a powerful cooperative spell that can be used only by four or more priests, each casting the spell simultaneously. Because of the nature of this spell and its casting time, it is often used to cleanse grounds in preparation for the construction of a temple or sanctuary.<br />When casting the great circle, the priests stand in a circle of no more than 20-foot diameter. Each faces inward; when the spell is completed, each priest faces outward, directing the energy of the spell.<br />When the casting is complete, the spell takes the form of a radiant halo of golden light 20 feet above the ground. This halo quickly expands in a shimmering wave. It can pass through objects, with small arcs of the halo disappearing momentarily and reappearing on the far side. As the halo moves, it generates a high-pitched hum that varies in pitch, almost like a chorus. The halo moves slowly at first, but builds speed, reaching its maximum range at the end of one round.<br />The radius of the golden halo is dependent on the number of priests casting the spell.<br />Each priest adds 60 feet to the radius. Thus, four priests could generate a halo that extends 240 feet in all directions from the circle of priests. Theoretically, there is no limit to the number of priests who may contribute to this spell, but the need for the priests to be within a 20-foot diameter circle sets a practical limit of 20 casters.<br />The halo is pure energy tapped from the Positive Material plane. It causes harm to undead and evil beings within the area of effect. Undead creatures of 8 or fewer hit dice are instantly destroyed and are not allowed a saving throw to avoid the effect. More powerful undead suffer 1d8 points of damage per caster. A successful saving throw vs.<br />death magic reduces this damage to half. Creatures of evil alignment suffer 1d6 points of damage per caster (a saving throw is allowed for half-damage).<br />The reverse of this spell, the black circle, creates a ring of shimmering black energy.<br />Paladins and priests of good alignment suffer 1d10 points of damage per priest in the circle. All other good creatures suffer 1d4 points of damage per caster. Affected creatures are allowed a saving throw vs. death magic to reduce the damage to one-half.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 100</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="799" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Abundance",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"By casting an abundance spell, the priest quickens the ripening of a harvest or the growth of woodland. Fields of crops in the affected area will grow, ripen, and be ready for harvest in a single day. Seed must be sown any time before the casting of the spell.
+An area of woodland will grow as if it had grown for 25 years in one day plus five years per day for another three days. There must be soil capable of supporting the woodland for the growth to remain healthy.
+The priest must stand anywhere within the area to be affected. The priest designates the exact size and shape of the area in the casting.
+The area of effect is 10 square miles for ripening a harvest and 25 square miles for woodland growth. This spell does not create effects such as entanglement or enlargement of the flora within the area of effect."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Abundance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting an abundance spell, the priest quickens the ripening of a harvest or the growth of woodland. Fields of crops in the affected area will grow, ripen, and be ready for harvest in a single day. Seed must be sown any time before the casting of the spell.<br />An area of woodland will grow as if it had grown for 25 years in one day plus five years per day for another three days. There must be soil capable of supporting the woodland for the growth to remain healthy.<br />The priest must stand anywhere within the area to be affected. The priest designates the exact size and shape of the area in the casting.<br />The area of effect is 10 square miles for ripening a harvest and 25 square miles for woodland growth. This spell does not create effects such as entanglement or enlargement of the flora within the area of effect.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 112</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="817" class="card alteration" data-school="Alteration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Siege Wall",
+"school":"Alteration",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"480 yards",
+"aoe":"One building",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"A siege wall uses magical energy to fortify all external areas of a fortified building, such as walls, battlements, drawbridges, and gates. External surfaces to be protected must be contiguous.
+The protective effects of the siege wall are compatible with BATTLESYSTEM rules (see Chapter 7). Creatures assaulting the protected building have their movement rates reduced by half when trying to scale the exterior surfaces (scaling ladders, etc.).
+Attackers suffer a -2 penalty to damage rolls for missile fire.
+Damage or AD caused by war machines is reduced by 2 die levels (if normal damage is 1d12, 1d8 is rolled instead; if damage is 1d10, 1d6 is rolled; ballista has AD8).
+Damage caused by crushing engines is rolled at -2 to the damage roll or ADs. Hits or hit points of crushing engines are reduced by half.
+All enemies attacking a building protected by siege wall who enter an enclosed wall space are out of command unless they are in the line of sight of their commander, regardless of his control diameter.
+All exterior areas of the fortification have their hit points or Hits doubled (see Hits of Building Features in BATTLESYSTEM rules).
+The siege wall expires if the building is destroyed; it lasts a maximum of 24 hours."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Siege Wall</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">480 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One building&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A siege wall uses magical energy to fortify all external areas of a fortified building, such as walls, battlements, drawbridges, and gates. External surfaces to be protected must be contiguous.<br />The protective effects of the siege wall are compatible with BATTLESYSTEM rules (see Chapter 7). Creatures assaulting the protected building have their movement rates reduced by half when trying to scale the exterior surfaces (scaling ladders, etc.).<br />Attackers suffer a -2 penalty to damage rolls for missile fire.<br />Damage or AD caused by war machines is reduced by 2 die levels (if normal damage is 1d12, 1d8 is rolled instead; if damage is 1d10, 1d6 is rolled; ballista has AD8).<br />Damage caused by crushing engines is rolled at -2 to the damage roll or ADs. Hits or hit points of crushing engines are reduced by half.<br />All enemies attacking a building protected by siege wall who enter an enclosed wall space are out of command unless they are in the line of sight of their commander, regardless of his control diameter.<br />All exterior areas of the fortification have their hit points or Hits doubled (see Hits of Building Features in BATTLESYSTEM rules).<br />The siege wall expires if the building is destroyed; it lasts a maximum of 24 hours.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 119</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="821" class="card summoning" data-school="Conjuration/Summoning" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Stalker",
+"school":"Conjuration/Summoning",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"30 yards",
+"aoe":"Special",
+"castingTime":"1 round",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"A priest casting this spell conjures 1d4+2 plant creatures which have statistics identical to shambling mounds of 11HD. These creatures will aid the caster in combat or battle, perform a specific mission, or serve as bodyguards. The creatures remain with the priest for seven days unless he dismisses them. If the stalkers are summoned only for guard duty, however, the duration of the spell is seven months. In this case, the stalkers can only be ordered to guard a specific site or location.
+The stalkers gain resistance to fire as per shambling mounds only if the terrain is suitable (marshy, close to a body of water, etc.)"}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Stalker</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A priest casting this spell conjures 1d4+2 plant creatures which have statistics identical to shambling mounds of 11HD. These creatures will aid the caster in combat or battle, perform a specific mission, or serve as bodyguards. The creatures remain with the priest for seven days unless he dismisses them. If the stalkers are summoned only for guard duty, however, the duration of the spell is seven months. In this case, the stalkers can only be ordered to guard a specific site or location.<br />The stalkers gain resistance to fire as per shambling mounds only if the terrain is suitable (marshy, close to a body of water, etc.)</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 120</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

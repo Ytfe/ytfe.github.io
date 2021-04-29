@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardALteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestvelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Chill Touch",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1",
+"duration":"3 rds.+ 1 rd./level",
+"save":"Negate",
+"damage":"1d4",
+"description":"When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any living creature upon which the wizard makes a successful melee attack. The touched creature must roll a successful saving throw vs. spell or suffer 1d4 points of damage and lose 1 point of Strength. If the save is successful, the creature remains unharmed.
+
+Creatures not rated for Strength suffer a -1 penalty to their attack rolls for every other successful touch. Lost Strength returns at the rate of 1 point per hour. Damage must be cured magically or healed naturally.
+
+This spell has a special effect on undead creatures. Undead touched by the caster suffer no damage or Strength loss, but they must successfully save vs. spell or flee for 1d4 rounds+ 1 round per level of the caster."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Chill Touch</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d4&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any living creature upon which the wizard makes a successful melee attack. The touched creature must roll a successful saving throw vs. spell or suffer 1d4 points of damage and lose 1 point of Strength. If the save is successful, the creature remains unharmed.<br /><br />Creatures not rated for Strength suffer a -1 penalty to their attack rolls for every other successful touch. Lost Strength returns at the rate of 1 point per hour. Damage must be cured magically or healed naturally.<br /><br />This spell has a special effect on undead creatures. Undead touched by the caster suffer no damage or Strength loss, but they must successfully save vs. spell or flee for 1d4 rounds+ 1 round per level of the caster.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 172</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="953" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Mana Tap",
+"school":"Necromancy",
+"verbal":"0",
+"somatic":"1",
+"material":"1",
+"materials":"Blood drawn from the caster during the casting of the spell",
+"range":"Self",
+"aoe":"",
+"castingTime":"1",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"Variable",
+"description":"The caster draws some of their own life force and converts it into mana. In effect, they gain 3 mp for each HP they lose. The caster will need a way of drawing out blood, usually a knife or other bladed object is used to create a wound, although an already bleeding caster might draw on existing wounds.
+
+Life lost due to Mana Tap should be recorded separately as it can only be regained through natural healing.
+
+If the MP rules are not being used, the following conversions will work.
+
+HP | Spell Slot Level
+2  | 1
+3  | 2
+4  | 3
+6  | 4
+9  | 5
+13 | 6
+20 | 7
+26 | 8
+34 | 9"}</textarea>
+ -->
+			<div class="components  somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Mana Tap</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Self&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">Variable&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Blood drawn from the caster during the casting of the spell&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The caster draws some of their own life force and converts it into mana. In effect, they gain 3 mp for each HP they lose. The caster will need a way of drawing out blood, usually a knife or other bladed object is used to create a wound, although an already bleeding caster might draw on existing wounds.<br /><br />Life lost due to Mana Tap should be recorded separately as it can only be regained through natural healing.<br /><br />If the MP rules are not being used, the following conversions will work.<br /><br />HP | Spell Slot Level<br />2  | 1<br />3  | 2<br />4  | 3<br />6  | 4<br />9  | 5<br />13 | 6<br />20 | 7<br />26 | 8<br />34 | 9</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="342" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Ray of Fatigue",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yds. + 5 yds./level",
+"aoe":"1 creature",
+"castingTime":"1",
+"duration":"1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"This nefarious spell affects the victim's life energies, increasing any fatigue or exhaustion currently possesses. Alter and well-rested characters suddenly become tired and sluggish, and characters who are already fatigue may be reduced to near-helplessness. In effect, the ray adds one level of fatigue or encumbrance to the victim. Moderately encumbered characters suffer a -1 penalty to attack rolls; heavily encumbered characters suffer a -2 penalty to attack rolls and a +1  Armor class penalty to attack rolls and a +3 Armor class penalty.(Assume that monsters suffer a -1 penalty to their attack rolls and reduce their movement rates by 33%). The victim is allowed a saving throw to negate the spell's effects.
+
+If you are using the fatigue rules from the Player's option; Combat &tactics book, this spell operates in a slightly different manner-fresh characters become fatigued, gaining one level of encumbrance; fatigued characters become exhausted, gaining two levels of encumbrance; and exhausted characters collapse in a quivering heap, unable to move or attack."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Ray of Fatigue</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds. + 5 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This nefarious spell affects the victim&#039;s life energies, increasing any fatigue or exhaustion currently possesses. Alter and well-rested characters suddenly become tired and sluggish, and characters who are already fatigue may be reduced to near-helplessness. In effect, the ray adds one level of fatigue or encumbrance to the victim. Moderately encumbered characters suffer a -1 penalty to attack rolls; heavily encumbered characters suffer a -2 penalty to attack rolls and a +1  Armor class penalty to attack rolls and a +3 Armor class penalty.(Assume that monsters suffer a -1 penalty to their attack rolls and reduce their movement rates by 33%). The victim is allowed a saving throw to negate the spell&#039;s effects.<br /><br />If you are using the fatigue rules from the Player&#039;s option; Combat &amp;tactics book, this spell operates in a slightly different manner-fresh characters become fatigued, gaining one level of encumbrance; fatigued characters become exhausted, gaining two levels of encumbrance; and exhausted characters collapse in a quivering heap, unable to move or attack.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 142</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="103" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spectral Hand",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.+ 5 yds./level",
+"aoe":"1 opponent",
+"castingTime":"2",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"This spell causes a ghostly, glowing hand, shaped from the caster's life force, to materialize within the spell range and move as the caster desires. 
+
+Any touch attack spell of 4th level or less that is subsequently cast by the wizard can be delivered by the spectral hand. The spell gives the caster a +2 bonus to his attack roll. 
+
+The caster cannot perform any other actions when attacking with the hand; the hand returns to the caster and hovers if the caster takes other actions. The hand lasts the full spell duration unless dismissed by the caster, and it is possible to use more than one touch attack with it. The hand receives flank and rear attack bonuses if the caster is in a position to do so. 
+
+The hand is vulnerable to magical attack but has an Armor Class of -2. Any damage to the hand ends the spell and inflicts 1d4 points of damage to the caster."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spectral Hand</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.+ 5 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 opponent&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes a ghostly, glowing hand, shaped from the caster&#039;s life force, to materialize within the spell range and move as the caster desires. <br /><br />Any touch attack spell of 4th level or less that is subsequently cast by the wizard can be delivered by the spectral hand. The spell gives the caster a +2 bonus to his attack roll. <br /><br />The caster cannot perform any other actions when attacking with the hand; the hand returns to the caster and hovers if the caster takes other actions. The hand lasts the full spell duration unless dismissed by the caster, and it is possible to use more than one touch attack with it. The hand receives flank and rear attack bonuses if the caster is in a position to do so. <br /><br />The hand is vulnerable to magical attack but has an Armor Class of -2. Any damage to the hand ends the spell and inflicts 1d4 points of damage to the caster.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 188</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="938" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Unholy Strength",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1",
+"duration":"1 turn / level",
+"save":"None",
+"damage":"",
+"description":"A necromancer must touch a willing subject in the casting of this spell, turning their muscles into undead muscles, raising their strength temporarily.
+
+The subject of the spell makes an exchange of HP for Strength. For every HP they lose, they temporarily gain 1 point of strength, to a maximum of 18/100 (each category of exceptional strength counts as 1 point). Non-warriors can gain exceptional strength this way. When the duration expires, the subject reverts to their normal strength, and then loses an equal amount to what they gained. The lost strength returns at a rate of 1 point per day. It is worth keeping in mind, that any character who reaches 0 strength dies.
+
+Example: Lili the Cleric is fighting a giant with her necromancer friend Leoric. Leoric casts Unholy Strength on Lili, who chooses to give up 11 hp, raising her strength from 12 to 18/100. When the spell expires after defeating the giant, Lili looses 11 points of strength, bringing her to 1 strength. The next morning, she has regained 1 lost point of strength and is at 2 str. Three days later, she's at 5 strength. A week later, she's back at her full 12 strength. 
+
+Non-willing subjects, including unconscious people, cannot be targeted with the spell, as part of the magic involves an internal agreement to relinquish HP. Similarly, the muscles of the subject are decayed and undead, giving the subject of the spell a stench of death and decay about them. "}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Unholy Strength</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn / level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A necromancer must touch a willing subject in the casting of this spell, turning their muscles into undead muscles, raising their strength temporarily.<br /><br />The subject of the spell makes an exchange of HP for Strength. For every HP they lose, they temporarily gain 1 point of strength, to a maximum of 18/100 (each category of exceptional strength counts as 1 point). Non-warriors can gain exceptional strength this way. When the duration expires, the subject reverts to their normal strength, and then loses an equal amount to what they gained. The lost strength returns at a rate of 1 point per day. It is worth keeping in mind, that any character who reaches 0 strength dies.<br /><br />Example: Lili the Cleric is fighting a giant with her necromancer friend Leoric. Leoric casts Unholy Strength on Lili, who chooses to give up 11 hp, raising her strength from 12 to 18/100. When the spell expires after defeating the giant, Lili looses 11 points of strength, bringing her to 1 strength. The next morning, she has regained 1 lost point of strength and is at 2 str. Three days later, she&#039;s at 5 strength. A week later, she&#039;s back at her full 12 strength. <br /><br />Non-willing subjects, including unconscious people, cannot be targeted with the spell, as part of the magic involves an internal agreement to relinquish HP. Similarly, the muscles of the subject are decayed and undead, giving the subject of the spell a stench of death and decay about them. </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Subject smells bad until all lost HP is regained. Moderate aura of darkness.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="117" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Feign Death",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"1",
+"duration":"1 hr.+ 1 turn/level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster (or any other creature whose levels of experience or Hit Dice do not exceed the wizard's own level) can be put into a cataleptic state that is impossible to distinguish from death. Although the person or creature affected by the feign death spell can smell, hear, and know what is going on, no feeling or sight of any sort is possible. Thus any wounding or mistreatment of the body is not felt and no reaction occurs; damage is only 1/2 normal. In addition, paralysis, poison, or energy-level drain cannot affect an individual under the influence of this spell. 
+
+Poison injected or otherwise introduced into the body takes effect when the spell recipient is no longer under the influence of this spell, although a saving throw is permitted.
+
+Note that only a willing individual can be affected by feign death. The spellcaster can end the spell effects at any time desired, as will a successful dispel, but a full round is required for bodily functions to begin again."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Feign Death</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr.+ 1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster (or any other creature whose levels of experience or Hit Dice do not exceed the wizard&#039;s own level) can be put into a cataleptic state that is impossible to distinguish from death. Although the person or creature affected by the feign death spell can smell, hear, and know what is going on, no feeling or sight of any sort is possible. Thus any wounding or mistreatment of the body is not felt and no reaction occurs; damage is only 1/2 normal. In addition, paralysis, poison, or energy-level drain cannot affect an individual under the influence of this spell. <br /><br />Poison injected or otherwise introduced into the body takes effect when the spell recipient is no longer under the influence of this spell, although a saving throw is permitted.<br /><br />Note that only a willing individual can be affected by feign death. The spellcaster can end the spell effects at any time desired, as will a successful dispel, but a full round is required for bodily functions to begin again.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 191</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="974" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hold Person",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Creature sized mirror and a drop of the creatures blood.",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"5",
+"duration":"Special",
+"save":"Negate",
+"damage":"None",
+"description":"By positioning a creature against a mirror, and marking their forehead with their own blood, the necromancer entombs the creature inside a mirror. The mirror must be of a size to hold the creature. Spells that change the size of the creature prevent the creature from being entombed until the spell is worn off. Similarly, mirrors that are magically changed in size are unsuitable for this task.
+
+Once a creature is held in a mirror, it is in a state of two dimensional semi-stasis. The creature does not heal, does not age, has no need of food, drink, or bodily functions, yet they may still move and speak (if they were able to outside of the mirror). Furthermore, those trapped in the mirror find that their three dimensional belongings no longer function in two dimensional space: books cannot be read, potions cannot be consumed, itches cannot be scratched, etc. Creatures with magical abilities (spells, gazes, etc.) will find that their spells are restricted to the mirror dimension in which they are placed. A basilisk would not petrify someone looking at it, nor could a mage within a mirror cast Magic Missile at someone on the other side or at the mirror itself.
+
+Creatures inside the mirror are aware of what is happening on the outside of the mirror, being able to see, hear, and smell. Similarly, creatures on the outside of the mirror and see and hear those trapped within. Those inside the mirror may walk around within the confines of the mirror, and may come into the foreground (between the onlooker and their reflection) or stay in the background (behind the reflection of creatures). 
+
+If the mirror is broken or damaged (scratching the glass counts as damaged), the magic is broken, the mirror shatters, and the creature is freed, in the exact state it was originally imprisoned.
+
+A shatter spell cast from within the mirror dimension will break the mirror. Spells that move between dimensions can be used as long as they do not require 3 dimensional space (A spell that opens a portal one walks through would not work, but a spell that shifts the caster from one dimension to another will). Teleportation has no effect.
+
+A caster may not imprison themselves in a mirror."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hold Person</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">None&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Creature sized mirror and a drop of the creatures blood.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By positioning a creature against a mirror, and marking their forehead with their own blood, the necromancer entombs the creature inside a mirror. The mirror must be of a size to hold the creature. Spells that change the size of the creature prevent the creature from being entombed until the spell is worn off. Similarly, mirrors that are magically changed in size are unsuitable for this task.<br /><br />Once a creature is held in a mirror, it is in a state of two dimensional semi-stasis. The creature does not heal, does not age, has no need of food, drink, or bodily functions, yet they may still move and speak (if they were able to outside of the mirror). Furthermore, those trapped in the mirror find that their three dimensional belongings no longer function in two dimensional space: books cannot be read, potions cannot be consumed, itches cannot be scratched, etc. Creatures with magical abilities (spells, gazes, etc.) will find that their spells are restricted to the mirror dimension in which they are placed. A basilisk would not petrify someone looking at it, nor could a mage within a mirror cast Magic Missile at someone on the other side or at the mirror itself.<br /><br />Creatures inside the mirror are aware of what is happening on the outside of the mirror, being able to see, hear, and smell. Similarly, creatures on the outside of the mirror and see and hear those trapped within. Those inside the mirror may walk around within the confines of the mirror, and may come into the foreground (between the onlooker and their reflection) or stay in the background (behind the reflection of creatures). <br /><br />If the mirror is broken or damaged (scratching the glass counts as damaged), the magic is broken, the mirror shatters, and the creature is freed, in the exact state it was originally imprisoned.<br /><br />A shatter spell cast from within the mirror dimension will break the mirror. Spells that move between dimensions can be used as long as they do not require 3 dimensional space (A spell that opens a portal one walks through would not work, but a spell that shifts the caster from one dimension to another will). Teleportation has no effect.<br /><br />A caster may not imprison themselves in a mirror.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Strong magic until the mirror is broken.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="125" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hold Undead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of sulphur and powdered garlic",
+"range":"60 ft.",
+"aoe":"1d3 undead",
+"castingTime":"5",
+"duration":"1d4 rds.+ 1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"When cast, this spell renders immobile 1d3 undead creatures whose total Hit Dice are equal to or less than the caster's level.
+No more than three undead can be affected by a single spell. To cast, the wizard aims the spell at a point within range and the three undead closest  to this are considered to be in the area of effect, provided all are within the field of vision and spell range of the caster. 
+
+Undead of a mindless nature (skeletons, zombies, or ghouls) are automatically affected. Other forms of undead are allowed a saving throw to negate the effect. 
+
+If the spell is successful, it renders the undead immobile for the duration of the spell.
+
+The material component for this spell is a pinch of sulphur and powdered garlic."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hold Undead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 ft.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d3 undead&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d4 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of sulphur and powdered garlic&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When cast, this spell renders immobile 1d3 undead creatures whose total Hit Dice are equal to or less than the caster&#039;s level.<br />No more than three undead can be affected by a single spell. To cast, the wizard aims the spell at a point within range and the three undead closest  to this are considered to be in the area of effect, provided all are within the field of vision and spell range of the caster. <br /><br />Undead of a mindless nature (skeletons, zombies, or ghouls) are automatically affected. Other forms of undead are allowed a saving throw to negate the effect. <br /><br />If the spell is successful, it renders the undead immobile for the duration of the spell.<br /><br />The material component for this spell is a pinch of sulphur and powdered garlic.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 193</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="924" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Phantom Feast",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"0",
+"material":"1",
+"materials":"Caster's flesh",
+"range":"",
+"aoe":"",
+"castingTime":"1",
+"duration":"1 week",
+"save":"1/2",
+"damage":"3 + 1 / person",
+"description":"By presenting a part of their body and declaring a feast, the caster imbues themself with magic. The caster, and a number of people up to the caster level, may eat the flesh of the caster. Each person needs but one mouthful of flesh to nourish them for a week, although this spell does not stave off the effects of dehydration. The caster takes an amount of damage equal to the number of people who feast on them plus three (a 4 person party would deal 7 damage to the caster). The caster's flesh quickly regrows, but the damage they take is very real and cannot be healed by magical means.
+
+Creatures one size larger than the caster deal 3 damage when they feast, while smaller creatures still deal 1 point of damage. 
+
+It is not uncommon for creatures who use this spell to develop a taste for human flesh (assuming the caster is human). Those who survive on this spell for too long may find themselves repulsed by normal food."}</textarea>
+ -->
+			<div class="components  verbal material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Phantom Feast</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 week&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">3 + 1 / person&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Caster's flesh&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By presenting a part of their body and declaring a feast, the caster imbues themself with magic. The caster, and a number of people up to the caster level, may eat the flesh of the caster. Each person needs but one mouthful of flesh to nourish them for a week, although this spell does not stave off the effects of dehydration. The caster takes an amount of damage equal to the number of people who feast on them plus three (a 4 person party would deal 7 damage to the caster). The caster&#039;s flesh quickly regrows, but the damage they take is very real and cannot be healed by magical means.<br /><br />Creatures one size larger than the caster deal 3 damage when they feast, while smaller creatures still deal 1 point of damage. <br /><br />It is not uncommon for creatures who use this spell to develop a taste for human flesh (assuming the caster is human). Those who survive on this spell for too long may find themselves repulsed by normal food.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="931" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Reverse Healing",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Drop of caster's blood",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"3",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"To cast this spell, the caster must draw their own blood onto their fingertip, speak the word, and touch the target. If the target fails their saving throw, they take damage instead of gain life from all nonmagical healing. Magic healing of 3rd level and below heals the very damage it deals, rendering it ineffective. 4th level healing spells will negate the spell instead of healing damage. 5th level healing spells and above will remove the spell in addition to their normal effects. A remove curse or dispel magic spell will also remove the effect."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Reverse Healing</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Drop of caster's blood&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">To cast this spell, the caster must draw their own blood onto their fingertip, speak the word, and touch the target. If the target fails their saving throw, they take damage instead of gain life from all nonmagical healing. Magic healing of 3rd level and below heals the very damage it deals, rendering it ineffective. 4th level healing spells will negate the spell instead of healing damage. 5th level healing spells and above will remove the spell in addition to their normal effects. A remove curse or dispel magic spell will also remove the effect.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">Light curse.</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Custom</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="411" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spirit Armor",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"3",
+"duration":"2 rounds/level",
+"save":"Special",
+"damage":"2d3",
+"description":"This spell allows the wizard to surround himself with a portion of his own life essence, which takes the form of a shimmering aura. The spirit armor offers protection equivalent to splint mail (AC 16) and grants the wizard a + 3 bonus to saving throws vs. magical attacks. The spirit armor's effects are not cumulative with other types of armor or magical protection, but Dexterity bonuses apply.
+
+The spirit armor is effective against magical and nonmagical weapons and attacks. It does not hinder movement or add weight or encumbrance. It does not interfere with spellcasting.
+
+When the spell ends, the aura dissipates and the caster temporarily loses a bit of his life essence, suffering 2d3 points of damage unless he succeeds at a saving throw vs. spell. These lost HP return at a rate of 1/hour. No damage is sustained if the save is successful.
+"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spirit Armor</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rounds/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">2d3&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows the wizard to surround himself with a portion of his own life essence, which takes the form of a shimmering aura. The spirit armor offers protection equivalent to splint mail (AC 16) and grants the wizard a + 3 bonus to saving throws vs. magical attacks. The spirit armor&#039;s effects are not cumulative with other types of armor or magical protection, but Dexterity bonuses apply.<br /><br />The spirit armor is effective against magical and nonmagical weapons and attacks. It does not hinder movement or add weight or encumbrance. It does not interfere with spellcasting.<br /><br />When the spell ends, the aura dissipates and the caster temporarily loses a bit of his life essence, suffering 2d3 points of damage unless he succeeds at a saving throw vs. spell. These lost HP return at a rate of 1/hour. No damage is sustained if the save is successful.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 26</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="144" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Vampiric Touch",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"3",
+"duration":"One touch",
+"save":"None",
+"damage":"",
+"description":"When the caster touches an opponent in melee with a successful attack roll, the opponent loses 1d6 hit points for every two caster levels, to a maximum drain of 6d6 for a 12th-level caster. 
+
+The spell is expended when a successful touch is made or one turn passes. The hit points are added to the caster's total, with any hit points over the caster's normal total treated as temporary additional hit points. 
+
+Any damage to the caster is subtracted from the temporary hit points first. After one hour, any extra hit points above the caster's normal total are lost. 
+
+The creature originally losing hit points through this spell can regain them by magical or normal healing. 
+Undead creatures are unaffected by this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Vampiric Touch</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">One touch&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the caster touches an opponent in melee with a successful attack roll, the opponent loses 1d6 hit points for every two caster levels, to a maximum drain of 6d6 for a 12th-level caster. <br /><br />The spell is expended when a successful touch is made or one turn passes. The hit points are added to the caster&#039;s total, with any hit points over the caster&#039;s normal total treated as temporary additional hit points. <br /><br />Any damage to the caster is subtracted from the temporary hit points first. After one hour, any extra hit points above the caster&#039;s normal total are lost. <br /><br />The creature originally losing hit points through this spell can regain them by magical or normal healing. <br />Undead creatures are unaffected by this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 197</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="150" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Contagion",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"",
+"description":"This spell causes a major disease and weakness in a creature. The afflicted individual is immediately stricken with painful and distracting symptoms: boils, blotches, lesions, seeping abscesses, and so on. 
+
+Strength, Dexterity, and Charisma are reduced by 2. Attack rolls are decreased by 2. The effect persists until the character receives a cure disease spell or spends 1d3 weeks taking a complete rest to recover. 
+
+Characters ignoring the contagion for more than a day or so may be susceptible to worse diseases at the discretion of the DM."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Contagion</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes a major disease and weakness in a creature. The afflicted individual is immediately stricken with painful and distracting symptoms: boils, blotches, lesions, seeping abscesses, and so on. <br /><br />Strength, Dexterity, and Charisma are reduced by 2. Attack rolls are decreased by 2. The effect persists until the character receives a cure disease spell or spends 1d3 weeks taking a complete rest to recover. <br /><br />Characters ignoring the contagion for more than a day or so may be susceptible to worse diseases at the discretion of the DM.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 199</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="156" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Enervation",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yds./level",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"1d4 hrs.+ 1 hr./level",
+"save":"Negate",
+"damage":"",
+"description":"This spell temporarily suppresses the subject's life force. The necromancer points his finger and utters the incantation, releasing a black bolt of crackling energy. 
+
+The subject must roll a saving throw vs. spell, adjusted for Dexterity, to avoid the bolt. Success means the spell has no effect. Failure means the subject is treated exactly as if he had been drained of energy levels by a wight, one level for every four levels of the caster. 
+
+Hit Dice, spells, and other character details dependent on level are lost or reduced. Those drained to 0th level must make a system shock check to survive and are helpless until the spell expires. 
+
+The spell effect eventually wears off, either after 1d4 hours plus one hour per caster level, or after six hours of complete and undisturbed rest. 
+
+Level abilities are regained, but lost spells must be rememorized. 
+
+Undead are immune to this spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Enervation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d4 hrs.+ 1 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell temporarily suppresses the subject&#039;s life force. The necromancer points his finger and utters the incantation, releasing a black bolt of crackling energy. <br /><br />The subject must roll a saving throw vs. spell, adjusted for Dexterity, to avoid the bolt. Success means the spell has no effect. Failure means the subject is treated exactly as if he had been drained of energy levels by a wight, one level for every four levels of the caster. <br /><br />Hit Dice, spells, and other character details dependent on level are lost or reduced. Those drained to 0th level must make a system shock check to survive and are helpless until the spell expires. <br /><br />The spell effect eventually wears off, either after 1d4 hours plus one hour per caster level, or after six hours of complete and undisturbed rest. <br /><br />Level abilities are regained, but lost spells must be rememorized. <br /><br />Undead are immune to this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 200</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="420" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Mask of Death",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"A drop of doppleganger",
+"range":"Touch",
+"aoe":"One creature",
+"castingTime":"1 round",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"By casting this spell, a wizard can change a corpse's features to make it appear to be someone else. The caster must possess an accurate portrait of the individual to be duplicated, or must have a clear mental image of the person based on personal experience.
+
+If animate dead is cast on the body, it can be animated to become a zombie that looks exactly like the copied person. The double is a mindless automaton, however, having all the characteristics of a normal zombie.
+
+This spell may be cast on a creature that has already become a zombie. The wizard must successfully touch the zombie in combat, unless the zombie is controlled by the caster.
+
+The material component of this spell is a drop of doppelganger's blood."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Mask of Death</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >A drop of doppleganger&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By casting this spell, a wizard can change a corpse&#039;s features to make it appear to be someone else. The caster must possess an accurate portrait of the individual to be duplicated, or must have a clear mental image of the person based on personal experience.<br /><br />If animate dead is cast on the body, it can be animated to become a zombie that looks exactly like the copied person. The double is a mindless automaton, however, having all the characteristics of a normal zombie.<br /><br />This spell may be cast on a creature that has already become a zombie. The wizard must successfully touch the zombie in combat, unless the zombie is controlled by the caster.<br /><br />The material component of this spell is a drop of doppelganger&#039;s blood.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 29</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="194" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animate Dead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a drop of blood and a pinch of bone powder or a bone shard",
+"range":"10 yds.",
+"aoe":"Special",
+"castingTime":"5 rds.",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"This spell creates the lowest of the undead monsters - skeletons or zombies - usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes existing remains to become animated and obey the simple verbal commands of the caster. 
+The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat or are turned; the magic cannot be dispelled. The following types of dead creatures can be animated:
+
+A) Humans, demihumans, and humanoids with 1 Hit Die. The wizard can animate one skeleton for each experience level he has attained, or one zombie for every two levels. The experience levels, if any, of the slain are ignored: the body of a newly dead 9th-level fighter is animated as a zombie with 2 Hit Dice, without special class or racial abilities.
+
+B) Creatures with more than 1 Hit Die. The number of undead animated is determined by the monster Hit Dice (the total Hit Dice cannot exceed the wizards level). Skeletal forms have the Hit Dice of the original creature, while zombie forms have one more Hit Die. Thus, a 12th-level wizard could animate four zombie gnolls (4 x [2 + 1 Hit Dice]= 12), or a single fire giant skeleton. Such undead have none of the special abilities they had in life.
+
+C) Creatures with less than 1 Hit Die. The caster can animate two skeletons per level or one zombie per level. The creatures have their normal Hit Dice as skeletons and an additional Hit Die as zombies, Clerics receive a +1 bonus when trying to turn these.
+
+This spell assumes that the bodies or bones are available and are reasonably intact (those of skeletons or zombies destroyed in combat won't be!).
+
+It requires a drop of blood and a pinch of bone powder or a bone shard to complete the spell. 
+
+The casting of this spell is not a good act and only evil wizards use it frequently."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animate Dead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a drop of blood and a pinch of bone powder or a bone shard&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates the lowest of the undead monsters - skeletons or zombies - usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes existing remains to become animated and obey the simple verbal commands of the caster. <br />The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat or are turned; the magic cannot be dispelled. The following types of dead creatures can be animated:<br /><br />A) Humans, demihumans, and humanoids with 1 Hit Die. The wizard can animate one skeleton for each experience level he has attained, or one zombie for every two levels. The experience levels, if any, of the slain are ignored: the body of a newly dead 9th-level fighter is animated as a zombie with 2 Hit Dice, without special class or racial abilities.<br /><br />B) Creatures with more than 1 Hit Die. The number of undead animated is determined by the monster Hit Dice (the total Hit Dice cannot exceed the wizards level). Skeletal forms have the Hit Dice of the original creature, while zombie forms have one more Hit Die. Thus, a 12th-level wizard could animate four zombie gnolls (4 x [2 + 1 Hit Dice]= 12), or a single fire giant skeleton. Such undead have none of the special abilities they had in life.<br /><br />C) Creatures with less than 1 Hit Die. The caster can animate two skeletons per level or one zombie per level. The creatures have their normal Hit Dice as skeletons and an additional Hit Die as zombies, Clerics receive a +1 bonus when trying to turn these.<br /><br />This spell assumes that the bodies or bones are available and are reasonably intact (those of skeletons or zombies destroyed in combat won&#039;t be!).<br /><br />It requires a drop of blood and a pinch of bone powder or a bone shard to complete the spell. <br /><br />The casting of this spell is not a good act and only evil wizards use it frequently.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 210</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="214" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Magic Jar",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Jar",
+"range":"10 yds./level",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"The magic jar spell enables the caster to shift his life force into a special receptacle (a gem or large crystal). From there the caster can force an exchange of life forces between the receptacle and another creature, thus enabling the wizard to take over and control the body of another creature, while the life force of the host is confined in the receptacle. The special life force receptacle must be within spell range of the wizard's body at the time of spellcasting. The wizard's life force shifts into the receptacle in the round in which the casting is completed, allowing no other actions.
+
+While in the magic jar, the caster can sense and attack any life force within a 10-footper- level radius (on the same plane); however, the exact creature types and relative physical positions cannot be determined. In a group of life forces, the caster can sense a difference of four or more levels/Hit Dice and can determine whether a life force is positive or negative energy.
+
+For example, if two 10th-level fighters are attacking a hill giant and four ogres, the caster could determine that there are three stronger and four weaker life forces within range, all with positive life energy. The caster could try to take over either a stronger or a weaker creature, but he has no control over exactly which creature is attacked.
+
+An attempt to take over a host body requires a full round. It is blocked by a protection from evil spell or similar ward. It is successful only if the subject fails a saving throw vs. spell with a special modifier (see following). The saving throw is modified by subtracting the combined Intelligence and Wisdom scores of the target from those of the wizard
+
+(Intelligence and Hit Dice in nonhuman or nonhumanoid creatures). This modifier is added to (or subtracted from) the die roll. (See book for table).
+
+A negative score indicates that the wizard has a lower total than the target; thus, the host has a saving throw bonus. Failure to take over the host leaves the wizard's life force in the magic jar.
+
+If successful, the caster's life force occupies the host body and the host's life force is confined in the magic jar receptacle. The caster can call upon rudimentary or instinctive knowledge of the subject creature, but not upon its real or acquired knowledge (i.e., the wizard does not automatically know the language or spells of the creature). The caster retains his own attack rolls, class knowledge and training, and any adjustments due to his Intelligence or Wisdom. If the host body is human or humanoid, and the necessary spell components are available, the wizard can even use his memorized spells. The host body retains its own hit points and physical abilities and properties. The DM decides if any additional modifications are necessary; for example, perhaps clumsiness or inefficiency occurs if the caster must become used to the new form. The alignment of the host or receptacle is that of the occupying life force.
+
+The caster can shift freely from the host to the receptacle if within the 10-foot-per-level range. Each attempt to shift requires one round. The spell ends when the wizard shifts from the jar to his own body.
+
+A successful dispel magic spell cast on the host can drive the caster of the magic jar spell back into the receptacle and prevent him from making any attacks for 1d4 rounds plus 1 round per level of the caster of the dispel. The base success chance is 50%, plus or minus 5% per level difference between the casters. A successful dispel magic cast against the receptacle forces the occupant back into his own body. If the wizard who cast the magic jar is forced back into his own body, the spell ends.
+
+If the host body is slain, the caster returns to the receptacle, if within range, and the life force of the host departs (i.e., it is dead). If the host body is slain beyond the range of the spell, both the host and the caster die.
+
+Any life force with nowhere to go is treated as slain unless recalled by a raise dead, resurrection, or similar spell.
+
+If the body of the caster is slain, his life force survives if it is in either the receptacle or the host. If the receptacle is destroyed while the caster's life force occupies it, the caster is irrevocably slain."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Magic Jar</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >Jar&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The magic jar spell enables the caster to shift his life force into a special receptacle (a gem or large crystal). From there the caster can force an exchange of life forces between the receptacle and another creature, thus enabling the wizard to take over and control the body of another creature, while the life force of the host is confined in the receptacle. The special life force receptacle must be within spell range of the wizard&#039;s body at the time of spellcasting. The wizard&#039;s life force shifts into the receptacle in the round in which the casting is completed, allowing no other actions.<br /><br />While in the magic jar, the caster can sense and attack any life force within a 10-footper- level radius (on the same plane); however, the exact creature types and relative physical positions cannot be determined. In a group of life forces, the caster can sense a difference of four or more levels/Hit Dice and can determine whether a life force is positive or negative energy.<br /><br />For example, if two 10th-level fighters are attacking a hill giant and four ogres, the caster could determine that there are three stronger and four weaker life forces within range, all with positive life energy. The caster could try to take over either a stronger or a weaker creature, but he has no control over exactly which creature is attacked.<br /><br />An attempt to take over a host body requires a full round. It is blocked by a protection from evil spell or similar ward. It is successful only if the subject fails a saving throw vs. spell with a special modifier (see following). The saving throw is modified by subtracting the combined Intelligence and Wisdom scores of the target from those of the wizard<br /><br />(Intelligence and Hit Dice in nonhuman or nonhumanoid creatures). This modifier is added to (or subtracted from) the die roll. (See book for table).<br /><br />A negative score indicates that the wizard has a lower total than the target; thus, the host has a saving throw bonus. Failure to take over the host leaves the wizard&#039;s life force in the magic jar.<br /><br />If successful, the caster&#039;s life force occupies the host body and the host&#039;s life force is confined in the magic jar receptacle. The caster can call upon rudimentary or instinctive knowledge of the subject creature, but not upon its real or acquired knowledge (i.e., the wizard does not automatically know the language or spells of the creature). The caster retains his own attack rolls, class knowledge and training, and any adjustments due to his Intelligence or Wisdom. If the host body is human or humanoid, and the necessary spell components are available, the wizard can even use his memorized spells. The host body retains its own hit points and physical abilities and properties. The DM decides if any additional modifications are necessary; for example, perhaps clumsiness or inefficiency occurs if the caster must become used to the new form. The alignment of the host or receptacle is that of the occupying life force.<br /><br />The caster can shift freely from the host to the receptacle if within the 10-foot-per-level range. Each attempt to shift requires one round. The spell ends when the wizard shifts from the jar to his own body.<br /><br />A successful dispel magic spell cast on the host can drive the caster of the magic jar spell back into the receptacle and prevent him from making any attacks for 1d4 rounds plus 1 round per level of the caster of the dispel. The base success chance is 50%, plus or minus 5% per level difference between the casters. A successful dispel magic cast against the receptacle forces the occupant back into his own body. If the wizard who cast the magic jar is forced back into his own body, the spell ends.<br /><br />If the host body is slain, the caster returns to the receptacle, if within range, and the life force of the host departs (i.e., it is dead). If the host body is slain beyond the range of the spell, both the host and the caster die.<br /><br />Any life force with nowhere to go is treated as slain unless recalled by a raise dead, resurrection, or similar spell.<br /><br />If the body of the caster is slain, his life force survives if it is in either the receptacle or the host. If the receptacle is destroyed while the caster&#039;s life force occupies it, the caster is irrevocably slain.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 216</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="368" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Arrow of Bone",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a powdered sliver of bone mixed with black dragon blood.  ",
+"range":"0",
+"aoe":"1 missile",
+"castingTime":"6",
+"duration":"Special",
+"save":"Special",
+"damage":"1d3+3/level",
+"description":"By drawing runes of dire power upon a simple arrow, bolt, dart, or javelin, the caster changes the weapon into a sinister missile of cold, enchanted bone. The wizard may then throw or fire the weapon in the normal fashion, or he can choose to give it to a companion to use. If the wizard employs the arrow of bone himself, he strikes with the THAC0 of a warrior of half his own level and a +3 bonus to his attack roll; if he gives it to someone else, the bone arrow merely confers a +1 bonus to hit. A creature struck by the weapon must make a saving throw vs. death magic or die; even if successful, the victim sustains normal damage for the missile, plus an additional number of points equal to the weapon's maximum damage (for example, 1d6+6 for an arrow or javelin, or 1d3+3 for a dart). Unlike the death spell or finger of death, the victim can be raised or resurrected in any expedient manner.
+
+The arrow of bone does not destroy undead or nonliving creatures outright. Instead, the arrow inflicts normal damage plus four times the missile’s normal maximum (1d6+24 for an arrow, 1d3+12 for a dart, and so on), or half that if the subject creature succeeds in its saving throw.
+
+The material component is a powdered sliver of bone mixed with black dragon blood. The resulting mixture is used to paint runes on the weapon. If the splinter of bone can be taken from the remains of a close blood relative of the subject (a sibling, parent, or grandparent), the victim receives a "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Arrow of Bone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 missile&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d3+3/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a powdered sliver of bone mixed with black dragon blood.  &nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By drawing runes of dire power upon a simple arrow, bolt, dart, or javelin, the caster changes the weapon into a sinister missile of cold, enchanted bone. The wizard may then throw or fire the weapon in the normal fashion, or he can choose to give it to a companion to use. If the wizard employs the arrow of bone himself, he strikes with the THAC0 of a warrior of half his own level and a +3 bonus to his attack roll; if he gives it to someone else, the bone arrow merely confers a +1 bonus to hit. A creature struck by the weapon must make a saving throw vs. death magic or die; even if successful, the victim sustains normal damage for the missile, plus an additional number of points equal to the weapon&#039;s maximum damage (for example, 1d6+6 for an arrow or javelin, or 1d3+3 for a dart). Unlike the death spell or finger of death, the victim can be raised or resurrected in any expedient manner.<br /><br />The arrow of bone does not destroy undead or nonliving creatures outright. Instead, the arrow inflicts normal damage plus four times the missile&rsquo;s normal maximum (1d6+24 for an arrow, 1d3+12 for a dart, and so on), or half that if the subject creature succeeds in its saving throw.<br /><br />The material component is a powdered sliver of bone mixed with black dragon blood. The resulting mixture is used to paint runes on the weapon. If the splinter of bone can be taken from the remains of a close blood relative of the subject (a sibling, parent, or grandparent), the victim receives a </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 151</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="440" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Bloodstone's Spectral Steed",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a hollow bone from a vulture",
+"range":"10 yards",
+"aoe":"Special",
+"castingTime":"1 round",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This spell allows a wizard to create a quasireal, vulturelike creature. The flying steed can carry the caster and one other person per three levels of the wizards experience (four at 12th level, five at 15th, etc.). All passengers must be specifically named during the casting.
+
+The spectral steed looks like a huge, skeletal vulture with tattered wings. As it flies, it utters hideous screeches that echo through the sky. The spectral steed flies at a movement rate of 4 per level of the caster, to a maximum movement rate of 48. It appears with a bit and bridle, plus one saddle per passenger.
+
+All normal animals shun the spectral steed and only monsters will attack it. The mount has AC 18 and 10 hit points plus 1 hit point per level of the caster. If it loses all of its hit points, the spectral steed disappears. It has no attack mode.
+
+The material component is a hollow bone from a vulture"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Bloodstone's Spectral Steed</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a hollow bone from a vulture&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows a wizard to create a quasireal, vulturelike creature. The flying steed can carry the caster and one other person per three levels of the wizards experience (four at 12th level, five at 15th, etc.). All passengers must be specifically named during the casting.<br /><br />The spectral steed looks like a huge, skeletal vulture with tattered wings. As it flies, it utters hideous screeches that echo through the sky. The spectral steed flies at a movement rate of 4 per level of the caster, to a maximum movement rate of 48. It appears with a bit and bridle, plus one saddle per passenger.<br /><br />All normal animals shun the spectral steed and only monsters will attack it. The mount has AC 18 and 10 hit points plus 1 hit point per level of the caster. If it loses all of its hit points, the spectral steed disappears. It has no attack mode.<br /><br />The material component is a hollow bone from a vulture</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 37</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="238" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Death Spell",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a crushed black pearl",
+"range":"10 yds./level",
+"aoe":"30-ft. cube/level",
+"castingTime":"6",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"When a death spell is cast, it snuffs out the life forces of creatures in the area of effect instantly and irrevocably. Such creatures cannot be raised or resurrected, but an individual slain in this manner might be brought back via a wish. The number of creatures that can be slain is a function of their Hit Dice. (See book for table ).
+
+In other words, from the 4d20 roll subtract the number of creatures of less than 2 Hit Dice (these creatures die). If there are any remaining points from the 4d20 roll, subtract 2 for each creature of 2 to 4 Hit Dice (these creatures also die). If this still doesn't use up all the 4d20 roll, subtract 10 for each creature of 4+1 to 6+3 Hit Dice, and so on. Stop when all the creatures are dead, all the 4d20 roll is used up, or the remainder is less than half the CF of any remaining creatures. (If the remainder is one-half or more of the CF of a creature, that creature dies.)
+
+For example, a mixed group of 20 goblins, eight gnolls, and four ogres, led by a hill giant, are caught in the area of a death spell. The 4d20 roll gives a total of 53 points; 20 of this eliminates the goblins (20 x 1 CF), 16 kills the gnolls (8 x 2 CF), and the remaining 17 kills two ogres (10 points to kill one ogre, and the remaining 7 points are enough to kill one more ogre). The other two ogres and the hill giant are unharmed.
+
+A death spell does not affect lycanthropes, undead creatures, or creatures from planes other than the Prime Material.
+
+The material component of this spell is a crushed black pearl with a minimum value of 1,000 gp."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Death Spell</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-ft. cube/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a crushed black pearl&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a death spell is cast, it snuffs out the life forces of creatures in the area of effect instantly and irrevocably. Such creatures cannot be raised or resurrected, but an individual slain in this manner might be brought back via a wish. The number of creatures that can be slain is a function of their Hit Dice. (See book for table ).<br /><br />In other words, from the 4d20 roll subtract the number of creatures of less than 2 Hit Dice (these creatures die). If there are any remaining points from the 4d20 roll, subtract 2 for each creature of 2 to 4 Hit Dice (these creatures also die). If this still doesn&#039;t use up all the 4d20 roll, subtract 10 for each creature of 4+1 to 6+3 Hit Dice, and so on. Stop when all the creatures are dead, all the 4d20 roll is used up, or the remainder is less than half the CF of any remaining creatures. (If the remainder is one-half or more of the CF of a creature, that creature dies.)<br /><br />For example, a mixed group of 20 goblins, eight gnolls, and four ogres, led by a hill giant, are caught in the area of a death spell. The 4d20 roll gives a total of 53 points; 20 of this eliminates the goblins (20 x 1 CF), 16 kills the gnolls (8 x 2 CF), and the remaining 17 kills two ogres (10 points to kill one ogre, and the remaining 7 points are enough to kill one more ogre). The other two ogres and the hill giant are unharmed.<br /><br />A death spell does not affect lycanthropes, undead creatures, or creatures from planes other than the Prime Material.<br /><br />The material component of this spell is a crushed black pearl with a minimum value of 1,000 gp.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 222</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="373" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">6</button>
+<!--
+			<textarea class="spellJSON">{"name":"Trollish Fortitude",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a shred of dried flesh",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"6",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This powerful spell imbues the caster with the physical fortitude and resilience of a troll. While the spell is in effect, the caster regenerates 3 hit points per round until he reaches his normal maximum. He also gains a troll's ability to ignore dismemberment, decapitation, and other horrible injures that would normally incapacitate or kill him (although losing a limb may prevent the caster from taking certain action, such as running, climbing, and other activities) breeding, wounding, being reduced to negative hit points, and other effects that cause the victim to lose hit points from round to round are ignored-the caster instead regains 3 hit points per round, up to his normal maximum. If the caster is reduced to less than 0 hit points, he is incapacitated and must make a system shock roll or lose all of his highest level spells. The incapacitation lasts only until his regeneration restores him to 1 hit point or more; he can move fight, and cast spells again as soon as his hit point total is positive.
+
+Trollish fortitude does not provide the caster with any defenses against lethal position, disease, and other effects level draining, vampiric touch, or vampiric regeneration cannot be regenerated since this represents damage to the victim's life force and not physical injury. In addition, fire damage and acid damage cannot be regenerated. While the spell is in effect, the caster can rejoin severed limbs simply by holding them in place, but if the spell ends while a limb(which were already moving toward him) is still separate from his body, he immediately suffers the full effects of the injury.
+
+The material component for this spell is a shred of dried flesh from a troll's heart that must be pulverized into dust. The dust is then sprinkled on the caster."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Trollish Fortitude</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a shred of dried flesh&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This powerful spell imbues the caster with the physical fortitude and resilience of a troll. While the spell is in effect, the caster regenerates 3 hit points per round until he reaches his normal maximum. He also gains a troll&#039;s ability to ignore dismemberment, decapitation, and other horrible injures that would normally incapacitate or kill him (although losing a limb may prevent the caster from taking certain action, such as running, climbing, and other activities) breeding, wounding, being reduced to negative hit points, and other effects that cause the victim to lose hit points from round to round are ignored-the caster instead regains 3 hit points per round, up to his normal maximum. If the caster is reduced to less than 0 hit points, he is incapacitated and must make a system shock roll or lose all of his highest level spells. The incapacitation lasts only until his regeneration restores him to 1 hit point or more; he can move fight, and cast spells again as soon as his hit point total is positive.<br /><br />Trollish fortitude does not provide the caster with any defenses against lethal position, disease, and other effects level draining, vampiric touch, or vampiric regeneration cannot be regenerated since this represents damage to the victim&#039;s life force and not physical injury. In addition, fire damage and acid damage cannot be regenerated. While the spell is in effect, the caster can rejoin severed limbs simply by holding them in place, but if the spell ends while a limb(which were already moving toward him) is still separate from his body, he immediately suffers the full effects of the injury.<br /><br />The material component for this spell is a shred of dried flesh from a troll&#039;s heart that must be pulverized into dust. The dust is then sprinkled on the caster.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 154</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="447" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Bloodstone's Frightful joining",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"One undead creature",
+"castingTime":"7",
+"duration":"1 turn/level",
+"save":"Special",
+"damage":"5d6/level",
+"description":"When this powerful spell is employed, the wizard transfers his spirit to the body of an undead creature, totally dominating it. If the undead creature has intelligence, it is allowed a saving throw vs. spell to resist the joining. If the save is successful, the caster's spirit is forced back into his own body. The wizard must make a system shock roll; if the roll fails, the wizard suffers 5d6 points of damage. If the roll succeeds, the wizard suffers half this damage.
+
+If the creature's save fails, the necromancer joins his life essence with that of the undead. While in the creature's body, the caster can use all of its special attacks and innate abilities, excluding spells memorized by the creature.
+
+The wizard's body remains comatose, is subject to all regular attacks, and suffers damage normally. The wizard's spirit can travel an unlimited distance from his physical body as long as they remain on the same plane of existence.
+
+If intelligent, the possessed undead continually tries to purge the caster with mental threats that can be heard only by the wizard. The thoughts of the undead are ghastly. During the first minute of each hour of possession, the caster must succeed an Intelligence check in order to retain his sanity. The roll is modified by the difference between the creature's Intelligence and that of the spellcaster. If the undead has a higher score, the difference is added to the die roll. If the necromancer has a higher Intelligence, the difference is subtracted from the roll.
+
+If the roll is successful, nothing happens and the caster may continue to possess the undead. If the Intelligence roll fails, the wizard's intellect degenerates, making him a raving, homicidal maniac. His spirit is immediately forced to return to his body, and he must attempt a system shock roll with damage occurring as outlined above. The caster remains dangerously insane until a heal or wish spell is used to restore his intellect.
+
+This spell can be very useful when combined with the mask of death spell.
+
+When the spell's duration expires, the necromancer's spirit immediately returns to his body."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Bloodstone's Frightful joining</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">One undead creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">5d6/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this powerful spell is employed, the wizard transfers his spirit to the body of an undead creature, totally dominating it. If the undead creature has intelligence, it is allowed a saving throw vs. spell to resist the joining. If the save is successful, the caster&#039;s spirit is forced back into his own body. The wizard must make a system shock roll; if the roll fails, the wizard suffers 5d6 points of damage. If the roll succeeds, the wizard suffers half this damage.<br /><br />If the creature&#039;s save fails, the necromancer joins his life essence with that of the undead. While in the creature&#039;s body, the caster can use all of its special attacks and innate abilities, excluding spells memorized by the creature.<br /><br />The wizard&#039;s body remains comatose, is subject to all regular attacks, and suffers damage normally. The wizard&#039;s spirit can travel an unlimited distance from his physical body as long as they remain on the same plane of existence.<br /><br />If intelligent, the possessed undead continually tries to purge the caster with mental threats that can be heard only by the wizard. The thoughts of the undead are ghastly. During the first minute of each hour of possession, the caster must succeed an Intelligence check in order to retain his sanity. The roll is modified by the difference between the creature&#039;s Intelligence and that of the spellcaster. If the undead has a higher score, the difference is added to the die roll. If the necromancer has a higher Intelligence, the difference is subtracted from the roll.<br /><br />If the roll is successful, nothing happens and the caster may continue to possess the undead. If the Intelligence roll fails, the wizard&#039;s intellect degenerates, making him a raving, homicidal maniac. His spirit is immediately forced to return to his body, and he must attempt a system shock roll with damage occurring as outlined above. The caster remains dangerously insane until a heal or wish spell is used to restore his intellect.<br /><br />This spell can be very useful when combined with the mask of death spell.<br /><br />When the spell&#039;s duration expires, the necromancer&#039;s spirit immediately returns to his body.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 40</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="274" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Control Undead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a small piece each of bone and raw meat.",
+"range":"60 ft.",
+"aoe":"1d6 undead",
+"castingTime":"1 rd.",
+"duration":"3d4 rds. + 1 rd./level",
+"save":"Special",
+"damage":"",
+"description":"This spell enables the wizard to command 1d6 undead creatures for a short period of time. Upon casting the spell, the wizard selects one point within range of the spell. Those undead nearest to this point are affected, until either undead equal in Hit Dice to the caster's level or six undead are affected. Undead with 3 Hit Dice or less are automatically controlled. Those of greater Hit Dice are allowed a saving throw vs. spell, which, if successful, negates the attempt to control that creature. Regardless of the success or failure of the saving throw, each creature required to make a check counts toward the Hit Dice limit of the spell.
+
+Those creatures under the control of the wizard can be commanded by the caster if they are within hearing range. There is no telepathic communication or language requirement between the caster and the controlled undead. Even if communication is impossible, the controlled undead do not attack the spellcaster. At the end of the spell, the controlled undead revert to their normal behaviors. Those not mindless will remember the control exerted by the wizard.
+
+The material component for this spell is a small piece each of bone and raw meat."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Control Undead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 ft.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d6 undead&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3d4 rds. + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small piece each of bone and raw meat.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the wizard to command 1d6 undead creatures for a short period of time. Upon casting the spell, the wizard selects one point within range of the spell. Those undead nearest to this point are affected, until either undead equal in Hit Dice to the caster&#039;s level or six undead are affected. Undead with 3 Hit Dice or less are automatically controlled. Those of greater Hit Dice are allowed a saving throw vs. spell, which, if successful, negates the attempt to control that creature. Regardless of the success or failure of the saving throw, each creature required to make a check counts toward the Hit Dice limit of the spell.<br /><br />Those creatures under the control of the wizard can be commanded by the caster if they are within hearing range. There is no telepathic communication or language requirement between the caster and the controlled undead. Even if communication is impossible, the controlled undead do not attack the spellcaster. At the end of the spell, the controlled undead revert to their normal behaviors. Those not mindless will remember the control exerted by the wizard.<br /><br />The material component for this spell is a small piece each of bone and raw meat.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 232</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="278" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Finger of Death",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds.",
+"aoe":"1 creature",
+"castingTime":"5",
+"duration":"Permanent",
+"save":"Negate",
+"damage":"2d8+1/level",
+"description":"The finger of death spell snuffs out the victim's life force. If successful, the victim can be neither raised nor resurrected. In addition, in human subjects the spell initiates changes to the body such that after three days the caster can, by means of a special ceremony costing not less than 1,000gp plus 500gp per body, animate the corpse as a juju zombie under the control of the caster. The changes can be reversed before animation by a limited wish or similar spell cast directly upon the body, and a full wish restores the subject to life.
+
+The caster utters the finger of death spell incantation, points his index finger at the creature to be slain, and unless the victim succeeds in a saving throw vs. spell, death occurs. A creature successfully saving still receives 2d8+1 points of damage. If the subject dies of damage, no internal changes occur and the victim can then be revived normally."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Finger of Death</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">2d8+1/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The finger of death spell snuffs out the victim&#039;s life force. If successful, the victim can be neither raised nor resurrected. In addition, in human subjects the spell initiates changes to the body such that after three days the caster can, by means of a special ceremony costing not less than 1,000gp plus 500gp per body, animate the corpse as a juju zombie under the control of the caster. The changes can be reversed before animation by a limited wish or similar spell cast directly upon the body, and a full wish restores the subject to life.<br /><br />The caster utters the finger of death spell incantation, points his index finger at the creature to be slain, and unless the victim succeeds in a saving throw vs. spell, death occurs. A creature successfully saving still receives 2d8+1 points of damage. If the subject dies of damage, no internal changes occur and the victim can then be revived normally.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 233</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="455" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Suffocate",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"0",
+"material":"1",
+"materials":"a small silk bag",
+"range":"30 yards",
+"aoe":"10 foot radius circle",
+"castingTime":"7",
+"duration":"1 round/level",
+"save":"Negate",
+"damage":"2d4/level",
+"description":"This spell draws the breath out of all creatures within the area of effect who fail a saving throw. Their breath is placed within a small silk bag held by the caster.
+
+Each round a victim of this spell must attempt a Constitution check. If failed, the creature suffers 2d4 point of damage. It successful the subject has taken in enough air to reduce the damage to 1d4.
+
+As they struggle and gasp for air, affected creatures move and attack at half their normal rates, have a -4 AC penalty attack penalty of -4, and lose all Dexterity combat bonuses.
+
+Effects of this spell continue each round regardless of whether the victims remain in the original area of effect. The damage accumulates until the spell expires, the silk bag is opened or a successful dispel magic spell is cast upon the bag. The penalties to combat remain in effect for 1d3 rounds after the spell ends.
+
+The material component is a small silk bag studded with black opals worth a total of no less 5,000 gp. The bag is not destroyed during casting but becomes useless for further castings if a successful dispel magic spell is used on it."}</textarea>
+ -->
+			<div class="components  verbal material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Suffocate</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">7&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 foot radius circle&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 round/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">2d4/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small silk bag&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell draws the breath out of all creatures within the area of effect who fail a saving throw. Their breath is placed within a small silk bag held by the caster.<br /><br />Each round a victim of this spell must attempt a Constitution check. If failed, the creature suffers 2d4 point of damage. It successful the subject has taken in enough air to reduce the damage to 1d4.<br /><br />As they struggle and gasp for air, affected creatures move and attack at half their normal rates, have a -4 AC penalty attack penalty of -4, and lose all Dexterity combat bonuses.<br /><br />Effects of this spell continue each round regardless of whether the victims remain in the original area of effect. The damage accumulates until the spell expires, the silk bag is opened or a successful dispel magic spell is cast upon the bag. The penalties to combat remain in effect for 1d3 rounds after the spell ends.<br /><br />The material component is a small silk bag studded with black opals worth a total of no less 5,000 gp. The bag is not destroyed during casting but becomes useless for further castings if a successful dispel magic spell is used on it.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 43</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="299" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">8</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clone",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a small piece of the flesh",
+"range":"Touch",
+"aoe":"1 clone",
+"castingTime":"1 turn",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"  This spell creates a duplicate of a human, demihuman, or humanoid creature. This clone is in most respects the duplicate of the individual, complete to the level of experience, memories, etc. However, the duplicate really is the person, so if the original and a duplicate exist at the same time, each knows of the other's existence; the original
+person and the clone will each desire to do away with the other, for such an alter-ego is unbearable to both. If one cannot destroy the other, one will go insane and destroy itself (90% likely to be the clone), or possibly both will become mad and destroy themselves (2% chance). These events nearly always occur within one week of the dual existence.
+  Note that the clone is the person as he existed at the time at which the flesh was taken for the spell component, and all subsequent knowledge, experience, etc., is totally unknown to the clone. The clone is a physical duplicate, and possessions of the original are another matter entirely. A clone takes 2d4 months to grow, and only after that time is
+dual existence established. Furthermore, the clone has one less Constitution point than the body it was cloned from; the cloning fails if the clone would have a Constitution of 0.
+  The material component of the spell is a small piece of the flesh from the person to be duplicated.
+  The DM may, in addition, add other stipulations to the success of a cloning effort,requiring that some trace of life must remain in the flesh sample, that some means of storing and preserving the sample must be devised and maintained, etc."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 clone&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small piece of the flesh&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">  This spell creates a duplicate of a human, demihuman, or humanoid creature. This clone is in most respects the duplicate of the individual, complete to the level of experience, memories, etc. However, the duplicate really is the person, so if the original and a duplicate exist at the same time, each knows of the other&#039;s existence; the original<br />person and the clone will each desire to do away with the other, for such an alter-ego is unbearable to both. If one cannot destroy the other, one will go insane and destroy itself (90% likely to be the clone), or possibly both will become mad and destroy themselves (2% chance). These events nearly always occur within one week of the dual existence.<br />  Note that the clone is the person as he existed at the time at which the flesh was taken for the spell component, and all subsequent knowledge, experience, etc., is totally unknown to the clone. The clone is a physical duplicate, and possessions of the original are another matter entirely. A clone takes 2d4 months to grow, and only after that time is<br />dual existence established. Furthermore, the clone has one less Constitution point than the body it was cloned from; the cloning fails if the clone would have a Constitution of 0.<br />  The material component of the spell is a small piece of the flesh from the person to be duplicated.<br />  The DM may, in addition, add other stipulations to the success of a cloning effort,requiring that some trace of life must remain in the flesh sample, that some means of storing and preserving the sample must be devised and maintained, etc.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 240</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="379" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">8</button>
+<!--
+			<textarea class="spellJSON">{"name":"Heart of Stone",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"the stone heart itself.",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1 day",
+"duration":"1 year",
+"save":"None",
+"damage":"",
+"description":"  This potent spell exchanges the necromancer's own living heart for a finely crafted heart of perfect,unblemished stone that alters the very nature of the wizard's body.As long as the heart of stone remains in effect,the caster need not fear attacks that pierce,slash,or cut him;he does not bleed and can ignore the most horrible injuries of this kind.The caster can also ignore most magical effects such as spell,magical devices,and innate spell abilities of less than 8th level.
+   In game terms,the character suffers only 1 point of damage from any type S or type P attack,plus any magical adjustment for the weapon.For example,if struck by a long sword +1,he would suffer only 2 points of damage.Strength and specialization bonuses are ignored.If the wizard is dismembered,he suffers no additional damage other than the inconvenience of having his limbs removed,and he can reattach a severed limb by holding it in place for one full turn.The heart of stone is also partially effective against type B attacks since it prevents bruising,swelling,and crushed blood vessels.Against bludgeoning weapons,the wizard only suffers half the normal damage.Cause wound spell always inflict minimum damage against a wizard protected by this spell.While the caster may not feel a sword in his rib cage,any damage sustained interrupts spellcasting.
+    In addition to resisting injury,the heart of stone also renders the character immune to fatigue and exhaustion,whether normal or magical.He also gains a +4 bonus to saving throws vs,petrification attacks.
+   While the heart of stone is quite powerful,it has limitations.First of all,determined physical attack can eventually destroy the wizard despite his unnatural resistance to injury-a mob of angry peasants with hatchets and spears can finish him off 1 point at a time if that's what it takes.
+Second,the heart confers no protection against other attack forms,such as fire,electricity,cold,acid,and so on,although any bleeding caused by a burn is ignored.Disintegration effects also affect the caster.Most importantly,the caster loses the ability to naturally recover from injury and no longer regains lost hit points with the passage of time.Healing spells,potions and items are reduced to their minimum effect,so a cure serious wounds (2d8+1 hit points restored)would only return 3 hit points to a wizard protected by heart of stone.However,limited wish or wish can be used to restore 1 hit point per level of caster or all but 1d4 hit points,respectively.
+  In addition to these disadvantages,heart of stone also renders the caster vulnerable in one other way;his own real heart can be destroyed,instantly slaying him.Naturally,the caster will want to take steps to hide and protect his true heart to prevent this happening.The living heart continues to beat for the duration of the spell but requires no special receptacle or facilities to protect it-the caster could leave it lying on the floor,if he wished.
+     The heart of stone cannot be dispelled,although a more powerful negation magic such as Mordenkainen's disjunction can bring the spell to an end.Stone to flesh also undoes the magic of the heart of stone.No matter how the spell is ended,the wizard's own living heart instantly returns to its proper place,and the stone heart appears wherever the living heart was kept.At this time,any injuries the wizard currently has are multiplied by 1d6 as the wounds begin to bleed again.For example,a necromancer who was injured for 6 points of damage instead suffers 6d6 when the spell ends.
+      The material component for this spell is the stone heart itself.This must be a carved stone of quality (jade,obsidian,or gold-veined marble would be appropriate)worth not less than 5,000 gold pieces.It must be prepared by use of the enchant an item spell.The stone is not consumed at the spell's end and may be used again if it is undamaged.        "}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Heart of Stone</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 day&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 year&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >the stone heart itself.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">  This potent spell exchanges the necromancer&#039;s own living heart for a finely crafted heart of perfect,unblemished stone that alters the very nature of the wizard&#039;s body.As long as the heart of stone remains in effect,the caster need not fear attacks that pierce,slash,or cut him;he does not bleed and can ignore the most horrible injuries of this kind.The caster can also ignore most magical effects such as spell,magical devices,and innate spell abilities of less than 8th level.<br />   In game terms,the character suffers only 1 point of damage from any type S or type P attack,plus any magical adjustment for the weapon.For example,if struck by a long sword +1,he would suffer only 2 points of damage.Strength and specialization bonuses are ignored.If the wizard is dismembered,he suffers no additional damage other than the inconvenience of having his limbs removed,and he can reattach a severed limb by holding it in place for one full turn.The heart of stone is also partially effective against type B attacks since it prevents bruising,swelling,and crushed blood vessels.Against bludgeoning weapons,the wizard only suffers half the normal damage.Cause wound spell always inflict minimum damage against a wizard protected by this spell.While the caster may not feel a sword in his rib cage,any damage sustained interrupts spellcasting.<br />    In addition to resisting injury,the heart of stone also renders the character immune to fatigue and exhaustion,whether normal or magical.He also gains a +4 bonus to saving throws vs,petrification attacks.<br />   While the heart of stone is quite powerful,it has limitations.First of all,determined physical attack can eventually destroy the wizard despite his unnatural resistance to injury-a mob of angry peasants with hatchets and spears can finish him off 1 point at a time if that&#039;s what it takes.<br />Second,the heart confers no protection against other attack forms,such as fire,electricity,cold,acid,and so on,although any bleeding caused by a burn is ignored.Disintegration effects also affect the caster.Most importantly,the caster loses the ability to naturally recover from injury and no longer regains lost hit points with the passage of time.Healing spells,potions and items are reduced to their minimum effect,so a cure serious wounds (2d8+1 hit points restored)would only return 3 hit points to a wizard protected by heart of stone.However,limited wish or wish can be used to restore 1 hit point per level of caster or all but 1d4 hit points,respectively.<br />  In addition to these disadvantages,heart of stone also renders the caster vulnerable in one other way;his own real heart can be destroyed,instantly slaying him.Naturally,the caster will want to take steps to hide and protect his true heart to prevent this happening.The living heart continues to beat for the duration of the spell but requires no special receptacle or facilities to protect it-the caster could leave it lying on the floor,if he wished.<br />     The heart of stone cannot be dispelled,although a more powerful negation magic such as Mordenkainen&#039;s disjunction can bring the spell to an end.Stone to flesh also undoes the magic of the heart of stone.No matter how the spell is ended,the wizard&#039;s own living heart instantly returns to its proper place,and the stone heart appears wherever the living heart was kept.At this time,any injuries the wizard currently has are multiplied by 1d6 as the wounds begin to bleed again.For example,a necromancer who was injured for 6 points of damage instead suffers 6d6 when the spell ends.<br />      The material component for this spell is the stone heart itself.This must be a carved stone of quality (jade,obsidian,or gold-veined marble would be appropriate)worth not less than 5,000 gold pieces.It must be prepared by use of the enchant an item spell.The stone is not consumed at the spell&#039;s end and may be used again if it is undamaged.        </div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 156</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="470" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">9</button>
+<!--
+			<textarea class="spellJSON">{"name":"Wail of the Banshee",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a lock of hair from an evil female elf.",
+"range":"0",
+"aoe":"30-foot-radius sphere",
+"castingTime":"9",
+"duration":"Instantaneous",
+"save":"Negate",
+"damage":"",
+"description":"   At the culmination of this dreadful spell, the wizard screams like a banshee (a groaning spirit).For each level of the caster, one listener within 30 feet hears the wail. Those who fail a saving throw vs. death magic die instantly.
+  The wizard cannot be the victim of his own spell,nor can he choose who will be affected.If there are more potential victims than the level of the caster, the DM must randomly determine which creatures are affected.Creatures who cannot hear(due to ear plugs,deafness, etc.)can be targets,but cannot be affected and are considered.
+   The material component is a lock of hair from an evil female elf."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Wail of the Banshee</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">9&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-foot-radius sphere&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a lock of hair from an evil female elf.&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">   At the culmination of this dreadful spell, the wizard screams like a banshee (a groaning spirit).For each level of the caster, one listener within 30 feet hears the wail. Those who fail a saving throw vs. death magic die instantly.<br />  The wizard cannot be the victim of his own spell,nor can he choose who will be affected.If there are more potential victims than the level of the caster, the DM must randomly determine which creatures are affected.Creatures who cannot hear(due to ear plugs,deafness, etc.)can be targets,but cannot be affected and are considered.<br />   The material component is a lock of hair from an evil female elf.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 47</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+
