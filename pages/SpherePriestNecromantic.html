@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Dispel Fatigue",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"Blessed spring water",
+"range":"30 yds",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"This spell removes physical fatigue or exhaustion from the subject by undoing the physiological effects of his exertions. The subject is instantly restored to his normal, fully rested level of endurance or vigour. This spell can be used to negate the penalties of forced marching, long swims, jogging, running, or sprinting, or even accumulated fatigue points from either the Player's Option: Combat & Tactics rules or the magic fatigue rules in Chapter 6. Once this spell has been cast, the subject may start to accumulate fatigue or fatigue-based penalties again, depending on how he continues to exert himself.
+The material component is a sprinkle of fresh, blessed spring water."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Dispel Fatigue</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >Blessed spring water&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell removes physical fatigue or exhaustion from the subject by undoing the physiological effects of his exertions. The subject is instantly restored to his normal, fully rested level of endurance or vigour. This spell can be used to negate the penalties of forced marching, long swims, jogging, running, or sprinting, or even accumulated fatigue points from either the Player&#039;s Option: Combat &amp; Tactics rules or the magic fatigue rules in Chapter 6. Once this spell has been cast, the subject may start to accumulate fatigue or fatigue-based penalties again, depending on how he continues to exert himself.<br />The material component is a sprinkle of fresh, blessed spring water.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 161</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="492" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Invisibility to Undead",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"4",
+"duration":"6 rds.",
+"save":"Special",
+"damage":"",
+"description":"This spell causes affected undead to lose track of and ignore the warded creature for the duration of the spell. Undead of 4 or fewer Hit Dice are automatically affected, but those with more Hit Dice receive a saving throw vs. spell to avoid the effect. Note that a priest protected by this spell cannot turn affected undead. The spell ends immediately if the recipient makes any attack, although casting spells such as cure light wounds, augury, or chant does not end the ward.
+The material component is the priest's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Invisibility to Undead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">6 rds.&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes affected undead to lose track of and ignore the warded creature for the duration of the spell. Undead of 4 or fewer Hit Dice are automatically affected, but those with more Hit Dice receive a saving throw vs. spell to avoid the effect. Note that a priest protected by this spell cannot turn affected undead. The spell ends immediately if the recipient makes any attack, although casting spells such as cure light wounds, augury, or chant does not end the ward.<br />The material component is the priest&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 255</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="502" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Aid",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"5",
+"duration":"1 rd. + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"The recipient of this spell gains the benefit of a bless spell (+1 to attack rolls and saving throws) and a special bonus of 1d8 additional hit points for the duration of the spell. The aid spell enables the recipient to actually have more hit points than his full normal total. The bonus hit points are lost first when the recipient takes damage; they cannot be regained by curative magic.
+For example, a 1st-level fighter has 8 hit points, suffers 2 points of damage (8-2 = 6), and then receives an aid spell that gives 5 additional hit points. The fighter now has 11 hit points, 5 of which are temporary. If he is then hit for 7 points of damage, 2 normal hit points and all 5 temporary hit points are lost. He then receives a cure light wounds spell that heals 4 points of damage, restoring him to his original 8 hit points.
+Note that the operation of the spell is unaffected by permanent hit point losses due to energy drain, Hit Die losses, the loss of a familiar, or the operation of certain artifacts; the temporary hit point gain is figured from the new, lower total.
+The material components of this spell are a tiny strip of white cloth with a sticky substance (such as tree sap) on the ends, plus the priest's holy symbol."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Aid</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd. + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The recipient of this spell gains the benefit of a bless spell (+1 to attack rolls and saving throws) and a special bonus of 1d8 additional hit points for the duration of the spell. The aid spell enables the recipient to actually have more hit points than his full normal total. The bonus hit points are lost first when the recipient takes damage; they cannot be regained by curative magic.<br />For example, a 1st-level fighter has 8 hit points, suffers 2 points of damage (8-2 = 6), and then receives an aid spell that gives 5 additional hit points. The fighter now has 11 hit points, 5 of which are temporary. If he is then hit for 7 points of damage, 2 normal hit points and all 5 temporary hit points are lost. He then receives a cure light wounds spell that heals 4 points of damage, restoring him to his original 8 hit points.<br />Note that the operation of the spell is unaffected by permanent hit point losses due to energy drain, Hit Die losses, the loss of a familiar, or the operation of certain artifacts; the temporary hit point gain is figured from the new, lower total.<br />The material components of this spell are a tiny strip of white cloth with a sticky substance (such as tree sap) on the ends, plus the priest&#039;s holy symbol.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 257</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="846" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Restore Strength",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"5",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"This spell removes unnatural weakness, debilitation, or exhaustion from the creature touched and restores him to his normal strength and stamina. It is useful in countering the effects of chill touch, ray of enfeeblement, ray of fatigue, the touch of a shadow or roper, and any similar spell or effect. Only temporary ability score losses may be alleviated by this spell; if a character suffers an incapacitating, physical injury, restore strength cannot help him. Also, loss of strength or stamina from purely natural causes such as exposure, disease, or exertion is not repaired by restore strength. The duration is permanent in that the subject remains at his maximum strength and endurance only until he is drained (or exerts himself) again."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Restore Strength</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">5&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell removes unnatural weakness, debilitation, or exhaustion from the creature touched and restores him to his normal strength and stamina. It is useful in countering the effects of chill touch, ray of enfeeblement, ray of fatigue, the touch of a shadow or roper, and any similar spell or effect. Only temporary ability score losses may be alleviated by this spell; if a character suffers an incapacitating, physical injury, restore strength cannot help him. Also, loss of strength or stamina from purely natural causes such as exposure, disease, or exertion is not repaired by restore strength. The duration is permanent in that the subject remains at his maximum strength and endurance only until he is drained (or exerts himself) again.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 165</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="531" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Animate Dead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"10 Yds.",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"This spell creates the lowest of the undead monsters, skeletons or zombies, usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes these remains to become animated and obey the simple verbal commands of the caster, regardless of how they communicated in life. The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat or are turned; the magic cannot be dispelled.
+The priest can animate one skeleton or one zombie for each experience level he has attained. If creatures with more than 1+ Hit Dice are animated, the number is determined by the monster Hit Dice. Skeletal forms have the Hit Dice of the original creature, while zombie forms have 1 more Hit Die. Thus, a 12th-level priest could animate 12 dwarven skeletons (or six zombies), four zombie gnolls, or a single zombie fire giant. Note that this is based on the standard racial Hit Die norm; thus, a high-level adventurer would be animated as a skeleton or zombie of 1 or 2 Hit Dice, and without special class or racial abilities. The caster can, alternatively, animate two small animal skeletons (1-1 Hit Die or less) for every level of experience he has achieved.
+The spell requires a drop of blood, a piece of flesh of the type of creature being animated, and a pinch of bone powder or a bone shard to complete the spell. Casting this spell is not a good act, and only evil priests use it frequently."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Animate Dead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 Yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates the lowest of the undead monsters, skeletons or zombies, usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes these remains to become animated and obey the simple verbal commands of the caster, regardless of how they communicated in life. The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat or are turned; the magic cannot be dispelled.<br />The priest can animate one skeleton or one zombie for each experience level he has attained. If creatures with more than 1+ Hit Dice are animated, the number is determined by the monster Hit Dice. Skeletal forms have the Hit Dice of the original creature, while zombie forms have 1 more Hit Die. Thus, a 12th-level priest could animate 12 dwarven skeletons (or six zombies), four zombie gnolls, or a single zombie fire giant. Note that this is based on the standard racial Hit Die norm; thus, a high-level adventurer would be animated as a skeleton or zombie of 1 or 2 Hit Dice, and without special class or racial abilities. The caster can, alternatively, animate two small animal skeletons (1-1 Hit Die or less) for every level of experience he has achieved.<br />The spell requires a drop of blood, a piece of flesh of the type of creature being animated, and a pinch of bone powder or a bone shard to complete the spell. Casting this spell is not a good act, and only evil priests use it frequently.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 265</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="538" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Feign Death",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Person touched",
+"castingTime":"1/2",
+"duration":"1 turn + 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the caster or any other willing person can be put into a cataleptic state that is impossible to distinguish from actual death. Although the person affected can smell, hear, and know what is going on, no feeling or sight of any sort is possible; thus, any wounding or mistreatment of the body is not felt, no reaction occurs, and damage is only one-half normal. In addition, paralysis, poison, or energy level drain does not affect a person under the influence of this spell, but poison injected or otherwise introduced into the body becomes effective when the spell recipient is no longer under the influence of this spell, although a saving throw is permitted. However, the spell offers no protection from causes of certain death--being crushed under a landslide, etc. Only a willing individual can be affected by a feign death spell. The priest is able to end the spell effect at any time, but it requires a full round for bodily functions to begin again.
+Note that, unlike the wizard version of this spell, only people can be affected, and that those of any level can be affected by the priest casting this spell."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Feign Death</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1/2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Person touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn + 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the caster or any other willing person can be put into a cataleptic state that is impossible to distinguish from actual death. Although the person affected can smell, hear, and know what is going on, no feeling or sight of any sort is possible; thus, any wounding or mistreatment of the body is not felt, no reaction occurs, and damage is only one-half normal. In addition, paralysis, poison, or energy level drain does not affect a person under the influence of this spell, but poison injected or otherwise introduced into the body becomes effective when the spell recipient is no longer under the influence of this spell, although a saving throw is permitted. However, the spell offers no protection from causes of certain death--being crushed under a landslide, etc. Only a willing individual can be affected by a feign death spell. The priest is able to end the spell effect at any time, but it requires a full round for bodily functions to begin again.<br />Note that, unlike the wizard version of this spell, only people can be affected, and that those of any level can be affected by the priest casting this spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 267</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="545" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Negative Plane Protection",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell affords the caster or touched creature partial protection from undead monsters with Negative Energy plane connections (such as shadows, wights, wraiths, spectres, or vampires) and certain weapons and spells that drain energy levels. The negative plane protection spell opens a channel to the Positive Energy plane, possibly offsetting the effect of the negative energy attack. A protected creature struck by a negative energy attack is allowed a saving throw vs. death magic. If successful, the energies cancel with a bright flash of light and a thunderclap. The protected creature suffers only normal hit point damage from the attack and does not suffer any drain of experience or Strength, regardless of the number of levels the attack would have drained.
+An attacking undead creature suffers 2d6 points of damage from the positive energy; a draining wizard or weapon receives no damage.
+This protection is proof against only one such attack, dissipating immediately whether or not the saving throw was successful. If the saving throw is failed, the spell recipient suffers double the usual physical damage, in addition to the loss of experience or Strength that normally occurs. The protection lasts for one turn per level of the priest casting the spell, or until the protected creature is struck by a negative energy attack. This spell cannot be cast on the Negative Energy plane."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Negative Plane Protection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell affords the caster or touched creature partial protection from undead monsters with Negative Energy plane connections (such as shadows, wights, wraiths, spectres, or vampires) and certain weapons and spells that drain energy levels. The negative plane protection spell opens a channel to the Positive Energy plane, possibly offsetting the effect of the negative energy attack. A protected creature struck by a negative energy attack is allowed a saving throw vs. death magic. If successful, the energies cancel with a bright flash of light and a thunderclap. The protected creature suffers only normal hit point damage from the attack and does not suffer any drain of experience or Strength, regardless of the number of levels the attack would have drained.<br />An attacking undead creature suffers 2d6 points of damage from the positive energy; a draining wizard or weapon receives no damage.<br />This protection is proof against only one such attack, dissipating immediately whether or not the saving throw was successful. If the saving throw is failed, the spell recipient suffers double the usual physical damage, in addition to the loss of experience or Strength that normally occurs. The protection lasts for one turn per level of the priest casting the spell, or until the protected creature is struck by a negative energy attack. This spell cannot be cast on the Negative Energy plane.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 269</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="551" class="card abjuration" data-school="Abjuration" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Remove Paralysis",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"10 yds./level",
+"aoe":"1d4 creatures in 20-ft. cube",
+"castingTime":"6",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"By the use of this spell, the priest can free one or more creatures from the effects of any paralyzation or from related magic (such as a ghoul touch, or a hold or slow spell). If the spell is cast on one creature, the paralyzation is negated. If cast on two creatures, each receives another saving throw vs. the effect that afflicts it, with a +4 bonus. If cast on three or four creatures, each receives another saving throw with a +2 bonus. There must be no physical or magical barrier between the caster and the creatures to be affected, or the spell fails and is wasted."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Remove Paralysis</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">6&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1d4 creatures in 20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By the use of this spell, the priest can free one or more creatures from the effects of any paralyzation or from related magic (such as a ghoul touch, or a hold or slow spell). If the spell is cast on one creature, the paralyzation is negated. If cast on two creatures, each receives another saving throw vs. the effect that afflicts it, with a +4 bonus. If cast on three or four creatures, each receives another saving throw with a +2 bonus. There must be no physical or magical barrier between the caster and the creatures to be affected, or the spell fails and is wasted.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 271</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="553" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Speak With Dead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"1",
+"aoe":"1 creature",
+"castingTime":"1 turn",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"Upon casting a speak with dead spell, the priest is able to ask several questions of a dead creature in a set period of time and receive answers according to the knowledge of that creature. Of course, the priest must be able to converse in the language that the dead creature once used. The length of time the creature has been dead is a factor, since only higher level priests can converse with a long-dead creature. The number of questions that can be answered and the length of time in which the questions can be asked depend on the level of experience of the priest. Even if the casting is successful, such creatures are as evasive as possible when questioned. The dead tend to give extremely brief and limited answers, often cryptic, and to take questions literally. Furthermore, their knowledge is often limited to what they knew in life.
+A dead creature of different alignment or of higher level or Hit Dice than the caster's level receives a saving throw vs. spell. A dead creature that successfully saves can refuse to answer questions, ending the spell. At the DM's option, the casting of this spell on a given creature might be restricted to once per week.
+The priest needs a holy symbol and burning incense in order to cast this spell upon the body, remains, or a portion thereof. The remains are not expended. This spell does not function under water.
+Caster Level / Max Length of Time Dead / Time Questioned / # of Questions
+1-7 / 1 week / 1 round / 2
+7-8 / 1 month / 3 rounds / 3
+9-12 / 1 year / 1 turn / 4
+13-15 / 10 years / 2 turns / 5
+16-20 / 100 years / 3 turns / 6
+21+ / 1,000 years / 1 hour / 7"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Speak With Dead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Upon casting a speak with dead spell, the priest is able to ask several questions of a dead creature in a set period of time and receive answers according to the knowledge of that creature. Of course, the priest must be able to converse in the language that the dead creature once used. The length of time the creature has been dead is a factor, since only higher level priests can converse with a long-dead creature. The number of questions that can be answered and the length of time in which the questions can be asked depend on the level of experience of the priest. Even if the casting is successful, such creatures are as evasive as possible when questioned. The dead tend to give extremely brief and limited answers, often cryptic, and to take questions literally. Furthermore, their knowledge is often limited to what they knew in life.<br />A dead creature of different alignment or of higher level or Hit Dice than the caster&#039;s level receives a saving throw vs. spell. A dead creature that successfully saves can refuse to answer questions, ending the spell. At the DM&#039;s option, the casting of this spell on a given creature might be restricted to once per week.<br />The priest needs a holy symbol and burning incense in order to cast this spell upon the body, remains, or a portion thereof. The remains are not expended. This spell does not function under water.<br />Caster Level / Max Length of Time Dead / Time Questioned / # of Questions<br />1-7 / 1 week / 1 round / 2<br />7-8 / 1 month / 3 rounds / 3<br />9-12 / 1 year / 1 turn / 4<br />13-15 / 10 years / 2 turns / 5<br />16-20 / 100 years / 3 turns / 6<br />21+ / 1,000 years / 1 hour / 7</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 271</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="867" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Suspended Animation",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"4",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By using this spell, the caster can place one willing subject in a state of suspended animation. The victim's breathing, heartbeat, and other vital processes slow to the point of nonexistence, although he or she seems to be deeply asleep, not dead. A caster of 7th to 10th level can maintain the suspended animation for up to one week plus one day per level; a caster of 11th to 15th level can maintain the state for up to one month plus one week per level; and a caster of 16th level or higher can place someone in suspended animation for one year plus one month per level.
+This spell has many useful applications. First, all bodily or mental afflictions become quiescent during the victim's slumber. Poison, insanity, and many curses (lycanthropy, geas, and mummy rot included) can be arrested, if not cured, and have no effect on the subject while he sleeps. Of course, if the spell is broken prematurely, all the conditions that were halted by the spell will start once again. Second, the subject requires no food or water, but he still needs air and dies if deprived of oxygen. Third, for every month that the subject is in suspended animation, he recovers one hit point.
+The caster can awaken the subject at any time within the spell's duration, although he must be in the subject's presence to do so. Optionally, the priest may pre-specify an amount of time within his normal duration or a special condition to awaken the sleeper. A condition must include a physical stimulus to the subject, such as a change in temperature, the touch of the sun, the kiss of a princess, or whatever the priest desires. If the priest maintaining the spell dies or is not able to awaken the sleeper, then the subject can be taken to another priest of the same deity to be awakened.
+If the subject is attacked, he is completely helpless and can be killed by a single blow. However, if the subject is attacked without being slain for some reason, he gains a saving throw vs. spell each round to emerge from his suspended animation. The subject will be extremely groggy and disoriented if his slumber is disturbed in this fashion, suffering a -2 penalty to all die rolls for 1d6 turns, but if he awakens in the normal or prescribed fashion, he is disoriented for only one round.
+Some of the drawbacks to this spell affect the casting priest. First of all, it takes all of the priest's concentration to cast and maintain this spell. This means that the priest cannot cast any other spell while a subject is being held under the influence of the suspended animation. For each week that the subject is in suspended animation, the priest loses one point of Constitution. This happens each week until the priest transfers the spell to another priest of the same alignment. Transferring this spell requires a successful saving throw vs. spell. If the saving throw is successful, then the priest who transfers the spell can start recovering Constitution at a rate of one point per hour of bedrest. If the saving throw doesn't succeed, then the priest loses another point of Constitution and cannot try to transfer the spell again for 8 hours. Either way, because of the temporary lapse of the spell, the subject will automatically lose 1 hit point each time a transfer is attempted.
+The material component for this spell is a rare herb that must be prepared with exacting care. The treatment costs at least 200 gold pieces and requires 1d3 days of the priest's time and attention."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Suspended Animation</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">4&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By using this spell, the caster can place one willing subject in a state of suspended animation. The victim&#039;s breathing, heartbeat, and other vital processes slow to the point of nonexistence, although he or she seems to be deeply asleep, not dead. A caster of 7th to 10th level can maintain the suspended animation for up to one week plus one day per level; a caster of 11th to 15th level can maintain the state for up to one month plus one week per level; and a caster of 16th level or higher can place someone in suspended animation for one year plus one month per level.<br />This spell has many useful applications. First, all bodily or mental afflictions become quiescent during the victim&#039;s slumber. Poison, insanity, and many curses (lycanthropy, geas, and mummy rot included) can be arrested, if not cured, and have no effect on the subject while he sleeps. Of course, if the spell is broken prematurely, all the conditions that were halted by the spell will start once again. Second, the subject requires no food or water, but he still needs air and dies if deprived of oxygen. Third, for every month that the subject is in suspended animation, he recovers one hit point.<br />The caster can awaken the subject at any time within the spell&#039;s duration, although he must be in the subject&#039;s presence to do so. Optionally, the priest may pre-specify an amount of time within his normal duration or a special condition to awaken the sleeper. A condition must include a physical stimulus to the subject, such as a change in temperature, the touch of the sun, the kiss of a princess, or whatever the priest desires. If the priest maintaining the spell dies or is not able to awaken the sleeper, then the subject can be taken to another priest of the same deity to be awakened.<br />If the subject is attacked, he is completely helpless and can be killed by a single blow. However, if the subject is attacked without being slain for some reason, he gains a saving throw vs. spell each round to emerge from his suspended animation. The subject will be extremely groggy and disoriented if his slumber is disturbed in this fashion, suffering a -2 penalty to all die rolls for 1d6 turns, but if he awakens in the normal or prescribed fashion, he is disoriented for only one round.<br />Some of the drawbacks to this spell affect the casting priest. First of all, it takes all of the priest&#039;s concentration to cast and maintain this spell. This means that the priest cannot cast any other spell while a subject is being held under the influence of the suspended animation. For each week that the subject is in suspended animation, the priest loses one point of Constitution. This happens each week until the priest transfers the spell to another priest of the same alignment. Transferring this spell requires a successful saving throw vs. spell. If the saving throw is successful, then the priest who transfers the spell can start recovering Constitution at a rate of one point per hour of bedrest. If the saving throw doesn&#039;t succeed, then the priest loses another point of Constitution and cannot try to transfer the spell again for 8 hours. Either way, because of the temporary lapse of the spell, the subject will automatically lose 1 hit point each time a transfer is attempted.<br />The material component for this spell is a rare herb that must be prepared with exacting care. The treatment costs at least 200 gold pieces and requires 1d3 days of the priest&#039;s time and attention.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 172</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="868" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">4</button>
+<!--
+			<textarea class="spellJSON">{"name":"Unfailing Endurance",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature/level",
+"castingTime":"1 round",
+"duration":"1 day/level",
+"save":"None",
+"damage":"",
+"description":"This spell enhances the natural hardiness and stamina of the affected creatures by rendering them virtually immune to fatigue or exhaustion. During the casting of the spell, the caster must touch each creature to be affected. While under the spell's influence, the subjects may force march with no penalty, engage in up to 12 hours of hard labor per day with no fatigue (or up to 16 hours with moderate fatigue), and gain a +4 bonus to Strength/Stamina or Constitution/Fitness checks. In addition, the subjects gain a +4 bonus to saving throws against spells or magical effects that cause weakness, fatigue, or enfeeblement. Finally, an affected creature's fatigue rating (from Player's Option: Combat & Tactics) is doubled, and the subject gains a +4 bonus to his saving throws to recover from a fatigued or exhausted state."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Unfailing Endurance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enhances the natural hardiness and stamina of the affected creatures by rendering them virtually immune to fatigue or exhaustion. During the casting of the spell, the caster must touch each creature to be affected. While under the spell&#039;s influence, the subjects may force march with no penalty, engage in up to 12 hours of hard labor per day with no fatigue (or up to 16 hours with moderate fatigue), and gain a +4 bonus to Strength/Stamina or Constitution/Fitness checks. In addition, the subjects gain a +4 bonus to saving throws against spells or magical effects that cause weakness, fatigue, or enfeeblement. Finally, an affected creature&#039;s fatigue rating (from Player&#039;s Option: Combat &amp; Tactics) is doubled, and the subject gains a +4 bonus to his saving throws to recover from a fatigued or exhausted state.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 172</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="606" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">5</button>
+<!--
+			<textarea class="spellJSON">{"name":"Raise Dead",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"30 yds.",
+"aoe":"1 person",
+"castingTime":"1 rd.",
+"duration":"Permanent",
+"save":"Special",
+"damage":"",
+"description":"When the priest casts a raise dead spell, he can restore life to a dwarf, gnome, half-elf, halfling, or human (other creatures may be allowed, at the DM's option). The length of time that the person has been dead is of importance, as the priest can raise persons dead only up to a limit of one day for each experience level of the priest (i.e., a 9th-level priest can raise a person who has been dead for up to nine days).
+Note that the body of the person must be whole, or otherwise missing parts are still missing when the person is brought back to life. Likewise, other ills, such as poison and disease, are not negated. The raised person must roll a successful resurrection survival check to survive the ordeal (see Table 3: Constitution) and loses 1 point of Constitution.
+Further, the raised person is weak and helpless, needing a minimum of one full day of rest in bed for each day or fraction he was dead. The person has 1 hit point when raised and must regain the rest by natural healing or curative magic.
+A character's starting Constitution is an absolute limit to the number of times he can be revived by this means.
+The somatic component of the spell is a pointed finger.
+The reverse of the spell, slay living, grants the victim a saving throw vs. death magic.
+If the saving throw is successful, the victim sustains damage equal to that of a cause serious wounds spell--i.e., 2d8+1 points. Failure means the victim dies instantly."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Raise Dead</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 person&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the priest casts a raise dead spell, he can restore life to a dwarf, gnome, half-elf, halfling, or human (other creatures may be allowed, at the DM&#039;s option). The length of time that the person has been dead is of importance, as the priest can raise persons dead only up to a limit of one day for each experience level of the priest (i.e., a 9th-level priest can raise a person who has been dead for up to nine days).<br />Note that the body of the person must be whole, or otherwise missing parts are still missing when the person is brought back to life. Likewise, other ills, such as poison and disease, are not negated. The raised person must roll a successful resurrection survival check to survive the ordeal (see Table 3: Constitution) and loses 1 point of Constitution.<br />Further, the raised person is weak and helpless, needing a minimum of one full day of rest in bed for each day or fraction he was dead. The person has 1 hit point when raised and must regain the rest by natural healing or curative magic.<br />A character&#039;s starting Constitution is an absolute limit to the number of times he can be revived by this means.<br />The somatic component of the spell is a pointed finger.<br />The reverse of the spell, slay living, grants the victim a saving throw vs. death magic.<br />If the saving throw is successful, the victim sustains damage equal to that of a cause serious wounds spell--i.e., 2d8+1 points. Failure means the victim dies instantly.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 284</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="788" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Breath of Life",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 turn",
+"duration":"1 hour/level",
+"save":"None",
+"damage":"",
+"description":"This powerful spell enables the caster to cure many persons (even an entire community) who are afflicted with a nonmagical disease. The priest need not touch or even see the diseased people for the spell to be effective, although recipients must be within the area of effect.
+This spell does not cure all diseases in the community at one time; the caster must specifically state which disease is to be eliminated (black plague or yellow fever, for example) with each casting of the spell.
+When the spell is cast, the priest exhales a sweet-smelling breath. This forms into a breeze that radiates outward, forming a circle that expands in a 50-yard radius per hour.
+During this time, the caster must remain at the center of the area of effect. For example, after 12 hours, the breath of life would cover a circle 1200 yards in diameter (600-yard radius). The breath is of a magical nature rather than a physical nature; therefore, it is unaffected by prevailing winds.
+The breeze blows through the community, instantly eliminating the specified disease from all afflicted citizens. The breath of life spell does not destroy parasitic monsters (such as green slime, rot grubs, and others), nor does it cure lycanthropy or other magical afflictions. The spell does not prevent recurrence of a disease if the recipients are again exposed.
+The material components are the priest's holy symbol and a cone of incense that has been blessed by the highest priest of the character's religion.
+The breath of death, which produces a foul-smelling wind, is the reverse of this spell.
+Victims who fail a saving throw vs. death magic are afflicted with a nonmagical, fatal disease. To determine the results of this spell, the DM should roll saving throws for major NPCs in the area of effect. The effect on the rest of the community can be calculated as a percentage, based on the saving throw.
+Infected creatures do not heal hit points until the disease is cured. The disease is fatal within 1d6 weeks (the duration varies from person to person).
+The material components are the priest's holy symbol and a handful of dust taken from a mummy's corpse."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Breath of Life</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hour/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This powerful spell enables the caster to cure many persons (even an entire community) who are afflicted with a nonmagical disease. The priest need not touch or even see the diseased people for the spell to be effective, although recipients must be within the area of effect.<br />This spell does not cure all diseases in the community at one time; the caster must specifically state which disease is to be eliminated (black plague or yellow fever, for example) with each casting of the spell.<br />When the spell is cast, the priest exhales a sweet-smelling breath. This forms into a breeze that radiates outward, forming a circle that expands in a 50-yard radius per hour.<br />During this time, the caster must remain at the center of the area of effect. For example, after 12 hours, the breath of life would cover a circle 1200 yards in diameter (600-yard radius). The breath is of a magical nature rather than a physical nature; therefore, it is unaffected by prevailing winds.<br />The breeze blows through the community, instantly eliminating the specified disease from all afflicted citizens. The breath of life spell does not destroy parasitic monsters (such as green slime, rot grubs, and others), nor does it cure lycanthropy or other magical afflictions. The spell does not prevent recurrence of a disease if the recipients are again exposed.<br />The material components are the priest&#039;s holy symbol and a cone of incense that has been blessed by the highest priest of the character&#039;s religion.<br />The breath of death, which produces a foul-smelling wind, is the reverse of this spell.<br />Victims who fail a saving throw vs. death magic are afflicted with a nonmagical, fatal disease. To determine the results of this spell, the DM should roll saving throws for major NPCs in the area of effect. The effect on the rest of the community can be calculated as a percentage, based on the saving throw.<br />Infected creatures do not heal hit points until the disease is cured. The disease is fatal within 1d6 weeks (the duration varies from person to person).<br />The material components are the priest&#039;s holy symbol and a handful of dust taken from a mummy&#039;s corpse.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 105</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="648" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Restoration",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"3 rds.",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the life energy level of the recipient creature is raised by one.
+This reverses any previous life energy level drain of the creature by a force or monster.
+Thus, if a 10th-level character had been struck by a wight and drained to 9th level, the restoration spell would bring the character up to exactly the number of experience points necessary to restore him to 10th level once again, restoring additional Hit Dice (or hit points) and level functions accordingly. Restoration is effective only if the spell is cast within one day of the recipient's loss of life energy, per experience level of the priest casting it. A restoration spell restores the intelligence of a creature affected by a feeblemind spell. It also negates all forms of insanity. Casting this spell ages both the caster and the recipient by two years.
+The reverse, energy drain, draws away one life energy level (see such undead as spectre, wight, and vampire, in the Monstrous Manual). The energy drain requires the victim to be touched. Casting this form of the spell does not age the caster."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Restoration</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3 rds.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the life energy level of the recipient creature is raised by one.<br />This reverses any previous life energy level drain of the creature by a force or monster.<br />Thus, if a 10th-level character had been struck by a wight and drained to 9th level, the restoration spell would bring the character up to exactly the number of experience points necessary to restore him to 10th level once again, restoring additional Hit Dice (or hit points) and level functions accordingly. Restoration is effective only if the spell is cast within one day of the recipient&#039;s loss of life energy, per experience level of the priest casting it. A restoration spell restores the intelligence of a creature affected by a feeblemind spell. It also negates all forms of insanity. Casting this spell ages both the caster and the recipient by two years.<br />The reverse, energy drain, draws away one life energy level (see such undead as spectre, wight, and vampire, in the Monstrous Manual). The energy drain requires the victim to be touched. Casting this form of the spell does not age the caster.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 298</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="649" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">7</button>
+<!--
+			<textarea class="spellJSON">{"name":"Resurrection",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 turn",
+"duration":"Permanent",
+"save":"None",
+"damage":"",
+"description":"The priest is able to restore life and complete strength to any living creature, including elves, by bestowing the resurrection spell. The creature can have been dead up to 10 years per level of the priest casting the spell. Thus, a 19th-level priest can resurrect the bones of a creature dead up to 190 years. The creature, upon surviving a resurrection survival check, is immediately restored to full hit points and can perform strenuous activity. The spell cannot bring back a creature that has reached its allotted life span (i.e., died of natural causes). Casting this spell makes it impossible for the priest to cast further spells or engage in combat until he has had one day of bed rest for each experience level or Hit Die of the creature brought back to life. The caster ages three years upon casting this spell.
+The reverse, destruction, causes the victim of the spell to be instantly dead and turned to dust. A wish spell or equivalent is required for recovery. Destruction requires a touch, either in combat or otherwise, and does not age the caster. In addition, the victim is allowed a saving throw (with a -4 penalty). If the save is successful, the victim receives 8d6 points of damage instead.
+The material components of the spell are the priest's religious symbol and holy water (unholy water for the reverse spell). The DM may reduce the chances of successful resurrection if little of the creature's remains are available."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Resurrection</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Permanent&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The priest is able to restore life and complete strength to any living creature, including elves, by bestowing the resurrection spell. The creature can have been dead up to 10 years per level of the priest casting the spell. Thus, a 19th-level priest can resurrect the bones of a creature dead up to 190 years. The creature, upon surviving a resurrection survival check, is immediately restored to full hit points and can perform strenuous activity. The spell cannot bring back a creature that has reached its allotted life span (i.e., died of natural causes). Casting this spell makes it impossible for the priest to cast further spells or engage in combat until he has had one day of bed rest for each experience level or Hit Die of the creature brought back to life. The caster ages three years upon casting this spell.<br />The reverse, destruction, causes the victim of the spell to be instantly dead and turned to dust. A wish spell or equivalent is required for recovery. Destruction requires a touch, either in combat or otherwise, and does not age the caster. In addition, the victim is allowed a saving throw (with a -4 penalty). If the save is successful, the victim receives 8d6 points of damage instead.<br />The material components of the spell are the priest&#039;s religious symbol and holy water (unholy water for the reverse spell). The DM may reduce the chances of successful resurrection if little of the creature&#039;s remains are available.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 298</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="806" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Health Blessing",
+"school":"Necromancy",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"100 yards",
+"aoe":"50 creatures",
+"castingTime":"1 round",
+"duration":"1 day/level",
+"save":"None",
+"damage":"",
+"description":"Health blessing provides a number of human, demi-human, or humanoid creatures with protection against ill health; it also enables subjects to heal others.
+Recipients of a health blessing are immune to nonmagical disease, gain a +4 bonus to saving throws versus poison and death magic, and can cast cure light wounds on themselves once per day for the duration of the spell. In addition, a recipient of health blessing can heal one other creature per day as a paladin does by laying hands. The healing conferred is 1 hit point per level or hit die of the healer."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Health Blessing</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">100 yards&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 round&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">50 creatures&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 day/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Health blessing provides a number of human, demi-human, or humanoid creatures with protection against ill health; it also enables subjects to heal others.<br />Recipients of a health blessing are immune to nonmagical disease, gain a +4 bonus to saving throws versus poison and death magic, and can cast cure light wounds on themselves once per day for the duration of the spell. In addition, a recipient of health blessing can heal one other creature per day as a paladin does by laying hands. The healing conferred is 1 hit point per level or hit die of the healer.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 114</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="824" class="card necromancy" data-school="Necromancy" data-caster="priest" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">Q</button>
+<!--
+			<textarea class="spellJSON">{"name":"Undead Plague",
+"school":"Necromancy",
+"verbal":"0",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"1 mile",
+"aoe":"100-yard square/level",
+"castingTime":"2 rounds",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of this potent spell, the priest summons many ranks of skeletons to do his bidding. The skeletons are formed from any and all humanoid bones within the area of effect. The number of skeletons depends on the terrain in the area of effect; a battlesite or graveyard will yield 10 skeletons per 100 square yards; a long-inhabited area will yield three skeletons per 100 square yards; and wilderness will yield one skeleton per 100 square yards.
+The spell's maximum area of effect is 10,000 square yards. Thus, no more than 1,000 skeletons can be summoned by this spell.
+The skeletons created by this spell are turned as zombies and remain in existence until destroyed or willed out of existence by the priest who created them."}</textarea>
+ -->
+			<div class="components "><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Undead Plague</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">1 mile&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2 rounds&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">100-yard square/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this potent spell, the priest summons many ranks of skeletons to do his bidding. The skeletons are formed from any and all humanoid bones within the area of effect. The number of skeletons depends on the terrain in the area of effect; a battlesite or graveyard will yield 10 skeletons per 100 square yards; a long-inhabited area will yield three skeletons per 100 square yards; and wilderness will yield one skeleton per 100 square yards.<br />The spell&#039;s maximum area of effect is 10,000 square yards. Thus, no more than 1,000 skeletons can be summoned by this spell.<br />The skeletons created by this spell are turned as zombies and remain in existence until destroyed or willed out of existence by the priest who created them.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd></dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 121</dd>
+			</dl>
+		</section>
+	</div>
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+
