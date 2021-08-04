@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<div data-id="23" class="card abjuration" data-school="Abjuration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Alarm",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a tiny bell and a piece of very fine silver wire",
+"range":"10 yds.",
+"aoe":"Up to a 20-foot cube",
+"castingTime":"1 rd.",
+"duration":"4 hrs.+ 1/2 hr./level",
+"save":"None",
+"damage":"",
+"description":"When an alarm spell is cast, the wizard causes a selected area to react to the presence of any creature larger than a normal rat - anything larger than about one-half cubic foot in volume or more than about three pounds in weight. The area of effect can be a portal, a section of floor, stairs, etc. As soon as any creature enters the warded area, touches it, or otherwise contacts it without speaking a password established by the caster, the alarm spell lets out a loud ringing that can be heard clearly within a 60-foott radius. (Reduce the radius by 10 feet for each interposing door and by 20 feet for each substantial interposing wall.)
+
+The sound lasts for one round and then ceases. Ethereal or astrally projected creatures do not trigger an alarm, but flying or levitating creatures, invisible creatures, or incorporeal or gaseous creatures do. The caster can dismiss the alarm with a single word.
+The material components of this spell are a tiny bell and a piece of very fine silver wire."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Alarm</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Up to a 20-foot cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">4 hrs.+ 1/2 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >a tiny bell and a piece of very fine silver wire&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When an alarm spell is cast, the wizard causes a selected area to react to the presence of any creature larger than a normal rat - anything larger than about one-half cubic foot in volume or more than about three pounds in weight. The area of effect can be a portal, a section of floor, stairs, etc. As soon as any creature enters the warded area, touches it, or otherwise contacts it without speaking a password established by the caster, the alarm spell lets out a loud ringing that can be heard clearly within a 60-foott radius. (Reduce the radius by 10 feet for each interposing door and by 20 feet for each substantial interposing wall.)<br /><br />The sound lasts for one round and then ceases. Ethereal or astrally projected creatures do not trigger an alarm, but flying or levitating creatures, invisible creatures, or incorporeal or gaseous creatures do. The caster can dismiss the alarm with a single word.<br />The material components of this spell are a tiny bell and a piece of very fine silver wire.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 170</dd>
+			</dl>
+		</section>
+	</div>
+
+	<div data-id="24" class="card summoning" data-school="Conjuration/Summoning" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Armor",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"finely cured leather that has been blessed by a priest",
+"range":"Touch",
+"aoe":"1 creature",
+"castingTime":"1 rd.",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (+4AC). The spell has no effect on a person already armored or a creature with Armor Class 14 or better. It is not cumulative with the shield spell, but it is cumulative with Dexterity and, in the case of fighter/mages, with the shield bonus. The armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the wearer sustains cumulative damage totaling greater than 8 points + 1 per level of the caster. (It is important to note that the armor does not absorb this damage. The armor merely grants an AC of 14; the wearer still suffers full damage from any successful attacks.) Thus, the wearer might suffer 8 points from an attack, then several minutes later sustain an additional 1 point of damage. Unless the spell were cast by a wizard of 2nd level or higher, it would be dispelled at this time. Until it is dispelled, the armor spell grants the wearer full benefits of the Armor Class gained.
+
+The material component is a piece of finely cured leather that has been blessed by a priest."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Armor</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >finely cured leather that has been blessed by a priest&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (+4AC). The spell has no effect on a person already armored or a creature with Armor Class 14 or better. It is not cumulative with the shield spell, but it is cumulative with Dexterity and, in the case of fighter/mages, with the shield bonus. The armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the wearer sustains cumulative damage totaling greater than 8 points + 1 per level of the caster. (It is important to note that the armor does not absorb this damage. The armor merely grants an AC of 14; the wearer still suffers full damage from any successful attacks.) Thus, the wearer might suffer 8 points from an attack, then several minutes later sustain an additional 1 point of damage. Unless the spell were cast by a wizard of 2nd level or higher, it would be dispelled at this time. Until it is dispelled, the armor spell grants the wearer full benefits of the Armor Class gained.<br /><br />The material component is a piece of finely cured leather that has been blessed by a priest.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 170</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="26" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Burning Hands",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1",
+"duration":"Instantaneous",
+"save":"1/2",
+"damage":"1d3+ 2/level",
+"description":"When the wizard casts this spell, a jet of searing flame shoots from his fingertips. His hands must be held so as to send forth a fan-like sheet of flames: the wizards thumbs must touch each other and fingers must be spread. The burning hands send out flame jets of five-foot length in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of the flames suffers 1d3 hit points of damage, plus 2 points for each level of experience of the spellcaster, to a maximum of 1d3+20 points of fire damage. 
+
+Those successfully saving vs. spell receive half damage. Flammable materials touched by the fire bum (e.g., cloth, paper, parchment, thin wood, etc.). Such materials can be extinguished in the next round if no other action is taken."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Burning Hands</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d3+ 2/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the wizard casts this spell, a jet of searing flame shoots from his fingertips. His hands must be held so as to send forth a fan-like sheet of flames: the wizards thumbs must touch each other and fingers must be spread. The burning hands send out flame jets of five-foot length in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of the flames suffers 1d3 hit points of damage, plus 2 points for each level of experience of the spellcaster, to a maximum of 1d3+20 points of fire damage. <br /><br />Those successfully saving vs. spell receive half damage. Flammable materials touched by the fire bum (e.g., cloth, paper, parchment, thin wood, etc.). Such materials can be extinguished in the next round if no other action is taken.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 170</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="31" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Color Spray",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch each of powder or sand that is colored red, yellow, and blue",
+"range":"0",
+"aoe":"5 x 20 x 20 ft. wedge",
+"castingTime":"1",
+"duration":"Instantaneous",
+"save":"Special",
+"damage":"",
+"description":"Upon casting this spell, the wizard causes a vivid, fan-shaped spray of clashing colors to spring forth from his hand. From one to six creatures (1d6) within the area are affected in order of increasing distance from the wizard. All creatures above the level of the spellcaster and all those of 6th level or 6 Hit Dice or more are entitled to a saving throw vs. spell. Blind or unseeing creatures are not affected by the spell.
+
+Creatures not allowed or failing saving throws, and whose Hit Dice or levels are less than or equal to the spellcaster's level, are struck unconscious for 2d4 rounds; those with Hit Dice or levels 1 or 2 greater than be wizard's level are blinded for 1d4 rounds; those with Hit Dice or levels 3 or more greater than that of the spellcaster are stunned (reeling and unable to think or act coherently) for one round.
+
+The material components of this spell are a pinch each of powder or sand that is colored red, yellow, and blue."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Color Spray</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">5 x 20 x 20 ft. wedge&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >a pinch each of powder or sand that is colored red, yellow, and blue&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Upon casting this spell, the wizard causes a vivid, fan-shaped spray of clashing colors to spring forth from his hand. From one to six creatures (1d6) within the area are affected in order of increasing distance from the wizard. All creatures above the level of the spellcaster and all those of 6th level or 6 Hit Dice or more are entitled to a saving throw vs. spell. Blind or unseeing creatures are not affected by the spell.<br /><br />Creatures not allowed or failing saving throws, and whose Hit Dice or levels are less than or equal to the spellcaster&#039;s level, are struck unconscious for 2d4 rounds; those with Hit Dice or levels 1 or 2 greater than be wizard&#039;s level are blinded for 1d4 rounds; those with Hit Dice or levels 3 or more greater than that of the spellcaster are stunned (reeling and unable to think or act coherently) for one round.<br /><br />The material components of this spell are a pinch each of powder or sand that is colored red, yellow, and blue.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 172</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="32" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Comprehend Languages",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of soot and a few grains of salt",
+"range":"Touch",
+"aoe":"1 speaking creature or written object",
+"castingTime":"1 rd.",
+"duration":"5 rds./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the wizard is able to understand the spoken words of a creature or read an otherwise incomprehensible written message (such as writing in another language). In either case, the wizard must touch the creature or the writing. 
+Note that the ability to read does not necessarily impart understanding of the material, nor does the spell enable the caster to speak or write an unknown language. Written material can be read at the rate of one page or equivalent per round. 
+Magical writing cannot be read, other than to know it is magical, but the spell is often useful when deciphering treasure maps. This spell can be foiled by certain warding magics (the 3rd-level secret page and illusionary script spells) and it does not reveal messages concealed in otherwise normal text.
+The material components of this spell are a pinch of soot and a few grains of salt.
+The reverse of this spell, confuse languages, cancels a comprehend languages spell or renders a writing or a creature's speech incomprehensible, for the same duration as above."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Comprehend Languages</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 speaking creature or written object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials consumed" >a pinch of soot and a few grains of salt&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the wizard is able to understand the spoken words of a creature or read an otherwise incomprehensible written message (such as writing in another language). In either case, the wizard must touch the creature or the writing. <br />Note that the ability to read does not necessarily impart understanding of the material, nor does the spell enable the caster to speak or write an unknown language. Written material can be read at the rate of one page or equivalent per round. <br />Magical writing cannot be read, other than to know it is magical, but the spell is often useful when deciphering treasure maps. This spell can be foiled by certain warding magics (the 3rd-level secret page and illusionary script spells) and it does not reveal messages concealed in otherwise normal text.<br />The material components of this spell are a pinch of soot and a few grains of salt.<br />The reverse of this spell, confuse languages, cancels a comprehend languages spell or renders a writing or a creature&#039;s speech incomprehensible, for the same duration as above.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 172</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="34" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Detect Magic",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"10 ft. path, x 60 ft. long",
+"castingTime":"1",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"When the detect magic spell is cast, the wizard detects magical radiations in a path 10 feet wide and up to 60 feet long, in the direction he is facing. The intensity of the magic can be determined (dim, faint, moderate, strong, overwhelming), and the wizard has a 10% chance per level to recognize if a certain type of magic (alteration, conjuration, etc.) is present. The caster can turn, scanning a 60-degree arc per round. 
+A stone wall of one foot or more thickness, solid metal of one inch thickness, or a yard or more of solid wood blocks the spell. Magical areas, multiple types of magic, or strong local magical emanations may confuse or conceal weaker radiations. 
+Note that this spell does not reveal the presence of good or evil, or reveal alignment. Other-planar creatures are not necessarily magical."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Detect Magic</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. path, x 60 ft. long&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the detect magic spell is cast, the wizard detects magical radiations in a path 10 feet wide and up to 60 feet long, in the direction he is facing. The intensity of the magic can be determined (dim, faint, moderate, strong, overwhelming), and the wizard has a 10% chance per level to recognize if a certain type of magic (alteration, conjuration, etc.) is present. The caster can turn, scanning a 60-degree arc per round. <br />A stone wall of one foot or more thickness, solid metal of one inch thickness, or a yard or more of solid wood blocks the spell. Magical areas, multiple types of magic, or strong local magical emanations may confuse or conceal weaker radiations. <br />Note that this spell does not reveal the presence of good or evil, or reveal alignment. Other-planar creatures are not necessarily magical.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 172</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="36" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Enlarge",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of powdered iron",
+"range":"5 yds./level",
+"aoe":"1 creature or object",
+"castingTime":"1",
+"duration":"5 rds./level",
+"save":"Negate",
+"damage":"",
+"description":"This spell causes instant growth of a creature or object, increasing both size and weight. It can be cast only upon a single creature (or a symbiotic or community entity) or upon a single object that does not exceed ten cubic feet in volume per caster level. The object or creature must be seen to be affected.
+ 
+It grows by up to 10% per level of experience of the wizard, increasing this amount in height, width, and weight. Magical properties are not increased by this spell - a huge sword +1 is still only +1, a staff-sized wand is still only capable of its normal functions, a giant-sized potion merely requires a greater fluid intake to make its magical effects operate, etc. Weight, mass and strength are affected, though. Thus, a table blocking a door would be heavier and more effective, a hurled stein would have more mass (and cause more damage), chains would be more massive, doors thicker, a thin line turned to a sizeable, longer rope, and so on. A creature's hit points, Armor Class, and attack rolls do not change, but damage rolls increase proportionally with size. 
+
+For example, a fighter at 160% normal size hits with his long sword and rolls a 6 for damage. The adjusted damage roll is 10 (that is 6 x 1.6 = 9.6, rounded up). Bonuses due to Strength, class, and magic are not altered.
+
+The reverse spell, reduce, negates the enlarge spell or makes creatures or objects smaller. The creature or object loses 10% of its original size for every level of the caster, to a minimum of 10% of the original size. Thereafter, the size shrinks by one-foot increments to less than one foot, by one-inch increments to one inch, and by 1/10-inch increments to a minimum of 1/10 of an inch - the recipient cannot dwindle away to nothingness.
+
+For example, a 16-foot-tall giant reduced by a 15th-level wizard (15 steps) would be reduced to 1.6 feet (in nine steps), then to 6/10 of a foot or 7.2 inches (in one step), and finally to 2.2 inches (in the last five steps). A shrinking object may damage weaker materials affixed to it, but an object will shrink only as long as the object itself is not damaged. Unwilling creatures are allowed a saving throw vs. spell.
+
+The material component of this spell is a pinch of powdered iron."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Enlarge</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature or object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of powdered iron&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes instant growth of a creature or object, increasing both size and weight. It can be cast only upon a single creature (or a symbiotic or community entity) or upon a single object that does not exceed ten cubic feet in volume per caster level. The object or creature must be seen to be affected.<br /> <br />It grows by up to 10% per level of experience of the wizard, increasing this amount in height, width, and weight. Magical properties are not increased by this spell - a huge sword +1 is still only +1, a staff-sized wand is still only capable of its normal functions, a giant-sized potion merely requires a greater fluid intake to make its magical effects operate, etc. Weight, mass and strength are affected, though. Thus, a table blocking a door would be heavier and more effective, a hurled stein would have more mass (and cause more damage), chains would be more massive, doors thicker, a thin line turned to a sizeable, longer rope, and so on. A creature&#039;s hit points, Armor Class, and attack rolls do not change, but damage rolls increase proportionally with size. <br /><br />For example, a fighter at 160% normal size hits with his long sword and rolls a 6 for damage. The adjusted damage roll is 10 (that is 6 x 1.6 = 9.6, rounded up). Bonuses due to Strength, class, and magic are not altered.<br /><br />The reverse spell, reduce, negates the enlarge spell or makes creatures or objects smaller. The creature or object loses 10% of its original size for every level of the caster, to a minimum of 10% of the original size. Thereafter, the size shrinks by one-foot increments to less than one foot, by one-inch increments to one inch, and by 1/10-inch increments to a minimum of 1/10 of an inch - the recipient cannot dwindle away to nothingness.<br /><br />For example, a 16-foot-tall giant reduced by a 15th-level wizard (15 steps) would be reduced to 1.6 feet (in nine steps), then to 6/10 of a foot or 7.2 inches (in one step), and finally to 2.2 inches (in the last five steps). A shrinking object may damage weaker materials affixed to it, but an object will shrink only as long as the object itself is not damaged. Unwilling creatures are allowed a saving throw vs. spell.<br /><br />The material component of this spell is a pinch of powdered iron.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 173</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="38" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Feather Fall",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"10 yds./level",
+"aoe":"Special",
+"castingTime":"1",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, the creature(s) or object(s) affected immediately assumes the mass of a piece of down. Rate of falling is instantly changed to a mere two feet per second (120 feet per round), and no damage is incurred upon landing while the spell is in effect. However, when the spell duration ceases, normal rate of fall occurs.
+ 
+The spell can be cast upon the wizard or some other creature or object up to the maximum range and lasts for one round for each level of the wizard. The feather fall affects one or more objects or creatures in a 10-foot cube, as long as the maximum weight of the creatures or objects does not exceed a combined total of 200 pounds plus 200 pounds per level of the spellcaster. 
+
+For example, a 2nd-level wizard has a range of 20 yards, a duration of two rounds, and a weight limit of 600 pounds when casting this spell. 
+
+The spell works only upon free-falling, flying, or propelled objects (such as missiles). It does not affect a sword blow or a charging creature. 
+
+Note that the spell can be effectively combined with gust of wind and similar spells."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Feather Fall</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, the creature(s) or object(s) affected immediately assumes the mass of a piece of down. Rate of falling is instantly changed to a mere two feet per second (120 feet per round), and no damage is incurred upon landing while the spell is in effect. However, when the spell duration ceases, normal rate of fall occurs.<br /> <br />The spell can be cast upon the wizard or some other creature or object up to the maximum range and lasts for one round for each level of the wizard. The feather fall affects one or more objects or creatures in a 10-foot cube, as long as the maximum weight of the creatures or objects does not exceed a combined total of 200 pounds plus 200 pounds per level of the spellcaster. <br /><br />For example, a 2nd-level wizard has a range of 20 yards, a duration of two rounds, and a weight limit of 600 pounds when casting this spell. <br /><br />The spell works only upon free-falling, flying, or propelled objects (such as missiles). It does not affect a sword blow or a charging creature. <br /><br />Note that the spell can be effectively combined with gust of wind and similar spells.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 173</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="42" class="card summoning" data-school="Conjuration/Summoning" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Grease",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a bit of pork rind or butter",
+"range":"10 yds.",
+"aoe":"10 ft. x 10 ft. square area",
+"castingTime":"1",
+"duration":"3 rds.+ 1 rd./level",
+"save":"Special",
+"damage":"",
+"description":"A grease spell covers a material surface with a slippery layer of a fatty, greasy nature. Any creature entering the area or caught in it when the spell is cast must save vs. spell or slip, skid, and fall. 
+
+Those who successfully save can reach the nearest non-greased surface by the end of the round. Those who remain in the area are allowed a saving throw each round until they escape the area. The DM should adjust saving throws by circumstance; for example, a creature charging down an incline that is suddenly greased has little chance to avoid the effect, but its ability to exit the affected area is almost assured! 
+
+The spell can also be used to create a greasy coating on an item - a rope, ladder rungs, weapon handle, etc. 
+Material objects not in use are always affected by this spell, while creatures wielding or employing items receive a saving throw vs. spell to avoid the effect. If the initial saving throw is failed, the creature immediately drops the item. A saving throw must be made each round the creature attempts to use the greased item. 
+
+The caster can end the effect with a single utterance; otherwise it lasts for three rounds plus one round per level. 
+The material component of the spell is a bit of pork rind or butter."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Grease</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 ft. x 10 ft. square area&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a bit of pork rind or butter&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A grease spell covers a material surface with a slippery layer of a fatty, greasy nature. Any creature entering the area or caught in it when the spell is cast must save vs. spell or slip, skid, and fall. <br /><br />Those who successfully save can reach the nearest non-greased surface by the end of the round. Those who remain in the area are allowed a saving throw each round until they escape the area. The DM should adjust saving throws by circumstance; for example, a creature charging down an incline that is suddenly greased has little chance to avoid the effect, but its ability to exit the affected area is almost assured! <br /><br />The spell can also be used to create a greasy coating on an item - a rope, ladder rungs, weapon handle, etc. <br />Material objects not in use are always affected by this spell, while creatures wielding or employing items receive a saving throw vs. spell to avoid the effect. If the initial saving throw is failed, the creature immediately drops the item. A saving throw must be made each round the creature attempts to use the greased item. <br /><br />The caster can end the effect with a single utterance; otherwise it lasts for three rounds plus one round per level. <br />The material component of the spell is a bit of pork rind or butter.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 175</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="44" class="card charm" data-school="Enchantment/Charm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Hypnotism",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"5 yds.",
+"aoe":"30 ft. cube",
+"castingTime":"1",
+"duration":"1 rd.+ 1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"The gestures of the wizard, along with his droning incantation, cause 1d6 creatures within the area to become susceptible to a suggestion - a brief and reasonable-sounding request (see the 3rd-level wizard suggestion spell). The request must be given after the hypnotism spell is cast. 
+
+Until that time the success of the spell is unknown. Note that the subsequent suggestion is not a spell, but simply a vocalized urging (the caster must speak a language the creature understands for this spell to work). 
+
+Creatures that successfully roll their saving throws are not under hypnotic influence. Those who are exceptionally wary or hostile save with +1 to +3 bonuses. If the spell is cast at an individual creature that meets the caster's gaze, the saving throw is made with a penalty of -2. 
+
+A creature that fails its saving throw does not remember that the caster enspelled it."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Hypnotism</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30 ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The gestures of the wizard, along with his droning incantation, cause 1d6 creatures within the area to become susceptible to a suggestion - a brief and reasonable-sounding request (see the 3rd-level wizard suggestion spell). The request must be given after the hypnotism spell is cast. <br /><br />Until that time the success of the spell is unknown. Note that the subsequent suggestion is not a spell, but simply a vocalized urging (the caster must speak a language the creature understands for this spell to work). <br /><br />Creatures that successfully roll their saving throws are not under hypnotic influence. Those who are exceptionally wary or hostile save with +1 to +3 bonuses. If the spell is cast at an individual creature that meets the caster&#039;s gaze, the saving throw is made with a penalty of -2. <br /><br />A creature that fails its saving throw does not remember that the caster enspelled it.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Rare</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 175</dd>
+			</dl>
+		</section>
+	</div>
+	
+<div data-id="47" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Light",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"0",
+"material":"1",
+"materials":"a firefly or a piece of phosphorescent moss",
+"range":"60 yds. ",
+"aoe":"20-ft. radius globe",
+"castingTime":"1",
+"duration":"1 turn/level",
+"save":"Special",
+"damage":"",
+"description":"This spell creates a luminous glow, equal to torchlight, within a fixed radius of the spell's center. Objects in darkness beyond this sphere can be seen, at best, as vague and shadowy shapes. The spell is centered on a point selected by the caster, and he must have a line of sight and unobstructed path for the spell when it is cast. Light can spring from air, rock, metal, wood, or almost any similar substance.
+
+The effect is immobile unless it is specifically centered on a moveable object or mobile creature. If this spell is cast upon a creature, the applicable magic resistance and saving throw rolls must be made. Successful resistance negates the spell, while a successful saving throw indicates that the spell is centered immediately behind the creature, rather than upon the creature itself. Light taken into an area of magical darkness does not function, but if cast directly against magical darkness negates it (but only for the duration of the light spell, if the darkness effect is continual).
+
+Light centered on the visual organs of a creature blinds it, reducing its attack rolls and saving throws by 4 and worsening its Armor Class by 4. The caster can end the spell at any time by uttering a single word. 
+
+The material component is a firefly or a piece of phosphorescent moss."}</textarea>
+ -->
+			<div class="components  verbal material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Light</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds. &nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft. radius globe&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a firefly or a piece of phosphorescent moss&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates a luminous glow, equal to torchlight, within a fixed radius of the spell&#039;s center. Objects in darkness beyond this sphere can be seen, at best, as vague and shadowy shapes. The spell is centered on a point selected by the caster, and he must have a line of sight and unobstructed path for the spell when it is cast. Light can spring from air, rock, metal, wood, or almost any similar substance.<br /><br />The effect is immobile unless it is specifically centered on a moveable object or mobile creature. If this spell is cast upon a creature, the applicable magic resistance and saving throw rolls must be made. Successful resistance negates the spell, while a successful saving throw indicates that the spell is centered immediately behind the creature, rather than upon the creature itself. Light taken into an area of magical darkness does not function, but if cast directly against magical darkness negates it (but only for the duration of the light spell, if the darkness effect is continual).<br /><br />Light centered on the visual organs of a creature blinds it, reducing its attack rolls and saving throws by 4 and worsening its Armor Class by 4. The caster can end the spell at any time by uttering a single word. <br /><br />The material component is a firefly or a piece of phosphorescent moss.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 176</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="48" class="card evocation" data-school="Invocation/Evocation" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Magic Missile",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"60 yds.+ 10 yds./level",
+"aoe":"1 or more creatures in a 10-foot cube",
+"castingTime":"1",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"1d4+1",
+"description":"Use of the magic missile spell creates up to five missiles of magical energy that dart forth from the wizards fingertip and unerringly strike their target. This includes enemy creatures in a melee. The target creature must be seen or otherwise detected to be hit, however, so near-total concealment, such as that offered by arrow slits, can render the spell ineffective. Likewise, the caster must be able to identify the target. He cannot direct a magic missile to \"Strike the commander of the legion,\" unless he can single out the commander from the rest of the soldiers.  Specific parts of a creature cannot be singled out.  Inanimate objects (locks, etc.) cannot be damaged by the spell, and any attempt to do so wastes the missiles to no effect. Against creatures, each missile inflicts 1d4+1 points of damage.
+
+For every two extra levels of experience, the wizard gains an additional missile - he has two at 3rd level, three at 5th level, four at 7th level, etc., up to a total of five missiles at 9th level. If the wizard has multiple missile capability, he can have them strike a single target creature or several creatures, as desired.
+
+"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Magic Missile</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.+ 10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 or more creatures in a 10-foot cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d4+1&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Use of the magic missile spell creates up to five missiles of magical energy that dart forth from the wizards fingertip and unerringly strike their target. This includes enemy creatures in a melee. The target creature must be seen or otherwise detected to be hit, however, so near-total concealment, such as that offered by arrow slits, can render the spell ineffective. Likewise, the caster must be able to identify the target. He cannot direct a magic missile to &quot;Strike the commander of the legion,&quot; unless he can single out the commander from the rest of the soldiers.  Specific parts of a creature cannot be singled out.  Inanimate objects (locks, etc.) cannot be damaged by the spell, and any attempt to do so wastes the missiles to no effect. Against creatures, each missile inflicts 1d4+1 points of damage.<br /><br />For every two extra levels of experience, the wizard gains an additional missile - he has two at 3rd level, three at 5th level, four at 7th level, etc., up to a total of five missiles at 9th level. If the wizard has multiple missile capability, he can have them strike a single target creature or several creatures, as desired.<br /><br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 176</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="53" class="card illusion" data-school="Illusion/Phantasm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Phantasmal Force",
+"school":"Illusion/Phantasm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a bit of fleece",
+"range":"60 yds.+ 10 yds./level",
+"aoe":"400 sq. ft.+ 100 sq. ft./level",
+"castingTime":"1",
+"duration":"Special",
+"save":"Special",
+"damage":"",
+"description":"This spell creates the illusion of any object, creature, or force, as long as it is within the boundaries of the spell's area of effect. The illusion is visual and affects all believing creatures (undead are immune) that view it. It does not create sound, smell, or temperature. Effects that depend on these senses usually fail.	The illusion lasts until struck by an opponent - unless the spellcaster causes the illusion to react appropriately - or until the wizard ceases concentration upon the spell (due to desire, moving, or a successful attack that causes damage). 
+
+Saving throws for illusions are explained under \"Illusions\" in Chapter 7: Magic and under \"Adjudicating Illusions\" at the beginning of Appendix 2. 
+
+Creatures that disbelieve the illusion see it for what it is and add +4 to associates' saving throws if this knowledge can be communicated effectively. Creatures believing the illusion are subject to its effects, again as explained under Illusions.
+The illusionary effect can be moved by the caster within the limits of the area of effect. The DM has to rule on the effectiveness of this spell; detailed guidelines are outlined under \"Illusions\" in Chapter 7: Magic and under \"Adjudicating Illusions\" at the beginning of Appendix 2. 
+
+The material component of the spell is a bit of fleece."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Phantasmal Force</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.+ 10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">400 sq. ft.+ 100 sq. ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a bit of fleece&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates the illusion of any object, creature, or force, as long as it is within the boundaries of the spell&#039;s area of effect. The illusion is visual and affects all believing creatures (undead are immune) that view it. It does not create sound, smell, or temperature. Effects that depend on these senses usually fail.	The illusion lasts until struck by an opponent - unless the spellcaster causes the illusion to react appropriately - or until the wizard ceases concentration upon the spell (due to desire, moving, or a successful attack that causes damage). <br /><br />Saving throws for illusions are explained under &quot;Illusions&quot; in Chapter 7: Magic and under &quot;Adjudicating Illusions&quot; at the beginning of Appendix 2. <br /><br />Creatures that disbelieve the illusion see it for what it is and add +4 to associates&#039; saving throws if this knowledge can be communicated effectively. Creatures believing the illusion are subject to its effects, again as explained under Illusions.<br />The illusionary effect can be moved by the caster within the limits of the area of effect. The DM has to rule on the effectiveness of this spell; detailed guidelines are outlined under &quot;Illusions&quot; in Chapter 7: Magic and under &quot;Adjudicating Illusions&quot; at the beginning of Appendix 2. <br /><br />The material component of the spell is a bit of fleece.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Illusion/Phantasm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 177</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="55" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Read Magic",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a clear crystal or mineral prism",
+"range":"0",
+"aoe":"Special",
+"castingTime":"1 rd.",
+"duration":"2 rds./level",
+"save":"None",
+"damage":"",
+"description":"By means of a read magic spell, the wizard is able to read magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be totally unintelligible. (The personal books of the wizard, and works already magically read, are intelligible.) This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed scroll. Furthermore, once the spell is cast and the wizard has read the magical inscription, he is thereafter able to read that particular writing without recourse to the use of the read magic spell. The duration of the spell is two rounds per level of experience of the spellcaster; the wizard can read one page or its equivalent per round.
+
+The wizard must have a clear crystal or mineral prism, which is not expended, to cast the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Read Magic</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 rd.&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a clear crystal or mineral prism&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of a read magic spell, the wizard is able to read magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be totally unintelligible. (The personal books of the wizard, and works already magically read, are intelligible.) This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed scroll. Furthermore, once the spell is cast and the wizard has read the magical inscription, he is thereafter able to read that particular writing without recourse to the use of the read magic spell. The duration of the spell is two rounds per level of experience of the spellcaster; the wizard can read one page or its equivalent per round.<br /><br />The wizard must have a clear crystal or mineral prism, which is not expended, to cast the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 178</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="57" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Shocking Grasp",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"1",
+"duration":"Special",
+"save":"None",
+"damage":"1d8 +1/level",
+"description":"When the wizard casts this spell, he develops a powerful electrical charge that gives a jolt to the creature touched. 
+
+The spell remains in effect for one round per level of the caster or until it is discharged by the caster touching another	creature. 
+
+The shocking grasp delivers 1d8 points of damage, plus 1 point per level of the wizard (e.g., a 2nd-level wizard would discharge a shock causing 1d8+2 points of damage). 
+
+While the wizard must come close enough to his opponent to lay a hand on the opponent's body or upon an electrical conductor that touches the opponent's body, a like touch from the opponent does not discharge the spell."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Shocking Grasp</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d8 +1/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When the wizard casts this spell, he develops a powerful electrical charge that gives a jolt to the creature touched. <br /><br />The spell remains in effect for one round per level of the caster or until it is discharged by the caster touching another	creature. <br /><br />The shocking grasp delivers 1d8 points of damage, plus 1 point per level of the wizard (e.g., a 2nd-level wizard would discharge a shock causing 1d8+2 points of damage). <br /><br />While the wizard must come close enough to his opponent to lay a hand on the opponent&#039;s body or upon an electrical conductor that touches the opponent&#039;s body, a like touch from the opponent does not discharge the spell.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 178</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="58" class="card charm" data-school="Enchantment/Charm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Sleep",
+"school":"Enchantment/Charm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of fine sand, rose petals, or a live cricket",
+"range":"30 yds.",
+"aoe":"Special",
+"castingTime":"1",
+"duration":"5 rds./level",
+"save":"None",
+"damage":"",
+"description":"When a wizard casts a sleep spell, he causes a comatose slumber to come upon one or more creatures (other than undead and certain other creatures specifically excluded from the spell's effects). 
+
+All creatures to be affected by the sleep spell must be within 30 feet of each other. The number of creatures that can be affected is a function of Hit Dice or levels. 
+
+The spell affects 2d4 Hit Dice of monsters. Monsters with 4+3 Hit Dice (4 Hit Dice plus 3 hit points) or more are unaffected. The center of the area of effect is determined by the spellcaster. The creatures with the least Hit Dice are affected first, and partial effects are ignored.
+
+For example, a wizard casts sleep at three kobolds, two gnolls, and an ogre. The roll (2d4) result is 4. All the kobolds and one gnoll are affected (1/2 + 1/2 + 1/2 + 2 = 3 1/2 Hit Dice). 
+
+Note that the remainder is not enough to affect the last gnoll or the ogre.
+
+Slapping or wounding awakens affected creatures but normal noise does not. Awakening requires one entire round. Magically sleeping opponents can be attacked with substantial bonuses (see Combat, page 90).
+
+The material component for this spell is a pinch of fine sand, rose petals, or a live cricket."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Sleep</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">5 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of fine sand, rose petals, or a live cricket&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a wizard casts a sleep spell, he causes a comatose slumber to come upon one or more creatures (other than undead and certain other creatures specifically excluded from the spell&#039;s effects). <br /><br />All creatures to be affected by the sleep spell must be within 30 feet of each other. The number of creatures that can be affected is a function of Hit Dice or levels. <br /><br />The spell affects 2d4 Hit Dice of monsters. Monsters with 4+3 Hit Dice (4 Hit Dice plus 3 hit points) or more are unaffected. The center of the area of effect is determined by the spellcaster. The creatures with the least Hit Dice are affected first, and partial effects are ignored.<br /><br />For example, a wizard casts sleep at three kobolds, two gnolls, and an ogre. The roll (2d4) result is 4. All the kobolds and one gnoll are affected (1/2 + 1/2 + 1/2 + 2 = 3 1/2 Hit Dice). <br /><br />Note that the remainder is not enough to affect the last gnoll or the ogre.<br /><br />Slapping or wounding awakens affected creatures but normal noise does not. Awakening requires one entire round. Magically sleeping opponents can be attacked with substantial bonuses (see Combat, page 90).<br /><br />The material component for this spell is a pinch of fine sand, rose petals, or a live cricket.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Enchantment/Charm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 178</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="59" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spider Climb",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a drop of bitumen and a live spider",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"1",
+"duration":"3 rds.+ 1 rd./level",
+"save":"Negate",
+"damage":"",
+"description":"A spider climb spell enables the recipient to climb and travel upon vertical surfaces as well as a giant spider, or even hang upside down from ceilings. Unwilling victims must be touched and are then allowed a saving throw vs. spell to negate the effect. The affected creature must have bare hands and feet in order to climb in this manner, at a movement rate of 6 (3 if at all encumbered). 
+During the course of the spell, the recipient cannot handle objects that weigh less than a dagger (one pound), for such objects stick to his hands and feet. 
+
+Thus a wizard will find it virtually impossible to cast spells if under a spider climb spell. Sufficient force can pull the recipient free; the DM can assign a saving throw based on circumstances, the strength of the force, and so on. 
+
+For example, a creature with a Strength of 12 might pull the subject free if the subject fails a saving throw vs. paralyzation (a moderately difficult saving throw). The caster can end the spell effect with a word.
+
+The material components of this spell are a drop of bitumen and a live spider, both of which must be eaten by the spell recipient."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spider Climb</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a drop of bitumen and a live spider&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A spider climb spell enables the recipient to climb and travel upon vertical surfaces as well as a giant spider, or even hang upside down from ceilings. Unwilling victims must be touched and are then allowed a saving throw vs. spell to negate the effect. The affected creature must have bare hands and feet in order to climb in this manner, at a movement rate of 6 (3 if at all encumbered). <br />During the course of the spell, the recipient cannot handle objects that weigh less than a dagger (one pound), for such objects stick to his hands and feet. <br /><br />Thus a wizard will find it virtually impossible to cast spells if under a spider climb spell. Sufficient force can pull the recipient free; the DM can assign a saving throw based on circumstances, the strength of the force, and so on. <br /><br />For example, a creature with a Strength of 12 might pull the subject free if the subject fails a saving throw vs. paralyzation (a moderately difficult saving throw). The caster can end the spell effect with a word.<br /><br />The material components of this spell are a drop of bitumen and a live spider, both of which must be eaten by the spell recipient.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 179</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="60" class="card illusion" data-school="Illusion/Phantasm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spook",
+"school":"Illusion/Phantasm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"1 creature within 30 feet",
+"castingTime":"1 ",
+"duration":"Special",
+"save":"Negate",
+"damage":"",
+"description":"A spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical. Without actually knowing what this is, the wizard merely advances threateningly upon the creature. If a successful saving throw vs. spell is not made, the creature turns and flees at maximum speed as far from the wizard as possible, though items carried are not dropped. The creature has a saving throw penalty of -1 for every two experience levels of the caster, to a maximum of -6 at 12th level. 
+
+Note that a natural (unmodified) roll of 20 automatically succeeds, regardless of saving throw penalties. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Each round after the initial casting, the creature receives another saving throw, without penalty, until it successfully saves and the spell is broken. 
+
+In any event, the spell functions only against creatures with Intelligences of 2 or more, and undead are not affected at all.
+"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spook</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 &nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature within 30 feet&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical. Without actually knowing what this is, the wizard merely advances threateningly upon the creature. If a successful saving throw vs. spell is not made, the creature turns and flees at maximum speed as far from the wizard as possible, though items carried are not dropped. The creature has a saving throw penalty of -1 for every two experience levels of the caster, to a maximum of -6 at 12th level. <br /><br />Note that a natural (unmodified) roll of 20 automatically succeeds, regardless of saving throw penalties. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Each round after the initial casting, the creature receives another saving throw, without penalty, until it successfully saves and the spell is broken. <br /><br />In any event, the spell functions only against creatures with Intelligences of 2 or more, and undead are not affected at all.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Illusion/Phantasm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 179</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="344" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Displace Self",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"0",
+"material":"1",
+"materials":"a small strip of leather from a displacer beast",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"Emulating the natural ability of the displacer beast, this spell causes the caster to appear to be about two feet away from his true location. Any creature making a melee or missile attack against the caster automatically misses with his first attempt and suffers a -2 penalty on all subsequent attack rolls. In addition, the wizard also gains a +2 bonus on saving throws for any spell or special attack aimed directly at him, not at any other characters or the area around him. The only spell that will reveal the caster's true location is true seeing.
+
+The material component for this spell is a small strip of leather made from displacer beast hide that is twisted into a loop."}</textarea>
+ -->
+			<div class="components  verbal material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Displace Self</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small strip of leather from a displacer beast&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Emulating the natural ability of the displacer beast, this spell causes the caster to appear to be about two feet away from his true location. Any creature making a melee or missile attack against the caster automatically misses with his first attempt and suffers a -2 penalty on all subsequent attack rolls. In addition, the wizard also gains a +2 bonus on saving throws for any spell or special attack aimed directly at him, not at any other characters or the area around him. The only spell that will reveal the caster&#039;s true location is true seeing.<br /><br />The material component for this spell is a small strip of leather made from displacer beast hide that is twisted into a loop.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Spells and Magic page 142</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="78" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"ESP",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a copper piece",
+"range":"5 yds./level, 90 yds. max",
+"aoe":"1 creature per probe",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When an ESP spell is used, the caster is able to detect the surface thoughts of any creatures in range - except for those of undead and creatures without minds (as we know them). 
+
+The ESP is stopped by two or more feet of rock, two or more inches of any metal other than lead, or a thin sheet of lead foil. 
+The wizard employing the spell is able to probe the surface thoughts of one creature per round, getting simple instinctual thoughts from lower order creatures. Probes can continue on the same creature from round to round or can move on to other creatures. 
+The caster can use the spell to help determine if a creature lurks behind a door, for example, but the ESP does not always reveal what sort of creature it is. 
+
+If used as part of a program of interrogation, an intelligent and wary subject receives an initial saving throw. If successful, the creature successfully resists and the spell reveals no additional information. If the saving throw is failed, the caster may learn additional information, according to the DMs ruling. 
+
+The creature's Wisdom adjustment applies, as may additional bonuses up to +4, based on the sensitivity of the information sought.
+The material component of this spell is a copper piece."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">ESP</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yds./level, 90 yds. max&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature per probe&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a copper piece&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When an ESP spell is used, the caster is able to detect the surface thoughts of any creatures in range - except for those of undead and creatures without minds (as we know them). <br /><br />The ESP is stopped by two or more feet of rock, two or more inches of any metal other than lead, or a thin sheet of lead foil. <br />The wizard employing the spell is able to probe the surface thoughts of one creature per round, getting simple instinctual thoughts from lower order creatures. Probes can continue on the same creature from round to round or can move on to other creatures. <br />The caster can use the spell to help determine if a creature lurks behind a door, for example, but the ESP does not always reveal what sort of creature it is. <br /><br />If used as part of a program of interrogation, an intelligent and wary subject receives an initial saving throw. If successful, the creature successfully resists and the spell reveals no additional information. If the saving throw is failed, the caster may learn additional information, according to the DMs ruling. <br /><br />The creature&#039;s Wisdom adjustment applies, as may additional bonuses up to +4, based on the sensitivity of the information sought.<br />The material component of this spell is a copper piece.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 182</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="83" class="card summoning" data-school="Conjuration/Summoning" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Glitterdust",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"ground mica",
+"range":"10 yds./level",
+"aoe":"20-ft. cube",
+"castingTime":"2",
+"duration":"1d4 rds.+ 1/level",
+"save":"Special",
+"damage":"",
+"description":"This spell creates a cloud of glittering golden particles within the area of effect. 
+
+Those in the area must roll a successful saving throw vs. spell or be blinded (-4 penalties to attack rolls, saving throws, and Armor Class) for 1d4+1 rounds. In addition, all within the area are covered by the dust, which cannot be removed and continues to sparkle until it fades. 
+
+Note that this reveals invisible creatures. The dust fades in 1d4 rounds plus one round per caster level. Thus glitterdust cast by a 3rd-level wizard lasts for four to seven rounds.
+
+The material component is ground mica."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Glitterdust</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1d4 rds.+ 1/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >ground mica&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell creates a cloud of glittering golden particles within the area of effect. <br /><br />Those in the area must roll a successful saving throw vs. spell or be blinded (-4 penalties to attack rolls, saving throws, and Armor Class) for 1d4+1 rounds. In addition, all within the area are covered by the dust, which cannot be removed and continues to sparkle until it fades. <br /><br />Note that this reveals invisible creatures. The dust fades in 1d4 rounds plus one round per caster level. Thus glitterdust cast by a 3rd-level wizard lasts for four to seven rounds.<br /><br />The material component is ground mica.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 183</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="86" class="card illusion" data-school="Illusion/Phantasm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Invisibility",
+"school":"Illusion/Phantasm",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"an eyelash and a bit of gum arabic",
+"range":"Touch",
+"aoe":"Creature touched",
+"castingTime":"2",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"This spell causes the creature touched to vanish from sight and be undetectable by normal vision or even infravision. Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so. 
+
+Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. Note, however, that light never becomes invisible, although a source of light can become so (thus, the effect is that of a light with no visible source).
+
+The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until 24 hours have passed. Thus, the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first. Note that the priest spells bless, chant, and prayer are not attacks for this purpose. 
+
+All highly Intelligent (Intelligence 13 or more) creatures with 10 or more Hit Dice or levels of experience have a chance to detect invisible objects (they roll saving throws vs. spell; success means they noticed the invisible object).
+
+The material components of the invisibility spell are an eyelash and a bit of gum arabic, the former encased in the latter."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Invisibility</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Creature touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >an eyelash and a bit of gum arabic&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell causes the creature touched to vanish from sight and be undetectable by normal vision or even infravision. Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so. <br /><br />Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. Note, however, that light never becomes invisible, although a source of light can become so (thus, the effect is that of a light with no visible source).<br /><br />The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until 24 hours have passed. Thus, the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first. Note that the priest spells bless, chant, and prayer are not attacks for this purpose. <br /><br />All highly Intelligent (Intelligence 13 or more) creatures with 10 or more Hit Dice or levels of experience have a chance to detect invisible objects (they roll saving throws vs. spell; success means they noticed the invisible object).<br /><br />The material components of the invisibility spell are an eyelash and a bit of gum arabic, the former encased in the latter.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Illusion/Phantasm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 184</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="88" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Knock",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"0",
+"material":"0",
+"materials":"",
+"range":"60 yds.",
+"aoe":"10 sq. ft./level",
+"castingTime":"1",
+"duration":"Special",
+"save":"None",
+"damage":"",
+"description":"The knock spell opens stuck, barred, locked, held, or wizard-locked doors. It opens secret doors, as well as locked or trick-opening boxes or chests. It also loosens welds, shackles, or chains. 
+
+If used to open a wizard-locked door, the spell does not remove the former spell, but simply suspends its functioning for one turn. In all other cases, it permanently opens locks or welds - although the former could be closed and locked again later. It does not raise barred gates or similar impediments (such as a portcullis), nor does it affect ropes, vines, and the like. 
+
+Note that the effect is limited by the area; a 3rd-level wizard can cast a knock spell on a door of 30 square feet or less (for example, a standard 4-ft. x 7-ft. door). 
+
+Each spell can undo up to two means of preventing egress through a portal. Thus if a door is locked, barred, and held, or triple locked, opening it requires two knock spells. In all cases, the location of the door or item must be known - the spell cannot be used against a wall in hopes of discovering a secret door.
+
+The reverse spell, lock, closes and locks a door or similar closure, provided there is a physical mechanism. It does not create a weld, but it locks physically operated locking mechanisms, set bars, and so on, up to two functions. It cannot affect a portcullis."}</textarea>
+ -->
+			<div class="components  verbal"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Knock</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">10 sq. ft./level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">The knock spell opens stuck, barred, locked, held, or wizard-locked doors. It opens secret doors, as well as locked or trick-opening boxes or chests. It also loosens welds, shackles, or chains. <br /><br />If used to open a wizard-locked door, the spell does not remove the former spell, but simply suspends its functioning for one turn. In all other cases, it permanently opens locks or welds - although the former could be closed and locked again later. It does not raise barred gates or similar impediments (such as a portcullis), nor does it affect ropes, vines, and the like. <br /><br />Note that the effect is limited by the area; a 3rd-level wizard can cast a knock spell on a door of 30 square feet or less (for example, a standard 4-ft. x 7-ft. door). <br /><br />Each spell can undo up to two means of preventing egress through a portal. Thus if a door is locked, barred, and held, or triple locked, opening it requires two knock spells. In all cases, the location of the door or item must be known - the spell cannot be used against a wall in hopes of discovering a secret door.<br /><br />The reverse spell, lock, closes and locks a door or similar closure, provided there is a physical mechanism. It does not create a weld, but it locks physically operated locking mechanisms, set bars, and so on, up to two functions. It cannot affect a portcullis.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 184</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="91" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Levitate",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"either a small leather loop or a piece of golden wire",
+"range":"20 yds./level",
+"aoe":"1 creature or object",
+"castingTime":"2",
+"duration":"1 turn/level",
+"save":"Negate",
+"damage":"",
+"description":"When a levitate spell is cast, the wizard can place it upon his person, upon an object, or upon a single creature, subject to a maximum weight limit of 100 pounds per level of experience (e.g., a 3rd-level wizard can levitate up to 300 pounds maximum). If the spell is cast upon the wizard, he can move vertically up or down at a movement rate of 2 per round. If cast upon an object or another creature, the wizard can levitate it at the same speed according to his command. 
+
+Horizontal movement is not empowered by this spell, but the recipient could push along the face of a cliff, for example, to move laterally. 
+
+The spellcaster can cancel the spell as desired. If the subject of the spell is unwilling, or the object is in the possession of a creature, a saving throw vs. spell is allowed to determine if the levitate spell affects it.
+
+Once cast, the spell requires no concentration, except when changing height. A levitating creature attempting to use a missile weapon finds himself increasingly unstable; the first attack has an attack roll penalty of -1, the second -2, and the third -3, etc., up to a maximum of -5. A full round spent stabilizing allows the creature to begin again at -1. Lack of leverage makes it impossible to cock a medium or heavy crossbow.
+
+The material component of this spell is either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Levitate</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">20 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Negate&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 creature or object&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 turn/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >either a small leather loop or a piece of golden wire&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a levitate spell is cast, the wizard can place it upon his person, upon an object, or upon a single creature, subject to a maximum weight limit of 100 pounds per level of experience (e.g., a 3rd-level wizard can levitate up to 300 pounds maximum). If the spell is cast upon the wizard, he can move vertically up or down at a movement rate of 2 per round. If cast upon an object or another creature, the wizard can levitate it at the same speed according to his command. <br /><br />Horizontal movement is not empowered by this spell, but the recipient could push along the face of a cliff, for example, to move laterally. <br /><br />The spellcaster can cancel the spell as desired. If the subject of the spell is unwilling, or the object is in the possession of a creature, a saving throw vs. spell is allowed to determine if the levitate spell affects it.<br /><br />Once cast, the spell requires no concentration, except when changing height. A levitating creature attempting to use a missile weapon finds himself increasingly unstable; the first attack has an attack roll penalty of -1, the second -2, and the third -3, etc., up to a maximum of -5. A full round spent stabilizing allows the creature to begin again at -1. Lack of leverage makes it impossible to cock a medium or heavy crossbow.<br /><br />The material component of this spell is either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 185</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="92" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Locate Object",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a forked twig",
+"range":"0",
+"aoe":"20 yards/level",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell aids in locating a known or familiar object. The wizard casts the spell, slowly turns, and senses when he is facing in the direction of the object to be located, provided the object is within range, i.e., 60 yards for 3rd-level wizards, 80 yards for 4th, 100 yards for 5th, etc. 
+
+The spell can locate such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Note that attempting to find a specific item, such as jewelry or a crown, requires an accurate mental image; if the image is not close enough to the actual, the spell does not work. Desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.
+
+Creatures cannot be found by this spell.
+
+The material component is a forked twig.
+
+The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. Creatures cannot be affected by this spell. The material component is a chameleon skin."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Locate Object</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20 yards/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a forked twig&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell aids in locating a known or familiar object. The wizard casts the spell, slowly turns, and senses when he is facing in the direction of the object to be located, provided the object is within range, i.e., 60 yards for 3rd-level wizards, 80 yards for 4th, 100 yards for 5th, etc. <br /><br />The spell can locate such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Note that attempting to find a specific item, such as jewelry or a crown, requires an accurate mental image; if the image is not close enough to the actual, the spell does not work. Desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead.<br /><br />Creatures cannot be found by this spell.<br /><br />The material component is a forked twig.<br /><br />The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. Creatures cannot be affected by this spell. The material component is a chameleon skin.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 185</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="94" class="card summoning" data-school="Conjuration/Summoning" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Melf's Acid Arrow",
+"school":"Conjuration/Summoning",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a dart, powdered rhubarb leaf, and an adder's stomach",
+"range":"180 yds.",
+"aoe":"1 target",
+"castingTime":"2",
+"duration":"Special",
+"save":"None",
+"damage":"2d4",
+"description":"By means of this spell, the wizard creates a magical arrow that speeds to its target as if fired from the bow of a fighter of the same level as the wizard. No modifiers for range, nonproficiency, or specialization are used. The arrow has no attack or damage bonus, but it inflicts 2d4 points of acid damage (with saving throws for items on the target); there is no splash damage. 
+
+For every three levels that the caster has achieved, the acid, unless somehow neutralized, lasts for another round, inflicting another 2d4 points of damage each round. So at 3rd-5th level, the acid lasts two rounds; at 6th-8th level, the acid lasts for three rounds, etc.
+
+The material components of the spell are a dart, powdered rhubarb leaf, and an adder's stomach."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Melf's Acid Arrow</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">180 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">1 target&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Special&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">2d4&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a dart, powdered rhubarb leaf, and an adder's stomach&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the wizard creates a magical arrow that speeds to its target as if fired from the bow of a fighter of the same level as the wizard. No modifiers for range, nonproficiency, or specialization are used. The arrow has no attack or damage bonus, but it inflicts 2d4 points of acid damage (with saving throws for items on the target); there is no splash damage. <br /><br />For every three levels that the caster has achieved, the acid, unless somehow neutralized, lasts for another round, inflicting another 2d4 points of damage each round. So at 3rd-5th level, the acid lasts two rounds; at 6th-8th level, the acid lasts for three rounds, etc.<br /><br />The material components of the spell are a dart, powdered rhubarb leaf, and an adder&#039;s stomach.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Conjuration/Summoning&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 186</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="95" class="card illusion" data-school="Illusion/Phantasm" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Mirror Image",
+"school":"Illusion/Phantasm",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"6-ft. radius",
+"castingTime":"2",
+"duration":"3 rds./level",
+"save":"None",
+"damage":"",
+"description":"When a mirror image spell is invoked, the spellcaster causes from two to eight exact duplicates of himself to come into being around him. 
+
+These images do exactly what the wizard does. Since the spell causes a blurring and slight distortion when it is cast, it is impossible for opponents to be certain which are the illusions and which is the actual wizard. When an image is struck by a melee or missile attack, magical or otherwise, it disappears, but any other existing images remain intact until struck. 
+
+The images seem to shift from round to round, so that if the actual wizard is struck during one round, he cannot be picked out from among his images the next. 
+
+To determine the number of images that appear, roll 1d4 and add 1 for every three levels of experience the wizard has achieved, to a maximum of eight images. At the end of the spell duration, all surviving images wink out."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Mirror Image</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">6-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a mirror image spell is invoked, the spellcaster causes from two to eight exact duplicates of himself to come into being around him. <br /><br />These images do exactly what the wizard does. Since the spell causes a blurring and slight distortion when it is cast, it is impossible for opponents to be certain which are the illusions and which is the actual wizard. When an image is struck by a melee or missile attack, magical or otherwise, it disappears, but any other existing images remain intact until struck. <br /><br />The images seem to shift from round to round, so that if the actual wizard is struck during one round, he cannot be picked out from among his images the next. <br /><br />To determine the number of images that appear, roll 1d4 and add 1 for every three levels of experience the wizard has achieved, to a maximum of eight images. At the end of the spell duration, all surviving images wink out.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Illusion/Phantasm&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 186</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="104" class="card evocation" data-school="Invocation/Evocation" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Stinking Cloud",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a rotten egg or several skunk cabbage leaves",
+"range":"30 yds.",
+"aoe":"20-ft. cube",
+"castingTime":"2",
+"duration":"1 rd./level",
+"save":"Special",
+"damage":"",
+"description":"When a stinking cloud is cast, the wizard creates a billowing mass of nauseous vapors up to 30 yards away from his position.
+Any creature caught within the cloud must roll a successful saving throw vs. poison or be reeling and unable to attack because of nausea for 1d4+1 rounds after leaving the cloud. 
+
+Those who make successful saving throws can leave the cloud without suffering any ill effects, although those remaining in the cloud must continue to save each round. 
+
+These poisonous effects can be slowed or neutralized by appropriate magic. The cloud duration is halved in a moderate breeze (8-18 m.p.h.) and is dispersed in one round by a stronger breeze.
+
+The material component of the spell is a rotten egg or several skunk cabbage leaves."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Stinking Cloud</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">30 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a rotten egg or several skunk cabbage leaves&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a stinking cloud is cast, the wizard creates a billowing mass of nauseous vapors up to 30 yards away from his position.<br />Any creature caught within the cloud must roll a successful saving throw vs. poison or be reeling and unable to attack because of nausea for 1d4+1 rounds after leaving the cloud. <br /><br />Those who make successful saving throws can leave the cloud without suffering any ill effects, although those remaining in the cloud must continue to save each round. <br /><br />These poisonous effects can be slowed or neutralized by appropriate magic. The cloud duration is halved in a moderate breeze (8-18 m.p.h.) and is dispersed in one round by a stronger breeze.<br /><br />The material component of the spell is a rotten egg or several skunk cabbage leaves.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 188</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="105" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Strength",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a few hairs, or a pinch of dung",
+"range":"Touch",
+"aoe":"Person touched",
+"castingTime":"1 turn",
+"duration":"1 hr./level",
+"save":"None",
+"damage":"",
+"description":"Application of this spell increases the Strength of the character by a number of points - or tenths of points after 18 Strength is attained (only if the character is a warrior).
+
+Benefits of the strength spell last for the duration of the magic. The amount of added Strength depends upon the spell recipient's group and is subject to all restrictions on Strength due to race and class. Multiclass characters use the best die. 
+
+A Priest gains 1d6 points of Strength;
+A Rogue gains 1d6 points of Strength;
+A Warrior gains 1d8 points of Strength;
+A Wizard gains 1d4 points of Strength;
+
+If a warrior has an 18 Strength already, from 10% to 80% is added to his extraordinary Strength roll. The spell cannot confer a Strength of 19 or more, nor is it cumulative with other magic that adds to Strength. Beings without Strength scores (kobolds, lizard men, etc.) receive a +1 to attack and damage rolls.
+
+The material component of this spell is a few hairs, or a pinch of dung, from a particularly strong animal - ape, bear, ox, etc."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Strength</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Touch&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1 turn&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Person touched&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 hr./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a few hairs, or a pinch of dung&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Application of this spell increases the Strength of the character by a number of points - or tenths of points after 18 Strength is attained (only if the character is a warrior).<br /><br />Benefits of the strength spell last for the duration of the magic. The amount of added Strength depends upon the spell recipient&#039;s group and is subject to all restrictions on Strength due to race and class. Multiclass characters use the best die. <br /><br />A Priest gains 1d6 points of Strength;<br />A Rogue gains 1d6 points of Strength;<br />A Warrior gains 1d8 points of Strength;<br />A Wizard gains 1d4 points of Strength;<br /><br />If a warrior has an 18 Strength already, from 10% to 80% is added to his extraordinary Strength roll. The spell cannot confer a Strength of 19 or more, nor is it cumulative with other magic that adds to Strength. Beings without Strength scores (kobolds, lizard men, etc.) receive a +1 to attack and damage rolls.<br /><br />The material component of this spell is a few hairs, or a pinch of dung, from a particularly strong animal - ape, bear, ox, etc.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 188</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="108" class="card evocation" data-school="Invocation/Evocation" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">2</button>
+<!--
+			<textarea class="spellJSON">{"name":"Web",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a bit of spider web",
+"range":"5 yds./level",
+"aoe":"Special",
+"castingTime":"2",
+"duration":"2 turns/level",
+"save":"Special",
+"damage":"",
+"description":"A web spell creates a many-layered mass of strong, sticky strands similar to spider webs but far larger and tougher. These masses must be anchored to two or more solid and diametrically opposed points - floor and ceiling, opposite walls, etc., or the web collapses upon itself and disappears.
+
+The web spell covers a maximum area of eight 10' x 10' x 10' cubes and the webs must be at least 10 feet thick, so a mass 40 feet high, 20 feet wide, and 10 feet deep may be cast. Creatures caught within webs, or simply touching them, become stuck among the gluey fibers. 
+
+Anyone in the area when the spell is cast must roll a saving throw vs. spell with a -2 penalty. If the saving throw is successful, two things may have occurred. If the creature has room to escape the area, then it is assumed to have jumped free. If there is no room to escape, then the webs are only half strength. Creatures with less than 13 Strength (7 if the webs are half strength) are stuck until freed by another or until the spell wears off. Missile fire is generally ineffective against creatures trapped in webs.
+
+Creatures with Strengths between 13 and 17 can break through 1 foot of webs per round. Creatures with 18 or greater Strength can break through 2 feet of webs per round. If the webs are at half strength, these rates are doubled. (Great mass equates to great strength in this case, and creatures of large mass hardly notice webs.) Strong and huge creatures can break through 10 feet of webs per round.
+
+Furthermore, the strands of a web spell are flammable. A magical flaming sword can slash them away as easily as a hand brushes away cobwebs. Any fire - torch, flaming oil, flaming sword, etc. - can set them alight and burn them away in a single round. All creatures within flaming webs suffer 2d4 points of damage from the flames, but those free of the strands are not harmed.
+
+The material component of this spell is a bit of spider web."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Web</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">5 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">2&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 turns/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a bit of spider web&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A web spell creates a many-layered mass of strong, sticky strands similar to spider webs but far larger and tougher. These masses must be anchored to two or more solid and diametrically opposed points - floor and ceiling, opposite walls, etc., or the web collapses upon itself and disappears.<br /><br />The web spell covers a maximum area of eight 10&#039; x 10&#039; x 10&#039; cubes and the webs must be at least 10 feet thick, so a mass 40 feet high, 20 feet wide, and 10 feet deep may be cast. Creatures caught within webs, or simply touching them, become stuck among the gluey fibers. <br /><br />Anyone in the area when the spell is cast must roll a saving throw vs. spell with a -2 penalty. If the saving throw is successful, two things may have occurred. If the creature has room to escape the area, then it is assumed to have jumped free. If there is no room to escape, then the webs are only half strength. Creatures with less than 13 Strength (7 if the webs are half strength) are stuck until freed by another or until the spell wears off. Missile fire is generally ineffective against creatures trapped in webs.<br /><br />Creatures with Strengths between 13 and 17 can break through 1 foot of webs per round. Creatures with 18 or greater Strength can break through 2 feet of webs per round. If the webs are at half strength, these rates are doubled. (Great mass equates to great strength in this case, and creatures of large mass hardly notice webs.) Strong and huge creatures can break through 10 feet of webs per round.<br /><br />Furthermore, the strands of a web spell are flammable. A magical flaming sword can slash them away as easily as a hand brushes away cobwebs. Any fire - torch, flaming oil, flaming sword, etc. - can set them alight and burn them away in a single round. All creatures within flaming webs suffer 2d4 points of damage from the flames, but those free of the strands are not harmed.<br /><br />The material component of this spell is a bit of spider web.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 189</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="111" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Blink",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"1",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"By means of this spell, the wizard causes his material form to \"blink\" directly from one point to another at a random time and in a random direction. This means that melee attacks against the wizard automatically miss if initiative indicates they fall after he has blinked.
+
+Each round the spell is in effect, the wizard rolls 2d8 to determine the timing of the blink - the result of the dice roll is used as the wizards initiative for that round. The wizard disappears and instantaneously reappears 10 feet distant from his previous position. (Direction is determined by roll of ld8: 1 = right ahead, 2 = right, 3 = right behind, 4 = behind, 5 = left behind, 6 = left, 7 left ahead, 8 = ahead.) 
+
+The caster cannot blink into a solid object; if such is indicated, reroll the direction. Movable objects of size and mass comparable to the caster are shoved aside when the caster blinks in. If blinking is impossible except into a fixed, solid object, the caster is then trapped on the Ethereal plane.
+
+During each round that he blinks, the spellcaster can be attacked only by opponents who win initiative or by those who are able to strike both locations at once (e.g., with a breath weapon, fireball, or similar wide-area attack forms). Opponents with multiple attacks, or those operating under haste or similar effects, can often strike early enough to have at least one attack against the caster.
+
+If the spellcaster holds off his attack (if any) until after the blink, the 2d8 delay until the blink is added to his normal ldl0 initiative roll (thus he probably attacks last in the round). Or the spellcaster can try to get his attack in before he blinks (he must announce his intent before rolling the 2d8 for blink timing and the 1d10 for initiative). In this case, the caster compares the two dice rolls, hoping that his initiative roll is lower than his blink roll (the two rolls are not added if he is trying to attack before he blinks). If so, he attacks according to his initiative roll, then blinks according to the blink roll. 
+
+If his blink roll is lower than his initiative roll, however, he blinks out, then he attacks in whatever direction he's facing (he must go through with his attack, even if he is facing in the wrong direction to affect anyone).
+"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Blink</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">1&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">By means of this spell, the wizard causes his material form to &quot;blink&quot; directly from one point to another at a random time and in a random direction. This means that melee attacks against the wizard automatically miss if initiative indicates they fall after he has blinked.<br /><br />Each round the spell is in effect, the wizard rolls 2d8 to determine the timing of the blink - the result of the dice roll is used as the wizards initiative for that round. The wizard disappears and instantaneously reappears 10 feet distant from his previous position. (Direction is determined by roll of ld8: 1 = right ahead, 2 = right, 3 = right behind, 4 = behind, 5 = left behind, 6 = left, 7 left ahead, 8 = ahead.) <br /><br />The caster cannot blink into a solid object; if such is indicated, reroll the direction. Movable objects of size and mass comparable to the caster are shoved aside when the caster blinks in. If blinking is impossible except into a fixed, solid object, the caster is then trapped on the Ethereal plane.<br /><br />During each round that he blinks, the spellcaster can be attacked only by opponents who win initiative or by those who are able to strike both locations at once (e.g., with a breath weapon, fireball, or similar wide-area attack forms). Opponents with multiple attacks, or those operating under haste or similar effects, can often strike early enough to have at least one attack against the caster.<br /><br />If the spellcaster holds off his attack (if any) until after the blink, the 2d8 delay until the blink is added to his normal ldl0 initiative roll (thus he probably attacks last in the round). Or the spellcaster can try to get his attack in before he blinks (he must announce his intent before rolling the 2d8 for blink timing and the 1d10 for initiative). In this case, the caster compares the two dice rolls, hoping that his initiative roll is lower than his blink roll (the two rolls are not added if he is trying to attack before he blinks). If so, he attacks according to his initiative roll, then blinks according to the blink roll. <br /><br />If his blink roll is lower than his initiative roll, however, he blinks out, then he attacks in whatever direction he&#039;s facing (he must go through with his attack, even if he is facing in the wrong direction to affect anyone).<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 190</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="113" class="card divination" data-school="Divination" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Clairvoyance",
+"school":"Divination",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a pinch of powdered pineal gland",
+"range":"Special",
+"aoe":"Special",
+"castingTime":"3",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"Similar to the clairaudience spell, the clairvoyance spell empowers the wizard to see in his mind whatever is within sight range from the spell locale chosen. 
+
+Distance from the wizard is not a factor, but the locale must be known - familiar or obvious. Furthermore, light is a factor, as the spell does not enable the use of infravision or magical enhancements. 
+
+If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell's area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.
+
+Lead sheeting or magical protection foils a clairvoyance spell, and the wizard has some indication that it is so blocked. The spell creates an invisible sensor, similar to that created by a crystal ball spell, that can be dispelled. 
+
+The spell functions only on the wizards current plane of existence.
+
+The material component is a pinch of powdered pineal gland."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Clairvoyance</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">Special&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">Special&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a pinch of powdered pineal gland&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">Similar to the clairaudience spell, the clairvoyance spell empowers the wizard to see in his mind whatever is within sight range from the spell locale chosen. <br /><br />Distance from the wizard is not a factor, but the locale must be known - familiar or obvious. Furthermore, light is a factor, as the spell does not enable the use of infravision or magical enhancements. <br /><br />If the area is magically dark, only darkness is seen; if naturally pitch dark, only a 10-foot radius from the center of the spell&#039;s area of effect can be seen. Otherwise, the seeing extends to the normal vision range according to the prevailing light.<br /><br />Lead sheeting or magical protection foils a clairvoyance spell, and the wizard has some indication that it is so blocked. The spell creates an invisible sensor, similar to that created by a crystal ball spell, that can be dispelled. <br /><br />The spell functions only on the wizards current plane of existence.<br /><br />The material component is a pinch of powdered pineal gland.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Divination&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 190</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="115" class="card abjuration" data-school="Abjuration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Dispel Magic",
+"school":"Abjuration",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"120 yds.",
+"aoe":"30-ft. cube",
+"castingTime":"3",
+"duration":"Instantaneous",
+"save":"None",
+"damage":"",
+"description":"When a wizard casts this spell, it has a chance to neutralize or negate magic it comes in contact with, as follows:
+
+First, it removes spells and spell-like effects (including device effects and innate abilities) from creatures or objects.
+
+Second, it disrupts the casting or use of these in the area of effect at the instant the dispel is cast. 
+
+Third, it destroys magical potions (which are treated as 12th level for purposes of this spell). 
+
+Each effect or potion in the spell's area is checked to determine if it is dispelled. The caster can always dispel his own magic; otherwise the chance to dispel depends on the difference in level between the magical effect and the caster. The base chance is 50% (11 or higher on 1d20 to dispel).
+
+If the caster is higher level than the creator of the effect to be dispelled, the difference is subtracted from the number needed on 1d20 to dispel (thus making it more likely that the dispel succeeds); if the caster is of lower level, then the difference is added to the number needed on 1d20 to dispel (making it less likely that the dispel succeeds). A roll of 20 always succeeds and a roll of 1 always fails. Thus, if a caster is 10 levels higher, only a roll of 1 prevents the effect from being dispelled.
+
+A dispel magic spell does not affect a specially enchanted item, such as a magical scroll, ring, wand, rod, staff, miscellaneous item, weapon, shield, or armor, unless it is cast directly upon the item. This renders the item nonoperational for 1d4 rounds. An item possessed and carried by a creature gains the creature's saving throw against this effect, otherwise it is automatically rendered nonoperational. 
+
+An interdimensional interface (such as a bag of holding) rendered nonoperational would be temporarily closed. Note that an item's physical properties are unchanged: a nonoperational magical sword is still a sword.
+
+Artifacts and relics are not subject to this spell; however, some of their spell-like effects may be, at the DMs option.
+Note that this spell can be very effective when used upon charmed and similarly beguiled creatures. Certain spells or effects cannot be dispelled; these are listed in the spell descriptions."}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Dispel Magic</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">120 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-ft. cube&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When a wizard casts this spell, it has a chance to neutralize or negate magic it comes in contact with, as follows:<br /><br />First, it removes spells and spell-like effects (including device effects and innate abilities) from creatures or objects.<br /><br />Second, it disrupts the casting or use of these in the area of effect at the instant the dispel is cast. <br /><br />Third, it destroys magical potions (which are treated as 12th level for purposes of this spell). <br /><br />Each effect or potion in the spell&#039;s area is checked to determine if it is dispelled. The caster can always dispel his own magic; otherwise the chance to dispel depends on the difference in level between the magical effect and the caster. The base chance is 50% (11 or higher on 1d20 to dispel).<br /><br />If the caster is higher level than the creator of the effect to be dispelled, the difference is subtracted from the number needed on 1d20 to dispel (thus making it more likely that the dispel succeeds); if the caster is of lower level, then the difference is added to the number needed on 1d20 to dispel (making it less likely that the dispel succeeds). A roll of 20 always succeeds and a roll of 1 always fails. Thus, if a caster is 10 levels higher, only a roll of 1 prevents the effect from being dispelled.<br /><br />A dispel magic spell does not affect a specially enchanted item, such as a magical scroll, ring, wand, rod, staff, miscellaneous item, weapon, shield, or armor, unless it is cast directly upon the item. This renders the item nonoperational for 1d4 rounds. An item possessed and carried by a creature gains the creature&#039;s saving throw against this effect, otherwise it is automatically rendered nonoperational. <br /><br />An interdimensional interface (such as a bag of holding) rendered nonoperational would be temporarily closed. Note that an item&#039;s physical properties are unchanged: a nonoperational magical sword is still a sword.<br /><br />Artifacts and relics are not subject to this spell; however, some of their spell-like effects may be, at the DMs option.<br />Note that this spell can be very effective when used upon charmed and similarly beguiled creatures. Certain spells or effects cannot be dispelled; these are listed in the spell descriptions.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue">None</div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Abjuration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 191</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="118" class="card evocation" data-school="Invocation/Evocation" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Fireball",
+"school":"Invocation/Evocation",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a tiny ball of bat guano and sulphur",
+"range":"10 yds.+ 10 yds./level",
+"aoe":"20-ft. radius",
+"castingTime":"3",
+"duration":"Instantaneous",
+"save":"1/2",
+"damage":"1d6/level",
+"description":"A fireball is an explosive burst of flame, which detonates with a low roar and delivers damage proportional to the level of the wizard who cast it - ld6 points of damage for each level of experience of the spellcaster (up to a maximum of 10d6).
+
+The burst of the fireball creates little pressure and generally conforms to the shape of the area in which it occurs. The fireball fills an area equal to its normal spherical volume (roughly 33,000 cubic feet - thirty-three 10' x 10' x 10' cubes).
+
+Besides causing damage to creatures, the fireball ignites all combustible materials within its burst radius, and the
+heat of the fireball melts soft metals such as gold, copper, silver, etc. Exposed items require saving throws vs. magical fire to determine if they are affected, but items in the possession of a creature that rolls a successful saving throw are unaffected by the fireball.
+
+The wizard points his finger and speaks the range (distance and height) at which the fireball is to burst. A streak flashes from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball (an early impact results in an early detonation). Creatures failing their saving throws each suffer full damage from the blast. 
+
+Those who roll successful saving throws manage to dodge, fall flat, or roll aside, each receiving half damage (the DM rolls the damage and each affected creature suffers either full damage or half damage [round fractions down], depending on whether the creature saved or not).
+
+The material component of this spell is a tiny ball of bat guano and sulphur."}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Fireball</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">10 yds.+ 10 yds./level&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">1/2&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">20-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">Instantaneous&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">1d6/level&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a tiny ball of bat guano and sulphur&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">A fireball is an explosive burst of flame, which detonates with a low roar and delivers damage proportional to the level of the wizard who cast it - ld6 points of damage for each level of experience of the spellcaster (up to a maximum of 10d6).<br /><br />The burst of the fireball creates little pressure and generally conforms to the shape of the area in which it occurs. The fireball fills an area equal to its normal spherical volume (roughly 33,000 cubic feet - thirty-three 10&#039; x 10&#039; x 10&#039; cubes).<br /><br />Besides causing damage to creatures, the fireball ignites all combustible materials within its burst radius, and the<br />heat of the fireball melts soft metals such as gold, copper, silver, etc. Exposed items require saving throws vs. magical fire to determine if they are affected, but items in the possession of a creature that rolls a successful saving throw are unaffected by the fireball.<br /><br />The wizard points his finger and speaks the range (distance and height) at which the fireball is to burst. A streak flashes from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball (an early impact results in an early detonation). Creatures failing their saving throws each suffer full damage from the blast. <br /><br />Those who roll successful saving throws manage to dodge, fall flat, or roll aside, each receiving half damage (the DM rolls the damage and each affected creature suffers either full damage or half damage [round fractions down], depending on whether the creature saved or not).<br /><br />The material component of this spell is a tiny ball of bat guano and sulphur.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Invocation/Evocation&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 191</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="123" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Haste",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"1",
+"material":"1",
+"materials":"a shaving of licorice root",
+"range":"60 yds.",
+"aoe":"40-ft. cube, 1 creature/level",
+"castingTime":"3",
+"duration":"3 rds.+ 1 rd./level",
+"save":"None",
+"damage":"",
+"description":"When this spell is cast, each affected creature functions at double its normal movement and attack rates. 
+
+A hasted creature gains a -2 initiative bonus. Thus, a creature moving at 6 and attacking once per round would move at 12 and attack twice per round. Spellcasting and spell effects are not sped up. 
+
+The number of creatures that can be affected is equal to the caster's experience level; those creatures closest to the center of effect are affected first. All affected by haste must be in the designated area of effect. 
+
+Note that this spell negates the effects of a slow spell. Additionally, this spell ages the recipient by one year, because of sped-up metabolic processes. This spell is not cumulative with itself or with other similar magic.
+
+Its material component is a shaving of licorice root.
+"}</textarea>
+ -->
+			<div class="components  verbal somatic material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Haste</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">60 yds.&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">40-ft. cube, 1 creature/level&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">3 rds.+ 1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a shaving of licorice root&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">When this spell is cast, each affected creature functions at double its normal movement and attack rates. <br /><br />A hasted creature gains a -2 initiative bonus. Thus, a creature moving at 6 and attacking once per round would move at 12 and attack twice per round. Spellcasting and spell effects are not sped up. <br /><br />The number of creatures that can be affected is equal to the caster&#039;s experience level; those creatures closest to the center of effect are affected first. All affected by haste must be in the designated area of effect. <br /><br />Note that this spell negates the effects of a slow spell. Additionally, this spell ages the recipient by one year, because of sped-up metabolic processes. This spell is not cumulative with itself or with other similar magic.<br /><br />Its material component is a shaving of licorice root.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="411" class="card necromancy" data-school="Necromancy" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Spirit Armor",
+"school":"Necromancy",
+"verbal":"1",
+"somatic":"1",
+"material":"0",
+"materials":"",
+"range":"0",
+"aoe":"The caster",
+"castingTime":"3",
+"duration":"2 rounds/level",
+"save":"Special",
+"damage":"2d3",
+"description":"This spell allows the wizard to surround himself with a portion of his own life essence, which takes the form of a shimmering aura. The spirit armor offers protection equivalent to splint mail (AC 16) and grants the wizard a + 3 bonus to saving throws vs. magical attacks. The spirit armor's effects are not cumulative with other types of armor or magical protection, but Dexterity bonuses apply.
+
+The spirit armor is effective against magical and nonmagical weapons and attacks. It does not hinder movement or add weight or encumbrance. It does not interfere with spellcasting.
+
+When the spell ends, the aura dissipates and the caster temporarily loses a bit of his life essence, suffering 2d3 points of damage unless he succeeds at a saving throw vs. spell. These lost HP return at a rate of 1/hour. No damage is sustained if the save is successful.
+"}</textarea>
+ -->
+			<div class="components  verbal somatic"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Spirit Armor</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">Special&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">The caster&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">2 rounds/level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">2d3&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell allows the wizard to surround himself with a portion of his own life essence, which takes the form of a shimmering aura. The spirit armor offers protection equivalent to splint mail (AC 16) and grants the wizard a + 3 bonus to saving throws vs. magical attacks. The spirit armor&#039;s effects are not cumulative with other types of armor or magical protection, but Dexterity bonuses apply.<br /><br />The spirit armor is effective against magical and nonmagical weapons and attacks. It does not hinder movement or add weight or encumbrance. It does not interfere with spellcasting.<br /><br />When the spell ends, the aura dissipates and the caster temporarily loses a bit of his life essence, suffering 2d3 points of damage unless he succeeds at a saving throw vs. spell. These lost HP return at a rate of 1/hour. No damage is sustained if the save is successful.<br /></div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Uncommon</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Necromancy&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Tome of Magic page 26</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<div data-id="143" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">3</button>
+<!--
+			<textarea class="spellJSON">{"name":"Tongues",
+"school":"Alteration",
+"verbal":"1",
+"somatic":"0",
+"material":"1",
+"materials":"a small clay model of a ziggurat",
+"range":"0",
+"aoe":"30-ft. radius",
+"castingTime":"3",
+"duration":"1 rd./level",
+"save":"None",
+"damage":"",
+"description":"This spell enables the wizard to speak and understand additional languages, whether they are racial tongues or regional dialects. This does not enable the caster to speak with animals. The spell enables the caster to be understood by all creatures of that type within hearing distance, usually 60 feet.
+
+This spell does not predispose the subject toward the caster in any way.
+
+The wizard can speak one additional tongue for every three levels of experience. The reverse of the spell cancels the effect of the tongues spell or confuses verbal communication of any sort within the area of effect.
+
+The material component is a small clay model of a ziggurat, which shatters when the spell is pronounced."}</textarea>
+ -->
+			<div class="components  verbal material"><span class="somatic">S</span><span class="material">M</span><span class="verbal">V</span></div>
+			<div class="name">Tongues</div>
+		</header>
+		<section>
+			<dl class="half">
+				<dt>Range</dt><dd class="range">0&nbsp;</dd>
+				<dt>Casting Time</dt><dd class="castingTime">3&nbsp;</dd>
+				<dt>Save</dt><dd class="save">None&nbsp;</dd>
+			</dl>
+			<dl class="half">
+				<dt>AoE</dt><dd class="aoe">30-ft. radius&nbsp;</dd>
+				<dt>Duration</dt><dd class="duration">1 rd./level&nbsp;</dd>
+				<dt>Damage</dt><dd class="damage">&nbsp;</dd>
+			</dl>
+			<dl class="full">
+				<dt>Materials</dt><dd class="materials " >a small clay model of a ziggurat&nbsp;</dd>
+			</dl>
+			<div class="description">
+				<div class="description-content">This spell enables the wizard to speak and understand additional languages, whether they are racial tongues or regional dialects. This does not enable the caster to speak with animals. The spell enables the caster to be understood by all creatures of that type within hearing distance, usually 60 feet.<br /><br />This spell does not predispose the subject toward the caster in any way.<br /><br />The wizard can speak one additional tongue for every three levels of experience. The reverse of the spell cancels the effect of the tongues spell or confuses verbal communication of any sort within the area of effect.<br /><br />The material component is a small clay model of a ziggurat, which shatters when the spell is pronounced.</div>
+			</div>
+			<dl class="label">
+				<dt>Residue</dt>
+				<dd>Common</dd>
+			</dl>
+			<div class="description">
+				<div class="description-residue"></div>
+			</div>
+			<dl class="half bot">
+				<dt>School</dt><dd>Alteration&nbsp;</dd>
+			</dl>
+			<dl class="half bot">
+				<dt>Source</dt><dd>Players Hand Book page 197</dd>
+			</dl>
+		</section>
+	</div>
+	
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+

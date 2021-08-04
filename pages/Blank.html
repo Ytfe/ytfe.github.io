@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script> // Google Analytics Tracking
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80475120-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+<script src="/scripts/jquery-3.0.0.min.js"></script>
+<!-- <script src="/scripts/twitch.js"></script> For the Streambadge but creates too much work for the server (somehow)-->
+	<link href="spells.css?v=15" type="text/css" rel="stylesheet" />
+	<style type="text/css" media="print">
+		#description-content {
+		  overflow: hidden;
+		  }
+		#menu {
+			 display:none;
+		 }
+	</style>
+	<script src="scripts/clipboard.js"></script>
+	
+	<title>Spells List: AD&D 2.n</title>
+</head>
+<body>
+		<header id="menu">
+		<div id="ledgend">
+			<div class="evocation"><header>Invocation/Evocation</header></div>
+			<div class="charm"><header>Enchantment/Charm</header></div>
+			<div class="summoning"><header>Conjuration/Summoning</header></div>
+			<div class="abjuration"><header>Abjuration</header></div>
+			<div class="necromancy"><header>Necromancy</header></div>
+			<div class="illusion"><header>Illusion/Phantasm</header></div>
+			<div class="alteration"><header>Alteration/Transmutation</header></div>
+			<div class="divination"><header>Divination</header></div>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsWizard.html">All Wizard Spells</a></div>
+		<div>Spells by Specialization: 
+			<a href="SpecializationWizardAbjurer.html">Abjurer</a>
+			<a href="SpecializationWizardConjurer.html">Conjurer</a>
+			<a href="SpecializationWizardDiviner.html">Diviner</a>
+			<a href="SpecializationWizardEnchanter.html">Enchanter</a>
+			<a href="SpecializationWizardIllusionist.html">Illusionist</a>
+			<a href="SpecializationWizardInvoker.html">Invoker</a>
+			<a href="SpecializationWizardNecromancer.html">Necromancer</a>
+			<a href="SpecializationWizardTransmuter.html">Transmuter</a>
+		</div>
+		<div>Spells by School:
+			<a href="SchoolWizardAbjuration.html">Abjuration</a>
+			<a href="SchoolWizardAlteration.html">Alteration</a>
+			<a href="SchoolWizardConjuration.html">Conjuration/Summoning</a>
+			<a href="SchoolWizardDivination.html">Divination</a>
+			<a href="SchoolWizardEnchantmentCharm.html">Enchantment/Charm</a>
+			<a href="SchoolWizardEvocation.html">Invocation/Evocation</a>
+			<a href="SchoolWizardIllusion.html">Illusion/Phantasm</a>
+			<a href="SchoolWizardNecromancy.html">Necromancy</a>
+		</div>
+		<div style="font-size: 18px;"><a href="SpellsPriest.html">All Priest Spells</a></div>
+			<div>Spells by Sphere:
+				<a href="SpherePriestAll.html">All</a>
+				<a href="SpherePriestAnimal.html">Animal</a>
+				<a href="SpherePriestAstral.html">Astral</a>
+				<a href="SpherePriestChaos.html">Chaos</a>
+				<a href="SpherePriestCharm.html">Charm</a>
+				<a href="SpherePriestCombat.html">Combat</a>
+				<a href="SpherePriestCreation.html">Creation</a>
+				<a href="SpherePriestDivination.html">Divination</a>
+				<a href="SpherePriestElementalAir.html">Elemntal Air</a>
+				<a href="SpherePriestElementalEarth.html">Elemental Earth</a>
+				<a href="SpherePriestElementalFire.html">Elemental Fire</a>
+				<a href="SpherePriestElementalWater.html">Elemental Water</a>
+				<a href="SpherePriestGuardian.html">Guardian</a>
+				<a href="SpherePriestHealing.html">Healing</a>
+				<a href="SpherePriestLaw.html">Law</a>
+				<a href="SpherePriestNecromantic.html">Necromantic</a>
+				<a href="SpherePriestNumbers.html">Numbers</a>
+				<a href="SpherePriestPlant.html">Plant</a>
+				<a href="SpherePriestProtection.html">Protection</a>
+				<a href="SpherePriestSummoning.html">Summoning</a>
+				<a href="SpherePriestSun.html">Sun</a>
+				<a href="SpherePriestThought.html">Thought</a>
+				<a href="SpherePriestTime.html">Time</a>
+				<a href="SpherePriestTravelers.html">Travelers</a>
+				<a href="SpherePriestWar.html">War</a>
+				<a href="SpherePriestWards.html">Wards</a>
+				<a href="SpherePriestWeather.html">Weather</a>
+			</div>
+			<div>Spells by Diety:
+				<a href="DietyPriestCosmos.html">Cosmos</a>
+				<a href="DietyPriestDavina.html">Davina</a>
+				<a href="DietyPriestZereth.html">Zereth</a>
+				<a href="DietyPriestMave.html">Mave</a> | 
+				<a href="DietyPriestLaplace.html">Laplace</a>
+				<a href="DietyPriestUrsinia.html">Ursinia</a>
+				<a href="DietyPriestLune.html">Lune</a> | 
+				<a href="DietyPriestCandela.html">Candela</a>
+				<a href="DietyPriestMidna.html">Midna</a> | 
+				<a href="DietyPriestThrawn.html">Thrawn</a>
+				<a href="DietyPriestMenoa">Menoa</a>
+				<a href="DietyPriestVelor.html">Velor</a>
+				<a href="DietyPriestIllustril.html">Illustril</a>
+				<a href="DietyPriestZelda.html">Zelda</a>
+				<a href="DietyPriestVerva.html">Verva</a>
+				<a href="DietyPriestJant.html">Jant</a>
+				<a href="DietyPriestMadrigal.html">Madrigal</a>
+				<a href="DietyPriestFellora.html">Fellora</a>
+				<a href="DietyPriestTorrigan.html">Torrigan</a>
+				<a href="DietyPriestFibo.html">Fibo</a>
+				<a href="DietyPriestAmora.html">Amora</a>
+				<a href="DietyPriestFactorio">Factorio</a>
+				<a href="DietyPriestAngwyn.html">Angwyn</a>
+				<a href="DietyPriestPhorror.html">Phorror</a>
+				<a href="DietyPriestPell.html">Pell</a>
+				<a href="DietyPriestPlatos.html">Platos</a>
+				<a href="DietyPriestVantice.html">Vantice</a>
+				<a href="DietyPriestYippin.html">Yippin</a>
+	</header>
+	<div data-id="21" class="card alteration" data-school="Alteration" data-caster="wizard" >
+		<header class="clearfix">
+			<button class="level" data-clipboard-action="copy">1</button>
+
+
+	<script>
+		$("button").on('click', function(){
+			var json = {};
+	    	json["name"] = $.trim($(this).siblings(".name").text()); 
+	    	json["school"] = $.trim($(this).closest(".card").attr("data-school")).toLowerCase();
+	    	var components = $(this).siblings(".components").attr("class");
+	    		var verbal = 0;
+	    		var somatic = 0;
+	    		var material = 0;
+	    		if(components.includes("verbal")){ verbal = 1; }
+	    		if(components.includes("somatic")){ somatic = 1; }
+	    		if(components.includes("material")){ material = 1; }
+	    		json["verbal"] = verbal;
+	    		json["somatic"] = somatic;
+	    		json["material"] = material;
+	    	json["materials"] = $.trim($(this).parent().parent().find(".materials").text());
+	    	json["range"] = $.trim($(this).parent().parent().find(".range").text());
+	    	json["aoe"] = $.trim($(this).parent().parent().find(".aoe").text());
+	    	json["castingTime"] = $.trim($(this).parent().parent().find(".castingTime").text());
+	    	json["duration"] = $.trim($(this).parent().parent().find(".duration").text());
+	    	json["save"] = $.trim($(this).parent().parent().find(".save").text());
+	    	json["damage"] = $.trim($(this).parent().parent().find(".damage").text());
+	    	var description = $(this).parent().parent().find(".description-content").html()
+	    	description = description.replace(/<br\s*\/?>/gim, "\n")
+
+
+	    	json["description"] = $.trim(description);
+
+
+			console.log(json);
+			var jsonnew = JSON.stringify(json);
+		    var $temp = $("<textarea>");
+		    $("body").append($temp);
+		    $temp.text(jsonnew);
+		    $temp.select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		})
+	</script>
+</body>
+</html>
+
